@@ -1,0 +1,1609 @@
+{
+   "welcome": "Welcome to my App",
+   "Nomor HP wajib diisi":"Mobile phone number is required",
+   "menu": {
+      "home": "Home",
+      "wallet": "Wallet",
+      "market": "Market",
+      "profile": "Profile"
+   },
+   "button": {
+      "change_lang": "Change Language",
+      "receive_funds": "Receive Token",
+      "topup": "Top Up",
+      "search_opponents": "Ranked Match",
+      "tournaments": "Tournaments",
+      "lobby": "Lobby",
+      "play_offline": "Play Offline",
+      "vs_bot": "Vs Bot",
+      "cancel_search": "Cancel Search",
+      "rejoin": "Rejoin",
+      "logout": "Logout",
+      "cancel": "Cancel",
+      "verify": "Verify",
+      "view_all": "View All"
+   },
+   "text": {
+      "total_game": "Total Games",
+      "win_rate": "Win Rate",
+      "rating": "Rating",
+      "rating_trend": "Rating Trend",
+      "game_mode": "Game Modes",
+      "search_desc": "Play against real opponents",
+      "tournaments_desc": "Competitive events",
+      "lobby_desc": "Friendly matches",
+      "offline_desc": "Scan QR to play",
+      "bot_desc": "Practice with AI",
+      "promotions": "Promotions",
+      "chess_news": "Chess News",
+      "account": "Account",
+      "total_balance": "Total Token",
+      "guest": "Guest",
+      "live_match": "LIVE MATCH",
+      "vs": "vs",
+      "matchmaking_progress": "Matchmaking Progress",
+      "estimated_wait": "Estimated wait:",
+      "searching": "Searching...",
+      "players": "Players",
+      "online": "Online",
+      "similar": "Similar",
+      "tip": "Tip:",
+      "tip_desc": "Wider rating range may find matches faster",
+      "greeting": {
+         "morning": "Good Morning",
+         "afternoon": "Good Afternoon",
+         "evening": "Good Evening",
+         "night": "Good Night"
+      }
+   },
+   "toast": {
+      "connecting": "Connecting to server...",
+      "finish_active": "Finish active match first!",
+      "req_failed": "Failed to send request.",
+      "search_cancelled": "Search cancelled.",
+      "cancel_failed": "Failed to cancel."
+   },
+   "dialog": {
+      "logout_title": "Logout?",
+      "logout_desc": "You will need to login again."
+   },
+   "bot_game": {
+      "title": "vs Bot",
+      "bot_name": "CHESS BOT",
+      "game_stats": "Game Stats",
+      "game_controls": "Game Controls",
+      "game_over": "GAME OVER",
+      "time_remaining": "Time Remaining",
+      "moving": "Moving",
+      "waiting": "Waiting",
+      "moves": "moves",
+      "duration": "Duration",
+      "your_moves": "Your Moves",
+      "bot_moves": "Bot Moves",
+      "total_moves": "Total Moves",
+      "bot_thinking": "Bot is Thinking",
+      "analyzing": "Analyzing depth...",
+      "select_level": "Select Bot Level",
+      "challenge_desc": "Challenge yourself with various difficulties",
+      "level": "Level",
+      "turn": "Turn",
+      "you": "You",
+      "white": "White",
+      "black": "Black",
+      "your_turn": "YOUR TURN",
+      "wait_turn": "Wait Turn",
+      "reset": "Reset Game",
+      "change_color": "Switch Color",
+      "stats": "Statistics",
+      "play_again": "Play Again",
+      "dashboard": "Dashboard",
+      "tournament": "Tournament",
+      "confirm_reset": "Switch color? Current game will be reset.",
+      "difficulty": {
+         "easy": "Noob",
+         "medium": "Decent",
+         "hard": "Expert",
+         "gm": "Grandmaster"
+      },
+      "result": {
+         "time_out": "Time Out",
+         "bot_time_out": "Bot Time Out",
+         "checkmate": "Checkmate",
+         "draw": "Draw",
+         "win": "You Win",
+         "lose": "You Lose"
+      }
+   },
+   "flight": {
+      "title": "Book Flight Tickets",
+      "subtitle": "Search and book tickets easily",
+      "trip_type": {
+         "one_way": "One Way",
+         "round_trip": "Round Trip"
+      },
+      "form": {
+         "from": "From",
+         "to": "To",
+         "origin_placeholder": "Origin airport",
+         "destination_placeholder": "Destination airport",
+         "departure": "Departure",
+         "return": "Return",
+         "passengers_class": "Passengers & Class",
+         "loading": "Loading airports..."
+      },
+      "quick_date": {
+         "today": "Today",
+         "tomorrow": "Tomorrow",
+         "days_3": "3 Days",
+         "days_7": "7 Days"
+      },
+      "passengers": {
+         "title": "Number of Passengers",
+         "label": "Passengers",
+         "adults": "Adults",
+         "adults_desc": "(12+ years)",
+         "children": "Children",
+         "children_desc": "(2-11 years)",
+         "infants": "Infants",
+         "infants_desc": "(0-2 years)"
+      },
+      "class": {
+         "title": "Cabin Class",
+         "economy": "Economy",
+         "business": "Business",
+         "first": "First Class",
+         "label_popular": "Popular",
+         "label_comfort": "Comfort",
+         "label_premium": "Premium"
+      },
+      "button": {
+         "search": "Search Flights",
+         "searching": "Searching..."
+      },
+      "tips": {
+         "1": "Book at least 3 hours before departure",
+         "2": "Prepare ID Card/Passport for check-in",
+         "3": "Infants max 2 years, children 2-11 years",
+         "4": "Show boarding pass at the airport",
+         "title": "Booking Tips"
+      },
+      "routes": {
+         "title": "Popular Routes",
+         "jakarta": "Jakarta",
+         "bali": "Bali",
+         "surabaya": "Surabaya",
+         "makassar": "Makassar"
+      },
+      "toast": {
+         "load_error": "Failed to load airports.",
+         "try_again": "Please try again later.",
+         "incomplete": "Incomplete details",
+         "incomplete_desc": "Please select origin and destination airports.",
+         "invalid": "Invalid airports",
+         "invalid_desc": "Origin and destination cannot be the same.",
+         "invalid_date": "Invalid date",
+         "invalid_date_desc": "Return date must be after departure date.",
+         "success": "Search successful!",
+         "showing_flights": "Showing flights from"
+      }
+   },
+   "forgot_password": {
+      "title": "FORGOT PASSWORD?",
+      "subtitle": "Don't worry. Enter your registered email, and we will send you password reset instructions.",
+      "success_title": "Success!",
+      "success_message": "Password reset link has been sent to your email. Please check your inbox/spam.",
+      "error_default": "Failed to process request. Please ensure the email is registered.",
+      "email_label": "Registered Email",
+      "email_placeholder": "example@email.com",
+      "btn_submit": "SEND RESET LINK",
+      "btn_sending": "SENDING...",
+      "back_to_login": "Back to Login"
+   },
+   "live_game": {
+      "header": {
+         "live_match": "LIVE MATCH",
+         "finished": "FINISHED",
+         "your_turn": "YOUR TURN",
+         "opponent_turn": "OPPONENT'S TURN"
+      },
+      "loading": "Loading game...",
+      "player": {
+         "moving": "Moving",
+         "you": "You",
+         "white": "White",
+         "black": "Black"
+      },
+      "info": {
+         "duration": "Duration",
+         "mode": "Mode",
+         "with_time": "Timed",
+         "no_time": "Untimed"
+      },
+      "controls": {
+         "title": "Game Controls",
+         "offer_draw": "Offer Draw",
+         "resign": "Resign",
+         "draw_sent": "Waiting...",
+         "resigning": "Sending...",
+         "draw_label": "Draw Offer",
+         "resign_label": "Resign",
+         "back_dashboard": "Back to Dashboard",
+         "analyze": "Analyze Game"
+      },
+      "overlay": {
+         "waiting_draw": "WAITING FOR OPPONENT RESPONSE",
+         "sending_resign": "SENDING RESIGNATION...",
+         "game_over": "GAME OVER"
+      },
+      "result": {
+         "draw_title": "Draw! 🤝",
+         "victory": "Victory! 🏆",
+         "finished": "Game Over",
+         "default_desc": "The game has ended"
+      },
+      "reason": {
+         "checkmate": "Checkmate! The King cannot move",
+         "stalemate": "Stalemate - King cannot move but is not in check",
+         "insufficient_material": "Insufficient material to continue",
+         "threefold_repetition": "Threefold repetition",
+         "timeout": "Time out",
+         "resignation": "Player resigned",
+         "agreement": "Mutual agreement",
+         "abandoned": "Game abandoned",
+         "unknown": "Game ended"
+      },
+      "modal": {
+         "draw_title": "Draw Offer",
+         "draw_desc": "Opponent offers a draw.",
+         "draw_ask_title": "Offer Draw?",
+         "draw_ask_desc": "Send a draw offer to opponent",
+         "resign_title": "Resign?",
+         "resign_desc": "Are you sure you want to resign?",
+         "btn_accept": "Accept",
+         "btn_decline": "Decline",
+         "btn_offer": "Offer",
+         "btn_resign": "Yes, Resign",
+         "btn_cancel": "Cancel",
+         "btn_continue": "Continue"
+      },
+      "toast": {
+         "draw_accepted": "Draw accepted",
+         "contacting_server": "Contacting server...",
+         "draw_declined": "Draw declined",
+         "game_continued": "Game continued",
+         "draw_sent": "Draw offer sent",
+         "waiting_opponent": "Waiting for opponent...",
+         "opponent_declined": "Opponent declined draw offer",
+         "resigning": "Resigning...",
+         "sending_resign": "Sending resignation request",
+         "load_error": "Failed to load data.",
+         "analyze_info": "Analysis feature coming soon"
+      }
+   },
+   "notification": {
+      "header": {
+         "title": "Inbox",
+         "unread_count": "{count} unread messages",
+         "mark_all_read": "Mark All as Read"
+      },
+      "empty": {
+         "title": "Inbox is empty",
+         "desc": "All notifications will appear here"
+      },
+      "card": {
+         "just_now": "Just now",
+         "min_ago": "{count}m ago",
+         "hour_ago": "{count}h ago",
+         "view_detail": "View detail"
+      },
+      "modal": {
+         "title": "Notification Detail",
+         "subtitle": "Complete information",
+         "read": "Read",
+         "unread": "Unread",
+         "additional_info": "Additional Information",
+         "close": "Close",
+         "view_action": "View Detail"
+      },
+      "type": {
+         "success": "Success",
+         "warning": "Warning",
+         "danger": "Alert",
+         "payment": "Payment",
+         "tournament": "Tournament",
+         "match": "Match",
+         "info": "Info"
+      }
+   },
+   "kyc": {
+      "pending_title": "Verification Pending",
+      "pending_desc": "Documents are being reviewed.",
+      "unverified_title": "Unverified Account",
+      "unverified_desc": "Feature limits apply.",
+      "header": {
+         "title": "Account Verification",
+         "subtitle": "Complete data to enable withdrawal features."
+      },
+      "step1": {
+         "title": "1. ID Card Photo (E-KTP)",
+         "status_success": "SUCCESS",
+         "upload_text": "Upload ID Card"
+      },
+      "step2": {
+         "title": "2. Face Verification",
+         "status_success": "SUCCESS",
+         "start_liveness": "Start Liveness Test",
+         "click_camera": "Click to open camera",
+         "retake": "Retake Photo"
+      },
+      "modal": {
+         "loading_ai": "Loading AI Model...",
+         "instruction": "Instruction",
+         "success_title": "VERIFICATION SUCCESS!",
+         "verified_hold": "Verified! Hold still...",
+         "btn_camera": "Turn On Camera",
+         "error_load": "Failed to load Liveness system. Check connection/camera."
+      },
+      "challenges": {
+         "smile": "Please SMILE widely",
+         "mouth": "Open your MOUTH",
+         "turn_left": "Turn head slightly LEFT",
+         "turn_right": "Turn head slightly RIGHT"
+      },
+      "button": {
+         "submit": "SUBMIT VERIFICATION",
+         "sending": "SENDING DATA..."
+      },
+      "toast": {
+         "incomplete": "Data incomplete.",
+         "success_submit": "Verification Submitted Successfully!",
+         "success_face": "Face Verification Successful!",
+         "upload_failed": "Upload failed."
+      }
+   },
+   "live_matches": {
+      "header": {
+         "title_1": "LIVE",
+         "title_2": "MATCHES",
+         "subtitle": "Watch matches happening in real-time",
+         "live_count": "{count} Match Live | {count} Matches Live",
+         "updated": "Updated: {time}",
+         "refresh": "Refresh"
+      },
+      "card": {
+         "live_now": "LIVE NOW",
+         "match_id": "MATCH #{id}",
+         "white": "White",
+         "black": "Black",
+         "moving": "Moving",
+         "moves": "Moves",
+         "time": "Time",
+         "watch": "Watch Match"
+      },
+      "empty": {
+         "title": "No active matches",
+         "desc": "There are no ongoing matches right now. Stay tuned for the next game!",
+         "btn_refresh": "Refresh"
+      },
+      "footer": {
+         "title": "Real-time Updates",
+         "desc": "Data updates automatically every 10 seconds",
+         "total": "Total live matches"
+      }
+   },
+   "lobby": {
+      "header": {
+         "title": "Player Lobby",
+         "subtitle": "{count} Players Online"
+      },
+      "search": {
+         "placeholder": "Search username..."
+      },
+      "status": {
+         "playing": "Playing",
+         "online": "Online"
+      },
+      "empty": {
+         "title": "No other players online right now.",
+         "desc": "Try inviting your friends to login!"
+      },
+      "button": {
+         "duel": "Duel",
+         "watch": "Watch"
+      },
+      "toast": {
+         "player_busy": "Player is currently in a match.",
+         "challenge_sent": "Challenge sent to {username}!",
+         "challenge_declined": "{username} declined the challenge.",
+         "match_start": "Challenge accepted! Starting game..."
+      }
+   },
+   "auth_login": {
+      "welcome_user": "Welcome, {name}!",
+      "biometric": {
+         "title": "Login with Fingerprint",
+         "desc": "Verify identity with fingerprint or Face ID to continue",
+         "btn": "Biometric Login",
+         "processing": "Processing..."
+      },
+      "other_account": "Login with another account",
+      "register_new": "Register new account",
+      "form": {
+         "email_label": "Email Address",
+         "email_placeholder": "email@example.com",
+         "password_label": "Password",
+         "password_placeholder": "••••••••",
+         "forgot_password": "Forgot password?",
+         "btn_login": "Sign In",
+         "or_divider": "or continue with"
+      },
+      "register_link": {
+         "text": "Don't have an account?",
+         "link": "Register Athlete"
+      },
+      "2fa": {
+         "title_setup": "Activate 2-Factor Authentication",
+         "desc_setup": "Scan QR code with authenticator app",
+         "title_verify": "Security Verification",
+         "desc_verify": "Enter OTP code from your authenticator app",
+         "title_input_setup": "Enter Verification Code",
+         "desc_input_setup": "Enter 6 digit code from authenticator app",
+         "loading_qr": "Loading QR code...",
+         "manual_code": "Or enter manual code:",
+         "btn_verifying": "Verifying...",
+         "btn_activate": "Activate Security",
+         "btn_confirm": "Confirm OTP",
+         "back_to_login": "Back to Login",
+         "copy_success": "Manual code copied!"
+      },
+      "error": {
+         "email_required": "Please enter your email.",
+         "biometric_failed": "Biometric login failed.",
+         "login_failed": "Invalid email or password.",
+         "google_failed": "Google login failed",
+         "otp_invalid": "Invalid or expired OTP code."
+      },
+      "footer": "All rights reserved.",
+      "default_welcome": "Please sign in to"
+   },
+   "biometric": {
+      "title": "Biometric Login",
+      "btn_login": "Use Fingerprint / Face ID",
+      "btn_register": "Register This Device",
+      "success_register": "Biometric registered successfully!",
+      "success_login": "Login Successful!",
+      "error_auth": "Biometric failed or cancelled."
+   },
+   "market": {
+      "header": {
+         "title": "Marketplace & PPOB",
+         "subtitle": "Choose services you need",
+         "available_balance": "Available Token",
+         "today_transaction": "Today's Transaction",
+         "points": "Points"
+      },
+      "section": {
+         "available_services": "Available Services",
+         "services_count": "{count} Services",
+         "services_desc": "Select and access various services easily"
+      },
+      "category": {
+         "train": "Train Ticket",
+         "train_desc": "Book KAI tickets for domestic travel.",
+         "flight": "Flight Ticket",
+         "flight_desc": "Search and book domestic and international flights.",
+         "hotel": "Hotel & Accommodation",
+         "hotel_desc": "Book lodging, hotels, or villas worldwide.",
+         "pulsa": "Credit & Data",
+         "pulsa_desc": "Top up prepaid credit and data packages for all operators.",
+         "postpaid": "Phone Bill",
+         "postpaid_desc": "Pay your monthly postpaid bills.",
+         "pln": "Electricity (PLN)",
+         "pln_desc": "Pay electricity bills or buy PLN tokens.",
+         "pdam": "Water Bill (PDAM)",
+         "pdam_desc": "Pay PDAM water bills for various regions.",
+         "finance": "Multi Finance",
+         "finance_desc": "Pay installments for motor, car, or other loans.",
+         "umrah": "Umrah Package",
+         "umrah_desc": "Best offers for Umrah pilgrimage packages.",
+         "religious": "Religious Tour",
+         "religious_desc": "Explore pilgrimage and religious tour packages."
+      },
+      "button": {
+         "access_now": "Access Now"
+      },
+      "info": {
+         "title": "Important Information",
+         "secure_title": "Safe & Reliable Transaction",
+         "secure_desc": "All PPOB and Travel transactions use the main token and are protected with a transaction PIN for your security."
+      }
+   },
+   "history": {
+      "header": {
+         "title": "Match History List",
+         "total_match": "Total: {count} Match"
+      },
+      "loading": "Loading data...",
+      "empty": {
+         "title": "No matches yet",
+         "desc": "Let's start playing chess now!"
+      },
+      "table": {
+         "date": "Date",
+         "opponent": "Opponent",
+         "color": "Color",
+         "result": "Result",
+         "reason": "Reason"
+      },
+      "pagination": {
+         "page_info": "Page {current} of {total}",
+         "prev": "Prev",
+         "next": "Next"
+      },
+      "player": {
+         "unknown": "Unknown",
+         "white": "White",
+         "black": "Black"
+      },
+      "result": {
+         "draw": "DRAW",
+         "win": "WIN",
+         "lose": "LOSE"
+      },
+      "reason": {
+         "agreement": "Agreement",
+         "timeout": "Timeout",
+         "resignation": "Resignation",
+         "checkmate": "Checkmate",
+         "abandoned": "Abandoned",
+         "unknown": "Unknown"
+      },
+      "toast": {
+         "load_error": "Failed to load data."
+      }
+   },
+   "mirror": {
+      "title": "Spectator Room",
+      "match_id": "Match #{id}",
+      "status": {
+         "live": "LIVE SPECTATING",
+         "checkmate": "CHECKMATE",
+         "draw": "DRAW",
+         "finished": "FINISHED"
+      },
+      "stats": {
+         "watchers": "Watchers",
+         "moves": "Moves",
+         "white": "White",
+         "black": "Black"
+      },
+      "history": "Move History",
+      "back": "Back"
+   },
+   "news_detail": {
+      "header": {
+         "title": "Article",
+         "subtitle": "Strategy & Tips"
+      },
+      "menu": {
+         "liked": "Liked Articles",
+         "saved": "Saved Articles",
+         "profile": "My Profile"
+      },
+      "share": {
+         "title": "Share Article",
+         "copy": "Copy Link",
+         "whatsapp": "WhatsApp",
+         "twitter": "Twitter",
+         "facebook": "Facebook"
+      },
+      "meta": {
+         "min_read": "min read",
+         "views": "views",
+         "verified": "Verified",
+         "articles_count": "10+ Articles",
+         "follow": "Follow"
+      },
+      "stats": {
+         "likes": "Likes",
+         "comments": "Comments",
+         "shares": "Shares"
+      },
+      "tags_title": "Related Topics",
+      "actions": {
+         "like": "Like",
+         "liked": "Liked",
+         "share": "Share"
+      },
+      "related": {
+         "title": "Related Articles",
+         "subtitle": "Read other interesting articles",
+         "view_all": "View All",
+         "read_more": "Read More",
+         "view_all_mobile": "View All Articles"
+      },
+      "newsletter": {
+         "title": "Want Latest Updates?",
+         "desc": "Get strategy articles, tournament info, and exclusive tips directly to your email.",
+         "placeholder": "Your Email",
+         "subscribe": "Subscribe",
+         "privacy": "By subscribing, you agree to our privacy policy."
+      },
+      "toast": {
+         "copy_success": "Link copied successfully!"
+      }
+   },
+   "profile": {
+      "header": {
+         "title": "Edit Profile",
+         "subtitle": "Update account & financial information"
+      },
+      "verified": "Verified",
+      "verify_now": "Verify Now",
+      "account_active": "Account Active",
+      "tabs": {
+         "general": "General",
+         "financial": "Financial",
+         "security": "Security"
+      },
+      "general": {
+         "title": "Basic Information",
+         "full_name": "Full Name",
+         "full_name_ph": "Name as per ID Card",
+         "phone": "WhatsApp Number",
+         "country": "Country",
+         "province": "Province",
+         "regency": "City / Regency",
+         "district": "District",
+         "subdistrict": "Subdistrict / Village",
+         "postal_code": "Postal Code",
+         "address": "Full Address",
+         "address_ph": "Street, House No., RT/RW",
+         "select": {
+            "country": "Select Country",
+            "province": "Select Province",
+            "regency": "Select City",
+            "district": "Select District",
+            "subdistrict": "Select Subdistrict"
+         },
+         "phone_verified_note": "* Number is verified and cannot be changed."
+      },
+      "financial": {
+         "title": "Bank Account",
+         "bank_name": "Bank Name",
+         "select_bank": "Select Bank",
+         "account_number": "Account Number",
+         "account_holder": "Account Holder Name",
+         "account_holder_ph": "Automatically follows Full Name",
+         "account_holder_note": "Automatically follows full name in profile",
+         "wallet_security": "Wallet Security",
+         "wallet_note": "Leave blank if you don't want to change Wallet PIN. PIN is used for withdrawals.",
+         "old_pin": "Old PIN",
+         "old_pin_note": "(Leave blank for new PIN creation)",
+         "new_pin": "New PIN (6 Digits)",
+         "confirm_pin": "Repeat New PIN (6 Digits)",
+         "pin_rule": "Only numbers 0-9"
+      },
+      "security": {
+         "title": "Change Login Password",
+         "note": "Leave this form blank if you don't want to change your app login password.",
+         "current_pass": "Current Password",
+         "current_pass_ph": "Enter old password",
+         "new_pass": "New Password",
+         "new_pass_ph": "Minimum 6 characters",
+         "confirm_pass": "Confirm New Password",
+         "confirm_pass_ph": "Retype new password"
+      },
+      "button": {
+         "save": "SAVE CHANGES",
+         "saving": "SAVING..."
+      },
+      "toast": {
+         "success": "Data saved successfully!",
+         "error": "Failed to save data.",
+         "file_size": "Max file size 2MB.",
+         "pass_required": "Enter current password to change password.",
+         "pass_mismatch": "New password confirmation does not match.",
+         "pass_min": "New password minimum 6 characters.",
+         "pin_length": "PIN must be 6 digits.",
+         "pin_mismatch": "New PIN does not match.",
+         "email_sent": "Email verification link sent.",
+         "phone_verified": "Phone number verified successfully!"
+      },
+      "modal": {
+         "phone_title": "Phone Verification",
+         "phone_desc": "Enter 6 digit code sent to your number (Valid for 5 mins)",
+         "btn_verify": "Verify",
+         "btn_cancel": "Cancel",
+         "validation": "Enter 6 digit code"
+      }
+   },
+   "topup": {
+      "header": {
+         "back": "Back",
+         "close": "Close",
+         "title_input": "Top Up Token",
+         "title_qris": "QRIS Payment",
+         "subtitle_input": "Top up via QRIS",
+         "subtitle_qris": "Scan QR code to pay",
+         "amount": "Amount",
+         "total": "Total"
+      },
+      "form": {
+         "title": "Top Up via QRIS",
+         "subtitle": "Instant, secure, and automated payment via QRIS Indonesia",
+         "select_label": "Select Top Up Amount",
+         "custom_label": "Or Enter Another Amount",
+         "min_max_help": "Minimum Rp 1,000, maximum Rp 10,000,000",
+         "btn_process": "Processing...",
+         "btn_submit": "Generate QR Payment"
+      },
+      "qris": {
+         "total_due": "Total Payment",
+         "trx_id": "Transaction ID",
+         "expiry": "QR Code expires in 24 hours",
+         "download": "Download QR",
+         "not_available": "QR Code not available",
+         "supported_by": "Supported by:"
+      },
+      "steps": {
+         "title": "How to Pay:",
+         "1_title": "Open App",
+         "1_desc": "Open your e-wallet, mobile banking, or internet banking app",
+         "2_title": "Scan QR Code",
+         "2_desc": "Select 'Scan QR' or 'Pay with QRIS' menu in your app",
+         "3_title": "Confirm Payment",
+         "3_desc": "Scan the QR code above and confirm the payment amount",
+         "4_title": "Done",
+         "4_desc": "Token will be automatically added to your account in 1-3 minutes"
+      },
+      "banner": {
+         "title": "Faster Payment with QRIS",
+         "desc": "Use QRIS for instant and practical token top-ups. No manual data entry needed, just scan and pay."
+      },
+      "toast": {
+         "min_amount": "Minimum Top Up Rp 1,000",
+         "success": "QRIS Generated Successfully",
+         "error": "Failed to generate QRIS"
+      }
+   },
+   "qr_game": {
+      "header": {
+         "title": "Match Code",
+         "subtitle": "Show QR Code to join"
+      },
+      "card": {
+         "title": "Scan to Join",
+         "desc": "Point opponent's camera to this QR Code"
+      },
+      "status": {
+         "expired_title": "QR Code Expired",
+         "btn_refresh": "Generate New",
+         "time_left": "Time remaining:",
+         "refresh_desc": "QR code will refresh automatically in {time} seconds",
+         "loading": "Connecting...",
+         "network_check": "Ensure opponent has a stable internet connection"
+      },
+      "tips": {
+         "title": "How to Join",
+         "desc": "Ask your opponent to open the app, select \"Scan QR\", and point the camera at the code above. Ensure good lighting and clear visibility."
+      },
+      "toast": {
+         "error": "Failed to generate QR Code."
+      }
+   },
+   "receive_Token": {
+      "header": {
+         "title": "QR Transfer",
+         "subtitle": "Show this to receive payment"
+      },
+      "card": {
+         "title": "Receive Token",
+         "desc": "Scan this QR to transfer token instantly"
+      },
+      "timer": {
+         "label": "QR valid for:",
+         "refresh_info": "QR code refreshes automatically every 60 seconds"
+      },
+      "button": {
+         "copy": "Copy QR Code"
+      },
+      "toast": {
+         "copy_success": "QR Code copied successfully!",
+         "copy_failed": "Failed to copy."
+      },
+      "instruction": "Ensure the QR code stays visible in the sender's camera frame"
+   },
+   "auth_register": {
+      "title": "Create Account",
+      "subtitle": "Join and start playing chess!",
+      "form": {
+         "username_label": "Username",
+         "username_placeholder": "johndoe",
+         "fullname_label": "Full Name",
+         "fullname_placeholder": "John Doe",
+         "email_label": "Email",
+         "email_placeholder": "name@email.com",
+         "password_label": "Password",
+         "password_placeholder": "******",
+         "btn_register": "REGISTER NOW",
+         "btn_loading": "PROCESSING..."
+      },
+      "login_link": {
+         "text": "Already have an account?",
+         "link": "Login here"
+      },
+      "toast": {
+         "success_title": "Registration Successful!",
+         "success_desc": "Please login with your new account.",
+         "error_title": "Failed",
+         "error_desc": "Registration failed. Please try again.",
+         "warning_incomplete": "Please complete all required fields."
+      }
+   },
+   "scan_qr": {
+      "header": {
+         "title": "QR Scanner",
+         "subtitle": "Point camera at QR code"
+      },
+      "loading": {
+         "processing": "PROCESSING",
+         "preparing": "Preparing session...",
+         "initializing": "Initializing camera...",
+         "wait": "Please wait a moment"
+      },
+      "error": {
+         "title": "Camera Access Failed",
+         "btn_retry": "Try Again",
+         "btn_back": "Back",
+         "tip": "Tip: Ensure you have granted camera permission and no other app is using the camera."
+      },
+      "scanner": {
+         "instruction": "Point QR Code within the scanning area",
+         "scanning": "Reading QR Code..."
+      },
+      "controls": {
+         "flash_on": "FLASH ON",
+         "flash_off": "FLASH OFF",
+         "help": "Ensure QR Code is within scanning box with sufficient lighting"
+      },
+      "toast": {
+         "invalid_format": "Invalid format",
+         "scan_valid": "Please scan a valid QR Code",
+         "flash_on": "Flash On",
+         "flash_off": "Flash Off",
+         "flash_unsupported": "Flash not supported",
+         "flash_error": "Device does not support flash",
+         "error_access": "Failed to access camera. Please check permissions."
+      }
+   },
+   "settings": {
+      "header": {
+         "title": "Settings",
+         "subtitle": "Account Center"
+      },
+      "tabs": {
+         "security": "Security",
+         "privacy": "Privacy"
+      },
+      "security": {
+         "title": "Security & Access",
+         "single_login": {
+            "title": "Single Login",
+            "desc": "New login will automatically logout old sessions."
+         },
+         "2fa": {
+            "title": "2-Factor Authentication",
+            "desc": "Use code from Google Authenticator to login."
+         },
+         "biometric": {
+            "title": "Biometric Login",
+            "desc": "Use fingerprint or face ID for quick access."
+         },
+         "register_biometric": {
+            "title": "Touch ID Ready",
+            "subtitle": "Ready to Register",
+            "desc": "Tap to register fingerprint",
+            "btn_register": "Register Now",
+            "btn_processing": "Processing...",
+            "btn_registered": "Registered",
+            "unsupported": {
+               "title": "Device Not Supported",
+               "desc": "Your browser/device does not support biometric features."
+            },
+            "tips": {
+               "1": "Ensure fingerprint/face is registered in OS",
+               "2": "Use the same finger registered on device",
+               "title": "Registration Tips:"
+            }
+         }
+      },
+      "privacy": {
+         "title": "Connection & Visibility",
+         "open_match": {
+            "title": "Open Challenge",
+            "desc": "Allow other athletes to find and challenge you."
+         }
+      },
+      "tips": {
+         "1": "Single Login & 2FA protects your rating and wallet",
+         "2": "Biometric speeds up login without remembering passwords",
+         "3": "Always logout from public devices",
+         "title": "Account Security Tips"
+      },
+      "help": {
+         "title": "Settings Help",
+         "subtitle": "Account security guide",
+         "email_support": "Email Support",
+         "single_login_desc": "Ensures only one active session. Logging in on a new device logs out the old one.",
+         "benefits": {
+            "1": "Protects from unauthorized access",
+            "2": "Ideal for tournament rating security",
+            "3": "Auto logout from old devices"
+         },
+         "2fa_desc": "Add extra security layer with OTP code from authenticator app.",
+         "setup_steps": "Setup Steps:",
+         "step_1": "1. Enable 2FA toggle",
+         "step_2": "2. Scan QR code with authenticator app",
+         "step_3": "3. Enter 6-digit verification code",
+         "step_4": "4. Save backup codes safely",
+         "biometric_desc": "Use fingerprint or face recognition for quick passwordless login.",
+         "requirements": "Requirements:",
+         "req_1": "Browser supports WebAuthn (Chrome, Edge, Safari)",
+         "req_2": "Device with biometric sensor",
+         "req_3": "Biometric registered in OS",
+         "challenge_desc": "Allow other athletes to find and challenge you to play. Disable for maximum privacy.",
+         "challenge_active": "Active: Profile visible in challenge search",
+         "challenge_inactive": "Inactive: Only friends can challenge",
+         "btn_understand": "Understood"
+      },
+      "modal_2fa": {
+         "title": "Setup Authenticator",
+         "desc": "Scan this QR Code using Google Authenticator or Authy.",
+         "loading_qr": "Loading QR code...",
+         "manual_code": "Manual Code",
+         "verify_otp": "Verify OTP",
+         "placeholder_otp": "000000",
+         "btn_cancel": "Cancel",
+         "btn_activate": "Activate"
+      },
+      "confirm": {
+         "unsaved_title": "Unsaved Changes",
+         "unsaved_msg": "You have unsaved changes.",
+         "unsaved_detail": "Are you sure you want to leave without saving?",
+         "disable_2fa_title": "Disable 2FA?",
+         "disable_2fa_msg": "You are about to disable 2-Factor Authentication.",
+         "disable_2fa_detail": "Your account security will be reduced without 2FA. Ensure your password is strong.",
+         "disable_bio_title": "Disable Biometric Login?",
+         "disable_bio_msg": "Biometric session data will be removed from this device.",
+         "disable_bio_detail": "You need to re-register fingerprint/face if you want to use biometric login again.",
+         "btn_stay": "Stay Here",
+         "btn_leave": "Leave",
+         "btn_cancel": "Cancel",
+         "btn_yes_disable": "Yes, Disable",
+         "btn_yes_turn_off": "Yes, Turn Off"
+      },
+      "toast": {
+         "bio_activate_info": "Activate biometric by clicking 'Register Now'",
+         "qr_fail": "Failed to load QR Code",
+         "2fa_success": "2FA Activated Successfully!",
+         "otp_invalid": "Invalid OTP code",
+         "2fa_disabled": "2FA Disabled",
+         "2fa_disable_fail": "Failed to disable 2FA",
+         "bio_unsupported": "Device does not support biometric",
+         "bio_success": "Biometric registered successfully!",
+         "bio_verify_fail": "Server verification failed",
+         "bio_cancelled": "Registration cancelled by user.",
+         "bio_fail": "Biometric registration failed.",
+         "load_fail": "Failed to load profile",
+         "save_success": "Settings saved successfully",
+         "save_fail": "Failed to save settings",
+         "code_copied": "Manual code copied!"
+      }
+   },
+   "tournament_lobby": {
+      "header": {
+         "title": "Tournament Lobby",
+         "loading": "Loading..."
+      },
+      "status": {
+         "active": "Lobby Active",
+         "ongoing": "Ongoing"
+      },
+      "info": {
+         "format": "Format",
+         "time": "Time",
+         "participants": "Participants"
+      },
+      "schedule": {
+         "start": "Start",
+         "remaining": "Time Remaining",
+         "start_in_days": "Starts in {d} days",
+         "start_in_hours": "Starts in {h} hours {m} mins",
+         "start_in_mins": "Starts in {m} mins"
+      },
+      "tabs": {
+         "participants": "Participants",
+         "bracket": "Bracket"
+      },
+      "participants": {
+         "title": "Participant List",
+         "subtitle": "Sorted by rating",
+         "count": "{count} Players",
+         "empty_title": "No Participants Yet",
+         "empty_desc": "Be the first to register!",
+         "btn_register": "Register Now",
+         "rating": "Rating"
+      },
+      "bracket": {
+         "title": "Tournament Bracket",
+         "subtitle": "Match structure",
+         "system": "Swiss System",
+         "placeholder_title": "Bracket Available Soon",
+         "placeholder_desc": "Bracket will be displayed once tournament starts and participants are registered.",
+         "btn_view_participants": "View Participants"
+      },
+      "rules": {
+         "title": "Tournament Rules",
+         "time_control": "Thinking time: {time} per player",
+         "format_round": "{format} System - {round} rounds",
+         "penalty": "Forced quit penalty: -5 rating",
+         "prize": "Top 3 prizes: Points and exclusive badges"
+      },
+      "actions": {
+         "rules": "Rules",
+         "chat": "Lobby Chat"
+      },
+      "toast": {
+         "error": "Oops!",
+         "load_failed": "Failed to load lobby data."
+      }
+   },
+   "tournament_list": {
+      "header": {
+         "title": "Chess Tournament",
+         "subtitle": "Join and achieve victory!",
+         "back": "Back"
+      },
+      "tabs": {
+         "all": "All",
+         "open": "Open",
+         "active": "Active",
+         "waiting": "Waiting"
+      },
+      "search_placeholder": "Search tournament...",
+      "stats": {
+         "total": "Total Tournaments",
+         "ongoing": "Ongoing",
+         "registration": "Registration",
+         "waiting": "Waiting"
+      },
+      "card": {
+         "start_time": "Start Time",
+         "format": "Format",
+         "entry_fee": "Entry Fee",
+         "prize_pool": "Prize Pool",
+         "free": "FREE"
+      },
+      "status": {
+         "registration": "Registration",
+         "active": "Ongoing",
+         "completed": "Completed",
+         "waiting": "Waiting"
+      },
+      "button": {
+         "register": "REGISTER NOW",
+         "processing": "PROCESSING...",
+         "enter_lobby": "ENTER LOBBY",
+         "watch": "WATCH GAME",
+         "closed": "REGISTRATION CLOSED",
+         "unavailable": "UNAVAILABLE"
+      },
+      "empty": {
+         "title": "No tournaments yet",
+         "desc_search": "No tournaments found with that keyword",
+         "desc_default": "Please try again later",
+         "btn_all": "View All Tournaments"
+      },
+      "footer": "Showing {count} of {total} tournaments",
+      "toast": {
+         "load_error": "Failed to load tournament data.",
+         "join_success_title": "Registration Successful!",
+         "join_success_msg": "Congratulations! You have registered as a participant.",
+         "insufficient_balance": "Insufficient Token",
+         "schedule_conflict": "Schedule Conflict",
+         "join_failed": "Failed to Join"
+      },
+      "confirm_modal": {
+         "title": "Confirm Registration",
+         "msg": "Registration fee will be deducted from your token.",
+         "btn_yes": "Yes, Register Now",
+         "btn_cancel": "Cancel"
+      },
+      "time": {
+         "ended": "Ended",
+         "days": "{d}d {h}h",
+         "hours": "{h}h {m}m",
+         "mins": "{m}m"
+      }
+   },
+   "train": {
+      "header": {
+         "title": "Book Train Ticket",
+         "subtitle": "Search and book tickets easily"
+      },
+      "trip_type": {
+         "one_way": "One Way",
+         "round_trip": "Round Trip"
+      },
+      "form": {
+         "origin": "From",
+         "origin_placeholder": "Origin station",
+         "destination": "To",
+         "destination_placeholder": "Destination station",
+         "departure": "Departure",
+         "passengers": "Passengers",
+         "adult": "{count} Adult | {count} Adults",
+         "loading": "Loading stations..."
+      },
+      "quick_date": {
+         "today": "Today",
+         "tomorrow": "Tomorrow",
+         "days_7": "7 Days"
+      },
+      "button": {
+         "search": "Search Tickets",
+         "searching": "Searching..."
+      },
+      "tips": {
+         "1": "Book at least 1 hour before departure",
+         "2": "Prepare ID card for check-in",
+         "3": "Cancellation limit: 2 hours before departure",
+         "title": "Booking Tips"
+      },
+      "advantages": {
+         "1": "Best prices in the market",
+         "2": "Fast and easy process",
+         "3": "Digital tickets directly to email",
+         "title": "Advantages"
+      },
+      "routes": {
+         "title": "Popular Routes",
+         "gambir": "Gambir",
+         "bandung": "Bandung",
+         "yogyakarta": "Yogyakarta",
+         "solo": "Solo",
+         "surabaya": "Surabaya",
+         "malang": "Malang",
+         "jakarta_kota": "Jakarta Kota",
+         "tangerang": "Tangerang",
+         "hours": "{count} hour | {count} hours",
+         "minutes": "{count} minutes",
+         "price_start": "Starts from {price}"
+      },
+      "toast": {
+         "load_error": "Failed to load station list.",
+         "incomplete": "Stations incomplete",
+         "incomplete_desc": "Please select origin and destination stations.",
+         "invalid": "Invalid stations",
+         "invalid_desc": "Origin and destination cannot be the same.",
+         "success": "Search successful!",
+         "showing_schedule": "Showing schedule from"
+      }
+   },
+   "transaction_history": {
+      "header": {
+         "title": "Transaction History",
+         "total_transactions": "Total Transactions",
+         "latest": "Latest"
+      },
+      "filter": {
+         "period_label": "Filter Period:",
+         "this_month": "This Month",
+         "month": "Month",
+         "year": "Year",
+         "jan": "January",
+         "feb": "February",
+         "mar": "March",
+         "apr": "April",
+         "may": "May",
+         "jun": "June",
+         "jul": "July",
+         "aug": "August",
+         "sep": "September",
+         "oct": "October",
+         "nov": "November",
+         "dec": "December"
+      },
+      "transaction_type": {
+         "topup_va": "Token Top Up",
+         "withdraw": "Withdrawal",
+         "tournament_fee": "Tournament Fee",
+         "game_fee": "Game Fee",
+         "prize_payout": "Prize Money",
+         "prize": "Prize",
+         "transfer_in": "Incoming Transfer",
+         "transfer_out": "Outgoing Transfer",
+         "transaksi": "Transaction",
+         "transfer": "Transfer",
+         "default": "Transaction"
+      },
+      "status": {
+         "success": "Success",
+         "pending": "Pending",
+         "failed": "Failed",
+         "unknown": "Unknown"
+      },
+      "remark": {
+         "from": "From: {name}",
+         "to": "To: {name}"
+      },
+      "empty": {
+         "title": "No transactions found",
+         "desc": "No transactions found in {period}",
+         "btn_topup": "Top Up Now"
+      },
+      "footer": "Showing {count} transactions in {period}",
+      "btn_detail": "Detail"
+   },
+   "transfer_amount": {
+      "header": {
+         "title": "Fund Transfer"
+      },
+      "recipient": {
+         "to": "To",
+         "id": "ID",
+         "verified": "Verified"
+      },
+      "form": {
+         "amount_label": "Transfer Amount",
+         "balance": "Token",
+         "note_label": "Note (Optional)",
+         "note_placeholder": "Example: Payment for coffee",
+         "btn_continue": "CONTINUE",
+         "btn_processing": "PROCESSING..."
+      },
+      "pin_modal": {
+         "title": "Security",
+         "desc": "Enter your 6-digit Transaction PIN to confirm transfer.",
+         "placeholder": "••••••",
+         "btn_cancel": "Cancel",
+         "btn_send": "Send"
+      },
+      "error": {
+         "invalid_target": "Invalid transfer destination",
+         "self_transfer": "You cannot transfer Token to your own account.",
+         "user_not_found": "User Not Found",
+         "user_not_found_desc": "Invalid ID or account deleted.",
+         "insufficient_balance": "Insufficient Token",
+         "min_amount": "Minimum transfer Rp {amount}",
+         "pin_length": "PIN must be 6 digits",
+         "system_error": "System error occurred.",
+         "title_failed": "Failed"
+      },
+      "success": {
+         "title": "Transfer Successful!",
+         "msg": "Rp {amount} successfully sent to {name}",
+         "btn_done": "Done"
+      }
+   },
+   "wallet": {
+      "header": {
+         "title": "Digital Wallet",
+         "subtitle": "Last updated"
+      },
+      "balance": {
+         "available": "Available Token",
+         "currency": "IDR",
+         "description": "Token can be used for all transactions",
+         "breakdown": {
+            "main": "Main Token",
+            "pending": "Processing",
+            "bonus": "Bonus"
+         }
+      },
+      "actions": {
+         "topup": "QRIS Topup",
+         "withdraw": "Withdraw Token",
+         "history": "History",
+         "help": "Help"
+      },
+      "va": {
+         "title": "Virtual Accounts",
+         "subtitle": "For manual top up via bank transfer",
+         "available_count": "{count} available",
+         "empty_title": "No Virtual Accounts yet",
+         "btn_create": "Create new Virtual Account",
+         "va_number": "Virtual Account Number",
+         "btn_copy": "Copy VA"
+      },
+      "tips": {
+         "1": "Keep your PIN confidential and do not share it",
+         "2": "The system will never ask for PIN via call or chat",
+         "3": "Always verify destination account before withdrawing",
+         "4": "Enable transaction notifications to monitor activity",
+         "title": "Wallet Security Tips"
+      },
+      "modal_withdraw": {
+         "title": "Withdraw Token",
+         "subtitle": "Token will be sent to your chosen account",
+         "amount_label": "Withdrawal Amount",
+         "balance_info": "Token: {amount}",
+         "min_max_info": "Admin fee: Rp 2,500 • Minimum Rp 10,000",
+         "bank_label": "Destination Account",
+         "select_bank": "Select Account",
+         "add_bank": "+ Add new account",
+         "pin_label": "Security PIN",
+         "pin_placeholder": "Enter 6 digit PIN",
+         "pin_desc": "6 digit PIN for transaction security",
+         "summary_fee": "Admin fee",
+         "summary_total": "Total received",
+         "btn_confirm": "Confirm Withdrawal",
+         "btn_processing": "Processing...",
+         "btn_cancel": "Cancel"
+      },
+      "toast": {
+        "load_fail": "Failed to load wallet data",
+        "no_bank": "No destination account yet",
+        "no_bank_desc": "Add an account in Edit Profile first",
+        "incomplete": "Please complete all data.",
+        "pin_length": "PIN must be 6 digits.",
+        "insufficient_balance": "Insufficient Token!",
+        "min_withdraw": "Minimum withdrawal Rp 10,000",
+        "success_withdraw": "Withdrawal successful!",
+        "success_desc": "Token will be sent in 1-2 working hours",
+        "kyc_required": "Your account is not KYC verified. Upload ID Card now?",
+        "copy_success": "Copied!",
+        "copy_desc": "VA number copied to clipboard",
+        "error_title": "Failed",
+        "wallet_generated": "Crypto wallet generated!",
+        "wallet_fail": "Failed to generate wallet",
+        "invalid_amount": "Please enter valid amount",
+        "no_address": "Wallet address not found",
+        "topup_initiated": "Topup initiated!",
+        "topup_instruction": "Please send crypto to the address provided",
+        "topup_failed": "Topup failed",
+        "frozen_desc": "Your wallet is currently frozen, please contact customer support"
+      },"crypto": {
+      "btn_topup": "Crypto Topup",
+      "history_btn": "Crypto History",
+      "wallets_title": "Crypto Wallets",
+      "wallets_subtitle": "Your cryptocurrency deposit addresses",
+      "wallets_count": "{count} wallets",
+      "address_label": "Wallet Address",
+      "btn_copy": "Copy",
+      "btn_deposit": "Deposit",
+      "modal": {
+        "title": "Crypto Topup",
+        "subtitle": "Deposit using cryptocurrency",
+        "amount_label": "Amount to Deposit",
+        "amount_placeholder": "Min 10 USD",
+        "amount_help": "Minimum deposit: $10. Network fees may apply.",
+        "currency_label": "Select Cryptocurrency",
+        "network_label": "Select Network",
+        "address_label": "Your Deposit Address",
+        "address_help": "Send only {currency} on {network} network to this address",
+        "summary_amount": "Amount",
+        "summary_currency": "Currency",
+        "summary_network": "Network",
+        "summary_receive": "You will receive ≈",
+        "btn_generate": "Generate Deposit Address",
+        "btn_processing": "Processing...",
+        "btn_cancel": "Cancel"
+      }
+    }
+   },
+   "bottom_nav": {
+      "home": "Home",
+      "wallet": "Wallet",
+      "scan": "Scan",
+      "market": "Market",
+      "profile": "Profile"
+   },
+   "captured_pieces": {
+      "empty": "-",
+      "tooltip": "Captured Pieces"
+   },
+   "chess_board": {
+      "status": {
+         "check": "CHECK!",
+         "checkmate": "CHECKMATE!",
+         "stalemate": "STALEMATE",
+         "draw": "DRAW",
+         "opponent_move": "Opponent: {from} → {to}"
+      },
+      "promotion": {
+         "title": "Select Promotion",
+         "queen": "Queen",
+         "knight": "Knight",
+         "rook": "Rook",
+         "bishop": "Bishop"
+      },
+      "controls": {
+         "mute": "Mute sounds",
+         "unmute": "Unmute sounds",
+         "flip": "Flip Board"
+      },
+      "loading": "Loading board..."
+   },
+   "loading": {
+      "title": "Loading Strategy",
+      "subtitle": "Preparing game board..."
+   },
+   "incoming_match": {
+      "default_title": "Challenge",
+      "role_default": "Player",
+      "seconds": "seconds",
+      "btn_accept": "ACCEPT CHALLENGE",
+      "warning_wo": "No response = Auto WO loss.",
+      "waiting": "Waiting for Opponent..."
+   },
+  "help_wallet": {
+    "header": "Wallet & Security Help",
+    "hero": {
+      "title": "Your Smart Wallet",
+      "desc": "Learn how to secure and manage your wallet wisely for a better chess experience.",
+      "f1": "Secure & Encrypted",
+      "f2": "Real-time Transactions",
+      "f3": "24/7 Support"
+    },
+    "nav": {
+      "what_is": "What is Wallet?",
+      "what_is_desc": "Understanding digital wallet",
+      "security": "Security",
+      "security_desc": "Crucial security tips",
+      "tips": "Practical Tips",
+      "tips_desc": "Best practices",
+      "faq": "FAQ",
+      "faq_desc": "Common questions"
+    },
+    "content": {
+      "what_is": {
+        "title": "What is Wallet?",
+        "subtitle": "Digital wallet for platform transactions",
+        "section_title": "Wallet in Chess Platform",
+        "desc": "Wallet is a digital purse allowing you to perform transactions within our chess platform. With the wallet, you can:",
+        "list": {
+          "1": "Join paid tournaments",
+          "2": "Receive winning prizes",
+          "3": "Purchase premium features",
+          "4": "Transfer to other users"
+        },
+        "card1": {
+          "title": "Encrypted Wallet",
+          "desc": "All transactions are protected with end-to-end encryption for maximum security."
+        },
+        "card2": {
+          "title": "Fast Transactions",
+          "desc": "Transactions processed in seconds, instantly available in the recipient's wallet."
+        }
+      },
+      "security": {
+        "title": "Wallet Security",
+        "subtitle": "Protect your digital assets with the right steps",
+        "alert_title": "Important Attention!",
+        "alert_desc": "Wallet security is your responsibility. Our platform provides security tools, but you must guard access to your account.",
+        "tips": {
+          "pass_title": "Strong Password",
+          "pass_desc": "Create a unique and complex password",
+          "pass_p1": "Minimum 12 characters",
+          "pass_p2": "Mix of uppercase/lowercase",
+          "pass_p3": "Numbers and symbols",
+          "pass_p4": "Do not reuse passwords",
+          "2fa_title": "Two-Factor Authentication",
+          "2fa_desc": "Enable 2FA for extra security layer",
+          "2fa_p1": "Use authenticator app",
+          "2fa_p2": "Save backup codes",
+          "2fa_p3": "Verify via SMS/Email",
+          "2fa_p4": "Enable on all devices",
+          "phish_title": "Beware of Phishing",
+          "phish_desc": "Avoid suspicious emails and links",
+          "phish_p1": "Check email sender",
+          "phish_p2": "Don't click unknown links",
+          "phish_p3": "Verify website URL",
+          "phish_p4": "Report phishing immediately",
+          "backup_title": "Backup & Recovery",
+          "backup_desc": "Prepare backup for recovery",
+          "backup_p1": "Save recovery phrases",
+          "backup_p2": "Backup wallet periodically",
+          "backup_p3": "Test recovery process",
+          "backup_p4": "Store in a safe place"
+        }
+      },
+      "practical": {
+        "title": "Practical Tips",
+        "subtitle": "Best practices for a safe wallet experience",
+        "checklist_title": "Daily Security Checklist",
+        "checks": {
+          "1": "Check recent login activity",
+          "2": "Review wallet transactions",
+          "3": "Update password if needed",
+          "4": "Verify recovery backup"
+        },
+        "btn_done": "Done",
+        "btn_mark": "Mark",
+        "do_title": "✅ Do's",
+        "do_list": {
+          "1": "Use a trusted password manager",
+          "2": "Enable security notifications",
+          "3": "Update software regularly",
+          "4": "Log out from public devices",
+          "5": "Use secure connection (HTTPS)"
+        },
+        "dont_title": "❌ Don'ts",
+        "dont_list": {
+          "1": "Don't share password/PIN",
+          "2": "Don't save password in browser",
+          "3": "Don't use public WiFi without VPN",
+          "4": "Don't click links from unknown emails",
+          "5": "Don't delay security updates"
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "subtitle": "Frequently Asked Questions",
+        "q1": "What if I forget my password?",
+        "a1": "Use the 'Forgot Password' feature on the login page. We will send a reset link to your registered email. Ensure your recovery email is active.",
+        "t1": "Store passwords in a secure manager to avoid this issue.",
+        "q2": "Is my wallet guaranteed 100% safe?",
+        "a2": "We use military-grade encryption and the latest security protocols. However, security also depends on your practices like using strong passwords and 2FA.",
+        "t2": "Security is a shared responsibility between platform and user.",
+        "q3": "How to report suspicious activity?",
+        "a3": "Contact support@chess.cloud immediately or use the emergency form on this page. Include transaction details and relevant proof.",
+        "t3": "The faster you report, the faster we can take action.",
+        "q4": "Can transactions be cancelled?",
+        "a4": "Transactions confirmed on the blockchain cannot be cancelled. Ensure the destination address is correct before sending.",
+        "t4": "Always verify the recipient address at least twice before sending."
+      }
+    },
+    "sidebar": {
+      "stats_title": "📊 Security Stats",
+      "stats_1": "Protected accounts",
+      "stats_2": "Secure transactions",
+      "stats_3": "Support response",
+      "checklist_title": "📋 Security Checklist",
+      "check_1": "Password min 12 chars",
+      "check_2": "Two-Factor Auth enabled",
+      "check_3": "Recovery email verified",
+      "check_4": "Recovery phrase backed up",
+      "check_5": "Security alerts enabled",
+      "check_6": "No unknown devices",
+      "progress": "Security progress",
+      "emergency_title": "🚨 Emergency Contact",
+      "email_support": "Email Support",
+      "security_report": "Security Report",
+      "btn_report": "Report Security Issue"
+    },
+    "footer": {
+      "title": "Chess Wallet Security",
+      "subtitle": "Protecting your digital assets since 2024",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "copyright": "© 2024 Chess Cloud. All rights reserved.",
+      "updated": "Last updated:"
+    },
+    "modal": {
+      "title": "🚨 Report Security Issue",
+      "warning": "Use this form only for serious security issues such as:",
+      "w1": "Unauthorized account access",
+      "w2": "Suspicious transactions",
+      "w3": "Security vulnerabilities",
+      "w4": "Identity theft",
+      "type_label": "Issue Type",
+      "type_hack": "Unauthorized Access",
+      "type_trans": "Suspicious Transaction",
+      "type_phish": "Phishing/Scam",
+      "type_other": "Other",
+      "desc_label": "Description",
+      "desc_ph": "Describe the issue in detail...",
+      "email_label": "Your Email",
+      "btn_cancel": "Cancel",
+      "btn_submit": "Submit Report",
+      "alert_sent": "Emergency report sent!"
+    }
+  },
+  "common": {
+      "back":"Back"
+  }
+}

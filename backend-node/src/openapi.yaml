@@ -1,0 +1,262 @@
+openapi: 3.0.0
+info:
+  title: Percasi App API Documentation
+  description: >
+    API terintegrasi untuk platform catur online Percasi. 
+    Mencakup sistem matchmaking, wallet kripto/fiat, turnamen, dan autentikasi biometrik.
+  version: 1.0.0
+  contact:
+    name: Yassuki & AI Assistant
+    email: support@percasi.id
+
+servers:
+  - url: http://localhost:3000/api
+    description: Local Development Server
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    # --- Shared Schemas ---
+    User:
+      type: object
+      properties:
+        id: { type: integer }
+        username: { type: string }
+        email: { type: string }
+        full_name: { type: string }
+        balance: { type: number }
+        is_2fa_active: { type: string, enum: [YES, NO] }
+        avatar_url: { type: string }
+
+    Match:
+      type: object
+      properties:
+        id: { type: string }
+        white_player_id: { type: integer }
+        black_player_id: { type: integer }
+        fen: { type: string }
+        status: { type: string, enum: [ongoing, completed, draw] }
+
+    StandardResponse:
+      type: object
+      properties:
+        status: { type: boolean }
+        message: { type: string }
+
+security:
+  - bearerAuth: []
+
+tags:
+  - name: Auth
+    description: Registrasi, Login, 2FA, dan Biometric
+  - name: Admin
+    description: Manajemen sistem dan Approval
+  - name: Matches
+    description: Gameplay dan Matchmaking
+  - name: Wallet & Finance
+    description: Transaksi, Deposit, Withdraw, dan KYC
+  - name: Tournament
+    description: Pendaftaran dan Pairing Turnamen
+  - name: Content
+    description: Berita dan Banner Promosi
+
+paths:
+  # ==========================================
+  # AUTH MODULE
+  # ==========================================
+  /auth/login:
+    post:
+      tags: [Auth]
+      summary: Login User Manual
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email: { type: string, example: "user@example.com" }
+                password: { type: string, example: "password123" }
+      responses:
+        '200':
+          description: Berhasil login
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: { type: boolean }
+                  token: { type: string }
+                  user: { $ref: '#/components/schemas/User' }
+
+  /auth/google:
+    post:
+      tags: [Auth]
+      summary: Login menggunakan Google OAuth
+      security: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                idToken: { type: string }
+      responses:
+        '200':
+          description: Login sukses
+
+  /auth/2fa/setup:
+    post:
+      tags: [Auth]
+      summary: Inisiasi setup 2FA (Generate QR)
+      responses:
+        '200':
+          description: QR Code data returned
+
+  /auth/biometric/verify-login:
+    post:
+      tags: [Auth]
+      summary: Verifikasi login sidik jari/wajah
+      security: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email: { type: string }
+                authResponse: { type: object }
+      responses:
+        '200':
+          description: Login Berhasil
+
+  # ==========================================
+  # MATCH MODULE
+  # ==========================================
+  /matches/move:
+    post:
+      tags: [Matches]
+      summary: Kirim langkah catur (UCI format)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                matchId: { type: string }
+                uciMove: { type: string, example: "e2e4" }
+      responses:
+        '200':
+          description: Langkah divalidasi dan dikirim ke lawan via Socket
+
+  /matches/casual/join:
+    post:
+      tags: [Matches]
+      summary: Masuk ke antrian pencarian lawan (Queue)
+      responses:
+        '200':
+          description: User ditambahkan ke Redis Queue
+
+  # ==========================================
+  # WALLET & FINANCE MODULE
+  # ==========================================
+  /wallet/transfer:
+    post:
+      tags: [Wallet & Finance]
+      summary: Transfer saldo antar pengguna (P2P)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                recipient_id: { type: integer }
+                amount: { type: number, example: 50000 }
+                pin: { type: string, example: "123456" }
+                note: { type: string }
+      responses:
+        '200':
+          description: Transfer berhasil
+
+  /finance/kyc:
+    post:
+      tags: [Wallet & Finance]
+      summary: Upload KTP dan Selfie untuk verifikasi
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                ktp: { type: string, format: binary }
+                selfie: { type: string, format: binary }
+      responses:
+        '200':
+          description: KYC diproses
+
+  # ==========================================
+  # ADMIN MODULE
+  # ==========================================
+  /admin/withdraw/process:
+    post:
+      tags: [Admin]
+      summary: Konfirmasi penarikan dana user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                transaction_id: { type: string }
+                action: { type: string, enum: [approve, reject] }
+      responses:
+        '200':
+          description: Status transaksi diperbarui
+
+  /admin/blast-notification:
+    post:
+      tags: [Admin]
+      summary: Kirim notifikasi massal via Redis Queue
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title: { type: string }
+                message: { type: string }
+                target: { type: string, example: "all" }
+      responses:
+        '200':
+          description: Job blasting ditambahkan ke antrian
+
+  # ==========================================
+  # CONTENT & MASTER MODULE
+  # ==========================================
+  /content/news:
+    get:
+      tags: [Content]
+      summary: Ambil daftar berita terbaru
+      security: []
+      parameters:
+        - name: page
+          in: query
+          schema: { type: integer }
+      responses:
+        '200':
+          description: List berita
+
+  /master/banks:
+    get:
+      tags: [Content]
+      summary: Daftar bank yang didukung
+      security: []
+      responses:
+        '200':
+          description: List data bank

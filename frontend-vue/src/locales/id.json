@@ -1,0 +1,1610 @@
+{
+   "welcome": "Selamat Datang di Aplikasi Saya",
+   "Nomor HP wajib diisi":"Nomor HP wajib diisi",
+   "menu": {
+      "home": "Beranda",
+      "wallet": "Dompet",
+      "market": "Pasar",
+      "profile": "Profil"
+   },
+   "button": {
+      "change_lang": "Ganti Bahasa",
+      "receive_funds": "Terima Token",
+      "topup": "Isi Token",
+      "search_opponents": "Pertandingan Peringkat",
+      "tournaments": "Turnamen",
+      "lobby": "Lobi",
+      "play_offline": "Main Offline",
+      "vs_bot": "Lawan Bot",
+      "cancel_search": "Batalkan",
+      "rejoin": "Gabung Lagi",
+      "logout": "Keluar",
+      "cancel": "Batal",
+      "verify": "Verifikasi",
+      "view_all": "Lihat Semua"
+   },
+   "text": {
+      "total_game": "Total Permainan",
+      "win_rate": "Rasio Menang",
+      "rating": "Peringkat",
+      "rating_trend": "Tren Peringkat",
+      "game_mode": "Mode Permainan",
+      "search_desc": "Lawan pemain asli",
+      "tournaments_desc": "Acara kompetitif",
+      "lobby_desc": "Pertandingan persahabatan",
+      "offline_desc": "Scan QR untuk main",
+      "bot_desc": "Latihan lawan AI",
+      "promotions": "Promosi",
+      "chess_news": "Berita Catur",
+      "account": "Akun",
+      "total_balance": "Total Token",
+      "guest": "Tamu",
+      "live_match": "PERTANDINGAN LANGSUNG",
+      "vs": "lwn",
+      "matchmaking_progress": "Progres Pencarian",
+      "estimated_wait": "Estimasi waktu:",
+      "searching": "Mencari...",
+      "players": "Pemain",
+      "online": "Online",
+      "similar": "Serupa",
+      "tip": "Tips:",
+      "tip_desc": "Rentang rating yang lebih luas mempercepat pencarian",
+      "greeting": {
+         "morning": "Selamat Pagi",
+         "afternoon": "Selamat Siang",
+         "evening": "Selamat Sore",
+         "night": "Selamat Malam"
+      }
+   },
+   "toast": {
+      "connecting": "Menghubungkan ke server...",
+      "finish_active": "Selesaikan pertandingan aktif dulu!",
+      "req_failed": "Gagal mengirim permintaan.",
+      "search_cancelled": "Pencarian dibatalkan.",
+      "cancel_failed": "Gagal membatalkan."
+   },
+   "dialog": {
+      "logout_title": "Keluar?",
+      "logout_desc": "Anda harus login kembali nanti."
+   },
+   "bot_game": {
+      "title": "Lawan Bot",
+      "bot_name": "CHESS BOT",
+      "game_stats": "Statistik Game",
+      "game_controls": "Kontrol Game",
+      "game_over": "PERMAINAN SELESAI",
+      "time_remaining": "Waktu Tersisa",
+      "moving": "Sedang Bergerak",
+      "waiting": "Menunggu",
+      "moves": "langkah",
+      "duration": "Durasi",
+      "your_moves": "Langkah Anda",
+      "bot_moves": "Langkah Bot",
+      "total_moves": "Total Langkah",
+      "bot_thinking": "Bot Sedang Berpikir",
+      "analyzing": "Menganalisis kedalaman...",
+      "select_level": "Pilih Level Bot",
+      "challenge_desc": "Tantang dirimu dengan berbagai tingkat kesulitan",
+      "level": "Level",
+      "turn": "Giliran",
+      "you": "Anda",
+      "white": "Putih",
+      "black": "Hitam",
+      "your_turn": "GILIRAN ANDA",
+      "wait_turn": "Tunggu Giliran",
+      "reset": "Reset Game",
+      "change_color": "Ganti Warna",
+      "stats": "Statistik",
+      "play_again": "Main Lagi",
+      "dashboard": "Dashboard",
+      "tournament": "Turnamen",
+      "confirm_reset": "Ganti warna? Game saat ini akan direset.",
+      "difficulty": {
+         "easy": "Culun",
+         "medium": "Lumayan",
+         "hard": "Jago",
+         "gm": "Grandmaster"
+      },
+      "result": {
+         "time_out": "Waktu Habis",
+         "bot_time_out": "Bot Habis Waktu",
+         "checkmate": "Skakmat",
+         "draw": "Remis",
+         "win": "Menang",
+         "lose": "Kalah"
+      }
+   },
+   "flight": {
+      "title": "Pesan Tiket Pesawat",
+      "subtitle": "Cari dan pesan tiket dengan mudah",
+      "trip_type": {
+         "one_way": "Sekali Jalan",
+         "round_trip": "Pulang Pergi"
+      },
+      "form": {
+         "from": "Dari",
+         "to": "Ke",
+         "origin_placeholder": "Bandara asal",
+         "destination_placeholder": "Bandara tujuan",
+         "departure": "Berangkat",
+         "return": "Kembali",
+         "passengers_class": "Penumpang & Kelas",
+         "loading": "Memuat bandara..."
+      },
+      "quick_date": {
+         "today": "Hari Ini",
+         "tomorrow": "Besok",
+         "days_3": "3 Hari",
+         "days_7": "7 Hari"
+      },
+      "passengers": {
+         "title": "Jumlah Penumpang",
+         "label": "Penumpang",
+         "adults": "Dewasa",
+         "adults_desc": "(12+ tahun)",
+         "children": "Anak-anak",
+         "children_desc": "(2-11 tahun)",
+         "infants": "Bayi",
+         "infants_desc": "(0-2 tahun)"
+      },
+      "class": {
+         "title": "Kelas Penerbangan",
+         "economy": "Ekonomi",
+         "business": "Bisnis",
+         "first": "First Class",
+         "label_popular": "Terpopuler",
+         "label_comfort": "Lebih nyaman",
+         "label_premium": "Premium"
+      },
+      "button": {
+         "search": "Cari Penerbangan",
+         "searching": "Mencari..."
+      },
+      "tips": {
+         "1": "Pesan minimal 3 jam sebelum keberangkatan",
+         "2": "Siapkan KTP/Passpor untuk check-in",
+         "3": "Bayi maksimal 2 tahun, anak 2-11 tahun",
+         "4": "Tunjukkan boarding pass di bandara",
+         "title": "Tips Pemesanan"
+      },
+      "routes": {
+         "title": "Rute Populer",
+         "jakarta": "Jakarta",
+         "bali": "Bali",
+         "surabaya": "Surabaya",
+         "makassar": "Makassar"
+      },
+      "toast": {
+         "load_error": "Gagal memuat daftar bandara.",
+         "try_again": "Silakan coba beberapa saat lagi.",
+         "incomplete": "Bandara belum lengkap",
+         "incomplete_desc": "Mohon pilih bandara asal dan tujuan dari daftar yang tersedia.",
+         "invalid": "Bandara tidak valid",
+         "invalid_desc": "Bandara asal dan tujuan tidak boleh sama.",
+         "invalid_date": "Tanggal tidak valid",
+         "invalid_date_desc": "Tanggal kembali harus setelah tanggal berangkat.",
+         "success": "Pencarian berhasil!",
+         "showing_flights": "Menampilkan penerbangan dari"
+      }
+   },
+   "forgot_password": {
+      "title": "LUPA PASSWORD?",
+      "subtitle": "Jangan khawatir. Masukkan email yang terdaftar, kami akan mengirimkan instruksi reset password.",
+      "success_title": "Berhasil!",
+      "success_message": "Link reset password telah dikirim ke email Anda. Silakan cek inbox/spam.",
+      "error_default": "Gagal memproses permintaan. Pastikan email terdaftar.",
+      "email_label": "Email Terdaftar",
+      "email_placeholder": "contoh@email.com",
+      "btn_submit": "KIRIM LINK RESET",
+      "btn_sending": "MENGIRIM...",
+      "back_to_login": "Kembali ke Login"
+   },
+   "live_game": {
+      "header": {
+         "live_match": "LIVE MATCH",
+         "finished": "SELESAI",
+         "your_turn": "GILIRAN ANDA",
+         "opponent_turn": "GILIRAN LAWAN"
+      },
+      "loading": "Memuat permainan...",
+      "player": {
+         "moving": "Sedang Bergerak",
+         "you": "Anda",
+         "white": "Putih",
+         "black": "Hitam"
+      },
+      "info": {
+         "duration": "Durasi",
+         "mode": "Mode",
+         "with_time": "Bersama Waktu",
+         "no_time": "Tanpa Waktu"
+      },
+      "controls": {
+         "title": "Kontrol Game",
+         "offer_draw": "Ajukan Remis",
+         "resign": "Menyerah",
+         "draw_sent": "Menunggu...",
+         "resigning": "Mengirim...",
+         "draw_label": "Draw Offer",
+         "resign_label": "Resign",
+         "back_dashboard": "Kembali ke Dashboard",
+         "analyze": "Analisis Pertandingan"
+      },
+      "overlay": {
+         "waiting_draw": "MENUNGGU RESPON LAWAN",
+         "sending_resign": "MENGIRIMKAN PENYERAHAN...",
+         "game_over": "PERTANDINGAN SELESAI"
+      },
+      "result": {
+         "draw_title": "Remis! 🤝",
+         "victory": "Kemenangan! 🏆",
+         "finished": "Pertandingan Selesai",
+         "default_desc": "Pertandingan telah berakhir"
+      },
+      "reason": {
+         "checkmate": "Skakmat! Raja tidak dapat bergerak",
+         "stalemate": "Stalemate - Raja tidak dapat bergerak tetapi tidak sedang diserang",
+         "insufficient_material": "Material tidak cukup untuk melanjutkan permainan",
+         "threefold_repetition": "Posisi yang sama muncul tiga kali berturut-turut",
+         "timeout": "Waktu habis",
+         "resignation": "Pemain menyerah",
+         "agreement": "Kesepakatan bersama",
+         "abandoned": "Pertandingan dibatalkan",
+         "unknown": "Pertandingan berakhir"
+      },
+      "modal": {
+         "draw_title": "Tawaran Remis",
+         "draw_desc": "Lawan menawarkan hasil seri.",
+         "draw_ask_title": "Ajukan Remis?",
+         "draw_ask_desc": "Ajukan permintaan remis ke lawan",
+         "resign_title": "Menyerah?",
+         "resign_desc": "Apakah Anda yakin ingin menyerah?",
+         "btn_accept": "Terima",
+         "btn_decline": "Tolak",
+         "btn_offer": "Ajukan",
+         "btn_resign": "Ya, Menyerah",
+         "btn_cancel": "Batal",
+         "btn_continue": "Lanjutkan"
+      },
+      "toast": {
+         "draw_accepted": "Remis diterima",
+         "contacting_server": "Menghubungi server...",
+         "draw_declined": "Remis ditolak",
+         "game_continued": "Permainan dilanjutkan",
+         "draw_sent": "Tawaran remis terkirim",
+         "waiting_opponent": "Menunggu respon lawan...",
+         "opponent_declined": "Lawan menolak tawaran remis",
+         "resigning": "Menyerah...",
+         "sending_resign": "Mengirimkan permintaan menyerah",
+         "load_error": "Gagal memuat data.",
+         "analyze_info": "Fitur analisis akan segera tersedia"
+      }
+   },
+   "notification": {
+      "header": {
+         "title": "Kotak Masuk",
+         "unread_count": "{count} pesan belum dibaca",
+         "mark_all_read": "Baca Semua"
+      },
+      "empty": {
+         "title": "Kotak masuk kosong",
+         "desc": "Semua notifikasi akan muncul di sini"
+      },
+      "card": {
+         "just_now": "Baru saja",
+         "min_ago": "{count} menit lalu",
+         "hour_ago": "{count} jam lalu",
+         "view_detail": "Lihat detail"
+      },
+      "modal": {
+         "title": "Detail Notifikasi",
+         "subtitle": "Informasi lengkap",
+         "read": "Sudah dibaca",
+         "unread": "Belum dibaca",
+         "additional_info": "Informasi Tambahan",
+         "close": "Tutup",
+         "view_action": "Lihat Detail"
+      },
+      "type": {
+         "success": "Sukses",
+         "warning": "Peringatan",
+         "danger": "Bahaya",
+         "payment": "Pembayaran",
+         "tournament": "Turnamen",
+         "match": "Pertandingan",
+         "info": "Info"
+      }
+   },
+   "kyc": {
+      "pending_title": "Verifikasi Tertunda",
+      "pending_desc": "Dokumen sedang ditinjau admin.",
+      "unverified_title": "Akun Belum Verifikasi",
+      "unverified_desc": "Batasan fitur berlaku.",
+      "header": {
+         "title": "Verifikasi Akun",
+         "subtitle": "Lengkapi data untuk mengaktifkan fitur penarikan."
+      },
+      "step1": {
+         "title": "1. Foto E-KTP",
+         "status_success": "SUKSES",
+         "upload_text": "Upload KTP"
+      },
+      "step2": {
+         "title": "2. Verifikasi Wajah",
+         "status_success": "SUKSES",
+         "start_liveness": "Mulai Tes Liveness",
+         "click_camera": "Klik untuk membuka kamera",
+         "retake": "Foto Ulang"
+      },
+      "modal": {
+         "loading_ai": "Memuat AI Wajah...",
+         "instruction": "Instruksi",
+         "success_title": "VERIFIKASI SUKSES!",
+         "verified_hold": "Terverifikasi! Tahan...",
+         "btn_camera": "Nyalakan Kamera",
+         "error_load": "Gagal memuat sistem Liveness. Cek koneksi/kamera."
+      },
+      "challenges": {
+         "smile": "Silakan TERSENYUM lebar",
+         "mouth": "Buka MULUT Anda",
+         "turn_left": "Toleh Sedikit ke KIRI",
+         "turn_right": "Toleh Sedikit ke KANAN"
+      },
+      "button": {
+         "submit": "KIRIM VERIFIKASI",
+         "sending": "MENGIRIM DATA..."
+      },
+      "toast": {
+         "incomplete": "Data belum lengkap.",
+         "success_submit": "Verifikasi Berhasil Dikirim!",
+         "success_face": "Verifikasi Wajah Berhasil!",
+         "upload_failed": "Gagal upload."
+      }
+   },
+   "live_matches": {
+      "header": {
+         "title_1": "PERTANDINGAN",
+         "title_2": "LANGSUNG",
+         "subtitle": "Tonton pertandingan berlangsung secara real-time",
+         "live_count": "{count} Pertandingan Live",
+         "updated": "Diperbarui: {time}",
+         "refresh": "Segarkan"
+      },
+      "card": {
+         "live_now": "LIVE SEKARANG",
+         "match_id": "MATCH #{id}",
+         "white": "Putih",
+         "black": "Hitam",
+         "moving": "Bergerak",
+         "moves": "Langkah",
+         "time": "Waktu",
+         "watch": "Tonton Pertandingan"
+      },
+      "empty": {
+         "title": "Belum ada pertandingan aktif",
+         "desc": "Saat ini tidak ada pertandingan yang sedang berlangsung. Nantikan pertandingan berikutnya!",
+         "btn_refresh": "Segarkan"
+      },
+      "footer": {
+         "title": "Update Real-time",
+         "desc": "Data diperbarui otomatis setiap 10 detik",
+         "total": "Total match live"
+      }
+   },
+   "lobby": {
+      "header": {
+         "title": "Lobi Pemain",
+         "subtitle": "{count} Pemain Online"
+      },
+      "search": {
+         "placeholder": "Cari username..."
+      },
+      "status": {
+         "playing": "Sedang Main",
+         "online": "Online"
+      },
+      "empty": {
+         "title": "Tidak ada pemain lain yang online saat ini.",
+         "desc": "Coba ajak temanmu login!"
+      },
+      "button": {
+         "duel": "Duel",
+         "watch": "Tonton"
+      },
+      "toast": {
+         "player_busy": "Pemain sedang bertanding.",
+         "challenge_sent": "Tantangan dikirim ke {username}!",
+         "challenge_declined": "{username} menolak tantangan.",
+         "match_start": "Tantangan diterima! Memulai permainan..."
+      }
+   },
+   "auth_login": {
+      "welcome_user": "Selamat datang, {name}!",
+      "biometric": {
+         "title": "Login dengan Sidik Jari",
+         "desc": "Verifikasi identitas dengan sidik jari atau Face ID untuk melanjutkan",
+         "btn": "Login Biometrik",
+         "processing": "Memproses..."
+      },
+      "other_account": "Login dengan akun lain",
+      "register_new": "Daftar akun baru",
+      "form": {
+         "email_label": "Alamat Email",
+         "email_placeholder": "email@contoh.com",
+         "password_label": "Password",
+         "password_placeholder": "••••••••",
+         "forgot_password": "Lupa password?",
+         "btn_login": "Masuk ke Sistem",
+         "or_divider": "atau lanjutkan dengan"
+      },
+      "register_link": {
+         "text": "Belum punya akun?",
+         "link": "Daftar Atlet"
+      },
+      "2fa": {
+         "title_setup": "Aktifkan 2-Factor Authentication",
+         "desc_setup": "Scan QR code dengan aplikasi authenticator",
+         "title_verify": "Verifikasi Keamanan",
+         "desc_verify": "Masukkan kode OTP dari aplikasi authenticator Anda",
+         "title_input_setup": "Masukkan Kode Verifikasi",
+         "desc_input_setup": "Masukkan 6 digit kode dari aplikasi authenticator",
+         "loading_qr": "Memuat QR code...",
+         "manual_code": "Atau masukkan kode manual:",
+         "btn_verifying": "Memverifikasi...",
+         "btn_activate": "Aktifkan Keamanan",
+         "btn_confirm": "Konfirmasi OTP",
+         "back_to_login": "Kembali ke Login",
+         "copy_success": "Kode manual disalin!"
+      },
+      "error": {
+         "email_required": "Silakan masukkan email Anda.",
+         "biometric_failed": "Gagal login biometrik.",
+         "login_failed": "Email atau password salah.",
+         "google_failed": "Gagal login dengan Google",
+         "otp_invalid": "Kode OTP tidak valid atau kadaluarsa."
+      },
+      "footer": "Hak cipta dilindungi.",
+      "default_welcome": "Silakan masuk ke aplikasi"
+   },
+   "biometric": {
+      "title": "Login Biometrik",
+      "btn_login": "Gunakan Fingerprint / Face ID",
+      "btn_register": "Daftarkan Biometrik Perangkat Ini",
+      "success_register": "Biometrik berhasil didaftarkan!",
+      "success_login": "Login Berhasil!",
+      "error_auth": "Biometrik gagal atau dibatalkan."
+   },
+   "market": {
+      "header": {
+         "title": "Marketplace & PPOB",
+         "subtitle": "Pilih layanan yang Anda butuhkan",
+         "available_balance": "Token Tersedia",
+         "today_transaction": "Transaksi Hari Ini",
+         "points": "Poin"
+      },
+      "section": {
+         "available_services": "Layanan Tersedia",
+         "services_count": "{count} Layanan",
+         "services_desc": "Pilih dan akses berbagai layanan dengan mudah"
+      },
+      "category": {
+         "train": "Tiket Kereta",
+         "train_desc": "Pesan tiket KAI untuk perjalanan domestik.",
+         "flight": "Tiket Pesawat",
+         "flight_desc": "Cari dan pesan tiket pesawat domestik dan internasional.",
+         "hotel": "Hotel & Akomodasi",
+         "hotel_desc": "Booking penginapan, hotel, atau villa di seluruh dunia.",
+         "pulsa": "Pulsa & Data",
+         "pulsa_desc": "Isi ulang pulsa prabayar dan paket data semua operator.",
+         "postpaid": "Tagihan Telepon",
+         "postpaid_desc": "Bayar tagihan pascabayar bulanan Anda.",
+         "pln": "Listrik (PLN)",
+         "pln_desc": "Bayar tagihan listrik atau beli token PLN.",
+         "pdam": "PDAM",
+         "pdam_desc": "Pembayaran tagihan air PDAM berbagai wilayah.",
+         "finance": "Multi Finance",
+         "finance_desc": "Bayar cicilan kredit motor, mobil, atau pinjaman lainnya.",
+         "umrah": "Paket Umroh",
+         "umrah_desc": "Penawaran paket perjalanan ibadah umroh terbaik.",
+         "religious": "Wisata Religi",
+         "religious_desc": "Jelajahi paket wisata ziarah dan religi."
+      },
+      "button": {
+         "access_now": "Akses Sekarang"
+      },
+      "info": {
+         "title": "Informasi Penting",
+         "secure_title": "Transaksi Aman & Terpercaya",
+         "secure_desc": "Semua transaksi PPOB dan Travel menggunakan Token utama dan dilindungi dengan PIN transaksi untuk keamanan Anda."
+      }
+   },
+   "history": {
+      "header": {
+         "title": "Daftar Riwayat Pertandingan",
+         "total_match": "Total: {count} Match"
+      },
+      "loading": "Memuat data...",
+      "empty": {
+         "title": "Belum ada pertandingan",
+         "desc": "Ayo mulai bermain catur sekarang!"
+      },
+      "table": {
+         "date": "Tanggal",
+         "opponent": "Lawan",
+         "color": "Warna",
+         "result": "Hasil",
+         "reason": "Alasan"
+      },
+      "pagination": {
+         "page_info": "Halaman {current} dari {total}",
+         "prev": "Sebel",
+         "next": "Lanjut"
+      },
+      "player": {
+         "unknown": "Tidak Diketahui",
+         "white": "Putih",
+         "black": "Hitam"
+      },
+      "result": {
+         "draw": "REMIS",
+         "win": "MENANG",
+         "lose": "KALAH"
+      },
+      "reason": {
+         "agreement": "Kesepakatan",
+         "timeout": "Waktu Habis",
+         "resignation": "Menyerah",
+         "checkmate": "Skakmat",
+         "abandoned": "Dibatalkan",
+         "unknown": "Tidak Diketahui"
+      },
+      "toast": {
+         "load_error": "Gagal memuat data."
+      }
+   },
+   "mirror": {
+      "title": "Ruang Penonton",
+      "match_id": "Match #{id}",
+      "status": {
+         "live": "MENONTON LANGSUNG",
+         "checkmate": "SKAKMAT",
+         "draw": "REMIS",
+         "finished": "SELESAI"
+      },
+      "stats": {
+         "watchers": "Penonton",
+         "moves": "Langkah",
+         "white": "Putih",
+         "black": "Hitam"
+      },
+      "history": "Riwayat Langkah",
+      "back": "Kembali"
+   },
+   "news_detail": {
+      "header": {
+         "title": "Artikel",
+         "subtitle": "Strategi & Tips"
+      },
+      "menu": {
+         "liked": "Artikel Disukai",
+         "saved": "Artikel Tersimpan",
+         "profile": "Profil Saya"
+      },
+      "share": {
+         "title": "Bagikan Artikel",
+         "copy": "Salin",
+         "whatsapp": "WhatsApp",
+         "twitter": "Twitter",
+         "facebook": "Facebook"
+      },
+      "meta": {
+         "min_read": "menit baca",
+         "views": "dilihat",
+         "verified": "Terverifikasi",
+         "articles_count": "10+ Artikel",
+         "follow": "Ikuti"
+      },
+      "stats": {
+         "likes": "Suka",
+         "comments": "Komentar",
+         "shares": "Bagikan"
+      },
+      "tags_title": "Topik Terkait",
+      "actions": {
+         "like": "Suka",
+         "liked": "Disukai",
+         "share": "Bagikan"
+      },
+      "related": {
+         "title": "Artikel Terkait",
+         "subtitle": "Baca juga artikel menarik lainnya",
+         "view_all": "Lihat Semua",
+         "read_more": "Baca Selengkapnya",
+         "view_all_mobile": "Lihat Semua Artikel"
+      },
+      "newsletter": {
+         "title": "Ingin Update Terbaru?",
+         "desc": "Dapatkan artikel strategi catur, info turnamen, dan tips eksklusif langsung di email Anda.",
+         "placeholder": "Email Anda",
+         "subscribe": "Berlangganan",
+         "privacy": "Dengan berlangganan, Anda menyetujui kebijakan privasi kami."
+      },
+      "toast": {
+         "copy_success": "Link berhasil disalin!"
+      }
+   },
+   "profile": {
+      "header": {
+         "title": "Edit Profil",
+         "subtitle": "Perbarui informasi akun & finansial"
+      },
+      "verified": "Terverifikasi",
+      "verify_now": "Verifikasi Sekarang",
+      "account_active": "Akun Aktif",
+      "tabs": {
+         "general": "Umum",
+         "financial": "Finansial",
+         "security": "Keamanan"
+      },
+      "general": {
+         "title": "Informasi Dasar",
+         "full_name": "Nama Lengkap",
+         "full_name_ph": "Nama sesuai KTP",
+         "phone": "Nomor WhatsApp",
+         "country": "Negara",
+         "province": "Provinsi",
+         "regency": "Kota / Kabupaten",
+         "district": "Kecamatan",
+         "subdistrict": "Kelurahan / Desa",
+         "postal_code": "Kode Pos",
+         "address": "Alamat Lengkap",
+         "address_ph": "Jalan, No. Rumah, RT/RW",
+         "select": {
+            "country": "Pilih Negara",
+            "province": "Pilih Provinsi",
+            "regency": "Pilih Kota/Kab",
+            "district": "Pilih Kecamatan",
+            "subdistrict": "Pilih Kelurahan"
+         },
+         "phone_verified_note": "* Nomor sudah terverifikasi dan tidak dapat diubah."
+      },
+      "financial": {
+         "title": "Rekening Bank",
+         "bank_name": "Nama Bank",
+         "select_bank": "Pilih Bank",
+         "account_number": "Nomor Rekening",
+         "account_holder": "Atas Nama (Sesuai Buku Tabungan)",
+         "account_holder_ph": "Otomatis mengikuti Nama Lengkap",
+         "account_holder_note": "Otomatis mengikuti nama lengkap dalam profil",
+         "wallet_security": "Keamanan Wallet",
+         "wallet_note": "Kosongkan jika tidak ingin mengubah PIN Wallet. PIN digunakan untuk penarikan Token.",
+         "old_pin": "PIN lama",
+         "old_pin_note": "(Kosongkan untuk pembuatan pin baru)",
+         "new_pin": "PIN baru (6 Digit)",
+         "confirm_pin": "Ulangi PIN baru (6 Digit)",
+         "pin_rule": "Hanya angka 0-9"
+      },
+      "security": {
+         "title": "Ubah Password Login",
+         "note": "Kosongkan form ini jika Anda tidak ingin mengubah password login aplikasi.",
+         "current_pass": "Password Saat Ini",
+         "current_pass_ph": "Masukkan password lama",
+         "new_pass": "Password Baru",
+         "new_pass_ph": "Minimal 6 karakter",
+         "confirm_pass": "Konfirmasi Password Baru",
+         "confirm_pass_ph": "Ketik ulang password baru"
+      },
+      "button": {
+         "save": "SIMPAN PERUBAHAN",
+         "saving": "MENYIMPAN..."
+      },
+      "toast": {
+         "success": "Data berhasil disimpan!",
+         "error": "Gagal menyimpan data.",
+         "file_size": "File maks 2MB.",
+         "pass_required": "Masukkan password saat ini untuk mengubah password.",
+         "pass_mismatch": "Konfirmasi password baru tidak cocok.",
+         "pass_min": "Password baru minimal 6 karakter.",
+         "pin_length": "PIN harus 6 digit angka.",
+         "pin_mismatch": "PIN baru tidak match.",
+         "email_sent": "Link verifikasi email telah dikirim.",
+         "phone_verified": "Nomor telepon berhasil diverifikasi!"
+      },
+      "modal": {
+         "phone_title": "Verifikasi Telepon",
+         "phone_desc": "Masukkan 6 digit kode yang dikirim ke nomor Anda (Berlaku 5 menit)",
+         "btn_verify": "Verifikasi",
+         "btn_cancel": "Batal",
+         "validation": "Masukkan 6 digit kode"
+      }
+   },
+   "topup": {
+      "header": {
+         "back": "Kembali",
+         "close": "Tutup",
+         "title_input": "Top Up Token",
+         "title_qris": "Pembayaran QRIS",
+         "subtitle_input": "Isi Token dengan QRIS",
+         "subtitle_qris": "Scan kode QR untuk bayar",
+         "amount": "Nominal",
+         "total": "Total"
+      },
+      "form": {
+         "title": "Top Up Token dengan QRIS",
+         "subtitle": "Pembayaran instan, aman, dan otomatis dengan QRIS Indonesia",
+         "select_label": "Pilih Nominal Top Up",
+         "custom_label": "Atau Masukkan Nominal Lain",
+         "min_max_help": "Minimum Rp 1.000, maksimum Rp 10.000.000",
+         "btn_process": "Memproses...",
+         "btn_submit": "Buat QR Pembayaran"
+      },
+      "qris": {
+         "total_due": "Total yang harus dibayar",
+         "trx_id": "Kode transaksi",
+         "expiry": "Kode QR akan kadaluarsa dalam 24 jam",
+         "download": "Download QR",
+         "not_available": "QR Code tidak tersedia",
+         "supported_by": "Didukung oleh:"
+      },
+      "steps": {
+         "title": "Cara Pembayaran:",
+         "1_title": "Buka Aplikasi",
+         "1_desc": "Buka aplikasi e-wallet, mobile banking, atau internet banking Anda",
+         "2_title": "Scan QR Code",
+         "2_desc": "Pilih menu \"Scan QR\" atau \"Bayar dengan QRIS\" di aplikasi Anda",
+         "3_title": "Konfirmasi Pembayaran",
+         "3_desc": "Scan kode QR di atas dan konfirmasi nominal pembayaran",
+         "4_title": "Selesai",
+         "4_desc": "Token akan otomatis masuk ke akun Anda dalam 1-3 menit"
+      },
+      "banner": {
+         "title": "Pembayaran Lebih Cepat dengan QRIS",
+         "desc": "Gunakan QRIS untuk pengisian Token yang instan dan praktis. Tidak perlu mengisi data manual, cukup scan dan bayar."
+      },
+      "toast": {
+         "min_amount": "Minimal Top Up Rp 1.000",
+         "success": "QRIS Berhasil Dibuat",
+         "error": "Gagal membuat QRIS"
+      }
+   },
+   "qr_game": {
+      "header": {
+         "title": "Kode Pertandingan",
+         "subtitle": "Tunjukkan QR Code untuk bergabung"
+      },
+      "card": {
+         "title": "Scan untuk Bergabung",
+         "desc": "Arahkan kamera lawan ke QR Code ini"
+      },
+      "status": {
+         "expired_title": "QR Code Kadaluarsa",
+         "btn_refresh": "Generate Baru",
+         "time_left": "Waktu tersisa:",
+         "refresh_desc": "QR code akan diperbarui secara otomatis dalam {time} detik",
+         "loading": "Menghubungkan...",
+         "network_check": "Pastikan lawan memiliki koneksi internet yang stabil"
+      },
+      "tips": {
+         "title": "Tips Bergabung",
+         "desc": "Minta lawan untuk membuka aplikasi, pilih \"Scan QR\", dan arahkan kamera ke kode di atas. Pastikan pencahayaan cukup dan QR Code terlihat jelas."
+      },
+      "toast": {
+         "error": "Gagal membuat QR Code."
+      }
+   },
+   "receive_funds": {
+      "header": {
+         "title": "QR Transfer",
+         "subtitle": "Tunjukkan untuk menerima pembayaran"
+      },
+      "card": {
+         "title": "Terima Token",
+         "desc": "Scan QR ini untuk transfer Token langsung"
+      },
+      "timer": {
+         "label": "QR berlaku:",
+         "refresh_info": "QR code akan diperbarui secara otomatis setiap 60 detik"
+      },
+      "button": {
+         "copy": "Salin Kode QR"
+      },
+      "toast": {
+         "copy_success": "Kode QR berhasil disalin!",
+         "copy_failed": "Gagal menyalin."
+      },
+      "instruction": "Pastikan QR code tetap dalam tampilan kamera penerima"
+   },
+   "auth_register": {
+      "title": "Buat Akun",
+      "subtitle": "Bergabunglah dan mulai bermain catur!",
+      "form": {
+         "username_label": "Username",
+         "username_placeholder": "budisantoso",
+         "fullname_label": "Nama Lengkap",
+         "fullname_placeholder": "Budi Santoso",
+         "email_label": "Email",
+         "email_placeholder": "nama@email.com",
+         "password_label": "Password",
+         "password_placeholder": "******",
+         "btn_register": "DAFTAR SEKARANG",
+         "btn_loading": "MEMPROSES..."
+      },
+      "login_link": {
+         "text": "Sudah punya akun?",
+         "link": "Masuk di sini"
+      },
+      "toast": {
+         "success_title": "Registrasi Berhasil!",
+         "success_desc": "Silakan login dengan akun baru Anda.",
+         "error_title": "Gagal",
+         "error_desc": "Gagal mendaftar. Coba lagi.",
+         "warning_incomplete": "Mohon lengkapi data wajib."
+      }
+   },
+   "scan_qr": {
+      "header": {
+         "title": "QR Scanner",
+         "subtitle": "Arahkan kamera ke kode QR"
+      },
+      "loading": {
+         "processing": "MEMPROSES",
+         "preparing": "Menyiapkan sesi permainan...",
+         "initializing": "Menginisialisasi kamera...",
+         "wait": "Harap tunggu sebentar"
+      },
+      "error": {
+         "title": "Kamera Tidak Dapat Diakses",
+         "btn_retry": "Coba Lagi",
+         "btn_back": "Kembali",
+         "tip": "Tips: Pastikan Anda telah memberikan izin akses kamera dan tidak ada aplikasi lain yang menggunakan kamera."
+      },
+      "scanner": {
+         "instruction": "Arahkan QR Code ke dalam area pemindaian",
+         "scanning": "Membaca QR Code..."
+      },
+      "controls": {
+         "flash_on": "FLASH NYALA",
+         "flash_off": "FLASH MATI",
+         "help": "Pastikan QR Code berada dalam kotak pemindaian dengan pencahayaan yang cukup"
+      },
+      "toast": {
+         "invalid_format": "Format tidak dikenali",
+         "scan_valid": "Silakan scan QR Code yang valid",
+         "flash_on": "Flash Menyala",
+         "flash_off": "Flash Mati",
+         "flash_unsupported": "Flash tidak didukung",
+         "flash_error": "Perangkat tidak mendukung flash",
+         "error_access": "Gagal mengakses kamera. Pastikan izin kamera telah diberikan."
+      }
+   },
+   "settings": {
+      "header": {
+         "title": "Pengaturan",
+         "subtitle": "Account Center"
+      },
+      "tabs": {
+         "security": "Keamanan",
+         "privacy": "Privasi"
+      },
+      "security": {
+         "title": "Keamanan & Akses",
+         "single_login": {
+            "title": "Single Login",
+            "desc": "Login perangkat baru akan otomatis mengeluarkan sesi lama."
+         },
+         "2fa": {
+            "title": "Autentikasi 2 Faktor",
+            "desc": "Gunakan kode dari Google Authenticator untuk login."
+         },
+         "biometric": {
+            "title": "Login Biometrik",
+            "desc": "Gunakan sidik jari atau wajah untuk akses cepat."
+         },
+         "register_biometric": {
+            "title": "Touch ID Ready",
+            "subtitle": "Siap Didaftarkan",
+            "desc": "Tap untuk registrasi sidik jari",
+            "btn_register": "Daftar Sekarang",
+            "btn_processing": "Processing...",
+            "btn_registered": "Terdaftar",
+            "unsupported": {
+               "title": "Perangkat Tidak Mendukung",
+               "desc": "Browser/device Anda belum mendukung fitur biometrik."
+            },
+            "tips": {
+               "1": "Pastikan sidik jari/wajah sudah terdaftar di sistem operasi",
+               "2": "Gunakan jari yang sama dengan yang didaftarkan di perangkat",
+               "title": "Tips Pendaftaran Biometrik:"
+            }
+         }
+      },
+      "privacy": {
+         "title": "Koneksi & Visibilitas",
+         "open_match": {
+            "title": "Tantangan Terbuka",
+            "desc": "Izinkan atlet lain menemukan dan menantang Anda bermain."
+         }
+      },
+      "tips": {
+         "1": "Single Login & 2FA melindungi rating dan wallet turnamen Anda",
+         "2": "Biometrik mempercepat login tanpa mengingat password",
+         "3": "Pastikan selalu logout dari perangkat publik",
+         "title": "Tips Keamanan Akun"
+      },
+      "help": {
+         "title": "Bantuan Pengaturan",
+         "subtitle": "Panduan fitur keamanan akun",
+         "email_support": "Email Support",
+         "single_login_desc": "Fitur ini memastikan hanya satu sesi aktif yang dapat digunakan. Ketika login di perangkat baru, sesi lama akan otomatis logout.",
+         "benefits": {
+            "1": "Melindungi dari akses tidak sah",
+            "2": "Cocok untuk keamanan rating turnamen",
+            "3": "Otomatis logout dari perangkat lama"
+         },
+         "2fa_desc": "Tambahkan lapisan keamanan ekstra dengan kode OTP dari aplikasi autentikator seperti Google Authenticator.",
+         "setup_steps": "Cara Setup:",
+         "step_1": "1. Aktifkan toggle 2FA",
+         "step_2": "2. Scan QR code dengan aplikasi autentikator",
+         "step_3": "3. Masukkan kode verifikasi 6 digit",
+         "step_4": "4. Simpan kode backup di tempat aman",
+         "biometric_desc": "Gunakan sidik jari atau pengenalan wajah untuk login cepat tanpa password.",
+         "requirements": "Persyaratan:",
+         "req_1": "Browser mendukung WebAuthn (Chrome, Edge, Safari)",
+         "req_2": "Perangkat dengan sensor biometrik",
+         "req_3": "Sidik jari/wajah sudah terdaftar di sistem operasi",
+         "challenge_desc": "Izinkan atlet lain menemukan dan menantang Anda untuk bermain. Nonaktifkan untuk privasi maksimal.",
+         "challenge_active": "Aktif: Profil Anda terlihat di pencarian tantangan",
+         "challenge_inactive": "Nonaktif: Hanya teman yang bisa menantang",
+         "btn_understand": "Mengerti"
+      },
+      "modal_2fa": {
+         "title": "Setup Authenticator",
+         "desc": "Scan QR Code ini menggunakan aplikasi Google Authenticator atau Authy.",
+         "loading_qr": "Memuat QR code...",
+         "manual_code": "Kode Manual",
+         "verify_otp": "Verifikasi OTP",
+         "placeholder_otp": "000000",
+         "btn_cancel": "Batal",
+         "btn_activate": "Aktifkan"
+      },
+      "confirm": {
+         "unsaved_title": "Ada Perubahan Belum Disimpan",
+         "unsaved_msg": "Anda memiliki perubahan yang belum disimpan.",
+         "unsaved_detail": "Yakin ingin keluar tanpa menyimpan perubahan?",
+         "disable_2fa_title": "Nonaktifkan 2FA?",
+         "disable_2fa_msg": "Anda akan menonaktifkan Autentikasi 2 Faktor.",
+         "disable_2fa_detail": "Keamanan akun Anda akan berkurang tanpa 2FA. Pastikan password Anda kuat dan unik.",
+         "disable_bio_title": "Matikan Login Biometrik?",
+         "disable_bio_msg": "Data sesi biometrik akan dihapus dari perangkat ini.",
+         "disable_bio_detail": "Anda perlu mendaftarkan ulang sidik jari/wajah jika ingin menggunakan login biometrik lagi.",
+         "btn_stay": "Tetap di Sini",
+         "btn_leave": "Keluar Saja",
+         "btn_cancel": "Batal",
+         "btn_yes_disable": "Ya, Nonaktifkan",
+         "btn_yes_turn_off": "Ya, Matikan"
+      },
+      "toast": {
+         "bio_activate_info": "Aktifkan biometrik dengan menekan tombol 'Daftar Sekarang'",
+         "qr_fail": "Gagal memuat QR Code",
+         "2fa_success": "2FA Berhasil Diaktifkan!",
+         "otp_invalid": "Kode OTP salah",
+         "2fa_disabled": "2FA Dinonaktifkan",
+         "2fa_disable_fail": "Gagal menonaktifkan 2FA",
+         "bio_unsupported": "Perangkat tidak mendukung biometrik",
+         "bio_success": "Biometrik berhasil didaftarkan!",
+         "bio_verify_fail": "Gagal verifikasi di server",
+         "bio_cancelled": "Pendaftaran dibatalkan user.",
+         "bio_fail": "Gagal registrasi biometrik.",
+         "load_fail": "Gagal memuat profil",
+         "save_success": "Pengaturan berhasil disimpan",
+         "save_fail": "Gagal menyimpan pengaturan",
+         "code_copied": "Kode manual disalin!"
+      }
+   },
+   "tournament_lobby": {
+      "header": {
+         "title": "Lobby Turnamen",
+         "loading": "Memuat..."
+      },
+      "status": {
+         "active": "Lobby Aktif",
+         "ongoing": "Sedang Berlangsung"
+      },
+      "info": {
+         "format": "Format",
+         "time": "Waktu",
+         "participants": "Peserta"
+      },
+      "schedule": {
+         "start": "Mulai",
+         "remaining": "Waktu Tersisa",
+         "start_in_days": "Dimulai dalam {d} hari",
+         "start_in_hours": "Dimulai dalam {h} jam {m} menit",
+         "start_in_mins": "Dimulai dalam {m} menit"
+      },
+      "tabs": {
+         "participants": "Peserta",
+         "bracket": "Bracket"
+      },
+      "participants": {
+         "title": "Daftar Peserta",
+         "subtitle": "Diurutkan berdasarkan rating",
+         "count": "{count} Pemain",
+         "empty_title": "Belum Ada Peserta",
+         "empty_desc": "Jadilah yang pertama mendaftar!",
+         "btn_register": "Daftar Sekarang",
+         "rating": "Rating"
+      },
+      "bracket": {
+         "title": "Bracket Turnamen",
+         "subtitle": "Struktur pertandingan",
+         "system": "Sistem Swiss",
+         "placeholder_title": "Bracket Akan Tersedia",
+         "placeholder_desc": "Bracket akan ditampilkan setelah turnamen dimulai dan peserta telah terdaftar.",
+         "btn_view_participants": "Lihat Peserta"
+      },
+      "rules": {
+         "title": "Aturan Turnamen",
+         "time_control": "Waktu berpikir: {time} per pemain",
+         "format_round": "Sistem {format} - {round} ronde",
+         "penalty": "Penalti untuk keluar paksa: -5 rating",
+         "prize": "Hadiah untuk 3 besar: Poin dan badge eksklusif"
+      },
+      "actions": {
+         "rules": "Aturan",
+         "chat": "Chat Lobby"
+      },
+      "toast": {
+         "error": "Oops!",
+         "load_failed": "Gagal memuat data lobby."
+      }
+   },
+   "tournament_list": {
+      "header": {
+         "title": "Turnamen Catur",
+         "subtitle": "Bergabunglah dan raih kemenangan!",
+         "back": "Kembali"
+      },
+      "tabs": {
+         "all": "Semua",
+         "open": "Buka",
+         "active": "Aktif",
+         "waiting": "Menunggu"
+      },
+      "search_placeholder": "Cari turnamen...",
+      "stats": {
+         "total": "Total Turnamen",
+         "ongoing": "Berlangsung",
+         "registration": "Pendaftaran",
+         "waiting": "Menunggu"
+      },
+      "card": {
+         "start_time": "Waktu Mulai",
+         "format": "Format",
+         "entry_fee": "Biaya Masuk",
+         "prize_pool": "Total Hadiah",
+         "free": "GRATIS"
+      },
+      "status": {
+         "registration": "Pendaftaran",
+         "active": "Berlangsung",
+         "completed": "Selesai",
+         "waiting": "Menunggu"
+      },
+      "button": {
+         "register": "DAFTAR SEKARANG",
+         "processing": "MEMPROSES...",
+         "enter_lobby": "MASUK KE LOBBY",
+         "watch": "PANTAU PERMAINAN",
+         "closed": "PENDAFTARAN DITUTUP",
+         "unavailable": "TIDAK TERSEDIA"
+      },
+      "empty": {
+         "title": "Belum ada turnamen",
+         "desc_search": "Tidak ditemukan turnamen dengan kata kunci tersebut",
+         "desc_default": "Silakan coba lagi nanti",
+         "btn_all": "Lihat Semua Turnamen"
+      },
+      "footer": "Menampilkan {count} dari {total} turnamen",
+      "toast": {
+         "load_error": "Gagal memuat data turnamen.",
+         "join_success_title": "Pendaftaran Berhasil!",
+         "join_success_msg": "Selamat! Anda telah terdaftar sebagai peserta.",
+         "insufficient_balance": "Token Tidak Cukup",
+         "schedule_conflict": "Jadwal Bertabrakan",
+         "join_failed": "Gagal Bergabung"
+      },
+      "confirm_modal": {
+         "title": "Konfirmasi Pendaftaran",
+         "msg": "Biaya pendaftaran akan dipotong dari Token Anda.",
+         "btn_yes": "Ya, Daftar Sekarang",
+         "btn_cancel": "Batal"
+      },
+      "time": {
+         "ended": "Berakhir",
+         "days": "{d}h {h}j",
+         "hours": "{h}j {m}m",
+         "mins": "{m}m"
+      }
+   },
+   "train": {
+      "header": {
+         "title": "Pesan Tiket Kereta",
+         "subtitle": "Cari dan pesan tiket dengan mudah"
+      },
+      "trip_type": {
+         "one_way": "Sekali Jalan",
+         "round_trip": "Pulang Pergi"
+      },
+      "form": {
+         "origin": "Dari",
+         "origin_placeholder": "Stasiun asal",
+         "destination": "Ke",
+         "destination_placeholder": "Stasiun tujuan",
+         "departure": "Berangkat",
+         "passengers": "Penumpang",
+         "adult": "{count} Dewasa",
+         "loading": "Memuat stasiun..."
+      },
+      "quick_date": {
+         "today": "Hari Ini",
+         "tomorrow": "Besok",
+         "days_7": "7 Hari"
+      },
+      "button": {
+         "search": "Cari Tiket",
+         "searching": "Mencari..."
+      },
+      "tips": {
+         "1": "Pesan minimal 1 jam sebelum keberangkatan",
+         "2": "Siapkan KTP untuk check-in",
+         "3": "Batas pembatalan: 2 jam sebelum keberangkatan",
+         "title": "Tips Pemesanan"
+      },
+      "advantages": {
+         "1": "Harga terbaik di pasaran",
+         "2": "Proses cepat dan mudah",
+         "3": "Tiket digital langsung ke email",
+         "title": "Keuntungan"
+      },
+      "routes": {
+         "title": "Rute Populer",
+         "gambir": "Gambir",
+         "bandung": "Bandung",
+         "yogyakarta": "Yogyakarta",
+         "solo": "Solo",
+         "surabaya": "Surabaya",
+         "malang": "Malang",
+         "jakarta_kota": "Jakarta Kota",
+         "tangerang": "Tangerang",
+         "hours": "{count} jam",
+         "minutes": "{count} menit",
+         "price_start": "Mulai {price}"
+      },
+      "toast": {
+         "load_error": "Gagal memuat daftar stasiun.",
+         "incomplete": "Stasiun belum lengkap",
+         "incomplete_desc": "Mohon pilih stasiun asal dan tujuan dari daftar yang tersedia.",
+         "invalid": "Stasiun tidak valid",
+         "invalid_desc": "Stasiun asal dan tujuan tidak boleh sama.",
+         "success": "Pencarian berhasil!",
+         "showing_schedule": "Menampilkan jadwal dari"
+      }
+   },
+   "transaction_history": {
+      "header": {
+         "title": "Riwayat Transaksi",
+         "total_transactions": "Total Transaksi",
+         "latest": "Terakhir"
+      },
+      "filter": {
+         "period_label": "Filter Periode:",
+         "this_month": "Bulan Ini",
+         "month": "Bulan",
+         "year": "Tahun",
+         "jan": "Januari",
+         "feb": "Februari",
+         "mar": "Maret",
+         "apr": "April",
+         "may": "Mei",
+         "jun": "Juni",
+         "jul": "Juli",
+         "aug": "Agustus",
+         "sep": "September",
+         "oct": "Oktober",
+         "nov": "November",
+         "dec": "Desember"
+      },
+      "transaction_type": {
+         "topup_va": "Top Up Token",
+         "withdraw": "Penarikan Token",
+         "tournament_fee": "Biaya Turnamen",
+         "game_fee": "Biaya Permainan",
+         "prize_payout": "Hadiah Menang",
+         "prize": "Hadiah",
+         "transfer_in": "Transfer Masuk",
+         "transfer_out": "Transfer Keluar",
+         "transaksi": "Transaksi",
+         "transfer": "Transfer",
+         "default": "Transaksi"
+      },
+      "status": {
+         "success": "Berhasil",
+         "pending": "Menunggu",
+         "failed": "Gagal",
+         "unknown": "Tidak Diketahui"
+      },
+      "remark": {
+         "from": "Dari: {name}",
+         "to": "Ke: {name}"
+      },
+      "empty": {
+         "title": "Tidak ada transaksi",
+         "desc": "Tidak ditemukan transaksi pada periode {period}",
+         "btn_topup": "Top Up Sekarang"
+      },
+      "footer": "Menampilkan {count} transaksi pada {period}",
+      "btn_detail": "Detail"
+   },
+   "transfer_amount": {
+      "header": {
+         "title": "Transfer Token"
+      },
+      "recipient": {
+         "to": "Kepada",
+         "id": "ID",
+         "verified": "Verified"
+      },
+      "form": {
+         "amount_label": "Nominal Transfer",
+         "balance": "Token",
+         "note_label": "Catatan (Opsional)",
+         "note_placeholder": "Contoh: Bayar hutang kopi",
+         "btn_continue": "LANJUTKAN",
+         "btn_processing": "MEMPROSES..."
+      },
+      "pin_modal": {
+         "title": "Keamanan",
+         "desc": "Masukkan 6 digit PIN Transaksi Anda untuk konfirmasi transfer.",
+         "placeholder": "••••••",
+         "btn_cancel": "Batal",
+         "btn_send": "Kirim"
+      },
+      "error": {
+         "invalid_target": "Tujuan transfer tidak valid",
+         "self_transfer": "Anda tidak bisa mengirim token ke akun sendiri.",
+         "user_not_found": "User Tidak Ditemukan",
+         "user_not_found_desc": "ID Tujuan tidak valid atau akun telah dihapus.",
+         "insufficient_balance": "Token tidak mencukupi",
+         "min_amount": "Minimal transfer Rp {amount}",
+         "pin_length": "PIN harus 6 digit",
+         "system_error": "Terjadi kesalahan sistem.",
+         "title_failed": "Gagal"
+      },
+      "success": {
+         "title": "Transfer Berhasil!",
+         "msg": "Rp {amount} berhasil dikirim ke {name}",
+         "btn_done": "Selesai"
+      }
+   },
+   "wallet": {
+      "header": {
+         "title": "Dompet Digital",
+         "subtitle": "Terakhir diperbarui"
+      },
+      "balance": {
+         "available": "Token Tersedia",
+         "currency": "IDR",
+         "description": "Token dapat digunakan untuk semua transaksi",
+         "breakdown": {
+            "main": "Token Utama",
+            "pending": "Sedang Diproses",
+            "bonus": "Bonus"
+         }
+      },
+      "actions": {
+         "topup": "QRIS Topup",
+         "withdraw": "Tarik Token",
+         "history": "Riwayat",
+         "help": "Bantuan"
+      },
+      "va": {
+         "title": "Virtual Accounts",
+         "subtitle": "Untuk top up manual via transfer bank",
+         "available_count": "{count} tersedia",
+         "empty_title": "Belum ada Virtual Account",
+         "btn_create": "Buat Virtual Account baru",
+         "va_number": "Nomor Virtual Account",
+         "btn_copy": "Salin VA"
+      },
+      "tips": {
+         "1": "Jaga kerahasiaan PIN Anda dan jangan berikan kepada siapapun",
+         "2": "Sistem tidak akan pernah meminta PIN melalui telepon atau chat",
+         "3": "Selalu verifikasi rekening tujuan sebelum melakukan penarikan",
+         "4": "Aktifkan notifikasi transaksi untuk memantau aktivitas dompet",
+         "title": "Tips Keamanan Dompet Digital"
+      },
+      "modal_withdraw": {
+         "title": "Tarik Token",
+         "subtitle": "Token akan dikirim ke rekening pilihan Anda",
+         "amount_label": "Jumlah Penarikan",
+         "balance_info": "Token: {amount}",
+         "min_max_info": "Biaya admin: Rp 2.500 • Minimum Rp 10.000",
+         "bank_label": "Rekening Tujuan",
+         "select_bank": "Pilih Rekening",
+         "add_bank": "+ Tambah rekening baru",
+         "pin_label": "PIN Keamanan",
+         "pin_placeholder": "Masukkan 6 digit PIN",
+         "pin_desc": "PIN 6 digit untuk keamanan transaksi Anda",
+         "summary_fee": "Biaya admin",
+         "summary_total": "Total diterima",
+         "btn_confirm": "Konfirmasi Penarikan",
+         "btn_processing": "Memproses...",
+         "btn_cancel": "Batalkan"
+      },
+      "toast": {
+         "load_fail": "Gagal memuat data dompet",
+         "no_bank": "Belum ada rekening tujuan",
+         "no_bank_desc": "Tambahkan rekening di Edit Profil terlebih dahulu",
+         "incomplete": "Mohon lengkapi semua data.",
+         "pin_length": "PIN harus 6 digit angka.",
+         "insufficient_balance": "Token tidak mencukupi!",
+         "min_withdraw": "Minimal penarikan Rp 10.000",
+         "success_withdraw": "Penarikan berhasil!",
+         "success_desc": "Token akan dikirim dalam 1-2 jam kerja",
+         "kyc_required": "Akun Anda belum verifikasi KYC. Upload KTP sekarang?",
+         "copy_success": "Disalin!",
+         "copy_desc": "Nomor VA telah disalin ke clipboard",
+         "error_title": "Gagal",
+         "wallet_generated": "Dompet kripto berhasil dibuat!",
+          "wallet_fail": "Gagal membuat dompet",
+          "invalid_amount": "Masukkan jumlah yang valid",
+          "no_address": "Alamat dompet tidak ditemukan",
+          "topup_initiated": "Topup dimulai!",
+          "topup_instruction": "Silakan kirim kripto ke alamat yang diberikan",
+          "topup_failed": "Topup gagal",
+          "frozen_desc":"Wallet anda sedang dibekukan, hubungi layanan pelanggan"
+      },
+      "crypto": {
+          "btn_topup": "Isi Token dengan Kripto",
+          "history_btn": "Riwayat Kripto",
+          "wallets_title": "Dompet Kripto",
+          "wallets_subtitle": "Alamat deposit mata uang kripto Anda",
+          "wallets_count": "{count} dompet",
+          "address_label": "Alamat Dompet",
+          "btn_copy": "Salin",
+          "btn_deposit": "Setor",
+          "modal": {
+            "title": "Isi Token dengan Kripto",
+            "subtitle": "Deposit menggunakan mata uang kripto",
+            "amount_label": "Jumlah Deposit",
+            "amount_placeholder": "Min 10 USD",
+            "amount_help": "Deposit minimum: $10. Biaya jaringan mungkin berlaku.",
+            "currency_label": "Pilih Mata Uang Kripto",
+            "network_label": "Pilih Jaringan",
+            "address_label": "Alamat Deposit Anda",
+            "address_help": "Kirim hanya {currency} di jaringan {network} ke alamat ini",
+            "summary_amount": "Jumlah",
+            "summary_currency": "Mata Uang",
+            "summary_network": "Jaringan",
+            "summary_receive": "Anda akan menerima ≈",
+            "btn_generate": "Buat Alamat Deposit",
+            "btn_processing": "Memproses...",
+            "btn_cancel": "Batal"
+          }
+        }
+   },
+   "bottom_nav": {
+      "home": "Beranda",
+      "wallet": "Dompet",
+      "scan": "Scan",
+      "market": "Market",
+      "profile": "Profil"
+   },
+   "captured_pieces": {
+      "empty": "-",
+      "tooltip": "Bidak yang Dimakan"
+   },
+   "chess_board": {
+      "status": {
+         "check": "SKAK!",
+         "checkmate": "SKAKMAT!",
+         "stalemate": "REMIS (Stalemate)",
+         "draw": "REMIS",
+         "opponent_move": "Lawan: {from} → {to}"
+      },
+      "promotion": {
+         "title": "Pilih Promosi",
+         "queen": "Menteri",
+         "knight": "Kuda",
+         "rook": "Benteng",
+         "bishop": "Gajah"
+      },
+      "controls": {
+         "mute": "Matikan suara",
+         "unmute": "Hidupkan suara",
+         "flip": "Putar Papan"
+      },
+      "loading": "Memuat papan..."
+   },
+   "loading": {
+      "title": "Loading Strategy",
+      "subtitle": "Preparing game board..."
+   },
+   "incoming_match": {
+      "default_title": "Challenge",
+      "role_default": "Player",
+      "seconds": "seconds",
+      "btn_accept": "ACCEPT CHALLENGE",
+      "warning_wo": "No response = Auto WO loss.",
+      "waiting": "Waiting for Opponent..."
+   },
+  "help_wallet": {
+    "header": "Bantuan Wallet & Keamanan",
+    "hero": {
+      "title": "Wallet Pintar Anda",
+      "desc": "Pelajari cara mengamankan dan mengelola wallet Anda dengan bijak untuk pengalaman catur yang lebih baik.",
+      "f1": "Aman & Terenkripsi",
+      "f2": "Transaksi Real-time",
+      "f3": "Dukungan 24/7"
+    },
+    "nav": {
+      "what_is": "Apa itu Wallet?",
+      "what_is_desc": "Memahami wallet digital",
+      "security": "Keamanan",
+      "security_desc": "Tips keamanan penting",
+      "tips": "Tips Praktis",
+      "tips_desc": "Praktik terbaik",
+      "faq": "FAQ",
+      "faq_desc": "Pertanyaan umum"
+    },
+    "content": {
+      "what_is": {
+        "title": "Apa itu Wallet?",
+        "subtitle": "Dompet digital untuk transaksi platform",
+        "section_title": "Wallet dalam Platform Catur",
+        "desc": "Wallet adalah dompet digital yang memungkinkan Anda melakukan transaksi dalam platform catur kami. Dengan wallet, Anda dapat:",
+        "list": {
+          "1": "Mengikuti turnamen berbayar",
+          "2": "Menerima hadiah kemenangan",
+          "3": "Membeli fitur premium",
+          "4": "Transfer ke pengguna lain"
+        },
+        "card1": {
+          "title": "Wallet Terenkripsi",
+          "desc": "Semua transaksi dilindungi dengan enkripsi end-to-end untuk keamanan maksimal."
+        },
+        "card2": {
+          "title": "Transaksi Cepat",
+          "desc": "Proses transaksi dalam hitungan detik, langsung tersedia di wallet penerima."
+        }
+      },
+      "security": {
+        "title": "Keamanan Wallet",
+        "subtitle": "Lindungi aset digital Anda dengan langkah tepat",
+        "alert_title": "Perhatian Penting!",
+        "alert_desc": "Keamanan wallet adalah tanggung jawab Anda. Platform kami menyediakan alat keamanan, tapi Anda harus menjaga akses ke akun Anda.",
+        "tips": {
+          "pass_title": "Password yang Kuat",
+          "pass_desc": "Buat password yang unik dan kompleks",
+          "pass_p1": "Minimal 12 karakter",
+          "pass_p2": "Kombinasi huruf besar/kecil",
+          "pass_p3": "Angka dan simbol",
+          "pass_p4": "Jangan gunakan ulang password",
+          "2fa_title": "Autentikasi Dua Faktor",
+          "2fa_desc": "Aktifkan 2FA untuk lapisan keamanan ekstra",
+          "2fa_p1": "Gunakan aplikasi authenticator",
+          "2fa_p2": "Simpan kode backup",
+          "2fa_p3": "Verifikasi via SMS/Email",
+          "2fa_p4": "Aktifkan di semua perangkat",
+          "phish_title": "Waspada Phishing",
+          "phish_desc": "Hindari email dan link mencurigakan",
+          "phish_p1": "Cek pengirim email",
+          "phish_p2": "Jangan klik link tidak dikenal",
+          "phish_p3": "Verifikasi URL website",
+          "phish_p4": "Laporkan phishing segera",
+          "backup_title": "Backup & Pemulihan",
+          "backup_desc": "Siapkan backup untuk pemulihan",
+          "backup_p1": "Simpan frasa pemulihan",
+          "backup_p2": "Backup wallet secara berkala",
+          "backup_p3": "Uji proses pemulihan",
+          "backup_p4": "Simpan di tempat aman"
+        }
+      },
+      "practical": {
+        "title": "Tips Praktis",
+        "subtitle": "Best practices untuk pengalaman wallet yang aman",
+        "checklist_title": "Checklist Keamanan Harian",
+        "checks": {
+          "1": "Cek aktivitas login terbaru",
+          "2": "Review transaksi wallet",
+          "3": "Update password jika perlu",
+          "4": "Verifikasi backup recovery"
+        },
+        "btn_done": "Selesai",
+        "btn_mark": "Tandai",
+        "do_title": "✅ Yang Harus Dilakukan",
+        "do_list": {
+          "1": "Gunakan password manager terpercaya",
+          "2": "Aktifkan notifikasi keamanan",
+          "3": "Update software secara berkala",
+          "4": "Log out dari perangkat publik",
+          "5": "Gunakan koneksi aman (HTTPS)"
+        },
+        "dont_title": "❌ Yang Tidak Boleh Dilakukan",
+        "dont_list": {
+          "1": "Jangan bagikan password/pin",
+          "2": "Jangan simpan password di browser",
+          "3": "Jangan gunakan WiFi publik tanpa VPN",
+          "4": "Jangan klik link dari email tidak dikenal",
+          "5": "Jangan tunda update keamanan"
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "subtitle": "Pertanyaan yang sering diajukan",
+        "q1": "Bagaimana jika saya lupa password?",
+        "a1": "Gunakan fitur 'Lupa Password' di halaman login. Kami akan mengirimkan link reset ke email terdaftar Anda. Pastikan email recovery Anda aktif.",
+        "t1": "Simpan password di password manager yang aman untuk menghindari masalah ini.",
+        "q2": "Apakah wallet saya dijamin 100% aman?",
+        "a2": "Kami menggunakan enkripsi tingkat militer dan protokol keamanan terbaru. Namun, keamanan juga bergantung pada praktik Anda seperti menggunakan password kuat dan 2FA.",
+        "t2": "Keamanan adalah tanggung jawab bersama antara platform dan pengguna.",
+        "q3": "Bagaimana cara melaporkan aktivitas mencurigakan?",
+        "a3": "Segera hubungi support@catur.cloud atau gunakan formulir darurat di halaman ini. Sertakan detail transaksi dan bukti yang relevan.",
+        "t3": "Semakin cepat dilaporkan, semakin cepat kami bisa mengambil tindakan.",
+        "q4": "Apakah transaksi bisa dibatalkan?",
+        "a4": "Transaksi yang sudah terkonfirmasi blockchain tidak dapat dibatalkan. Pastikan alamat tujuan benar sebelum mengirim.",
+        "t4": "Selalu verifikasi alamat penerima minimal 2 kali sebelum mengirim."
+      }
+    },
+    "sidebar": {
+      "stats_title": "📊 Statistik Keamanan",
+      "stats_1": "Akun terlindungi",
+      "stats_2": "Transaksi aman",
+      "stats_3": "Respon dukungan",
+      "checklist_title": "📋 Checklist Keamanan",
+      "check_1": "Password minimal 12 karakter",
+      "check_2": "Two-Factor Authentication aktif",
+      "check_3": "Email recovery terverifikasi",
+      "check_4": "Backup recovery phrase disimpan",
+      "check_5": "Notifikasi keamanan aktif",
+      "check_6": "Tidak ada perangkat tidak dikenal",
+      "progress": "Progress keamanan",
+      "emergency_title": "🚨 Kontak Darurat",
+      "email_support": "Email Support",
+      "security_report": "Laporan Keamanan",
+      "btn_report": "Laporkan Masalah Keamanan"
+    },
+    "footer": {
+      "title": "Keamanan Wallet Catur",
+      "subtitle": "Melindungi aset digital Anda sejak 2024",
+      "privacy": "Kebijakan Privasi",
+      "terms": "Syarat Layanan",
+      "cookies": "Kebijakan Cookie",
+      "copyright": "© 2024 Catur Cloud. Hak cipta dilindungi.",
+      "updated": "Halaman ini diperbarui terakhir:"
+    },
+    "modal": {
+      "title": "🚨 Laporkan Masalah Keamanan",
+      "warning": "Gunakan formulir ini hanya untuk masalah keamanan yang serius seperti:",
+      "w1": "Akses tidak sah ke akun",
+      "w2": "Transaksi mencurigakan",
+      "w3": "Vulnerabilitas keamanan",
+      "w4": "Pencurian identitas",
+      "type_label": "Jenis Masalah",
+      "type_hack": "Akses tidak sah",
+      "type_trans": "Transaksi mencurigakan",
+      "type_phish": "Phishing/Scam",
+      "type_other": "Lainnya",
+      "desc_label": "Deskripsi",
+      "desc_ph": "Jelaskan masalah secara detail...",
+      "email_label": "Email Anda",
+      "btn_cancel": "Batal",
+      "btn_submit": "Kirim Laporan",
+      "alert_sent": "Laporan darurat telah dikirim!"
+    }
+  },
+  "common": {
+      "back":"Kembali"
+  }
+}

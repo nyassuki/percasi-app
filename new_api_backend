@@ -1,0 +1,6 @@
+
+new API endpoint:
+
+/verification/phone/match
+/verification/phone/request
+/verification/email/request

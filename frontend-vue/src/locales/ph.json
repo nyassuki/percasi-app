@@ -1,0 +1,1610 @@
+{
+   "welcome": "Maligayang Pagdating sa Aking App",
+   "Nomor HP wajib diisi":"Kinakailangan ang numero ng mobile phone",
+   "menu": {
+      "home": "Home",
+      "wallet": "Wallet",
+      "market": "Market",
+      "profile": "Profile"
+   },
+   "button": {
+      "change_lang": "Palitan ang Wika",
+      "receive_funds": "Tumanggap ng Pondo",
+      "topup": "Mag-top up",
+      "search_opponents": "Ranked Match",
+      "tournaments": "Mga Tournament",
+      "lobby": "Lobby",
+      "play_offline": "Maglaro Offline",
+      "vs_bot": "Laban sa Bot",
+      "cancel_search": "Kanselahin",
+      "rejoin": "Sumali Muli",
+      "logout": "Mag-logout",
+      "cancel": "I-cancel",
+      "verify": "I-verify",
+      "view_all": "Ipakita Lahat"
+   },
+   "text": {
+      "total_game": "Kabuuang Laro",
+      "win_rate": "Win Rate",
+      "rating": "Rating",
+      "rating_trend": "Trend ng Rating",
+      "game_mode": "Mode ng Laro",
+      "search_desc": "Laban sa totoong mga manlalaro",
+      "tournaments_desc": "Mga kompetisyon",
+      "lobby_desc": "Friendly match",
+      "offline_desc": "I-scan ang QR para maglaro",
+      "bot_desc": "Magsanay laban sa AI",
+      "promotions": "Mga Promosyon",
+      "chess_news": "Balitang Chess",
+      "account": "Account",
+      "total_balance": "Kabuuang Balanse",
+      "guest": "Bisita",
+      "live_match": "LIVE MATCH",
+      "vs": "laban sa",
+      "matchmaking_progress": "Matchmaking Progress",
+      "estimated_wait": "Inaasahang oras:",
+      "searching": "Naghahanap...",
+      "players": "Mga Manlalaro",
+      "online": "Online",
+      "similar": "Katulad",
+      "tip": "Tips:",
+      "tip_desc": "Mas mabilis ang paghahanap sa mas malawak na rating range",
+      "greeting": {
+         "morning": "Magandang Umaga",
+         "afternoon": "Magandang Tanghali",
+         "evening": "Magandang Hapon",
+         "night": "Magandang Gabi"
+      }
+   },
+   "toast": {
+      "connecting": "Kumokonekta sa server...",
+      "finish_active": "Tapusin muna ang aktibong laro!",
+      "req_failed": "Bigo sa pagpapadala ng kahilingan.",
+      "search_cancelled": "Kanselado ang paghahanap.",
+      "cancel_failed": "Bigo sa pagkansela."
+   },
+   "dialog": {
+      "logout_title": "Mag-logout?",
+      "logout_desc": "Kailangan mong mag-login muli mamaya."
+   },
+   "bot_game": {
+      "title": "Laban sa Bot",
+      "bot_name": "CHESS BOT",
+      "game_stats": "Stats ng Laro",
+      "game_controls": "Kontrol sa Laro",
+      "game_over": "TAPOS NA ANG LARO",
+      "time_remaining": "Natitirang Oras",
+      "moving": "Gumagalaw",
+      "waiting": "Naghihintay",
+      "moves": "tira",
+      "duration": "Tagal",
+      "your_moves": "Iyong Tira",
+      "bot_moves": "Tira ng Bot",
+      "total_moves": "Kabuuang Tira",
+      "bot_thinking": "Nag-iisip ang Bot",
+      "analyzing": "Sinusuri ang lalim...",
+      "select_level": "Pumili ng Level ng Bot",
+      "challenge_desc": "Hamunin ang iyong sarili sa iba't ibang antas",
+      "level": "Level",
+      "turn": "Tira ni",
+      "you": "Ikaw",
+      "white": "Puti",
+      "black": "Itim",
+      "your_turn": "TIRA MO NA",
+      "wait_turn": "Maghintay ng Tira",
+      "reset": "I-reset ang Laro",
+      "change_color": "Palitan ang Kulay",
+      "stats": "Estadistika",
+      "play_again": "Maglaro Muli",
+      "dashboard": "Dashboard",
+      "tournament": "Tournament",
+      "confirm_reset": "Magpapalit ng kulay? Ang kasalukuyang laro ay ma-rereset.",
+      "difficulty": {
+         "easy": "Madali",
+         "medium": "Katamtaman",
+         "hard": "Mahirap",
+         "gm": "Grandmaster"
+      },
+      "result": {
+         "time_out": "Timeout",
+         "bot_time_out": "Bot Timeout",
+         "checkmate": "Checkmate",
+         "draw": "Draw",
+         "win": "Panalo",
+         "lose": "Talo"
+      }
+   },
+   "flight": {
+      "title": "Mag-book ng Ticket sa Eroplano",
+      "subtitle": "Maghanap at mag-book nang madali",
+      "trip_type": {
+         "one_way": "Isang Biyahe",
+         "round_trip": "Balikan"
+      },
+      "form": {
+         "from": "Mula",
+         "to": "Papunta",
+         "origin_placeholder": "Airport na pinagmulan",
+         "destination_placeholder": "Airport na pupuntahan",
+         "departure": "Alis",
+         "return": "Balik",
+         "passengers_class": "Abay & Klase",
+         "loading": "Naglo-load ng mga airport..."
+      },
+      "quick_date": {
+         "today": "Ngayon",
+         "tomorrow": "Bukas",
+         "days_3": "3 Araw",
+         "days_7": "7 Araw"
+      },
+      "passengers": {
+         "title": "Bilang ng Pasahero",
+         "label": "Pasahero",
+         "adults": "Matanda",
+         "adults_desc": "(12+ taon)",
+         "children": "Bata",
+         "children_desc": "(2-11 taon)",
+         "infants": "Sanggol",
+         "infants_desc": "(0-2 taon)"
+      },
+      "class": {
+         "title": "Klase ng Lipad",
+         "economy": "Ekonomiya",
+         "business": "Business",
+         "first": "First Class",
+         "label_popular": "Pinakasikat",
+         "label_comfort": "Mas komportable",
+         "label_premium": "Premium"
+      },
+      "button": {
+         "search": "Maghanap ng Lipad",
+         "searching": "Naghahanap..."
+      },
+      "tips": {
+         "1": "Mag-book kahit 3 oras bago ang alis",
+         "2": "Ihanda ang ID/Passport para sa check-in",
+         "3": "Sanggol hanggang 2 taon, bata 2-11 taon",
+         "4": "Ipakita ang boarding pass sa airport",
+         "title": "Tips sa Pag-book"
+      },
+      "routes": {
+         "title": "Sikat na Ruta",
+         "jakarta": "Jakarta",
+         "bali": "Bali",
+         "surabaya": "Surabaya",
+         "makassar": "Makassar"
+      },
+      "toast": {
+         "load_error": "Bigo sa pag-load ng listahan ng airport.",
+         "try_again": "Pakisubukang muli mamaya.",
+         "incomplete": "Kulang ang detalye ng airport",
+         "incomplete_desc": "Mangyaring pumili ng pinagmulan at pupuntahan na airport mula sa listahan.",
+         "invalid": "Hindi wastong airport",
+         "invalid_desc": "Hindi maaaring magkapareho ang airport na pinagmulan at pupuntahan.",
+         "invalid_date": "Hindi wastong petsa",
+         "invalid_date_desc": "Ang petsa ng balik ay dapat pagkatapos ng petsa ng alis.",
+         "success": "Matagumpay ang paghahanap!",
+         "showing_flights": "Ipinapakita ang mga lipad mula"
+      }
+   },
+   "forgot_password": {
+      "title": "NAKALIMUTAN ANG PASSWORD?",
+      "subtitle": "Huwag mag-alala. Ilagay ang rehistradong email, magpapadala kami ng mga instruksyon sa pag-reset.",
+      "success_title": "Matagumpay!",
+      "success_message": "Ang link para sa pag-reset ay naipadala na sa iyong email. Pakitingnan ang inbox o spam.",
+      "error_default": "Bigo sa pagproseso. Siguraduhing rehistrado ang email.",
+      "email_label": "Rehistradong Email",
+      "email_placeholder": "halimbawa@email.com",
+      "btn_submit": "IPADALA ANG RESET LINK",
+      "btn_sending": "IPINAPADALA...",
+      "back_to_login": "Bumalik sa Login"
+   },
+   "live_game": {
+      "header": {
+         "live_match": "LIVE MATCH",
+         "finished": "TAPOS NA",
+         "your_turn": "TIRA MO NA",
+         "opponent_turn": "TIRA NG KALABAN"
+      },
+      "loading": "Naglo-load ng laro...",
+      "player": {
+         "moving": "Gumagalaw",
+         "you": "Ikaw",
+         "white": "Puti",
+         "black": "Itim"
+      },
+      "info": {
+         "duration": "Tagal",
+         "mode": "Mode",
+         "with_time": "May Oras",
+         "no_time": "Walang Oras"
+      },
+      "controls": {
+         "title": "Kontrol sa Laro",
+         "offer_draw": "Mag-alok ng Draw",
+         "resign": "Sumuko",
+         "draw_sent": "Naghihintay...",
+         "resigning": "Ipinapadala...",
+         "draw_label": "Draw Offer",
+         "resign_label": "Resign",
+         "back_dashboard": "Bumalik sa Dashboard",
+         "analyze": "Suriin ang Laro"
+      },
+      "overlay": {
+         "waiting_draw": "NAGHIHINTAY NG SAGOT NG KALABAN",
+         "sending_resign": "IPINAPADALA ANG PAGSUKO...",
+         "game_over": "TAPOS NA ANG MATCH"
+      },
+      "result": {
+         "draw_title": "Draw! 🤝",
+         "victory": "Panalo! 🏆",
+         "finished": "Match Finished",
+         "default_desc": "Ang laro ay natapos na"
+      },
+      "reason": {
+         "checkmate": "Checkmate! Hindi na makagalaw ang Hari",
+         "stalemate": "Stalemate - Hindi makagalaw ang Hari pero hindi inaatake",
+         "insufficient_material": "Kulang ang piyesa para ituloy ang laro",
+         "threefold_repetition": "Ang parehong posisyon ay lumitaw nang tatlong beses",
+         "timeout": "Naubusan ng oras",
+         "resignation": "Sumuko ang manlalaro",
+         "agreement": "Kasunduan ng dalawang panig",
+         "abandoned": "Kinansela ang laro",
+         "unknown": "Natapos ang laro"
+      },
+      "modal": {
+         "draw_title": "Alok na Draw",
+         "draw_desc": "Nag-aalok ang kalaban ng tabla.",
+         "draw_ask_title": "Mag-alok ng Draw?",
+         "draw_ask_desc": "Magpadala ng kahilingan sa draw sa iyong kalaban",
+         "resign_title": "Susuko na?",
+         "resign_desc": "Sigurado ka bang gusto mo nang sumuko?",
+         "btn_accept": "Tanggapin",
+         "btn_decline": "Tanggihan",
+         "btn_offer": "Mag-alok",
+         "btn_resign": "Oo, Susuko na",
+         "btn_cancel": "Batal",
+         "btn_continue": "Ipagpatuloy"
+      },
+      "toast": {
+         "draw_accepted": "Tinanggap ang draw",
+         "contacting_server": "Nakikipag-ugnayan sa server...",
+         "draw_declined": "Tinanggihan ang draw",
+         "game_continued": "Ipinagpatuloy ang laro",
+         "draw_sent": "Naipadala ang alok na draw",
+         "waiting_opponent": "Naghihintay ng sagot ng kalaban...",
+         "opponent_declined": "Tinanggihan ng kalaban ang draw",
+         "resigning": "Sumusuko...",
+         "sending_resign": "Ipinapadala ang kahilingan sa pagpapasuko",
+         "load_error": "Bigo sa pag-load ng data.",
+         "analyze_info": "Magiging available na ang feature na ito sa lalong madaling panahon"
+      }
+   },
+   "notification": {
+      "header": {
+         "title": "Inbox",
+         "unread_count": "{count} na mensaheng hindi pa nababasa",
+         "mark_all_read": "Basahin Lahat"
+      },
+      "empty": {
+         "title": "Walang laman ang inbox",
+         "desc": "Lahat ng notipikasyon ay lalabas dito"
+      },
+      "card": {
+         "just_now": "Ngayon lang",
+         "min_ago": "{count} minuto ang nakalipas",
+         "hour_ago": "{count} oras ang nakalipas",
+         "view_detail": "Tingnan ang detalye"
+      },
+      "modal": {
+         "title": "Detalye ng Notipikasyon",
+         "subtitle": "Kumpletong impormasyon",
+         "read": "Nabasa na",
+         "unread": "Hindi pa nababasa",
+         "additional_info": "Karagdagang Impormasyon",
+         "close": "Isara",
+         "view_action": "Tingnan ang Detalye"
+      },
+      "type": {
+         "success": "Tagumpay",
+         "warning": "Babala",
+         "danger": "Panganib",
+         "payment": "Pagbabayad",
+         "tournament": "Tournament",
+         "match": "Laro",
+         "info": "Impormasyon"
+      }
+   },
+   "kyc": {
+      "pending_title": "Nakabinbing Pag-verify",
+      "pending_desc": "Sinusuri pa ng admin ang iyong mga dokumento.",
+      "unverified_title": "Account na Hindi Pa-Verified",
+      "unverified_desc": "May mga limitasyon sa feature.",
+      "header": {
+         "title": "Pag-verify ng Account",
+         "subtitle": "Kumpletuhin ang data para ma-activate ang pag-withdraw."
+      },
+      "step1": {
+         "title": "1. Larawan ng ID (E-KTP)",
+         "status_success": "TAGUMPAY",
+         "upload_text": "I-upload ang ID"
+      },
+      "step2": {
+         "title": "2. Pag-verify ng Mukha",
+         "status_success": "TAGUMPAY",
+         "start_liveness": "Simulan ang Liveness Test",
+         "click_camera": "I-click para buksan ang camera",
+         "retake": "Ulitin ang Larawan"
+      },
+      "modal": {
+         "loading_ai": "Naglo-load ng Face AI...",
+         "instruction": "Instruksyon",
+         "success_title": "TAGUMPAY ANG PAG-VERIFY!",
+         "verified_hold": "Verified! Maghintay lang...",
+         "btn_camera": "Buksan ang Camera",
+         "error_load": "Bigo sa pag-load ng Liveness system. Suriin ang koneksyon/camera."
+      },
+      "challenges": {
+         "smile": "Mangyaring NGUMITI nang malapad",
+         "mouth": "BUKSAN ang iyong bibig",
+         "turn_left": "Tumingin nang bahagya sa KALIWA",
+         "turn_right": "Tumingin nang bahagya sa KANAN"
+      },
+      "button": {
+         "submit": "IPADALA ANG PAG-VERIFY",
+         "sending": "IPINAPADALA ANG DATA..."
+      },
+      "toast": {
+         "incomplete": "Hindi kumpleto ang data.",
+         "success_submit": "Matagumpay na Naipadala ang Pag-verify!",
+         "success_face": "Matagumpay na Pag-verify ng Mukha!",
+         "upload_failed": "Bigo sa pag-upload."
+      }
+   },
+   "live_matches": {
+      "header": {
+         "title_1": "MGA LARONG",
+         "title_2": "LIVE",
+         "subtitle": "Panoorin ang mga laro sa real-time",
+         "live_count": "{count} na Live Matches",
+         "updated": "Na-update: {time}",
+         "refresh": "I-refresh"
+      },
+      "card": {
+         "live_now": "LIVE NGAYON",
+         "match_id": "MATCH #{id}",
+         "white": "Puti",
+         "black": "Itim",
+         "moving": "Gumagalaw",
+         "moves": "Tira",
+         "time": "Oras",
+         "watch": "Panoorin ang Laro"
+      },
+      "empty": {
+         "title": "Wala pang aktibong laro",
+         "desc": "Kasalukuyang walang laro na nagaganap. Abangan ang susunod!",
+         "btn_refresh": "I-refresh"
+      },
+      "footer": {
+         "title": "Real-time Update",
+         "desc": "Awtomatikong nag-uupdate ang data tuwing 10 segundo",
+         "total": "Kabuuang live matches"
+      }
+   },
+   "lobby": {
+      "header": {
+         "title": "Lobby ng mga Manlalaro",
+         "subtitle": "{count} na Manlalarong Online"
+      },
+      "search": {
+         "placeholder": "Maghanap ng username..."
+      },
+      "status": {
+         "playing": "Naglalalaro",
+         "online": "Online"
+      },
+      "empty": {
+         "title": "Walang ibang manlalaro na online sa ngayon.",
+         "desc": "Yayain ang iyong mga kaibigan na mag-login!"
+      },
+      "button": {
+         "duel": "Duel",
+         "watch": "Panoorin"
+      },
+      "toast": {
+         "player_busy": "Ang manlalaro ay kasalukuyang naglalaro.",
+         "challenge_sent": "Naipadala ang hamon kay {username}!",
+         "challenge_declined": "Tinanggihan ni {username} ang hamon.",
+         "match_start": "Tinanggap ang hamon! Nagsisimula na ang laro..."
+      }
+   },
+   "auth_login": {
+      "welcome_user": "Maligayang pagdating, {name}!",
+      "biometric": {
+         "title": "Login gamit ang Biometric",
+         "desc": "I-verify ang iyong pagkakakilanlan gamit ang fingerprint o Face ID para magpatuloy",
+         "btn": "Biometric Login",
+         "processing": "Pinoproseso..."
+      },
+      "other_account": "Mag-login gamit ang ibang account",
+      "register_new": "Magrehistro ng bagong account",
+      "form": {
+         "email_label": "Email Address",
+         "email_placeholder": "email@halimbawa.com",
+         "password_label": "Password",
+         "password_placeholder": "••••••••",
+         "forgot_password": "Nakalimutan ang password?",
+         "btn_login": "Pumasok sa System",
+         "or_divider": "o magpatuloy gamit ang"
+      },
+      "register_link": {
+         "text": "Wala pang account?",
+         "link": "Magrehistro bilang Atleta"
+      },
+      "2fa": {
+         "title_setup": "I-activate ang 2-Factor Authentication",
+         "desc_setup": "I-scan ang QR code gamit ang authenticator app",
+         "title_verify": "Security Verification",
+         "desc_verify": "Ilagay ang OTP code mula sa iyong authenticator app",
+         "title_input_setup": "Ilagay ang Verification Code",
+         "desc_input_setup": "Ilagay ang 6 na digit na code mula sa authenticator app",
+         "loading_qr": "Naglo-load ng QR code...",
+         "manual_code": "O ilagay ang manual code:",
+         "btn_verifying": "Nagve-verify...",
+         "btn_activate": "I-activate ang Security",
+         "btn_confirm": "I-kumpirma ang OTP",
+         "back_to_login": "Bumalik sa Login",
+         "copy_success": "Manual code ay nakopya na!"
+      },
+      "error": {
+         "email_required": "Mangyaring ilagay ang iyong email.",
+         "biometric_failed": "Bigo ang biometric login.",
+         "login_failed": "Maling email o password.",
+         "google_failed": "Bigo ang pag-login gamit ang Google",
+         "otp_invalid": "Ang OTP code ay mali o expired na."
+      },
+      "footer": "Nakalaan ang lahat ng karapatan.",
+      "default_welcome": "Mangyaring mag-login sa app"
+   },
+   "biometric": {
+      "title": "Biometric Login",
+      "btn_login": "Gamitin ang Fingerprint / Face ID",
+      "btn_register": "I-rehistro ang Biometric ng Device na ito",
+      "success_register": "Matagumpay na narehistro ang biometric!",
+      "success_login": "Matagumpay na Login!",
+      "error_auth": "Bigo o kinansela ang biometric."
+   },
+   "market": {
+      "header": {
+         "title": "Marketplace & PPOB",
+         "subtitle": "Piliin ang serbisyo na kailangan mo",
+         "available_balance": "Available na Balanse",
+         "today_transaction": "Transaksyon Ngayong Araw",
+         "points": "Puntos"
+      },
+      "section": {
+         "available_services": "Available na Serbisyo",
+         "services_count": "{count} Serbisyo",
+         "services_desc": "Pumili at i-access ang iba't ibang serbisyo nang madali"
+      },
+      "category": {
+         "train": "Ticket sa Tren",
+         "train_desc": "Mag-book ng ticket para sa domestic na biyahe.",
+         "flight": "Ticket sa Eroplano",
+         "flight_desc": "Maghanap at mag-book ng ticket sa eroplano.",
+         "hotel": "Hotel & Akomodasyon",
+         "hotel_desc": "Mag-book ng matitirhan sa buong mundo.",
+         "pulsa": "Load & Data",
+         "pulsa_desc": "Mag-load ng prepaid at data packets.",
+         "postpaid": "Bill sa Telepono",
+         "postpaid_desc": "Bayaran ang iyong monthly postpaid bills.",
+         "pln": "Kuryente (PLN)",
+         "pln_desc": "Magbayad ng kuryente o bumili ng token.",
+         "pdam": "Tubig (PDAM)",
+         "pdam_desc": "Pagbabayad ng bill sa tubig.",
+         "finance": "Multi Finance",
+         "finance_desc": "Magbayad ng installment para sa sasakyan o loans.",
+         "umrah": "Umrah Package",
+         "umrah_desc": "Pinakamagandang alok para sa Umrah pilgrimage.",
+         "religious": "Religiyosong Turismo",
+         "religious_desc": "Tuklasin ang mga pilgrimage at religious tour packages."
+      },
+      "button": {
+         "access_now": "I-access Ngayon"
+      },
+      "info": {
+         "title": "Mahalagang Impormasyon",
+         "secure_title": "Ligtas at Mapagkakatiwalaang Transaksyon",
+         "secure_desc": "Ang lahat ng transaksyong PPOB at Travel ay gumagamit ng main balance at protektado ng transaction PIN para sa iyong seguridad."
+      }
+   },
+   "history": {
+      "header": {
+         "title": "Kasaysayan ng mga Match",
+         "total_match": "Kabuuang Match: {count}"
+      },
+      "loading": "Naglo-load ng data...",
+      "empty": {
+         "title": "Wala pang match",
+         "desc": "Simulan nang maglaro ng chess ngayon!"
+      },
+      "table": {
+         "date": "Petsa",
+         "opponent": "Kalaban",
+         "color": "Kulay",
+         "result": "Resulta",
+         "reason": "Dahilan"
+      },
+      "pagination": {
+         "page_info": "Pahina {current} ng {total}",
+         "prev": "Nakaraan",
+         "next": "Susunod"
+      },
+      "player": {
+         "unknown": "Hindi Kilala",
+         "white": "Puti",
+         "black": "Itim"
+      },
+      "result": {
+         "draw": "DRAW",
+         "win": "PANALO",
+         "lose": "TALO"
+      },
+      "reason": {
+         "agreement": "Kasunduan",
+         "timeout": "Naubusan ng Oras",
+         "resignation": "Sumuko",
+         "checkmate": "Checkmate",
+         "abandoned": "Kinansela",
+         "unknown": "Hindi Kilala"
+      },
+      "toast": {
+         "load_error": "Bigo sa pag-load ng data."
+      }
+   },
+   "mirror": {
+      "title": "Spectator Room",
+      "match_id": "Match #{id}",
+      "status": {
+         "live": "LIVE NA PINAPANOOD",
+         "checkmate": "CHECKMATE",
+         "draw": "DRAW",
+         "finished": "TAPOS NA"
+      },
+      "stats": {
+         "watchers": "Mga Manonood",
+         "moves": "Mga Tira",
+         "white": "Puti",
+         "black": "Itim"
+      },
+      "history": "Kasaysayan ng mga Tira",
+      "back": "Bumalik"
+   },
+   "news_detail": {
+      "header": {
+         "title": "Artikulo",
+         "subtitle": "Estratehiya & Tips"
+      },
+      "menu": {
+         "liked": "Nagustuhang Artikulo",
+         "saved": "Nai-save na Artikulo",
+         "profile": "Aking Profile"
+      },
+      "share": {
+         "title": "Ibahagi ang Artikulo",
+         "copy": "Kopyahin",
+         "whatsapp": "WhatsApp",
+         "twitter": "Twitter",
+         "facebook": "Facebook"
+      },
+      "meta": {
+         "min_read": "minutong pagbasa",
+         "views": "napanood",
+         "verified": "Verified",
+         "articles_count": "10+ Artikulo",
+         "follow": "I-follow"
+      },
+      "stats": {
+         "likes": "Gusto",
+         "comments": "Komento",
+         "shares": "Bahagi"
+      },
+      "tags_title": "Kaugnay na Paksa",
+      "actions": {
+         "like": "Gusto",
+         "liked": "Nagustuhan",
+         "share": "Ibahagi"
+      },
+      "related": {
+         "title": "Kaugnay na Artikulo",
+         "subtitle": "Basahin din ang iba pang kawili-wiling artikulo",
+         "view_all": "Ipakita Lahat",
+         "read_more": "Magbasa Pa",
+         "view_all_mobile": "Tingnan Lahat ng Artikulo"
+      },
+      "newsletter": {
+         "title": "Gusto ng Pinakabagong Balita?",
+         "desc": "Kumuha ng mga artikulo sa estratehiya, info sa tournament, at eksklusibong tips diretso sa iyong email.",
+         "placeholder": "Iyong Email",
+         "subscribe": "Mag-subscribe",
+         "privacy": "Sa pag-subscribe, sumasang-ayon ka sa aming privacy policy."
+      },
+      "toast": {
+         "copy_success": "Matagumpay na nakopya ang link!"
+      }
+   },
+   "profile": {
+      "header": {
+         "title": "I-edit ang Profile",
+         "subtitle": "I-update ang impormasyon ng account at pinansyal"
+      },
+      "verified": "Verified",
+      "verify_now": "I-verify Ngayon",
+      "account_active": "Aktibong Account",
+      "tabs": {
+         "general": "Pangkalahatan",
+         "financial": "Pinansyal",
+         "security": "Seguridad"
+      },
+      "general": {
+         "title": "Pangunahing Impormasyon",
+         "full_name": "Buong Pangalan",
+         "full_name_ph": "Pangalan ayon sa ID",
+         "phone": "WhatsApp Number",
+         "country": "Bansa",
+         "province": "Lalawigan",
+         "regency": "Lungsod / Munisipalidad",
+         "district": "Distrito",
+         "subdistrict": "Barangay",
+         "postal_code": "Postal Code",
+         "address": "Kumpletong Address",
+         "address_ph": "Kalye, No. ng Bahay, RT/RW",
+         "select": {
+            "country": "Pumili ng Bansa",
+            "province": "Pumili ng Lalawigan",
+            "regency": "Pumili ng Lungsod",
+            "district": "Pumili ng Distrito",
+            "subdistrict": "Pumili ng Barangay"
+         },
+         "phone_verified_note": "* Ang numero ay verified na at hindi na maaaring baguhin."
+      },
+      "financial": {
+         "title": "Bank Account",
+         "bank_name": "Pangalan ng Bangko",
+         "select_bank": "Pumili ng Bangko",
+         "account_number": "Numero ng Account",
+         "account_holder": "Pangalan ng May-ari (Ayon sa Passbook)",
+         "account_holder_ph": "Awtomatikong susunod sa Buong Pangalan",
+         "account_holder_note": "Awtomatikong susunod sa buong pangalan sa profile",
+         "wallet_security": "Seguridad ng Wallet",
+         "wallet_note": "Iwanang walang laman kung ayaw baguhin ang PIN ng Wallet. Ginagamit ang PIN para sa pag-withdraw ng pondo.",
+         "old_pin": "Lumang PIN",
+         "old_pin_note": "(Iwanang walang laman para sa bagong PIN)",
+         "new_pin": "Bagong PIN (6 na Digit)",
+         "confirm_pin": "Ulitin ang Bagong PIN (6 na Digit)",
+         "pin_rule": "Mga numero lang (0-9)"
+      },
+      "security": {
+         "title": "Baguhin ang Login Password",
+         "note": "Iwanang walang laman kung hindi nais baguhin ang password.",
+         "current_pass": "Kasalukuyang Password",
+         "current_pass_ph": "Ilagay ang lumang password",
+         "new_pass": "Bagong Password",
+         "new_pass_ph": "Kahit 6 na karakter",
+         "confirm_pass": "I-kumpirma ang Bagong Password",
+         "confirm_pass_ph": "I-type muli ang bagong password"
+      },
+      "button": {
+         "save": "I-SAVE ANG MGA PAGBABAGO",
+         "saving": "INI-SAVE..."
+      },
+      "toast": {
+         "success": "Matagumpay na nai-save ang data!",
+         "error": "Bigo sa pag-save ng data.",
+         "file_size": "Maksimum na sukat ng file ay 2MB.",
+         "pass_required": "Ilagay ang kasalukuyang password para baguhin ang password.",
+         "pass_mismatch": "Hindi tugma ang kumpirmasyon ng bagong password.",
+         "pass_min": "Ang bagong password ay dapat may hindi bababa sa 6 na karakter.",
+         "pin_length": "Ang PIN ay dapat may 6 na digit.",
+         "pin_mismatch": "Hindi tugma ang bagong PIN.",
+         "email_sent": "Ang link sa pag-verify ng email ay naipadala na.",
+         "phone_verified": "Matagumpay na na-verify ang numero ng telepono!"
+      },
+      "modal": {
+         "phone_title": "Pag-verify ng Telepono",
+         "phone_desc": "Ilagay ang 6 na digit na code na ipinadala sa iyong numero (Valid sa loob ng 5 minuto)",
+         "btn_verify": "I-verify",
+         "btn_cancel": "Batal",
+         "validation": "Ilagay ang 6 na digit na code"
+      }
+   },
+   "topup": {
+      "header": {
+         "back": "Bumalik",
+         "close": "Isara",
+         "title_input": "Mag-top Up ng Balanse",
+         "title_qris": "Pagbabayad via QRIS",
+         "subtitle_input": "Mag-load ng balanse gamit ang QRIS",
+         "subtitle_qris": "I-scan ang QR code para magbayad",
+         "amount": "Halaga",
+         "total": "Kabuuan"
+      },
+      "form": {
+         "title": "Top Up Balanse gamit ang QRIS",
+         "subtitle": "Agad, ligtas, at awtomatikong pagbabayad gamit ang QRIS Indonesia",
+         "select_label": "Pumili ng Halaga ng Top Up",
+         "custom_label": "O Maglagay ng Ibang Halaga",
+         "min_max_help": "Minimum Rp 1.000, maksimum Rp 10.000.000",
+         "btn_process": "Pinoproseso...",
+         "btn_submit": "Gumawa ng QR Payment"
+      },
+      "qris": {
+         "total_due": "Kabuuang babayaran",
+         "trx_id": "Transaction Code",
+         "expiry": "Ang QR code ay mage-expire sa loob ng 24 oras",
+         "download": "I-download ang QR",
+         "not_available": "Hindi available ang QR Code",
+         "supported_by": "Suportado ng:"
+      },
+      "steps": {
+         "title": "Paraan ng Pagbabayad:",
+         "1_title": "Buksan ang App",
+         "1_desc": "Buksan ang iyong e-wallet o mobile banking app",
+         "2_title": "I-scan ang QR Code",
+         "2_desc": "Piliin ang menu na \"Scan QR\" o \"Pay with QRIS\" sa iyong app",
+         "3_title": "I-kumpirma ang Pagbabayad",
+         "3_desc": "I-scan ang QR code sa itaas at i-kumpirma ang halaga",
+         "4_title": "Tapos na",
+         "4_desc": "Ang balanse ay awtomatikong papasok sa iyong account sa loob ng 1-3 minuto"
+      },
+      "banner": {
+         "title": "Mas Mabilis na Pagbabayad gamit ang QRIS",
+         "desc": "Gamitin ang QRIS para sa instant na pag-load ng balanse. Hindi na kailangang mag-input nang manual."
+      },
+      "toast": {
+         "min_amount": "Minimum na Top Up ay Rp 1.000",
+         "success": "Matagumpay na nagawa ang QRIS",
+         "error": "Bigo sa paggawa ng QRIS"
+      }
+   },
+   "qr_game": {
+      "header": {
+         "title": "Code ng Match",
+         "subtitle": "Ipakita ang QR Code para sumali"
+      },
+      "card": {
+         "title": "I-scan para Sumali",
+         "desc": "I-tutok ang camera ng kalaban sa QR Code na ito"
+      },
+      "status": {
+         "expired_title": "Expired na ang QR Code",
+         "btn_refresh": "Gumawa ng Bago",
+         "time_left": "Natitirang oras:",
+         "refresh_desc": "Ang QR code ay awtomatikong mag-uupdate sa loob ng {time} segundo",
+         "loading": "Kumokonekta...",
+         "network_check": "Siguraduhing ang kalaban ay may matatag na internet"
+      },
+      "tips": {
+         "title": "Tips sa Pagsali",
+         "desc": "Hilingin sa kalaban na buksan ang app, piliin ang \"Scan QR\", at itutok ang camera sa code sa itaas."
+      },
+      "toast": {
+         "error": "Bigo sa paggawa ng QR Code."
+      }
+   },
+   "receive_funds": {
+      "header": {
+         "title": "QR Transfer",
+         "subtitle": "Ipakita para makatanggap ng bayad"
+      },
+      "card": {
+         "title": "Tumanggap ng Pondo",
+         "desc": "I-scan ang QR na ito para sa direktang transfer"
+      },
+      "timer": {
+         "label": "Valid ang QR hanggang:",
+         "refresh_info": "Ang QR code ay awtomatikong mag-uupdate tuwing 60 segundo"
+      },
+      "button": {
+         "copy": "Kopyahin ang QR Code"
+      },
+      "toast": {
+         "copy_success": "Matagumpay na nakopya ang QR code!",
+         "copy_failed": "Bigo sa pagkopya."
+      },
+      "instruction": "Siguraduhing nananatiling nakikita ang QR code sa camera ng nagpapadala"
+   },
+   "auth_register": {
+      "title": "Gumawa ng Account",
+      "subtitle": "Sumali at simulan ang paglalaro ng chess!",
+      "form": {
+         "username_label": "Username",
+         "username_placeholder": "juandelacruz",
+         "fullname_label": "Buong Pangalan",
+         "fullname_placeholder": "Juan Dela Cruz",
+         "email_label": "Email",
+         "email_placeholder": "pangalan@email.com",
+         "password_label": "Password",
+         "password_placeholder": "******",
+         "btn_register": "MAGREHISTRO NGAYON",
+         "btn_loading": "PINOPROSESO..."
+      },
+      "login_link": {
+         "text": "May account na?",
+         "link": "Mag-login dito"
+      },
+      "toast": {
+         "success_title": "Matagumpay na Pagpaparehistro!",
+         "success_desc": "Mangyaring mag-login gamit ang iyong bagong account.",
+         "error_title": "Bigo",
+         "error_desc": "Bigo sa pagrehistro. Subukang muli.",
+         "warning_incomplete": "Pakikumpleto ang lahat ng kinakailangang impormasyon."
+      }
+   },
+   "scan_qr": {
+      "header": {
+         "title": "QR Scanner",
+         "subtitle": "Itutok ang camera sa QR code"
+      },
+      "loading": {
+         "processing": "PINOPROSESO",
+         "preparing": "Inihahanda ang sesyon ng laro...",
+         "initializing": "Sinisimulan ang camera...",
+         "wait": "Mangyaring maghintay nang sandali"
+      },
+      "error": {
+         "title": "Hindi Ma-access ang Camera",
+         "btn_retry": "Subukan Muli",
+         "btn_back": "Bumalik",
+         "tip": "Tip: Siguraduhing nagbigay ka ng pahintulot sa camera at walang ibang app na gumagamit nito."
+      },
+      "scanner": {
+         "instruction": "I-tutok ang QR Code sa loob ng scanning area",
+         "scanning": "Binabasa ang QR Code..."
+      },
+      "controls": {
+         "flash_on": "FLASH ON",
+         "flash_off": "FLASH OFF",
+         "help": "Siguraduhing ang QR Code ay nasa loob ng scan box at may sapat na liwanag"
+      },
+      "toast": {
+         "invalid_format": "Hindi kinikilalang format",
+         "scan_valid": "Mangyaring mag-scan ng wastong QR Code",
+         "flash_on": "Naka-on ang Flash",
+         "flash_off": "Naka-off ang Flash",
+         "flash_unsupported": "Hindi suportado ang flash",
+         "flash_error": "Ang device ay hindi sumusuporta sa flash",
+         "error_access": "Bigo sa pag-access ng camera. Pakisuri ang mga pahintulot."
+      }
+   },
+   "settings": {
+      "header": {
+         "title": "Mga Setting",
+         "subtitle": "Account Center"
+      },
+      "tabs": {
+         "security": "Seguridad",
+         "privacy": "Privasiya"
+      },
+      "security": {
+         "title": "Seguridad & Access",
+         "single_login": {
+            "title": "Single Login",
+            "desc": "Ang pag-login sa bagong device ay awtomatikong mag-la-logout sa lumang sesyon."
+         },
+         "2fa": {
+            "title": "2-Factor Authentication",
+            "desc": "Gumamit ng code mula sa Google Authenticator para sa pag-login."
+         },
+         "biometric": {
+            "title": "Biometric Login",
+            "desc": "Gumamit ng fingerprint o mukha para sa mabilis na access."
+         },
+         "register_biometric": {
+            "title": "Touch ID Ready",
+            "subtitle": "Handa nang I-rehistro",
+            "desc": "I-tap para sa fingerprint registration",
+            "btn_register": "Magrehistro Ngayon",
+            "btn_processing": "Processing...",
+            "btn_registered": "Rehistrado na",
+            "unsupported": {
+               "title": "Device na Hindi Suportado",
+               "desc": "Ang iyong browser/device ay hindi sumusuporta sa biometric features."
+            },
+            "tips": {
+               "1": "Siguraduhing rehistrado ang fingerprint/mukha sa iyong OS",
+               "2": "Gamitin ang parehong daliri na nakarehistro sa iyong device",
+               "title": "Tips sa Pagpaparehistro ng Biometric:"
+            }
+         }
+      },
+      "privacy": {
+         "title": "Koneksyon & Visibility",
+         "open_match": {
+            "title": "Bukas na Hamon",
+            "desc": "Payagan ang ibang mga atleta na mahanap at hamunin ka sa laro."
+         }
+      },
+      "tips": {
+         "1": "Ang Single Login at 2FA ay nagpoprotekta sa iyong rating at wallet",
+         "2": "Pinapabilis ng biometric ang login nang hindi naaalala ang password",
+         "3": "Laging mag-logout mula sa mga pampublikong device",
+         "title": "Tips sa Seguridad ng Account"
+      },
+      "help": {
+         "title": "Tulong sa Mga Setting",
+         "subtitle": "Gabay sa mga feature ng seguridad",
+         "email_support": "Email Support",
+         "single_login_desc": "Tinitiyak ng feature na ito na isang sesyon lang ang aktibo. Kapag nag-login sa bago, mag-a-auto logout ang luma.",
+         "benefits": {
+            "1": "Proteksyon laban sa hindi awtorisadong access",
+            "2": "Mainam para sa seguridad ng rating sa tournament",
+            "3": "Awtomatikong pag-logout mula sa lumang device"
+         },
+         "2fa_desc": "Magdagdag ng extra layer ng seguridad gamit ang OTP code mula sa authenticator app.",
+         "setup_steps": "Paano i-setup:",
+         "step_1": "1. I-on ang 2FA toggle",
+         "step_2": "2. I-scan ang QR code gamit ang authenticator app",
+         "step_3": "3. Ilagay ang 6-digit verification code",
+         "step_4": "4. I-save ang backup codes sa ligtas na lugar",
+         "biometric_desc": "Gumamit ng fingerprint o face recognition para sa mabilis na login.",
+         "requirements": "Mga Kinakailangan:",
+         "req_1": "Browser na sumusuporta sa WebAuthn (Chrome, Edge, Safari)",
+         "req_2": "Device na may biometric sensor",
+         "req_3": "Rehistradong fingerprint/mukha sa system ng device",
+         "challenge_desc": "Payagan ang iba na hamunin ka. I-off ito para sa maksimum na privasiya.",
+         "challenge_active": "Aktibo: Makikita ang iyong profile sa paghahanap",
+         "challenge_inactive": "Hindi Aktibo: Mga kaibigan lang ang makakahamon",
+         "btn_understand": "Naiintindihan ko"
+      },
+      "modal_2fa": {
+         "title": "Setup Authenticator",
+         "desc": "I-scan ang QR Code gamit ang Google Authenticator o Authy.",
+         "loading_qr": "Naglo-load ng QR code...",
+         "manual_code": "Manual Code",
+         "verify_otp": "I-verify ang OTP",
+         "placeholder_otp": "000000",
+         "btn_cancel": "Batal",
+         "btn_activate": "I-activate"
+      },
+      "confirm": {
+         "unsaved_title": "May mga Hindi Nai-save na Pagbabago",
+         "unsaved_msg": "Mayroon kang mga pagbabagong hindi pa nai-save.",
+         "unsaved_detail": "Sigurado ka bang gusto mong lumabas nang hindi nag-sa-save?",
+         "disable_2fa_title": "I-disable ang 2FA?",
+         "disable_2fa_msg": "I-de-deactivate mo ang 2-Factor Authentication.",
+         "disable_2fa_detail": "Mababawasan ang seguridad ng iyong account. Siguraduhing matatag ang iyong password.",
+         "disable_bio_title": "I-off ang Biometric Login?",
+         "disable_bio_msg": "Ang data ng biometric session ay tatanggalin sa device na ito.",
+         "disable_bio_detail": "Kailangan mong magrehistro muli kung nais mong gamitin ito ulit.",
+         "btn_stay": "Manatili Dito",
+         "btn_leave": "Lumabas na",
+         "btn_cancel": "Batal",
+         "btn_yes_disable": "Oo, I-disable",
+         "btn_yes_turn_off": "Oo, I-off"
+      },
+      "toast": {
+         "bio_activate_info": "I-activate ang biometric sa pamamagitan ng pagpindot sa 'Magrehistro Ngayon'",
+         "qr_fail": "Bigo sa pag-load ng QR Code",
+         "2fa_success": "Matagumpay na na-activate ang 2FA!",
+         "otp_invalid": "Maling OTP code",
+         "2fa_disabled": "Na-disable ang 2FA",
+         "2fa_disable_fail": "Bigo sa pag-disable ng 2FA",
+         "bio_unsupported": "Hindi suportado ng device ang biometric",
+         "bio_success": "Matagumpay na na-rehistro ang biometric!",
+         "bio_verify_fail": "Bigo ang pag-verify sa server",
+         "bio_cancelled": "Kinansela ng user ang pagpaparehistro.",
+         "bio_fail": "Bigo sa pagpaparehistro ng biometric.",
+         "load_fail": "Bigo sa pag-load ng profile",
+         "save_success": "Matagumpay na nai-save ang mga setting",
+         "save_fail": "Bigo sa pag-save ng mga setting",
+         "code_copied": "Manual code ay nakopya na!"
+      }
+   },
+   "tournament_lobby": {
+      "header": {
+         "title": "Lobby ng Tournament",
+         "loading": "Naglo-load..."
+      },
+      "status": {
+         "active": "Aktibong Lobby",
+         "ongoing": "Kasalukuyang Nagaganap"
+      },
+      "info": {
+         "format": "Format",
+         "time": "Oras",
+         "participants": "Mga Peserta"
+      },
+      "schedule": {
+         "start": "Magsisimula",
+         "remaining": "Natitirang Oras",
+         "start_in_days": "Magsisimula sa loob ng {d} na araw",
+         "start_in_hours": "Magsisimula sa loob ng {h} oras {m} minuto",
+         "start_in_mins": "Magsisimula sa loob ng {m} minuto"
+      },
+      "tabs": {
+         "participants": "Mga Peserta",
+         "bracket": "Bracket"
+      },
+      "participants": {
+         "title": "Listahan ng Peserta",
+         "subtitle": "Nakaayos ayon sa rating",
+         "count": "{count} na Manlalaro",
+         "empty_title": "Wala pang Peserta",
+         "empty_desc": "Maging una sa pagrehistro!",
+         "btn_register": "Magrehistro Ngayon",
+         "rating": "Rating"
+      },
+      "bracket": {
+         "title": "Tournament Bracket",
+         "subtitle": "Estraktura ng mga match",
+         "system": "Swiss System",
+         "placeholder_title": "Magiging Available ang Bracket",
+         "placeholder_desc": "Lalabas ang bracket kapag nagsimula na ang tournament.",
+         "btn_view_participants": "Tingnan ang mga Peserta"
+      },
+      "rules": {
+         "title": "Mga Panuntunan sa Tournament",
+         "time_control": "Oras ng pag-iisip: {time} bawat manlalaro",
+         "format_round": "Sistemang {format} - {round} rounds",
+         "penalty": "Penalty sa forced exit: -5 rating",
+         "prize": "Premyo para sa top 3: Puntos at eksklusibong badge"
+      },
+      "actions": {
+         "rules": "Panuntunan",
+         "chat": "Lobby Chat"
+      },
+      "toast": {
+         "error": "Oops!",
+         "load_failed": "Bigo sa pag-load ng lobby data."
+      }
+   },
+   "tournament_list": {
+      "header": {
+         "title": "Mga Chess Tournament",
+         "subtitle": "Sumali at manalo!",
+         "back": "Bumalik"
+      },
+      "tabs": {
+         "all": "Lahat",
+         "open": "Bukas",
+         "active": "Aktibo",
+         "waiting": "Naghihintay"
+      },
+      "search_placeholder": "Maghanap ng tournament...",
+      "stats": {
+         "total": "Kabuuang Tournament",
+         "ongoing": "Nagaganap",
+         "registration": "Pagrerehistro",
+         "waiting": "Naghihintay"
+      },
+      "card": {
+         "start_time": "Oras ng Simula",
+         "format": "Format",
+         "entry_fee": "Entrance Fee",
+         "prize_pool": "Kabuuang Premyo",
+         "free": "LIBRE"
+      },
+      "status": {
+         "registration": "Pagrerehistro",
+         "active": "Nagaganap",
+         "completed": "Tapos Na",
+         "waiting": "Naghihintay"
+      },
+      "button": {
+         "register": "MAGREHISTRO NGAYON",
+         "processing": "PINOPROSESO...",
+         "enter_lobby": "PUMASOK SA LOBBY",
+         "watch": "MONITOR NG LARO",
+         "closed": "TAPOS NA ANG PAGREHISTRO",
+         "unavailable": "HINDI AVAILABLE"
+      },
+      "empty": {
+         "title": "Wala pang tournament",
+         "desc_search": "Walang nahanap na tournament sa keyword na iyon",
+         "desc_default": "Mangyaring subukan muli mamaya",
+         "btn_all": "Tingnan Lahat ng Tournament"
+      },
+      "footer": "Ipinapakita ang {count} mula sa {total} na mga tournament",
+      "toast": {
+         "load_error": "Bigo sa pag-load ng data ng tournament.",
+         "join_success_title": "Matagumpay na Pagrerehistro!",
+         "join_success_msg": "Tagumpay! Ikaw ay rehistrado na bilang peserta.",
+         "insufficient_balance": "Hindi Sapat ang Balanse",
+         "schedule_conflict": "Conflict sa Iskedyul",
+         "join_failed": "Bigo sa Pagsali"
+      },
+      "confirm_modal": {
+         "title": "Kumpirmasyon ng Pagrerehistro",
+         "msg": "Ang entrance fee ay ibabawas sa iyong balanse.",
+         "btn_yes": "Oo, Magrehistro Ngayon",
+         "btn_cancel": "Batal"
+      },
+      "time": {
+         "ended": "Tapos Na",
+         "days": "{d}a {h}o",
+         "hours": "{h}o {m}m",
+         "mins": "{m}m"
+      }
+   },
+   "train": {
+      "header": {
+         "title": "Mag-book ng Ticket sa Tren",
+         "subtitle": "Maghanap at mag-book nang madali"
+      },
+      "trip_type": {
+         "one_way": "Isang Biyahe",
+         "round_trip": "Balikan"
+      },
+      "form": {
+         "origin": "Mula",
+         "origin_placeholder": "Istasyon na pinagmulan",
+         "destination": "Papunta",
+         "destination_placeholder": "Istasyon na pupuntahan",
+         "departure": "Alis",
+         "passengers": "Pasahero",
+         "adult": "{count} na Matanda",
+         "loading": "Naglo-load ng mga istasyon..."
+      },
+      "quick_date": {
+         "today": "Ngayon",
+         "tomorrow": "Bukas",
+         "days_7": "7 Araw"
+      },
+      "button": {
+         "search": "Maghanap ng Ticket",
+         "searching": "Naghahanap..."
+      },
+      "tips": {
+         "1": "Mag-book kahit 1 oras bago ang alis",
+         "2": "Ihanda ang ID para sa check-in",
+         "3": "Limitasyon sa pag-cancel: 2 oras bago ang alis",
+         "title": "Tips sa Pag-book"
+      },
+      "advantages": {
+         "1": "Pinakamagandang presyo sa merkado",
+         "2": "Mabilis at madaling proseso",
+         "3": "Digital na ticket diretso sa email",
+         "title": "Mga Kauntigan"
+      },
+      "routes": {
+         "title": "Sikat na Ruta",
+         "gambir": "Gambir",
+         "bandung": "Bandung",
+         "yogyakarta": "Yogyakarta",
+         "solo": "Solo",
+         "surabaya": "Surabaya",
+         "malang": "Malang",
+         "jakarta_kota": "Jakarta Kota",
+         "tangerang": "Tangerang",
+         "hours": "{count} oras",
+         "minutes": "{count} minuto",
+         "price_start": "Mula {price}"
+      },
+      "toast": {
+         "load_error": "Bigo sa pag-load ng listahan ng istasyon.",
+         "incomplete": "Hindi kumpleto ang istasyon",
+         "incomplete_desc": "Pumili ng pinagmulan at pupuntahan na istasyon mula sa listahan.",
+         "invalid": "Hindi wastong istasyon",
+         "invalid_desc": "Hindi maaaring magkapareho ang istasyon.",
+         "success": "Matagumpay ang paghahanap!",
+         "showing_schedule": "Ipinapakita ang iskedyul mula"
+      }
+   },
+   "transaction_history": {
+      "header": {
+         "title": "Kasaysayan ng Transaksyon",
+         "total_transactions": "Kabuuang Transaksyon",
+         "latest": "Pinakahuli"
+      },
+      "filter": {
+         "period_label": "I-filter ayon sa Panahon:",
+         "this_month": "Ngayong Buwan",
+         "month": "Buwan",
+         "year": "Taon",
+         "jan": "Enero",
+         "feb": "Pebrero",
+         "mar": "Marso",
+         "apr": "Abril",
+         "may": "Mayo",
+         "jun": "Hunyo",
+         "jul": "Hulyo",
+         "aug": "Agosto",
+         "sep": "Setyembre",
+         "oct": "Oktubre",
+         "nov": "Nobyembre",
+         "dec": "Disyembre"
+      },
+      "transaction_type": {
+         "topup_va": "Top Up Balanse",
+         "withdraw": "Pag-withdraw ng Pondo",
+         "tournament_fee": "Bayad sa Tournament",
+         "game_fee": "Bayad sa Laro",
+         "prize_payout": "Premyo sa Panalo",
+         "prize": "Premyo",
+         "transfer_in": "Transfer Pumasok",
+         "transfer_out": "Transfer Lumabas",
+         "transaksi": "Transaksyon",
+         "transfer": "Transfer",
+         "default": "Transaksyon"
+      },
+      "status": {
+         "success": "Matagumpay",
+         "pending": "Naghihintay",
+         "failed": "Bigo",
+         "unknown": "Hindi Kilala"
+      },
+      "remark": {
+         "from": "Mula: {name}",
+         "to": "Para kay: {name}"
+      },
+      "empty": {
+         "title": "Walang transaksyon",
+         "desc": "Walang nahanap na transaksyon sa panahong {period}",
+         "btn_topup": "Mag-top Up Ngayon"
+      },
+      "footer": "Ipinapakita ang {count} na mga transaksyon sa {period}",
+      "btn_detail": "Detalye"
+   },
+   "transfer_amount": {
+      "header": {
+         "title": "Mag-transfer ng Pondo"
+      },
+      "recipient": {
+         "to": "Para kay",
+         "id": "ID",
+         "verified": "Verified"
+      },
+      "form": {
+         "amount_label": "Halaga ng Transfer",
+         "balance": "Balanse",
+         "note_label": "Paalala (Opsyonal)",
+         "note_placeholder": "Hal: Bayad sa kape",
+         "btn_continue": "MAGPATULOY",
+         "btn_processing": "PINOPROSESO..."
+      },
+      "pin_modal": {
+         "title": "Seguridad",
+         "desc": "Ilagay ang iyong 6-digit Transaction PIN para sa kumpirmasyon.",
+         "placeholder": "••••••",
+         "btn_cancel": "Batal",
+         "btn_send": "Ipadala"
+      },
+      "error": {
+         "invalid_target": "Hindi wastong patutunguhan",
+         "self_transfer": "Hindi mo maaaring padalhan ng pondo ang sariling account.",
+         "user_not_found": "Hindi Nahanap ang User",
+         "user_not_found_desc": "Ang target ID ay mali o ang account ay tinanggal na.",
+         "insufficient_balance": "Hindi sapat ang balanse",
+         "min_amount": "Minimum na transfer ay Rp {amount}",
+         "pin_length": "Ang PIN ay dapat may 6 na digit",
+         "system_error": "Nagkaroon ng error sa system.",
+         "title_failed": "Bigo"
+      },
+      "success": {
+         "title": "Matagumpay na Transfer!",
+         "msg": "Ang halagang Rp {amount} ay naipadala na kay {name}",
+         "btn_done": "Tapos Na"
+      }
+   },
+   "wallet": {
+      "header": {
+         "title": "Digital Wallet",
+         "subtitle": "Huling na-update"
+      },
+      "balance": {
+         "available": "Available na Balanse",
+         "currency": "IDR",
+         "description": "Ang balanse ay magagamit para sa lahat ng transaksyon",
+         "breakdown": {
+            "main": "Pangunahing Balanse",
+            "pending": "Pinoproseso",
+            "bonus": "Bonus"
+         }
+      },
+      "actions": {
+         "topup": "QRIS Topup",
+         "withdraw": "I-withdraw",
+         "history": "Kasaysayan",
+         "help": "Tulong"
+      },
+      "va": {
+         "title": "Virtual Accounts",
+         "subtitle": "Para sa manual na top up via bank transfer",
+         "available_count": "{count} na available",
+         "empty_title": "Wala pang Virtual Account",
+         "btn_create": "Gumawa ng bagong Virtual Account",
+         "va_number": "Numero ng Virtual Account",
+         "btn_copy": "Kopyahin ang VA"
+      },
+      "tips": {
+         "1": "Ingatan ang iyong PIN at huwag ibigay sa kahit kanino",
+         "2": "Hindi kailanman hihingi ang system ng PIN via tawag o chat",
+         "3": "Laging i-verify ang account number bago mag-withdraw",
+         "4": "I-on ang transaction notifications para ma-monitor ang wallet",
+         "title": "Tips sa Seguridad ng Digital Wallet"
+      },
+      "modal_withdraw": {
+         "title": "Pag-withdraw ng Pondo",
+         "subtitle": "Ang balanse ay ipadadala sa iyong napiling bangko",
+         "amount_label": "Halaga ng Pag-withdraw",
+         "balance_info": "Balanse: {amount}",
+         "min_max_info": "Admin fee: Rp 2.500 • Minimum Rp 10.000",
+         "bank_label": "Target na Bangko",
+         "select_bank": "Pumili ng Bangko",
+         "add_bank": "+ Magdagdag ng bagong account",
+         "pin_label": "Security PIN",
+         "pin_placeholder": "Ilagay ang 6-digit PIN",
+         "pin_desc": "Ang 6-digit PIN para sa seguridad ng iyong transaksyon",
+         "summary_fee": "Admin fee",
+         "summary_total": "Kabuuang matatanggap",
+         "btn_confirm": "I-kumpirma ang Pag-withdraw",
+         "btn_processing": "Pinoproseso...",
+         "btn_cancel": "Kanselahin"
+      },
+      "toast": {
+         "load_fail": "Bigo sa pag-load ng data ng wallet",
+         "no_bank": "Wala pang target na bangko",
+         "no_bank_desc": "Magdagdag muna ng bank account sa Edit Profile",
+         "incomplete": "Pakikumpleto ang lahat ng data.",
+         "pin_length": "Ang PIN ay dapat may 6 na digit.",
+         "insufficient_balance": "Hindi sapat ang balanse!",
+         "min_withdraw": "Minimum na pag-withdraw ay Rp 10.000",
+         "success_withdraw": "Matagumpay na pag-withdraw!",
+         "success_desc": "Ang pondo ay ipadadala sa loob ng 1-2 working hours",
+         "kyc_required": "Ang iyong account ay hindi pa verified (KYC). Mag-upload na ng ID?",
+         "copy_success": "Nakopya na!",
+         "copy_desc": "Ang numero ng VA ay nakopya na sa clipboard",
+         "error_title": "Bigo",
+         "wallet_generated": "Matagumpay na nagawa ang crypto wallet!",
+         "wallet_fail": "Bigo sa paggawa ng wallet",
+         "invalid_amount": "Maglagay ng wastong halaga",
+         "no_address": "Hindi nahanap ang wallet address",
+         "topup_initiated": "Nagsimula na ang topup!",
+         "topup_instruction": "Mangyaring magpadala ng crypto sa ibinigay na address",
+         "topup_failed": "Bigo ang topup",
+         "frozen_desc": "Naka-freeze ang iyong wallet, makipag-ugnayan sa customer support"
+      },
+      "crypto": {
+         "btn_topup": "Top Up Crypto",
+         "history_btn": "Kasaysayan ng Crypto",
+         "wallets_title": "Crypto Wallets",
+         "wallets_subtitle": "Iyong crypto deposit addresses",
+         "wallets_count": "{count} na wallets",
+         "address_label": "Wallet Address",
+         "btn_copy": "Kopyahin",
+         "btn_deposit": "Deposit",
+         "modal": {
+            "title": "Crypto Top Up",
+            "subtitle": "Mag-deposit gamit ang cryptocurrency",
+            "amount_label": "Halaga ng Deposit",
+            "amount_placeholder": "Min 10 USD",
+            "amount_help": "Minimum deposit: $10. Maaaring may network fees.",
+            "currency_label": "Pumili ng Cryptocurrency",
+            "network_label": "Pumili ng Network",
+            "address_label": "Iyong Deposit Address",
+            "address_help": "Magpadala lamang ng {currency} sa {network} network sa address na ito",
+            "summary_amount": "Halaga",
+            "summary_currency": "Currency",
+            "summary_network": "Network",
+            "summary_receive": "Inaasahang matatanggap ≈",
+            "btn_generate": "Gumawa ng Deposit Address",
+            "btn_processing": "Pinoproseso...",
+            "btn_cancel": "Batal"
+         }
+      }
+   },
+   "bottom_nav": {
+      "home": "Home",
+      "wallet": "Wallet",
+      "scan": "Scan",
+      "market": "Market",
+      "profile": "Profile"
+   },
+   "captured_pieces": {
+      "empty": "-",
+      "tooltip": "Mga Piyesang Nakain"
+   },
+   "chess_board": {
+      "status": {
+         "check": "CHECK!",
+         "checkmate": "CHECKMATE!",
+         "stalemate": "DRAW (Stalemate)",
+         "draw": "DRAW",
+         "opponent_move": "Kalaban: {from} → {to}"
+      },
+      "promotion": {
+         "title": "Pumili ng Promosyon",
+         "queen": "Reyna",
+         "knight": "Kabayo",
+         "rook": "Tore",
+         "bishop": "Obispo"
+      },
+      "controls": {
+         "mute": "I-mute",
+         "unmute": "I-unmute",
+         "flip": "I-flip ang Papan"
+      },
+      "loading": "Naglo-load ng papan..."
+   },
+   "loading": {
+      "title": "Loading Strategy",
+      "subtitle": "Preparing game board..."
+   },
+   "incoming_match": {
+      "default_title": "Hamon",
+      "role_default": "Manlalaro",
+      "seconds": "segundo",
+      "btn_accept": "TANGGAPIN ANG HAMON",
+      "warning_wo": "Walang sagot = Auto WO loss.",
+      "waiting": "Naghihintay sa Kalaban..."
+   },
+  "help_wallet": {
+    "header": "Tulong sa Wallet & Seguridad",
+    "hero": {
+      "title": "Ang Iyong Smart Wallet",
+      "desc": "Alamin kung paano protektahan at pamahalaan ang iyong wallet nang wasto para sa mas magandang karanasan sa chess.",
+      "f1": "Ligtas & Encrypted",
+      "f2": "Real-time Transactions",
+      "f3": "24/7 na Suporta"
+    },
+    "nav": {
+      "what_is": "Ano ang Wallet?",
+      "what_is_desc": "Pag-unawa sa digital wallet",
+      "security": "Seguridad",
+      "security_desc": "Mahahalagang tips sa seguridad",
+      "tips": "Praktikal na Tips",
+      "tips_desc": "Pinakamahusay na kasanayan",
+      "faq": "FAQ",
+      "faq_desc": "Mga karaniwang tanong"
+    },
+    "content": {
+      "what_is": {
+        "title": "Ano ang Wallet?",
+        "subtitle": "Digital wallet para sa mga transaksyon sa platform",
+        "section_title": "Wallet sa Chess Platform",
+        "desc": "Ang wallet ay isang digital wallet na nagpapahintulot sa iyo na gumawa ng mga transaksyon sa aming platform. Gamit ito, maaari kang:",
+        "list": {
+          "1": "Sumali sa mga paid tournaments",
+          "2": "Tumanggap ng mga premyo",
+          "3": "Bumili ng premium features",
+          "4": "Mag-transfer sa ibang mga user"
+        },
+        "card1": {
+          "title": "Encrypted Wallet",
+          "desc": "Lahat ng transaksyon ay protektado ng end-to-end encryption para sa maksimum na seguridad."
+        },
+        "card2": {
+          "title": "Mabilis na Transaksyon",
+          "desc": "Ang mga transaksyon ay napoproseso sa loob ng ilang segundo at agad na lalabas sa wallet."
+        }
+      },
+      "security": {
+        "title": "Seguridad ng Wallet",
+        "subtitle": "Protektahan ang iyong digital assets sa tamang paraan",
+        "alert_title": "Mahalagang Paalala!",
+        "alert_desc": "Ang seguridad ng wallet ay iyong responsibilidad. Nagbibigay kami ng mga security tools, ngunit dapat mong ingatan ang access sa iyong account.",
+        "tips": {
+          "pass_title": "Matatag na Password",
+          "pass_desc": "Gumawa ng kakaiba at kumplikadong password",
+          "pass_p1": "Hindi bababa sa 12 na karakter",
+          "pass_p2": "Kumbinasyon ng uppercase at lowercase",
+          "pass_p3": "May mga numero at simbolo",
+          "pass_p4": "Huwag gamitin muli ang lumang password",
+          "2fa_title": "2-Factor Authentication",
+          "2fa_desc": "I-activate ang 2FA para sa extra layer ng seguridad",
+          "2fa_p1": "Gumamit ng authenticator app",
+          "2fa_p2": "I-save ang backup codes",
+          "2fa_p3": "I-verify via SMS/Email",
+          "2fa_p4": "I-activate sa lahat ng devices",
+          "phish_title": "Waspada sa Phishing",
+          "phish_desc": "Iwasan ang mga kahina-hinalang email at links",
+          "phish_p1": "Suriin ang nagpadala ng email",
+          "phish_p2": "Huwag i-click ang mga hindi kilalang link",
+          "phish_p3": "I-verify ang URL ng website",
+          "phish_p4": "I-report agad ang phishing",
+          "backup_title": "Backup & Pag-recover",
+          "backup_desc": "Maghanda ng backup para sa pag-recover",
+          "backup_p1": "I-save ang recovery phrases",
+          "backup_p2": "Regular na i-backup ang wallet",
+          "backup_p3": "Subukan ang proseso ng pag-recover",
+          "backup_p4": "Itago sa isang ligtas na lugar"
+        }
+      },
+      "practical": {
+        "title": "Praktikal na Tips",
+        "subtitle": "Best practices para sa ligtas na paggamit ng wallet",
+        "checklist_title": "Araw-araw na Security Checklist",
+        "checks": {
+          "1": "Suriin ang mga huling login activity",
+          "2": "I-review ang mga transaksyon sa wallet",
+          "3": "I-update ang password kung kinakailangan",
+          "4": "I-verify ang backup recovery phrases"
+        },
+        "btn_done": "Tapos Na",
+        "btn_mark": "Lagyan ng Tsek",
+        "do_title": "✅ Mga Dapat Gawin",
+        "do_list": {
+          "1": "Gumamit ng mapagkakatiwalaang password manager",
+          "2": "I-activate ang security notifications",
+          "3": "Regular na i-update ang software",
+          "4": "Mag-log out mula sa pampublikong devices",
+          "5": "Gumamit ng ligtas na koneksyon (HTTPS)"
+        },
+        "dont_title": "❌ Mga Hindi Dapat Gawin",
+        "dont_list": {
+          "1": "Huwag ibahagi ang password/pin",
+          "2": "Huwag i-save ang password sa browser",
+          "3": "Huwag gumamit ng public WiFi nang walang VPN",
+          "4": "Huwag mag-click ng link mula sa hindi kilalang email",
+          "5": "Huwag ipagpaliban ang security updates"
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "subtitle": "Mga madalas itanong",
+        "q1": "Paano kung nakalimutan ko ang aking password?",
+        "a1": "Gamitin ang 'Nakalimutan ang Password' sa login page. Magpapadala kami ng reset link sa iyong email.",
+        "t1": "Itago ang iyong password sa isang ligtas na password manager.",
+        "q2": "100% bang ligtas ang aking wallet?",
+        "a2": "Gumagamit kami ng military-grade encryption, pero ang seguridad ay nakadepende rin sa iyong kasanayan tulad ng paggamit ng 2FA.",
+        "t2": "Ang seguridad ay pinagsamang responsibilidad ng platform at ng user.",
+        "q3": "Paano mag-report ng kahina-hinalang aktibidad?",
+        "a3": "Makipag-ugnayan agad sa support@catur.cloud o gamitin ang emergency form. Isama ang mga detalye ng transaksyon.",
+        "t3": "Mas mabilis ang pag-report, mas mabilis kaming makaka-aksyon.",
+        "q4": "Maaari bang i-cancel ang transaksyon?",
+        "a4": "Ang mga transaksyong kumpirmado na sa blockchain ay hindi na maaaring i-cancel. Siguraduhing tama ang address.",
+        "t4": "Laging i-verify ang address ng tatanggap nang dalawang beses."
+      }
+    },
+    "sidebar": {
+      "stats_title": "📊 Estadistika ng Seguridad",
+      "stats_1": "Account na protektado",
+      "stats_2": "Ligtas na transaksyon",
+      "stats_3": "Bilis ng suporta",
+      "checklist_title": "📋 Security Checklist",
+      "check_1": "Password na hindi bababa sa 12 na karakter",
+      "check_2": "Naka-on ang 2FA",
+      "check_3": "Verified recovery email",
+      "check_4": "Naka-save ang backup phrase",
+      "check_5": "Aktibong security notifications",
+      "check_6": "Walang hindi kilalang devices",
+      "progress": "Security Progress",
+      "emergency_title": "🚨 Emergency Contacts",
+      "email_support": "Email Support",
+      "security_report": "Security Report",
+      "btn_report": "I-report ang Isyu sa Seguridad"
+    },
+    "footer": {
+      "title": "Seguridad ng Chess Wallet",
+      "subtitle": "Pinoprotektahan ang iyong digital assets mula pa noong 2024",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "copyright": "© 2024 Catur Cloud. Lahat ng karapatan ay nakalaan.",
+      "updated": "Huling na-update ang pahinang ito:"
+    },
+    "modal": {
+      "title": "🚨 I-report ang Isyu sa Seguridad",
+      "warning": "Gamitin ang form na ito para lamang sa seryosong isyu tulad ng:",
+      "w1": "Hindi awtorisadong access sa account",
+      "w2": "Kahina-hinalang transaksyon",
+      "w3": "Security vulnerability",
+      "w4": "Identity theft",
+      "type_label": "Uri ng Isyu",
+      "type_hack": "Hindi awtorisadong access",
+      "type_trans": "Kahina-hinalang transaksyon",
+      "type_phish": "Phishing/Scam",
+      "type_other": "Iba pa",
+      "desc_label": "Deskripsyon",
+      "desc_ph": "Ipaliwanag nang detalyado ang isyu...",
+      "email_label": "Iyong Email",
+      "btn_cancel": "Batal",
+      "btn_submit": "Ipadala ang Report",
+      "alert_sent": "Ang emergency report ay naipadala na!"
+    }
+  },
+  "common": {
+      "back":"Back"
+  }
+}

@@ -1,0 +1,1610 @@
+{
+   "welcome": "Chào mừng bạn đến với ứng dụng của tôi",
+   "Nomor HP wajib diisi":"Số điện thoại di động là bắt buộc",
+   "menu": {
+      "home": "Trang chủ",
+      "wallet": "Ví tiền",
+      "market": "Tiện ích",
+      "profile": "Hồ sơ"
+   },
+   "button": {
+      "change_lang": "Đổi ngôn ngữ",
+      "receive_funds": "Nhận tiền",
+      "topup": "Nạp tiền",
+      "search_opponents": "Đấu hạng",
+      "tournaments": "Giải đấu",
+      "lobby": "Sảnh",
+      "play_offline": "Chơi ngoại tuyến",
+      "vs_bot": "Đấu với Bot",
+      "cancel_search": "Hủy",
+      "rejoin": "Tham gia lại",
+      "logout": "Đăng xuất",
+      "cancel": "Hủy bỏ",
+      "verify": "Xác minh",
+      "view_all": "Xem tất cả"
+   },
+   "text": {
+      "total_game": "Tổng số ván chơi",
+      "win_rate": "Tỉ lệ thắng",
+      "rating": "Xếp hạng",
+      "rating_trend": "Xu hướng hạng",
+      "game_mode": "Chế độ chơi",
+      "search_desc": "Đối đầu với người chơi thật",
+      "tournaments_desc": "Sự kiện cạnh tranh",
+      "lobby_desc": "Trận đấu giao hữu",
+      "offline_desc": "Quét mã QR để chơi",
+      "bot_desc": "Luyện tập với AI",
+      "promotions": "Khuyến mãi",
+      "chess_news": "Tin tức Cờ vua",
+      "account": "Tài khoản",
+      "total_balance": "Tổng số dư",
+      "guest": "Khách",
+      "live_match": "TRẬN ĐẤU TRỰC TIẾP",
+      "vs": "với",
+      "matchmaking_progress": "Tiến trình tìm trận",
+      "estimated_wait": "Thời gian dự kiến:",
+      "searching": "Đang tìm kiếm...",
+      "players": "Người chơi",
+      "online": "Trực tuyến",
+      "similar": "Tương tự",
+      "tip": "Mẹo:",
+      "tip_desc": "Phạm vi xếp hạng rộng hơn sẽ giúp tìm trận nhanh hơn",
+      "greeting": {
+         "morning": "Chào buổi sáng",
+         "afternoon": "Chào buổi trưa",
+         "evening": "Chào buổi chiều",
+         "night": "Chúc ngủ ngon"
+      }
+   },
+   "toast": {
+      "connecting": "Đang kết nối tới máy chủ...",
+      "finish_active": "Vui lòng hoàn thành trận đấu hiện tại!",
+      "req_failed": "Gửi yêu cầu thất bại.",
+      "search_cancelled": "Đã hủy tìm kiếm.",
+      "cancel_failed": "Hủy thất bại."
+   },
+   "dialog": {
+      "logout_title": "Đăng xuất?",
+      "logout_desc": "Bạn sẽ phải đăng nhập lại sau đó."
+   },
+   "bot_game": {
+      "title": "Đấu với Bot",
+      "bot_name": "CHESS BOT",
+      "game_stats": "Thống kê ván đấu",
+      "game_controls": "Điều khiển ván đấu",
+      "game_over": "TRÒ CHƠI KẾT THÚC",
+      "time_remaining": "Thời gian còn lại",
+      "moving": "Đang đi",
+      "waiting": "Đang đợi",
+      "moves": "nước đi",
+      "duration": "Thời lượng",
+      "your_moves": "Nước đi của bạn",
+      "bot_moves": "Nước đi của Bot",
+      "total_moves": "Tổng số nước đi",
+      "bot_thinking": "Bot đang suy nghĩ",
+      "analyzing": "Đang phân tích độ sâu...",
+      "select_level": "Chọn cấp độ Bot",
+      "challenge_desc": "Thử thách bản thân với các độ khó khác nhau",
+      "level": "Cấp độ",
+      "turn": "Lượt",
+      "you": "Bạn",
+      "white": "Trắng",
+      "black": "Đen",
+      "your_turn": "LƯỢT CỦA BẠN",
+      "wait_turn": "Đợi đến lượt",
+      "reset": "Đặt lại trò chơi",
+      "change_color": "Đổi màu quân",
+      "stats": "Thống kê",
+      "play_again": "Chơi lại",
+      "dashboard": "Bảng điều khiển",
+      "tournament": "Giải đấu",
+      "confirm_reset": "Đổi màu quân? Ván đấu hiện tại sẽ bị hủy.",
+      "difficulty": {
+         "easy": "Gà mờ",
+         "medium": "Khá",
+         "hard": "Cao thủ",
+         "gm": "Đại kiện tướng"
+      },
+      "result": {
+         "time_out": "Hết giờ",
+         "bot_time_out": "Bot hết giờ",
+         "checkmate": "Chiếu bí",
+         "draw": "Hòa",
+         "win": "Thắng",
+         "lose": "Thua"
+      }
+   },
+   "flight": {
+      "title": "Đặt vé máy bay",
+      "subtitle": "Tìm kiếm và đặt vé dễ dàng",
+      "trip_type": {
+         "one_way": "Một chiều",
+         "round_trip": "Khứ hồi"
+      },
+      "form": {
+         "from": "Từ",
+         "to": "Đến",
+         "origin_placeholder": "Sân bay đi",
+         "destination_placeholder": "Sân bay đến",
+         "departure": "Ngày đi",
+         "return": "Ngày về",
+         "passengers_class": "Hành khách & Hạng ghế",
+         "loading": "Đang tải danh sách sân bay..."
+      },
+      "quick_date": {
+         "today": "Hôm nay",
+         "tomorrow": "Ngày mai",
+         "days_3": "3 ngày",
+         "days_7": "7 ngày"
+      },
+      "passengers": {
+         "title": "Số lượng hành khách",
+         "label": "Hành khách",
+         "adults": "Người lớn",
+         "adults_desc": "(Trên 12 tuổi)",
+         "children": "Trẻ em",
+         "children_desc": "(2-11 tuổi)",
+         "infants": "Em bé",
+         "infants_desc": "(Dưới 2 tuổi)"
+      },
+      "class": {
+         "title": "Hạng vé",
+         "economy": "Phổ thông",
+         "business": "Thương gia",
+         "first": "Hạng nhất",
+         "label_popular": "Phổ biến nhất",
+         "label_comfort": "Thoải mái hơn",
+         "label_premium": "Cao cấp"
+      },
+      "button": {
+         "search": "Tìm chuyến bay",
+         "searching": "Đang tìm..."
+      },
+      "tips": {
+         "1": "Đặt vé ít nhất 3 tiếng trước khi khởi hành",
+         "2": "Chuẩn bị CCCD/Hộ chiếu để làm thủ tục",
+         "3": "Em bé dưới 2 tuổi, trẻ em 2-11 tuổi",
+         "4": "Xuất trình thẻ lên máy bay tại sân bay",
+         "title": "Mẹo đặt vé"
+      },
+      "routes": {
+         "title": "Tuyến đường phổ biến",
+         "jakarta": "Jakarta",
+         "bali": "Bali",
+         "surabaya": "Surabaya",
+         "makassar": "Makassar"
+      },
+      "toast": {
+         "load_error": "Không thể tải danh sách sân bay.",
+         "try_again": "Vui lòng thử lại sau.",
+         "incomplete": "Thông tin sân bay chưa đầy đủ",
+         "incomplete_desc": "Vui lòng chọn sân bay đi và sân bay đến từ danh sách có sẵn.",
+         "invalid": "Sân bay không hợp lệ",
+         "invalid_desc": "Sân bay đi và sân bay đến không được trùng nhau.",
+         "invalid_date": "Ngày không hợp lệ",
+         "invalid_date_desc": "Ngày về phải sau ngày đi.",
+         "success": "Tìm kiếm thành công!",
+         "showing_flights": "Đang hiển thị các chuyến bay từ"
+      }
+   },
+   "forgot_password": {
+      "title": "QUÊN MẬT KHẨU?",
+      "subtitle": "Đừng lo lắng. Nhập email đã đăng ký, chúng tôi sẽ gửi hướng dẫn đặt lại mật khẩu.",
+      "success_title": "Thành công!",
+      "success_message": "Link đặt lại mật khẩu đã được gửi vào email của bạn. Vui lòng kiểm tra hộp thư đến/spam.",
+      "error_default": "Xử lý yêu cầu thất bại. Đảm bảo email đã được đăng ký.",
+      "email_label": "Email đã đăng ký",
+      "email_placeholder": "vi_du@email.com",
+      "btn_submit": "GỬI LINK ĐẶT LẠI",
+      "btn_sending": "ĐANG GỬI...",
+      "back_to_login": "Quay lại Đăng nhập"
+   },
+   "live_game": {
+      "header": {
+         "live_match": "TRỰC TIẾP",
+         "finished": "KẾT THÚC",
+         "your_turn": "LƯỢT CỦA BẠN",
+         "opponent_turn": "LƯỢT ĐỐI THỦ"
+      },
+      "loading": "Đang tải ván đấu...",
+      "player": {
+         "moving": "Đang đi",
+         "you": "Bạn",
+         "white": "Trắng",
+         "black": "Đen"
+      },
+      "info": {
+         "duration": "Thời lượng",
+         "mode": "Chế độ",
+         "with_time": "Có thời gian",
+         "no_time": "Không thời gian"
+      },
+      "controls": {
+         "title": "Điều khiển ván đấu",
+         "offer_draw": "Cầu hòa",
+         "resign": "Chịu thua",
+         "draw_sent": "Đang đợi...",
+         "resigning": "Đang gửi...",
+         "draw_label": "Lời mời hòa",
+         "resign_label": "Chịu thua",
+         "back_dashboard": "Quay lại Bảng điều khiển",
+         "analyze": "Phân tích trận đấu"
+      },
+      "overlay": {
+         "waiting_draw": "ĐANG CHỜ PHẢN HỒI CỦA ĐỐI THỦ",
+         "sending_resign": "ĐANG GỬI YÊU CẦU CHỊU THUA...",
+         "game_over": "TRẬN ĐẤU KẾT THÚC"
+      },
+      "result": {
+         "draw_title": "Hòa! 🤝",
+         "victory": "Chiến thắng! 🏆",
+         "finished": "Trận đấu đã kết thúc",
+         "default_desc": "Trận đấu đã kết thúc"
+      },
+      "reason": {
+         "checkmate": "Chiếu bí! Vua không còn nước đi",
+         "stalemate": "Hòa (Stalemate) - Vua không bị chiếu nhưng không còn nước đi hợp lệ",
+         "insufficient_material": "Không đủ quân để chiếu bí đối phương",
+         "threefold_repetition": "Thế trận lặp lại ba lần",
+         "timeout": "Hết thời gian",
+         "resignation": "Người chơi chịu thua",
+         "agreement": "Hòa theo thỏa thuận",
+         "abandoned": "Trận đấu bị hủy",
+         "unknown": "Trận đấu kết thúc"
+      },
+      "modal": {
+         "draw_title": "Lời mời hòa",
+         "draw_desc": "Đối thủ đề nghị kết quả hòa.",
+         "draw_ask_title": "Cầu hòa?",
+         "draw_ask_desc": "Gửi yêu cầu hòa tới đối thủ",
+         "resign_title": "Chịu thua?",
+         "resign_desc": "Bạn có chắc chắn muốn chịu thua không?",
+         "btn_accept": "Chấp nhận",
+         "btn_decline": "Từ chối",
+         "btn_offer": "Gửi yêu cầu",
+         "btn_resign": "Vâng, chịu thua",
+         "btn_cancel": "Hủy",
+         "btn_continue": "Tiếp tục"
+      },
+      "toast": {
+         "draw_accepted": "Đã chấp nhận hòa",
+         "contacting_server": "Đang kết nối tới máy chủ...",
+         "draw_declined": "Đã từ chối hòa",
+         "game_continued": "Ván đấu tiếp tục",
+         "draw_sent": "Lời mời hòa đã được gửi",
+         "waiting_opponent": "Đang chờ đối thủ phản hồi...",
+         "opponent_declined": "Đối thủ từ chối đề nghị hòa",
+         "resigning": "Đang chịu thua...",
+         "sending_resign": "Đang gửi yêu cầu chịu thua",
+         "load_error": "Không thể tải dữ liệu.",
+         "analyze_info": "Tính năng phân tích sẽ sớm ra mắt"
+      }
+   },
+   "notification": {
+      "header": {
+         "title": "Hộp thư đến",
+         "unread_count": "{count} tin nhắn chưa đọc",
+         "mark_all_read": "Đọc tất cả"
+      },
+      "empty": {
+         "title": "Hộp thư trống",
+         "desc": "Tất cả thông báo sẽ xuất hiện ở đây"
+      },
+      "card": {
+         "just_now": "Vừa xong",
+         "min_ago": "{count} phút trước",
+         "hour_ago": "{count} giờ trước",
+         "view_detail": "Xem chi tiết"
+      },
+      "modal": {
+         "title": "Chi tiết thông báo",
+         "subtitle": "Thông tin đầy đủ",
+         "read": "Đã đọc",
+         "unread": "Chưa đọc",
+         "additional_info": "Thông tin thêm",
+         "close": "Đóng",
+         "view_action": "Xem chi tiết"
+      },
+      "type": {
+         "success": "Thành công",
+         "warning": "Cảnh báo",
+         "danger": "Nguy hiểm",
+         "payment": "Thanh toán",
+         "tournament": "Giải đấu",
+         "match": "Trận đấu",
+         "info": "Thông tin"
+      }
+   },
+   "kyc": {
+      "pending_title": "Xác minh đang chờ",
+      "pending_desc": "Tài liệu đang được quản trị viên xem xét.",
+      "unverified_title": "Tài khoản chưa xác minh",
+      "unverified_desc": "Áp dụng giới hạn tính năng.",
+      "header": {
+         "title": "Xác minh tài khoản",
+         "subtitle": "Hoàn thành dữ liệu để kích hoạt tính năng rút tiền."
+      },
+      "step1": {
+         "title": "1. Ảnh CCCD",
+         "status_success": "THÀNH CÔNG",
+         "upload_text": "Tải ảnh CCCD"
+      },
+      "step2": {
+         "title": "2. Xác minh khuôn mặt",
+         "status_success": "THÀNH CÔNG",
+         "start_liveness": "Bắt đầu kiểm tra Liveness",
+         "click_camera": "Nhấp để mở camera",
+         "retake": "Chụp lại"
+      },
+      "modal": {
+         "loading_ai": "Đang tải AI khuôn mặt...",
+         "instruction": "Hướng dẫn",
+         "success_title": "XÁC MINH THÀNH CÔNG!",
+         "verified_hold": "Đã xác minh! Vui lòng chờ...",
+         "btn_camera": "Bật Camera",
+         "error_load": "Không thể tải hệ thống Liveness. Kiểm tra kết nối/camera."
+      },
+      "challenges": {
+         "smile": "Vui lòng CƯỜI tươi",
+         "mouth": "Hãy MỞ MIỆNG",
+         "turn_left": "Quay nhẹ sang TRÁI",
+         "turn_right": "Quay nhẹ sang PHẢI"
+      },
+      "button": {
+         "submit": "GỬI XÁC MINH",
+         "sending": "ĐANG GỬI DỮ LIỆU..."
+      },
+      "toast": {
+         "incomplete": "Dữ liệu chưa đầy đủ.",
+         "success_submit": "Gửi xác minh thành công!",
+         "success_face": "Xác minh khuôn mặt thành công!",
+         "upload_failed": "Tải lên thất bại."
+      }
+   },
+   "live_matches": {
+      "header": {
+         "title_1": "TRẬN ĐẤU",
+         "title_2": "TRỰC TIẾP",
+         "subtitle": "Xem các trận đấu đang diễn ra theo thời gian thực",
+         "live_count": "{count} trận đang trực tiếp",
+         "updated": "Cập nhật lúc: {time}",
+         "refresh": "Làm mới"
+      },
+      "card": {
+         "live_now": "ĐANG TRỰC TIẾP",
+         "match_id": "TRẬN #{id}",
+         "white": "Trắng",
+         "black": "Đen",
+         "moving": "Đang đi",
+         "moves": "Nước đi",
+         "time": "Thời gian",
+         "watch": "Xem trận đấu"
+      },
+      "empty": {
+         "title": "Chưa có trận đấu nào đang diễn ra",
+         "desc": "Hiện tại không có trận đấu nào trực tiếp. Hãy đón xem các trận tiếp theo!",
+         "btn_refresh": "Làm mới"
+      },
+      "footer": {
+         "title": "Cập nhật thời gian thực",
+         "desc": "Dữ liệu được cập nhật tự động mỗi 10 giây",
+         "total": "Tổng số trận trực tiếp"
+      }
+   },
+   "lobby": {
+      "header": {
+         "title": "Sảnh chờ người chơi",
+         "subtitle": "{count} người chơi đang trực tuyến"
+      },
+      "search": {
+         "placeholder": "Tìm tên người dùng..."
+      },
+      "status": {
+         "playing": "Đang chơi",
+         "online": "Trực tuyến"
+      },
+      "empty": {
+         "title": "Không có người chơi nào khác đang trực tuyến lúc này.",
+         "desc": "Hãy mời bạn bè cùng đăng nhập!"
+      },
+      "button": {
+         "duel": "Thách đấu",
+         "watch": "Xem"
+      },
+      "toast": {
+         "player_busy": "Người chơi đang trong trận đấu.",
+         "challenge_sent": "Đã gửi lời thách đấu tới {username}!",
+         "challenge_declined": "{username} đã từ chối lời thách đấu.",
+         "match_start": "Thách đấu được chấp nhận! Đang bắt đầu ván đấu..."
+      }
+   },
+   "auth_login": {
+      "welcome_user": "Chào mừng trở lại, {name}!",
+      "biometric": {
+         "title": "Đăng nhập bằng Sinh trắc học",
+         "desc": "Xác minh danh tính bằng vân tay hoặc khuôn mặt để tiếp tục",
+         "btn": "Đăng nhập Sinh trắc học",
+         "processing": "Đang xử lý..."
+      },
+      "other_account": "Đăng nhập bằng tài khoản khác",
+      "register_new": "Đăng ký tài khoản mới",
+      "form": {
+         "email_label": "Địa chỉ Email",
+         "email_placeholder": "email@vi_du.com",
+         "password_label": "Mật khẩu",
+         "password_placeholder": "••••••••",
+         "forgot_password": "Quên mật khẩu?",
+         "btn_login": "Đăng nhập hệ thống",
+         "or_divider": "hoặc tiếp tục với"
+      },
+      "register_link": {
+         "text": "Chưa có tài khoản?",
+         "link": "Đăng ký Vận động viên"
+      },
+      "2fa": {
+         "title_setup": "Kích hoạt Xác thực 2 Yếu tố",
+         "desc_setup": "Quét mã QR bằng ứng dụng xác thực (Authenticator)",
+         "title_verify": "Xác minh Bảo mật",
+         "desc_verify": "Nhập mã OTP từ ứng dụng xác thực của bạn",
+         "title_input_setup": "Nhập mã xác minh",
+         "desc_input_setup": "Nhập 6 chữ số từ ứng dụng xác thực",
+         "loading_qr": "Đang tải mã QR...",
+         "manual_code": "Hoặc nhập mã thủ công:",
+         "btn_verifying": "Đang xác minh...",
+         "btn_activate": "Kích hoạt bảo mật",
+         "btn_confirm": "Xác nhận OTP",
+         "back_to_login": "Quay lại Đăng nhập",
+         "copy_success": "Đã sao chép mã thủ công!"
+      },
+      "error": {
+         "email_required": "Vui lòng nhập email của bạn.",
+         "biometric_failed": "Đăng nhập sinh trắc học thất bại.",
+         "login_failed": "Email hoặc mật khẩu không chính xác.",
+         "google_failed": "Đăng nhập bằng Google thất bại",
+         "otp_invalid": "Mã OTP không hợp lệ hoặc đã hết hạn."
+      },
+      "footer": "Bản quyền được bảo hộ.",
+      "default_welcome": "Vui lòng đăng nhập vào ứng dụng"
+   },
+   "biometric": {
+      "title": "Đăng nhập Sinh trắc học",
+      "btn_login": "Sử dụng Vân tay / Face ID",
+      "btn_register": "Đăng ký Sinh trắc học trên thiết bị này",
+      "success_register": "Đã đăng ký sinh trắc học thành công!",
+      "success_login": "Đăng nhập thành công!",
+      "error_auth": "Sinh trắc học thất bại hoặc bị hủy."
+   },
+   "market": {
+      "header": {
+         "title": "Thị trường & Dịch vụ",
+         "subtitle": "Chọn dịch vụ bạn cần",
+         "available_balance": "Số dư hiện có",
+         "today_transaction": "Giao dịch hôm nay",
+         "points": "Điểm"
+      },
+      "section": {
+         "available_services": "Dịch vụ hiện có",
+         "services_count": "{count} Dịch vụ",
+         "services_desc": "Chọn và truy cập các dịch vụ dễ dàng"
+      },
+      "category": {
+         "train": "Vé tàu hỏa",
+         "train_desc": "Đặt vé tàu cho hành trình nội địa.",
+         "flight": "Vé máy bay",
+         "flight_desc": "Tìm và đặt vé máy bay nội địa và quốc tế.",
+         "hotel": "Khách sạn & Lưu trú",
+         "hotel_desc": "Đặt chỗ ở, khách sạn hoặc biệt thự trên toàn thế giới.",
+         "pulsa": "Nạp tiền điện thoại & Data",
+         "pulsa_desc": "Nạp tiền điện thoại trả trước và gói data.",
+         "postpaid": "Hóa đơn điện thoại",
+         "postpaid_desc": "Thanh toán hóa đơn trả sau hàng tháng.",
+         "pln": "Điện lực",
+         "pln_desc": "Thanh toán hóa đơn điện hoặc mua mã thẻ điện.",
+         "pdam": "Nước sạch",
+         "pdam_desc": "Thanh toán hóa đơn nước sạch tại các khu vực.",
+         "finance": "Tài chính",
+         "finance_desc": "Thanh toán trả góp xe máy, ô tô hoặc các khoản vay khác.",
+         "umrah": "Gói hành hương Umrah",
+         "umrah_desc": "Ưu đãi gói hành hương Umrah tốt nhất.",
+         "religious": "Du lịch tâm linh",
+         "religious_desc": "Khám phá các gói du lịch hành hương và tâm linh."
+      },
+      "button": {
+         "access_now": "Truy cập ngay"
+      },
+      "info": {
+         "title": "Thông tin quan trọng",
+         "secure_title": "Giao dịch an toàn & Tin cậy",
+         "secure_desc": "Tất cả giao dịch dịch vụ và du lịch đều sử dụng số dư chính và được bảo vệ bằng mã PIN giao dịch để đảm bảo an toàn."
+      }
+   },
+   "history": {
+      "header": {
+         "title": "Lịch sử trận đấu",
+         "total_match": "Tổng cộng: {count} trận"
+      },
+      "loading": "Đang tải dữ liệu...",
+      "empty": {
+         "title": "Chưa có trận đấu nào",
+         "desc": "Hãy bắt đầu chơi cờ ngay bây giờ!"
+      },
+      "table": {
+         "date": "Ngày",
+         "opponent": "Đối thủ",
+         "color": "Màu quân",
+         "result": "Kết quả",
+         "reason": "Lý do"
+      },
+      "pagination": {
+         "page_info": "Trang {current} / {total}",
+         "prev": "Trước",
+         "next": "Tiếp"
+      },
+      "player": {
+         "unknown": "Không xác định",
+         "white": "Trắng",
+         "black": "Đen"
+      },
+      "result": {
+         "draw": "HÒA",
+         "win": "THẮNG",
+         "lose": "THUA"
+      },
+      "reason": {
+         "agreement": "Thỏa thuận",
+         "timeout": "Hết giờ",
+         "resignation": "Chịu thua",
+         "checkmate": "Chiếu bí",
+         "abandoned": "Bị hủy",
+         "unknown": "Không xác định"
+      },
+      "toast": {
+         "load_error": "Không thể tải dữ liệu."
+      }
+   },
+   "mirror": {
+      "title": "Phòng khán giả",
+      "match_id": "Trận #{id}",
+      "status": {
+         "live": "ĐANG XEM TRỰC TIẾP",
+         "checkmate": "CHIẾU BÍ",
+         "draw": "HÒA",
+         "finished": "KẾT THÚC"
+      },
+      "stats": {
+         "watchers": "Khán giả",
+         "moves": "Nước đi",
+         "white": "Trắng",
+         "black": "Đen"
+      },
+      "history": "Lịch sử nước đi",
+      "back": "Quay lại"
+   },
+   "news_detail": {
+      "header": {
+         "title": "Bài viết",
+         "subtitle": "Chiến thuật & Mẹo"
+      },
+      "menu": {
+         "liked": "Bài viết đã thích",
+         "saved": "Bài viết đã lưu",
+         "profile": "Hồ sơ của tôi"
+      },
+      "share": {
+         "title": "Chia sẻ bài viết",
+         "copy": "Sao chép",
+         "whatsapp": "WhatsApp",
+         "twitter": "Twitter",
+         "facebook": "Facebook"
+      },
+      "meta": {
+         "min_read": "phút đọc",
+         "views": "lượt xem",
+         "verified": "Đã xác minh",
+         "articles_count": "10+ Bài viết",
+         "follow": "Theo dõi"
+      },
+      "stats": {
+         "likes": "Thích",
+         "comments": "Bình luận",
+         "shares": "Chia sẻ"
+      },
+      "tags_title": "Chủ đề liên quan",
+      "actions": {
+         "like": "Thích",
+         "liked": "Đã thích",
+         "share": "Chia sẻ"
+      },
+      "related": {
+         "title": "Bài viết liên quan",
+         "subtitle": "Đọc thêm các bài viết thú vị khác",
+         "view_all": "Xem tất cả",
+         "read_more": "Đọc thêm",
+         "view_all_mobile": "Xem tất cả bài viết"
+      },
+      "newsletter": {
+         "title": "Muốn nhận cập nhật mới nhất?",
+         "desc": "Nhận bài viết chiến thuật, thông tin giải đấu và mẹo độc quyền trực tiếp qua email của bạn.",
+         "placeholder": "Email của bạn",
+         "subscribe": "Đăng ký",
+         "privacy": "Bằng cách đăng ký, bạn đồng ý với chính sách bảo mật của chúng tôi."
+      },
+      "toast": {
+         "copy_success": "Đã sao chép liên kết!"
+      }
+   },
+   "profile": {
+      "header": {
+         "title": "Chỉnh sửa hồ sơ",
+         "subtitle": "Cập nhật thông tin tài khoản & tài chính"
+      },
+      "verified": "Đã xác minh",
+      "verify_now": "Xác minh ngay",
+      "account_active": "Tài khoản đang hoạt động",
+      "tabs": {
+         "general": "Chung",
+         "financial": "Tài chính",
+         "security": "Bảo mật"
+      },
+      "general": {
+         "title": "Thông tin cơ bản",
+         "full_name": "Họ và tên",
+         "full_name_ph": "Tên theo CCCD",
+         "phone": "Số WhatsApp",
+         "country": "Quốc gia",
+         "province": "Tỉnh / Thành phố",
+         "regency": "Quận / Huyện",
+         "district": "Phường / Xã",
+         "subdistrict": "Thôn / Xóm",
+         "postal_code": "Mã bưu chính",
+         "address": "Địa chỉ đầy đủ",
+         "address_ph": "Đường, số nhà, ngõ...",
+         "select": {
+            "country": "Chọn quốc gia",
+            "province": "Chọn tỉnh",
+            "regency": "Chọn quận/huyện",
+            "district": "Chọn phường/xã",
+            "subdistrict": "Chọn thôn"
+         },
+         "phone_verified_note": "* Số điện thoại đã được xác minh và không thể thay đổi."
+      },
+      "financial": {
+         "title": "Tài khoản ngân hàng",
+         "bank_name": "Tên ngân hàng",
+         "select_bank": "Chọn ngân hàng",
+         "account_number": "Số tài khoản",
+         "account_holder": "Chủ tài khoản (Theo sổ tiết kiệm)",
+         "account_holder_ph": "Tự động theo Họ và tên",
+         "account_holder_note": "Tự động theo họ tên trong hồ sơ",
+         "wallet_security": "Bảo mật ví",
+         "wallet_note": "Để trống nếu không muốn đổi mã PIN ví. PIN dùng để rút tiền.",
+         "old_pin": "Mã PIN cũ",
+         "old_pin_note": "(Để trống nếu tạo PIN mới lần đầu)",
+         "new_pin": "Mã PIN mới (6 chữ số)",
+         "confirm_pin": "Nhập lại mã PIN mới",
+         "pin_rule": "Chỉ dùng số 0-9"
+      },
+      "security": {
+         "title": "Đổi mật khẩu đăng nhập",
+         "note": "Để trống nếu bạn không muốn thay đổi mật khẩu đăng nhập.",
+         "current_pass": "Mật khẩu hiện tại",
+         "current_pass_ph": "Nhập mật khẩu cũ",
+         "new_pass": "Mật khẩu mới",
+         "new_pass_ph": "Tối thiểu 6 ký tự",
+         "confirm_pass": "Xác nhận mật khẩu mới",
+         "confirm_pass_ph": "Nhập lại mật khẩu mới"
+      },
+      "button": {
+         "save": "LƯU THAY ĐỔI",
+         "saving": "ĐANG LƯU..."
+      },
+      "toast": {
+         "success": "Đã lưu dữ liệu thành công!",
+         "error": "Lưu dữ liệu thất bại.",
+         "file_size": "Tệp tối đa 2MB.",
+         "pass_required": "Nhập mật khẩu hiện tại để đổi mật khẩu.",
+         "pass_mismatch": "Xác nhận mật khẩu mới không khớp.",
+         "pass_min": "Mật khẩu mới tối thiểu 6 ký tự.",
+         "pin_length": "PIN phải có 6 chữ số.",
+         "pin_mismatch": "Mã PIN mới không khớp.",
+         "email_sent": "Link xác minh email đã được gửi.",
+         "phone_verified": "Số điện thoại đã được xác minh!"
+      },
+      "modal": {
+         "phone_title": "Xác minh điện thoại",
+         "phone_desc": "Nhập 6 chữ số đã được gửi đến số của bạn (Có hiệu lực trong 5 phút)",
+         "btn_verify": "Xác minh",
+         "btn_cancel": "Hủy",
+         "validation": "Vui lòng nhập 6 chữ số"
+      }
+   },
+   "topup": {
+      "header": {
+         "back": "Quay lại",
+         "close": "Đóng",
+         "title_input": "Nạp tiền vào tài khoản",
+         "title_qris": "Thanh toán QRIS",
+         "subtitle_input": "Nạp tiền bằng QRIS",
+         "subtitle_qris": "Quét mã QR để thanh toán",
+         "amount": "Số tiền",
+         "total": "Tổng cộng"
+      },
+      "form": {
+         "title": "Nạp tiền bằng QRIS",
+         "subtitle": "Thanh toán tức thì, an toàn và tự động với QRIS Indonesia",
+         "select_label": "Chọn số tiền nạp",
+         "custom_label": "Hoặc nhập số tiền khác",
+         "min_max_help": "Tối thiểu 1.000 Rp, tối đa 10.000.000 Rp",
+         "btn_process": "Đang xử lý...",
+         "btn_submit": "Tạo mã QR thanh toán"
+      },
+      "qris": {
+         "total_due": "Tổng số tiền cần trả",
+         "trx_id": "Mã giao dịch",
+         "expiry": "Mã QR sẽ hết hạn sau 24 giờ",
+         "download": "Tải mã QR",
+         "not_available": "Mã QR không khả dụng",
+         "supported_by": "Hỗ trợ bởi:"
+      },
+      "steps": {
+         "title": "Hướng dẫn thanh toán:",
+         "1_title": "Mở ứng dụng",
+         "1_desc": "Mở ví điện tử hoặc ứng dụng ngân hàng của bạn",
+         "2_title": "Quét mã QR",
+         "2_desc": "Chọn menu \"Quét QR\" hoặc \"Thanh toán qua QRIS\"",
+         "3_title": "Xác nhận thanh toán",
+         "3_desc": "Quét mã QR phía trên và xác nhận số tiền cần trả",
+         "4_title": "Hoàn tất",
+         "4_desc": "Số dư sẽ tự động được cộng vào tài khoản sau 1-3 phút"
+      },
+      "banner": {
+         "title": "Thanh toán nhanh hơn với QRIS",
+         "desc": "Sử dụng QRIS để nạp tiền tức thì và tiện lợi. Không cần nhập dữ liệu thủ công, chỉ cần quét và thanh toán."
+      },
+      "toast": {
+         "min_amount": "Nạp tối thiểu 1.000 Rp",
+         "success": "Đã tạo mã QRIS thành công",
+         "error": "Tạo mã QRIS thất bại"
+      }
+   },
+   "qr_game": {
+      "header": {
+         "title": "Mã trận đấu",
+         "subtitle": "Hiển thị mã QR để tham gia"
+      },
+      "card": {
+         "title": "Quét để tham gia",
+         "desc": "Hướng camera của đối thủ vào mã QR này"
+      },
+      "status": {
+         "expired_title": "Mã QR đã hết hạn",
+         "btn_refresh": "Tạo mã mới",
+         "time_left": "Thời gian còn lại:",
+         "refresh_desc": "Mã QR sẽ tự động cập nhật sau {time} giây",
+         "loading": "Đang kết nối...",
+         "network_check": "Đảm bảo đối thủ có kết nối internet ổn định"
+      },
+      "tips": {
+         "title": "Mẹo tham gia",
+         "desc": "Yêu cầu đối thủ mở ứng dụng, chọn \"Quét QR\" và hướng camera vào mã phía trên. Đảm bảo đủ ánh sáng và mã QR rõ ràng."
+      },
+      "toast": {
+         "error": "Tạo mã QR thất bại."
+      }
+   },
+   "receive_funds": {
+      "header": {
+         "title": "QR Chuyển tiền",
+         "subtitle": "Hiển thị để nhận thanh toán"
+      },
+      "card": {
+         "title": "Nhận tiền",
+         "desc": "Quét mã QR này để chuyển số dư trực tiếp"
+      },
+      "timer": {
+         "label": "Mã QR có hiệu lực trong:",
+         "refresh_info": "Mã QR sẽ tự động cập nhật sau mỗi 60 giây"
+      },
+      "button": {
+         "copy": "Sao chép mã QR"
+      },
+      "toast": {
+         "copy_success": "Đã sao chép mã QR thành công!",
+         "copy_failed": "Sao chép thất bại."
+      },
+      "instruction": "Đảm bảo mã QR luôn nằm trong tầm ngắm camera của người nhận"
+   },
+   "auth_register": {
+      "title": "Tạo tài khoản",
+      "subtitle": "Tham gia và bắt đầu chơi cờ ngay!",
+      "form": {
+         "username_label": "Tên người dùng",
+         "username_placeholder": "nguyenvanan",
+         "fullname_label": "Họ và tên",
+         "fullname_placeholder": "Nguyễn Văn An",
+         "email_label": "Email",
+         "email_placeholder": "ten@email.com",
+         "password_label": "Mật khẩu",
+         "password_placeholder": "******",
+         "btn_register": "ĐĂNG KÝ NGAY",
+         "btn_loading": "ĐANG XỬ LÝ..."
+      },
+      "login_link": {
+         "text": "Đã có tài khoản?",
+         "link": "Đăng nhập tại đây"
+      },
+      "toast": {
+         "success_title": "Đăng ký thành công!",
+         "success_desc": "Vui lòng đăng nhập bằng tài khoản mới của bạn.",
+         "error_title": "Thất bại",
+         "error_desc": "Đăng ký thất bại. Hãy thử lại.",
+         "warning_incomplete": "Vui lòng điền đầy đủ thông tin bắt buộc."
+      }
+   },
+   "scan_qr": {
+      "header": {
+         "title": "Trình quét QR",
+         "subtitle": "Hướng camera vào mã QR"
+      },
+      "loading": {
+         "processing": "ĐANG XỬ LÝ",
+         "preparing": "Đang chuẩn bị phiên ván đấu...",
+         "initializing": "Đang khởi tạo camera...",
+         "wait": "Vui lòng đợi trong giây lát"
+      },
+      "error": {
+         "title": "Không thể truy cập Camera",
+         "btn_retry": "Thử lại",
+         "btn_back": "Quay lại",
+         "tip": "Mẹo: Đảm bảo bạn đã cấp quyền truy cập camera và không có ứng dụng khác đang sử dụng camera."
+      },
+      "scanner": {
+         "instruction": "Hướng mã QR vào khu vực quét",
+         "scanning": "Đang đọc mã QR..."
+      },
+      "controls": {
+         "flash_on": "BẬT ĐÈN",
+         "flash_off": "TẮT ĐÈN",
+         "help": "Đảm bảo mã QR nằm trong khung quét với đủ ánh sáng"
+      },
+      "toast": {
+         "invalid_format": "Định dạng không xác định",
+         "scan_valid": "Vui lòng quét mã QR hợp lệ",
+         "flash_on": "Đèn flash bật",
+         "flash_off": "Đèn flash tắt",
+         "flash_unsupported": "Không hỗ trợ đèn flash",
+         "flash_error": "Thiết bị không hỗ trợ flash",
+         "error_access": "Lỗi truy cập camera. Hãy chắc chắn quyền đã được cấp."
+      }
+   },
+   "settings": {
+      "header": {
+         "title": "Cài đặt",
+         "subtitle": "Trung tâm tài khoản"
+      },
+      "tabs": {
+         "security": "Bảo mật",
+         "privacy": "Quyền riêng tư"
+      },
+      "security": {
+         "title": "Bảo mật & Truy cập",
+         "single_login": {
+            "title": "Đăng nhập đơn lẻ",
+            "desc": "Đăng nhập thiết bị mới sẽ tự động đăng xuất phiên cũ."
+         },
+         "2fa": {
+            "title": "Xác thực 2 yếu tố (2FA)",
+            "desc": "Sử dụng mã từ Google Authenticator để đăng nhập."
+         },
+         "biometric": {
+            "title": "Đăng nhập sinh trắc học",
+            "desc": "Sử dụng vân tay hoặc khuôn mặt để truy cập nhanh."
+         },
+         "register_biometric": {
+            "title": "Touch ID đã sẵn sàng",
+            "subtitle": "Có thể đăng ký",
+            "desc": "Chạm để đăng ký vân tay",
+            "btn_register": "Đăng ký ngay",
+            "btn_processing": "Đang xử lý...",
+            "btn_registered": "Đã đăng ký",
+            "unsupported": {
+               "title": "Thiết bị không hỗ trợ",
+               "desc": "Trình duyệt/thiết bị của bạn chưa hỗ trợ tính năng sinh trắc học."
+            },
+            "tips": {
+               "1": "Đảm bảo vân tay/khuôn mặt đã được đăng ký trong hệ điều hành",
+               "2": "Sử dụng cùng một ngón tay đã đăng ký trên thiết bị",
+               "title": "Mẹo đăng ký sinh trắc học:"
+            }
+         }
+      },
+      "privacy": {
+         "title": "Kết nối & Hiển thị",
+         "open_match": {
+            "title": "Thách đấu công khai",
+            "desc": "Cho phép các vận động viên khác tìm thấy và thách đấu bạn."
+         }
+      },
+      "tips": {
+         "1": "Single Login & 2FA bảo vệ hạng và ví giải đấu của bạn",
+         "2": "Sinh trắc học giúp đăng nhập nhanh mà không cần nhớ mật khẩu",
+         "3": "Luôn luôn đăng xuất khỏi các thiết bị công cộng",
+         "title": "Mẹo bảo mật tài khoản"
+      },
+      "help": {
+         "title": "Trợ giúp cài đặt",
+         "subtitle": "Hướng dẫn tính năng bảo mật tài khoản",
+         "email_support": "Email hỗ trợ",
+         "single_login_desc": "Tính năng này đảm bảo chỉ có một phiên hoạt động duy nhất. Khi đăng nhập trên thiết bị mới, phiên cũ sẽ tự động đăng xuất.",
+         "benefits": {
+            "1": "Bảo vệ khỏi truy cập trái phép",
+            "2": "Phù hợp để bảo mật hạng giải đấu",
+            "3": "Tự động đăng xuất khỏi thiết bị cũ"
+         },
+         "2fa_desc": "Thêm một lớp bảo mật cực mạnh với mã OTP từ ứng dụng xác thực như Google Authenticator.",
+         "setup_steps": "Cách thiết lập:",
+         "step_1": "1. Bật nút 2FA",
+         "step_2": "2. Quét mã QR bằng ứng dụng xác thực",
+         "step_3": "3. Nhập mã xác minh 6 chữ số",
+         "step_4": "4. Lưu mã dự phòng ở nơi an toàn",
+         "biometric_desc": "Sử dụng vân tay hoặc nhận diện khuôn mặt để đăng nhập nhanh chóng.",
+         "requirements": "Yêu cầu:",
+         "req_1": "Trình duyệt hỗ trợ WebAuthn (Chrome, Edge, Safari)",
+         "req_2": "Thiết bị có cảm biến sinh trắc học",
+         "req_3": "Vân tay/khuôn mặt đã được lưu trong máy",
+         "challenge_desc": "Cho phép người khác tìm và thách đấu bạn. Tắt đi nếu muốn sự riêng tư tối đa.",
+         "challenge_active": "Bật: Hồ sơ của bạn hiển thị trong tìm kiếm thách đấu",
+         "challenge_inactive": "Tắt: Chỉ bạn bè mới có thể thách đấu",
+         "btn_understand": "Đã hiểu"
+      },
+      "modal_2fa": {
+         "title": "Thiết lập Authenticator",
+         "desc": "Quét mã QR này bằng Google Authenticator hoặc Authy.",
+         "loading_qr": "Đang tải mã QR...",
+         "manual_code": "Mã thủ công",
+         "verify_otp": "Xác minh OTP",
+         "placeholder_otp": "000000",
+         "btn_cancel": "Hủy",
+         "btn_activate": "Kích hoạt"
+      },
+      "confirm": {
+         "unsaved_title": "Thay đổi chưa được lưu",
+         "unsaved_msg": "Bạn có các thay đổi chưa được lưu lại.",
+         "unsaved_detail": "Bạn có chắc muốn thoát mà không lưu không?",
+         "disable_2fa_title": "Tắt 2FA?",
+         "disable_2fa_msg": "Bạn sắp tắt Xác thực 2 yếu tố.",
+         "disable_2fa_detail": "Bảo mật tài khoản sẽ giảm đi. Đảm bảo mật khẩu của bạn đủ mạnh.",
+         "disable_bio_title": "Tắt đăng nhập sinh trắc học?",
+         "disable_bio_msg": "Dữ liệu sinh trắc học sẽ bị xóa khỏi thiết bị này.",
+         "disable_bio_detail": "Bạn cần đăng ký lại nếu muốn sử dụng tiếp.",
+         "btn_stay": "Ở lại đây",
+         "btn_leave": "Rời đi",
+         "btn_cancel": "Hủy",
+         "btn_yes_disable": "Có, hãy tắt",
+         "btn_yes_turn_off": "Có, hãy tắt"
+      },
+      "toast": {
+         "bio_activate_info": "Kích hoạt sinh trắc học bằng cách nhấn 'Đăng ký ngay'",
+         "qr_fail": "Lỗi tải mã QR",
+         "2fa_success": "Đã kích hoạt 2FA thành công!",
+         "otp_invalid": "Mã OTP sai",
+         "2fa_disabled": "Đã tắt 2FA",
+         "2fa_disable_fail": "Lỗi khi tắt 2FA",
+         "bio_unsupported": "Thiết bị không hỗ trợ sinh trắc học",
+         "bio_success": "Đã đăng ký sinh trắc học thành công!",
+         "bio_verify_fail": "Lỗi xác minh trên máy chủ",
+         "bio_cancelled": "Người dùng đã hủy đăng ký.",
+         "bio_fail": "Đăng ký sinh trắc học thất bại.",
+         "load_fail": "Lỗi tải hồ sơ",
+         "save_success": "Cài đặt đã được lưu thành công",
+         "save_fail": "Lưu cài đặt thất bại",
+         "code_copied": "Mã thủ công đã được sao chép!"
+      }
+   },
+   "tournament_lobby": {
+      "header": {
+         "title": "Sảnh giải đấu",
+         "loading": "Đang tải..."
+      },
+      "status": {
+         "active": "Sảnh đang hoạt động",
+         "ongoing": "Đang diễn ra"
+      },
+      "info": {
+         "format": "Thể thức",
+         "time": "Thời gian",
+         "participants": "Thành viên"
+      },
+      "schedule": {
+         "start": "Bắt đầu",
+         "remaining": "Thời gian còn lại",
+         "start_in_days": "Bắt đầu sau {d} ngày",
+         "start_in_hours": "Bắt đầu sau {h} giờ {m} phút",
+         "start_in_mins": "Bắt đầu sau {m} phút"
+      },
+      "tabs": {
+         "participants": "Thành viên",
+         "bracket": "Sơ đồ thi đấu"
+      },
+      "participants": {
+         "title": "Danh sách thành viên",
+         "subtitle": "Sắp xếp theo xếp hạng",
+         "count": "{count} Người chơi",
+         "empty_title": "Chưa có thành viên nào",
+         "empty_desc": "Hãy là người đầu tiên đăng ký!",
+         "btn_register": "Đăng ký ngay",
+         "rating": "Hạng"
+      },
+      "bracket": {
+         "title": "Sơ đồ thi đấu",
+         "subtitle": "Cấu trúc các trận đấu",
+         "system": "Hệ Thụy Sĩ",
+         "placeholder_title": "Sơ đồ sẽ sớm hiển thị",
+         "placeholder_desc": "Sơ đồ sẽ xuất hiện sau khi giải đấu bắt đầu và các thành viên được chốt danh sách.",
+         "btn_view_participants": "Xem thành viên"
+      },
+      "rules": {
+         "title": "Quy định giải đấu",
+         "time_control": "Thời gian suy nghĩ: {time} mỗi người",
+         "format_round": "Hệ {format} - {round} vòng",
+         "penalty": "Hình phạt khi thoát trận: -5 điểm hạng",
+         "prize": "Giải thưởng cho Top 3: Điểm và huy hiệu độc quyền"
+      },
+      "actions": {
+         "rules": "Quy định",
+         "chat": "Trò chuyện sảnh"
+      },
+      "toast": {
+         "error": "Rất tiếc!",
+         "load_failed": "Không thể tải dữ liệu sảnh."
+      }
+   },
+   "tournament_list": {
+      "header": {
+         "title": "Giải đấu Cờ vua",
+         "subtitle": "Tham gia và giành chiến thắng!",
+         "back": "Quay lại"
+      },
+      "tabs": {
+         "all": "Tất cả",
+         "open": "Mở đăng ký",
+         "active": "Đang diễn ra",
+         "waiting": "Đang chờ"
+      },
+      "search_placeholder": "Tìm giải đấu...",
+      "stats": {
+         "total": "Tổng giải đấu",
+         "ongoing": "Đang diễn ra",
+         "registration": "Đang đăng ký",
+         "waiting": "Đang chờ"
+      },
+      "card": {
+         "start_time": "Thời gian bắt đầu",
+         "format": "Thể thức",
+         "entry_fee": "Lệ phí",
+         "prize_pool": "Tổng giải thưởng",
+         "free": "MIỄN PHÍ"
+      },
+      "status": {
+         "registration": "Đang đăng ký",
+         "active": "Đang diễn ra",
+         "completed": "Đã kết thúc",
+         "waiting": "Đang chờ"
+      },
+      "button": {
+         "register": "ĐĂNG KÝ NGAY",
+         "processing": "ĐANG XỬ LÝ...",
+         "enter_lobby": "VÀO SẢNH",
+         "watch": "THEO DÕI",
+         "closed": "ĐÓNG ĐĂNG KÝ",
+         "unavailable": "KHÔNG KHẢ DỤNG"
+      },
+      "empty": {
+         "title": "Chưa có giải đấu nào",
+         "desc_search": "Không tìm thấy giải đấu với từ khóa đó",
+         "desc_default": "Vui lòng thử lại sau",
+         "btn_all": "Xem tất cả giải đấu"
+      },
+      "footer": "Hiển thị {count} / {total} giải đấu",
+      "toast": {
+         "load_error": "Lỗi tải dữ liệu giải đấu.",
+         "join_success_title": "Đăng ký thành công!",
+         "join_success_msg": "Chúc mừng! Bạn đã đăng ký tham gia thành công.",
+         "insufficient_balance": "Số dư không đủ",
+         "schedule_conflict": "Trùng lịch thi đấu",
+         "join_failed": "Tham gia thất bại"
+      },
+      "confirm_modal": {
+         "title": "Xác nhận đăng ký",
+         "msg": "Lệ phí tham gia sẽ được trừ vào số dư của bạn.",
+         "btn_yes": "Có, đăng ký ngay",
+         "btn_cancel": "Hủy"
+      },
+      "time": {
+         "ended": "Đã kết thúc",
+         "days": "{d} ngày {h} giờ",
+         "hours": "{h} giờ {m} phút",
+         "mins": "{m} phút"
+      }
+   },
+   "train": {
+      "header": {
+         "title": "Đặt vé tàu hỏa",
+         "subtitle": "Tìm kiếm và đặt vé dễ dàng"
+      },
+      "trip_type": {
+         "one_way": "Một chiều",
+         "round_trip": "Khứ hồi"
+      },
+      "form": {
+         "origin": "Từ",
+         "origin_placeholder": "Ga đi",
+         "destination": "Đến",
+         "destination_placeholder": "Ga đến",
+         "departure": "Ngày đi",
+         "passengers": "Hành khách",
+         "adult": "{count} Người lớn",
+         "loading": "Đang tải danh sách ga..."
+      },
+      "quick_date": {
+         "today": "Hôm nay",
+         "tomorrow": "Ngày mai",
+         "days_7": "7 ngày"
+      },
+      "button": {
+         "search": "Tìm vé",
+         "searching": "Đang tìm..."
+      },
+      "tips": {
+         "1": "Đặt vé ít nhất 1 tiếng trước khi khởi hành",
+         "2": "Chuẩn bị CCCD để làm thủ tục",
+         "3": "Hạn hủy vé: 2 tiếng trước giờ đi",
+         "title": "Mẹo đặt vé"
+      },
+      "advantages": {
+         "1": "Giá tốt nhất thị trường",
+         "2": "Quy trình nhanh chóng, dễ dàng",
+         "3": "Vé điện tử gửi thẳng qua email",
+         "title": "Lợi ích"
+      },
+      "routes": {
+         "title": "Tuyến đường phổ biến",
+         "gambir": "Gambir",
+         "bandung": "Bandung",
+         "yogyakarta": "Yogyakarta",
+         "solo": "Solo",
+         "surabaya": "Surabaya",
+         "malang": "Malang",
+         "jakarta_kota": "Jakarta Kota",
+         "tangerang": "Tangerang",
+         "hours": "{count} giờ",
+         "minutes": "{count} phút",
+         "price_start": "Từ {price}"
+      },
+      "toast": {
+         "load_error": "Không thể tải danh sách ga.",
+         "incomplete": "Thông tin ga chưa đầy đủ",
+         "incomplete_desc": "Vui lòng chọn ga đi và ga đến từ danh sách có sẵn.",
+         "invalid": "Ga không hợp lệ",
+         "invalid_desc": "Ga đi và ga đến không được trùng nhau.",
+         "success": "Tìm kiếm thành công!",
+         "showing_schedule": "Hiển thị lịch trình từ"
+      }
+   },
+   "transaction_history": {
+      "header": {
+         "title": "Lịch sử giao dịch",
+         "total_transactions": "Tổng giao dịch",
+         "latest": "Mới nhất"
+      },
+      "filter": {
+         "period_label": "Lọc theo giai đoạn:",
+         "this_month": "Tháng này",
+         "month": "Tháng",
+         "year": "Năm",
+         "jan": "Tháng 1",
+         "feb": "Tháng 2",
+         "mar": "Tháng 3",
+         "apr": "Tháng 4",
+         "may": "Tháng 5",
+         "jun": "Tháng 6",
+         "jul": "Tháng 7",
+         "aug": "Tháng 8",
+         "sep": "Tháng 9",
+         "oct": "Tháng 10",
+         "nov": "Tháng 11",
+         "dec": "Tháng 12"
+      },
+      "transaction_type": {
+         "topup_va": "Nạp tiền vào ví",
+         "withdraw": "Rút tiền",
+         "tournament_fee": "Phí giải đấu",
+         "game_fee": "Phí ván đấu",
+         "prize_payout": "Nhận giải thưởng",
+         "prize": "Giải thưởng",
+         "transfer_in": "Nhận chuyển khoản",
+         "transfer_out": "Chuyển tiền đi",
+         "transaksi": "Giao dịch",
+         "transfer": "Chuyển tiền",
+         "default": "Giao dịch"
+      },
+      "status": {
+         "success": "Thành công",
+         "pending": "Đang chờ",
+         "failed": "Thất bại",
+         "unknown": "Không rõ"
+      },
+      "remark": {
+         "from": "Từ: {name}",
+         "to": "Đến: {name}"
+      },
+      "empty": {
+         "title": "Không có giao dịch",
+         "desc": "Không tìm thấy giao dịch nào trong {period}",
+         "btn_topup": "Nạp tiền ngay"
+      },
+      "footer": "Hiển thị {count} giao dịch trong {period}",
+      "btn_detail": "Chi tiết"
+   },
+   "transfer_amount": {
+      "header": {
+         "title": "Chuyển tiền"
+      },
+      "recipient": {
+         "to": "Đến",
+         "id": "ID",
+         "verified": "Đã xác minh"
+      },
+      "form": {
+         "amount_label": "Số tiền chuyển",
+         "balance": "Số dư",
+         "note_label": "Ghi chú (Tùy chọn)",
+         "note_placeholder": "Ví dụ: Trả tiền cà phê",
+         "btn_continue": "TIẾP TỤC",
+         "btn_processing": "ĐANG XỬ LÝ..."
+      },
+      "pin_modal": {
+         "title": "Bảo mật",
+         "desc": "Nhập mã PIN giao dịch 6 chữ số để xác nhận chuyển tiền.",
+         "placeholder": "••••••",
+         "btn_cancel": "Hủy",
+         "btn_send": "Gửi"
+      },
+      "error": {
+         "invalid_target": "Đích đến không hợp lệ",
+         "self_transfer": "Bạn không thể chuyển tiền cho chính mình.",
+         "user_not_found": "Không tìm thấy người dùng",
+         "user_not_found_desc": "ID không hợp lệ hoặc tài khoản đã bị xóa.",
+         "insufficient_balance": "Số dư không đủ",
+         "min_amount": "Chuyển tối thiểu {amount} Rp",
+         "pin_length": "PIN phải có 6 chữ số",
+         "system_error": "Lỗi hệ thống.",
+         "title_failed": "Thất bại"
+      },
+      "success": {
+         "title": "Chuyển tiền thành công!",
+         "msg": "Đã chuyển thành công {amount} Rp đến {name}",
+         "btn_done": "Hoàn tất"
+      }
+   },
+   "wallet": {
+      "header": {
+         "title": "Ví điện tử",
+         "subtitle": "Cập nhật lần cuối"
+      },
+      "balance": {
+         "available": "Số dư hiện có",
+         "currency": "IDR",
+         "description": "Số dư có thể dùng cho mọi giao dịch",
+         "breakdown": {
+            "main": "Số dư chính",
+            "pending": "Đang xử lý",
+            "bonus": "Tiền thưởng"
+         }
+      },
+      "actions": {
+         "topup": "Nạp QRIS",
+         "withdraw": "Rút tiền",
+         "history": "Lịch sử",
+         "help": "Trợ giúp"
+      },
+      "va": {
+         "title": "Tài khoản định danh (VA)",
+         "subtitle": "Dành cho nạp tiền thủ công qua ngân hàng",
+         "available_count": "{count} tài khoản",
+         "empty_title": "Chưa có tài khoản định danh",
+         "btn_create": "Tạo tài khoản VA mới",
+         "va_number": "Số tài khoản VA",
+         "btn_copy": "Sao chép VA"
+      },
+      "tips": {
+         "1": "Giữ kín mã PIN của bạn và không cung cấp cho bất kỳ ai",
+         "2": "Hệ thống sẽ không bao giờ hỏi mã PIN qua điện thoại hoặc chat",
+         "3": "Luôn kiểm tra kỹ số tài khoản đích trước khi rút tiền",
+         "4": "Bật thông báo giao dịch để theo dõi hoạt động của ví",
+         "title": "Mẹo bảo mật ví điện tử"
+      },
+      "modal_withdraw": {
+         "title": "Rút tiền",
+         "subtitle": "Số dư sẽ được gửi về tài khoản ngân hàng của bạn",
+         "amount_label": "Số tiền rút",
+         "balance_info": "Số dư: {amount}",
+         "min_max_info": "Phí quản trị: 2.500 Rp • Tối thiểu 10.000 Rp",
+         "bank_label": "Tài khoản nhận",
+         "select_bank": "Chọn tài khoản",
+         "add_bank": "+ Thêm tài khoản mới",
+         "pin_label": "PIN bảo mật",
+         "pin_placeholder": "Nhập mã PIN 6 chữ số",
+         "pin_desc": "Mã PIN 6 chữ số để bảo mật giao dịch của bạn",
+         "summary_fee": "Phí quản trị",
+         "summary_total": "Thực nhận",
+         "btn_confirm": "Xác nhận rút tiền",
+         "btn_processing": "Đang xử lý...",
+         "btn_cancel": "Hủy bỏ"
+      },
+      "toast": {
+         "load_fail": "Lỗi tải dữ liệu ví",
+         "no_bank": "Chưa có tài khoản ngân hàng",
+         "no_bank_desc": "Vui lòng thêm tài khoản trong phần Chỉnh sửa hồ sơ trước",
+         "incomplete": "Vui lòng điền đầy đủ thông tin.",
+         "pin_length": "PIN phải có 6 chữ số.",
+         "insufficient_balance": "Số dư không đủ!",
+         "min_withdraw": "Rút tối thiểu 10.000 Rp",
+         "success_withdraw": "Rút tiền thành công!",
+         "success_desc": "Tiền sẽ được gửi trong 1-2 giờ làm việc",
+         "kyc_required": "Tài khoản chưa xác minh KYC. Tải CCCD ngay?",
+         "copy_success": "Đã sao chép!",
+         "copy_desc": "Số VA đã được sao chép vào bộ nhớ đệm",
+         "error_title": "Thất bại",
+         "wallet_generated": "Đã tạo ví tiền mã hóa thành công!",
+         "wallet_fail": "Lỗi khi tạo ví",
+         "invalid_amount": "Vui lòng nhập số tiền hợp lệ",
+         "no_address": "Không tìm thấy địa chỉ ví",
+         "topup_initiated": "Đã bắt đầu quy trình nạp!",
+         "topup_instruction": "Vui lòng gửi tiền mã hóa vào địa chỉ đã cung cấp",
+         "topup_failed": "Nạp tiền thất bại",
+         "frozen_desc": "Ví của bạn đang bị đóng băng, vui lòng liên hệ bộ phận hỗ trợ khách hàng"
+      },
+      "crypto": {
+         "btn_topup": "Nạp Crypto",
+         "history_btn": "Lịch sử Crypto",
+         "wallets_title": "Ví Crypto",
+         "wallets_subtitle": "Địa chỉ nạp tiền mã hóa của bạn",
+         "wallets_count": "{count} ví",
+         "address_label": "Địa chỉ ví",
+         "btn_copy": "Sao chép",
+         "btn_deposit": "Nạp tiền",
+         "modal": {
+            "title": "Nạp số dư bằng Crypto",
+            "subtitle": "Nạp tiền bằng tiền mã hóa",
+            "amount_label": "Số tiền nạp",
+            "amount_placeholder": "Tối thiểu 10 USD",
+            "amount_help": "Nạp tối thiểu: 10$. Phí mạng lưới có thể được áp dụng.",
+            "currency_label": "Chọn loại Crypto",
+            "network_label": "Chọn mạng lưới",
+            "address_label": "Địa chỉ nạp của bạn",
+            "address_help": "Chỉ gửi {currency} qua mạng lưới {network} vào địa chỉ này",
+            "summary_amount": "Số tiền",
+            "summary_currency": "Loại tiền",
+            "summary_network": "Mạng lưới",
+            "summary_receive": "Bạn sẽ nhận được ≈",
+            "btn_generate": "Tạo địa chỉ nạp",
+            "btn_processing": "Đang xử lý...",
+            "btn_cancel": "Hủy"
+         }
+      }
+   },
+   "bottom_nav": {
+      "home": "Trang chủ",
+      "wallet": "Ví",
+      "scan": "Quét",
+      "market": "Dịch vụ",
+      "profile": "Hồ sơ"
+   },
+   "captured_pieces": {
+      "empty": "-",
+      "tooltip": "Quân đã bị ăn"
+   },
+   "chess_board": {
+      "status": {
+         "check": "CHIẾU!",
+         "checkmate": "CHIẾU BÍ!",
+         "stalemate": "HÒA (Stalemate)",
+         "draw": "HÒA",
+         "opponent_move": "Đối thủ: {from} → {to}"
+      },
+      "promotion": {
+         "title": "Chọn quân phong cấp",
+         "queen": "Hậu",
+         "knight": "Mã",
+         "rook": "Xe",
+         "bishop": "Tượng"
+      },
+      "controls": {
+         "mute": "Tắt âm thanh",
+         "unmute": "Bật âm thanh",
+         "flip": "Xoay bàn cờ"
+      },
+      "loading": "Đang tải bàn cờ..."
+   },
+   "loading": {
+      "title": "Đang tải chiến thuật",
+      "subtitle": "Đang chuẩn bị bàn cờ..."
+   },
+   "incoming_match": {
+      "default_title": "Thử thách",
+      "role_default": "Người chơi",
+      "seconds": "giây",
+      "btn_accept": "CHẤP NHẬN THÁCH ĐẤU",
+      "warning_wo": "Không phản hồi = Tự động thua (WO).",
+      "waiting": "Đang chờ đối thủ..."
+   },
+  "help_wallet": {
+    "header": "Trợ giúp Ví & Bảo mật",
+    "hero": {
+      "title": "Ví thông minh của bạn",
+      "desc": "Tìm hiểu cách bảo mật và quản lý ví của bạn một cách khôn ngoan để có trải nghiệm chơi cờ tốt hơn.",
+      "f1": "An toàn & Mã hóa",
+      "f2": "Giao dịch thời gian thực",
+      "f3": "Hỗ trợ 24/7"
+    },
+    "nav": {
+      "what_is": "Ví là gì?",
+      "what_is_desc": "Hiểu về ví điện tử",
+      "security": "Bảo mật",
+      "security_desc": "Mẹo bảo mật quan trọng",
+      "tips": "Mẹo thực tế",
+      "tips_desc": "Thực hành tốt nhất",
+      "faq": "Câu hỏi thường gặp",
+      "faq_desc": "Các câu hỏi phổ biến"
+    },
+    "content": {
+      "what_is": {
+        "title": "Ví là gì?",
+        "subtitle": "Ví điện tử cho các giao dịch trên nền tảng",
+        "section_title": "Ví trong nền tảng Cờ vua",
+        "desc": "Ví là một chiếc ví kỹ thuật số cho phép bạn thực hiện các giao dịch trên nền tảng cờ vua của chúng tôi. Với ví, bạn có thể:",
+        "list": {
+          "1": "Tham gia các giải đấu có phí",
+          "2": "Nhận giải thưởng chiến thắng",
+          "3": "Mua các tính năng cao cấp",
+          "4": "Chuyển tiền cho người dùng khác"
+        },
+        "card1": {
+          "title": "Ví được mã hóa",
+          "desc": "Mọi giao dịch đều được bảo vệ bằng mã hóa đầu cuối để đảm bảo an toàn tối đa."
+        },
+        "card2": {
+          "title": "Giao dịch nhanh chóng",
+          "desc": "Quá trình giao dịch diễn ra trong vài giây, tiền sẽ có ngay trong ví người nhận."
+        }
+      },
+      "security": {
+        "title": "Bảo mật Ví",
+        "subtitle": "Bảo vệ tài sản kỹ thuật số bằng các bước đúng đắn",
+        "alert_title": "Lưu ý quan trọng!",
+        "alert_desc": "Bảo mật ví là trách nhiệm của bạn. Nền tảng của chúng tôi cung cấp công cụ bảo mật, nhưng bạn phải tự giữ quyền truy cập vào tài khoản của mình.",
+        "tips": {
+          "pass_title": "Mật khẩu mạnh",
+          "pass_desc": "Tạo mật khẩu độc nhất và phức tạp",
+          "pass_p1": "Tối thiểu 12 ký tự",
+          "pass_p2": "Kết hợp chữ hoa/chữ thường",
+          "pass_p3": "Gồm số và ký hiệu",
+          "pass_p4": "Không sử dụng lại mật khẩu cũ",
+          "2fa_title": "Xác thực hai yếu tố",
+          "2fa_desc": "Bật 2FA để thêm một lớp bảo mật",
+          "2fa_p1": "Sử dụng ứng dụng Authenticator",
+          "2fa_p2": "Lưu trữ mã dự phòng",
+          "2fa_p3": "Xác minh qua SMS/Email",
+          "2fa_p4": "Kích hoạt trên mọi thiết bị",
+          "phish_title": "Cảnh giác với Phishing",
+          "phish_desc": "Tránh các email và liên kết đáng ngờ",
+          "phish_p1": "Kiểm tra kỹ người gửi email",
+          "phish_p2": "Không nhấp vào link lạ",
+          "phish_p3": "Xác minh URL trang web",
+          "phish_p4": "Báo cáo phishing ngay lập tức",
+          "backup_title": "Sao lưu & Khôi phục",
+          "backup_desc": "Chuẩn bị sẵn phương án khôi phục",
+          "backup_p1": "Lưu cụm từ khôi phục",
+          "backup_p2": "Sao lưu ví định kỳ",
+          "backup_p3": "Thử nghiệm quy trình khôi phục",
+          "backup_p4": "Cất giữ ở nơi an toàn"
+        }
+      },
+      "practical": {
+        "title": "Mẹo thực tế",
+        "subtitle": "Thực hành tốt nhất cho trải nghiệm ví an toàn",
+        "checklist_title": "Danh sách kiểm tra bảo mật hàng ngày",
+        "checks": {
+          "1": "Kiểm tra hoạt động đăng nhập mới nhất",
+          "2": "Xem lại các giao dịch trong ví",
+          "3": "Cập nhật mật khẩu nếu cần thiết",
+          "4": "Xác minh các cụm từ khôi phục"
+        },
+        "btn_done": "Hoàn tất",
+        "btn_mark": "Đánh dấu",
+        "do_title": "✅ Những việc NÊN làm",
+        "do_list": {
+          "1": "Sử dụng trình quản lý mật khẩu tin cậy",
+          "2": "Bật thông báo bảo mật",
+          "3": "Cập nhật phần mềm định kỳ",
+          "4": "Đăng xuất khỏi thiết bị công cộng",
+          "5": "Sử dụng kết nối an toàn (HTTPS)"
+        },
+        "dont_title": "❌ Những việc KHÔNG NÊN làm",
+        "dont_list": {
+          "1": "Không chia sẻ mật khẩu/PIN cho ai",
+          "2": "Không lưu mật khẩu trên trình duyệt",
+          "3": "Không dùng WiFi công cộng khi không có VPN",
+          "4": "Không nhấp link từ email không rõ nguồn gốc",
+          "5": "Không trì hoãn các cập nhật bảo mật"
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "subtitle": "Các câu hỏi thường gặp",
+        "q1": "Nếu tôi quên mật khẩu thì sao?",
+        "a1": "Sử dụng tính năng 'Quên mật khẩu' tại trang đăng nhập. Chúng tôi sẽ gửi link đặt lại vào email của bạn. Đảm bảo email khôi phục đang hoạt động.",
+        "t1": "Hãy lưu mật khẩu vào trình quản lý bảo mật để tránh gặp sự cố này.",
+        "q2": "Ví của tôi có đảm bảo an toàn 100% không?",
+        "a2": "Chúng tôi sử dụng mã hóa cấp quân đội và các giao thức mới nhất. Tuy nhiên, an toàn còn phụ thuộc vào thói quen của bạn như dùng mật khẩu mạnh và 2FA.",
+        "t2": "Bảo mật là trách nhiệm chung giữa nền tảng và người dùng.",
+        "q3": "Làm thế nào để báo cáo hoạt động đáng ngờ?",
+        "a3": "Liên hệ ngay với support@catur.cloud hoặc dùng biểu mẫu khẩn cấp trên trang này. Gửi kèm chi tiết giao dịch và bằng chứng liên quan.",
+        "t3": "Báo cáo càng sớm, chúng tôi càng nhanh chóng xử lý.",
+        "q4": "Giao dịch có thể bị hủy không?",
+        "a4": "Các giao dịch đã được xác nhận trên blockchain không thể bị hủy. Hãy kiểm tra kỹ địa chỉ trước khi gửi.",
+        "t4": "Luôn xác minh địa chỉ người nhận ít nhất 2 lần trước khi chuyển."
+      }
+    },
+    "sidebar": {
+      "stats_title": "📊 Thống kê bảo mật",
+      "stats_1": "Tài khoản được bảo vệ",
+      "stats_2": "Giao dịch an toàn",
+      "stats_3": "Phản hồi hỗ trợ",
+      "checklist_title": "📋 Danh sách bảo mật",
+      "check_1": "Mật khẩu ít nhất 12 ký tự",
+      "check_2": "Xác thực 2 yếu tố đang bật",
+      "check_3": "Email khôi phục đã xác minh",
+      "check_4": "Đã lưu cụm từ khôi phục",
+      "check_5": "Thông báo bảo mật đang hoạt động",
+      "check_6": "Không có thiết bị lạ đăng nhập",
+      "progress": "Tiến độ bảo mật",
+      "emergency_title": "🚨 Liên hệ khẩn cấp",
+      "email_support": "Email hỗ trợ",
+      "security_report": "Báo cáo bảo mật",
+      "btn_report": "Báo cáo sự cố bảo mật"
+    },
+    "footer": {
+      "title": "Bảo mật Ví Catur",
+      "subtitle": "Bảo vệ tài sản kỹ thuật số của bạn từ năm 2024",
+      "privacy": "Chính sách bảo mật",
+      "terms": "Điều khoản dịch vụ",
+      "cookies": "Chính sách Cookie",
+      "copyright": "© 2024 Catur Cloud. Bảo lưu mọi quyền.",
+      "updated": "Trang này được cập nhật lần cuối lúc:"
+    },
+    "modal": {
+      "title": "🚨 Báo cáo sự cố bảo mật",
+      "warning": "Chỉ sử dụng biểu mẫu này cho các sự cố nghiêm trọng như:",
+      "w1": "Truy cập tài khoản trái phép",
+      "w2": "Giao dịch đáng ngờ",
+      "w3": "Lỗ hổng bảo mật",
+      "w4": "Đánh cắp danh tính",
+      "type_label": "Loại sự cố",
+      "type_hack": "Truy cập trái phép",
+      "type_trans": "Giao dịch đáng ngờ",
+      "type_phish": "Phishing/Lừa đảo",
+      "type_other": "Khác",
+      "desc_label": "Mô tả",
+      "desc_ph": "Giải thích chi tiết sự cố...",
+      "email_label": "Email của bạn",
+      "btn_cancel": "Hủy",
+      "btn_submit": "Gửi báo cáo",
+      "alert_sent": "Báo cáo khẩn cấp đã được gửi!"
+    }
+  },
+  "common": {
+      "back":"Back"
+  }
+}

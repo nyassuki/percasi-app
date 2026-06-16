@@ -1,0 +1,284 @@
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class StatisticModel extends Model
+{
+    protected $table = 'user_ratings';
+    protected $primaryKey = 'id';
+    
+    /**
+     * Helper: Menentukan Title Rank berdasarkan ELO Rating
+     */
+    private function getRankTitle($rating)
+    {
+        if ($rating >= 2500) return 'Grandmaster';
+        if ($rating >= 2200) return 'International Master';
+        if ($rating >= 2000) return 'Master';
+        if ($rating >= 1800) return 'Elite';
+        if ($rating >= 1600) return 'Expert';
+        if ($rating >= 1400) return 'Advanced';
+        if ($rating >= 1200) return 'Intermediate';
+        if ($rating >= 1000) return 'Novice';
+        return 'Beginner';
+    }
+
+    /**
+     * Mengambil statistik lengkap user berdasarkan ID
+     * @param int $userId 
+     * @return array
+     */
+    public function getUserStats($userId)
+    {
+        try {
+            // 1. Ambil Rating User Saat Ini
+            $userRating = $this->db->table('user_ratings')
+                ->select('standard_rating')
+                ->where('user_id', $userId)
+                ->get()
+                ->getRow();
+
+            // Handle jika user belum punya rating (User baru)
+            $currentRating = 1200; // Default rating
+            if ($userRating) {
+                $currentRating = $userRating->standard_rating;
+            }
+
+            // 2. Query Agregat untuk statistik pertandingan
+            $query = $this->db->query("
+                SELECT 
+                    COUNT(*) as total,
+                    
+                    -- Hitung Menang (Wins)
+                    SUM(CASE 
+                        WHEN (white_player_id = ? AND result = '1-0') THEN 1
+                        WHEN (black_player_id = ? AND result = '0-1') THEN 1
+                        ELSE 0 
+                    END) as wins,
+
+                    -- Hitung Seri (Draws)
+                    SUM(CASE 
+                        WHEN result = '1/2-1/2' THEN 1
+                        ELSE 0 
+                    END) as draws
+
+                FROM matches 
+                WHERE 
+                    (white_player_id = ? OR black_player_id = ?) 
+                    AND result IN ('1-0', '0-1', '1/2-1/2')
+            ", [$userId, $userId, $userId, $userId]);
+
+            $row = $query->getRow();
+
+            // 3. Konversi Data
+            $wins = $row->wins ? (int) $row->wins : 0;
+            $draws = $row->draws ? (int) $row->draws : 0;
+            $total = $row->total ? (int) $row->total : 0;
+
+            // Hitung Losses via PHP (Lebih hemat resource DB)
+            $losses = $total - $wins - $draws;
+
+            // 4. Hitung Rating Trend
+            $ratingTrend = ($wins * 10) - ($losses * 8);
+
+            // 5. Return Data
+            return [
+                'totalGames' => $total,
+                'wins' => $wins,
+                'losses' => $losses,
+                'draws' => $draws,
+                'rating' => $currentRating,
+                'rankTitle' => $this->getRankTitle($currentRating),
+                'ratingTrend' => $ratingTrend,
+                'winRate' => $total > 0 ? round(($wins / $total) * 100, 1) : 0
+            ];
+
+        } catch (\Exception $error) {
+            log_message('error', "Error in getUserStats: {$error->getMessage()}");
+            throw $error;
+        }
+    }
+
+    /**
+     * Mendapatkan statistik turnamen user
+     * @param int $userId
+     * @return array
+     */
+    public function getTournamentStats($userId)
+    {
+        try {
+            $query = $this->db->query("
+                SELECT 
+                    COUNT(DISTINCT t.id) as total_tournaments,
+                    SUM(CASE WHEN t.winner_id = ? THEN 1 ELSE 0 END) as tournament_wins,
+                    SUM(CASE WHEN tr.position = 1 THEN 1 ELSE 0 END) as first_place,
+                    SUM(CASE WHEN tr.position <= 3 THEN 1 ELSE 0 END) as podium_finishes
+                FROM tournaments t
+                LEFT JOIN tournament_registrations tr ON t.id = tr.tournament_id AND tr.user_id = ?
+                WHERE tr.user_id IS NOT NULL
+            ", [$userId, $userId]);
+
+            $row = $query->getRow();
+            
+            return [
+                'total_tournaments' => $row->total_tournaments ?? 0,
+                'tournament_wins' => $row->tournament_wins ?? 0,
+                'first_place' => $row->first_place ?? 0,
+                'podium_finishes' => $row->podium_finishes ?? 0
+            ];
+            
+        } catch (\Exception $error) {
+            log_message('error', "Error in getTournamentStats: {$error->getMessage()}");
+            return [];
+        }
+    }
+
+    /**
+     * Mendapatkan progress rating 30 hari terakhir
+     * @param int $userId
+     * @return array
+     */
+    public function getRatingProgress($userId)
+    {
+        try {
+            $query = $this->db->query("
+                SELECT 
+                    DATE(created_at) as date,
+                    standard_rating as rating
+                FROM user_ratings_history 
+                WHERE user_id = ? 
+                    AND created_at >= DATE_SUB(NOW(), INTERVAL 30 DAY)
+                ORDER BY created_at ASC
+            ", [$userId]);
+
+            return $query->getResultArray();
+            
+        } catch (\Exception $error) {
+            log_message('error', "Error in getRatingProgress: {$error->getMessage()}");
+            return [];
+        }
+    }
+
+    /**
+     * Mendapatkan performa vs opening (opsional)
+     * @param int $userId
+     * @return array
+     */
+    public function getOpeningPerformance($userId)
+    {
+        try {
+            $query = $this->db->query("
+                SELECT 
+                    opening_code,
+                    opening_name,
+                    COUNT(*) as games_played,
+                    SUM(CASE 
+                        WHEN (white_player_id = ? AND result = '1-0') OR 
+                             (black_player_id = ? AND result = '0-1') THEN 1
+                        ELSE 0 
+                    END) as wins,
+                    SUM(CASE WHEN result = '1/2-1/2' THEN 1 ELSE 0 END) as draws
+                FROM matches 
+                WHERE (white_player_id = ? OR black_player_id = ?)
+                    AND opening_code IS NOT NULL
+                GROUP BY opening_code, opening_name
+                ORDER BY games_played DESC
+                LIMIT 10
+            ", [$userId, $userId, $userId, $userId]);
+
+            $results = $query->getResultArray();
+            
+            // Hitung win rate untuk setiap opening
+            foreach ($results as &$result) {
+                $total = $result['games_played'];
+                $wins = $result['wins'];
+                $draws = $result['draws'];
+                $result['win_rate'] = $total > 0 ? round(($wins / $total) * 100, 1) : 0;
+            }
+            
+            return $results;
+            
+        } catch (\Exception $error) {
+            log_message('error', "Error in getOpeningPerformance: {$error->getMessage()}");
+            return [];
+        }
+    }
+
+    /**
+     * Mendapatkan statistik head-to-head vs lawan tertentu
+     * @param int $userId
+     * @param int $opponentId
+     * @return array
+     */
+    public function getHeadToHeadStats($userId, $opponentId)
+    {
+        try {
+            $query = $this->db->query("
+                SELECT 
+                    COUNT(*) as total_games,
+                    SUM(CASE 
+                        WHEN (white_player_id = ? AND result = '1-0') OR 
+                             (black_player_id = ? AND result = '0-1') THEN 1
+                        ELSE 0 
+                    END) as user_wins,
+                    SUM(CASE 
+                        WHEN (white_player_id = ? AND result = '1-0') OR 
+                             (black_player_id = ? AND result = '0-1') THEN 1
+                        ELSE 0 
+                    END) as opponent_wins,
+                    SUM(CASE WHEN result = '1/2-1/2' THEN 1 ELSE 0 END) as draws,
+                    AVG(CASE 
+                        WHEN white_player_id = ? THEN white_rating
+                        ELSE black_rating 
+                    END) as user_avg_rating,
+                    AVG(CASE 
+                        WHEN white_player_id = ? THEN white_rating
+                        ELSE black_rating 
+                    END) as opponent_avg_rating
+                FROM matches 
+                WHERE ((white_player_id = ? AND black_player_id = ?) OR 
+                       (white_player_id = ? AND black_player_id = ?))
+                    AND result IN ('1-0', '0-1', '1/2-1/2')
+            ", [
+                $userId, $userId,      // user_wins
+                $opponentId, $opponentId, // opponent_wins
+                $userId,                // user_avg_rating
+                $opponentId,            // opponent_avg_rating
+                $userId, $opponentId,   // kondisi pertama
+                $opponentId, $userId    // kondisi kedua
+            ]);
+
+            $row = $query->getRow();
+            
+            if (!$row || $row->total_games == 0) {
+                return [
+                    'total_games' => 0,
+                    'user_wins' => 0,
+                    'opponent_wins' => 0,
+                    'draws' => 0,
+                    'user_win_rate' => 0,
+                    'opponent_win_rate' => 0,
+                    'user_avg_rating' => 0,
+                    'opponent_avg_rating' => 0
+                ];
+            }
+            
+            return [
+                'total_games' => (int) $row->total_games,
+                'user_wins' => (int) $row->user_wins,
+                'opponent_wins' => (int) $row->opponent_wins,
+                'draws' => (int) $row->draws,
+                'user_win_rate' => round(($row->user_wins / $row->total_games) * 100, 1),
+                'opponent_win_rate' => round(($row->opponent_wins / $row->total_games) * 100, 1),
+                'user_avg_rating' => round($row->user_avg_rating, 0),
+                'opponent_avg_rating' => round($row->opponent_avg_rating, 0)
+            ];
+            
+        } catch (\Exception $error) {
+            log_message('error', "Error in getHeadToHeadStats: {$error->getMessage()}");
+            return [];
+        }
+    }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<title>WebSocket Test (ws / wss)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    padding: 20px;
+  }
+  .card {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  input, textarea, button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+  }
+  textarea {
+    height: 150px;
+    font-family: monospace;
+  }
+  button {
+    cursor: pointer;
+  }
+  .status {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h2>WebSocket Tester</h2>
+
+  <label>WebSocket URL</label>
+  <input id="wsUrl" value="ws://localhost:3000" />
+
+  <button onclick="connect()">Connect</button>
+  <button onclick="disconnect()">Disconnect</button>
+
+  <div id="status" class="status">Status: Disconnected</div>
+
+  <label>Message</label>
+  <input id="message" placeholder="Ketik pesan..." />
+
+  <button onclick="sendMessage()">Send</button>
+
+  <label>Log</label>
+  <textarea id="log" readonly></textarea>
+</div>
+
+<script>
+let socket = null;
+
+function log(msg) {
+  const logEl = document.getElementById('log');
+  logEl.value += msg + "\n";
+  logEl.scrollTop = logEl.scrollHeight;
+}
+
+function setStatus(text, color = 'black') {
+  const statusEl = document.getElementById('status');
+  statusEl.textContent = 'Status: ' + text;
+  statusEl.style.color = color;
+}
+
+function connect() {
+  const url = document.getElementById('wsUrl').value;
+
+  if (socket) {
+    log('⚠️ Already connected');
+    return;
+  }
+
+  try {
+    socket = new WebSocket(url);
+
+    setStatus('Connecting...', 'orange');
+    log('➡️ Connecting to ' + url);
+
+    socket.onopen = () => {
+      setStatus('Connected', 'green');
+      log('✅ Connected');
+    };
+
+    socket.onmessage = (event) => {
+      log('⬅️ Message: ' + event.data);
+    };
+
+    socket.onerror = (err) => {
+      log('❌ Error');
+      console.error(err);
+    };
+
+    socket.onclose = (e) => {
+      setStatus('Disconnected', 'red');
+      log(`🔌 Closed (code=${e.code})`);
+      socket = null;
+    };
+
+  } catch (e) {
+    log('❌ Exception: ' + e.message);
+  }
+}
+
+function sendMessage() {
+  const msg = document.getElementById('message').value;
+
+  if (!socket || socket.readyState !== WebSocket.OPEN) {
+    log('⚠️ Not connected');
+    return;
+  }
+
+  socket.send(msg);
+  log('➡️ Sent: ' + msg);
+}
+
+function disconnect() {
+  if (socket) {
+    socket.close();
+    socket = null;
+  }
+}
+</script>
+
+</body>
+</html>

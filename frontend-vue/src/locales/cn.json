@@ -1,0 +1,1610 @@
+{
+   "welcome": "欢迎使用我的应用",
+   "Nomor HP wajib diisi":"手机号码必填",
+   "menu": {
+      "home": "首页",
+      "wallet": "钱包",
+      "market": "市场",
+      "profile": "个人资料"
+   },
+   "button": {
+      "change_lang": "切换语言",
+      "receive_funds": "收款",
+      "topup": "充值",
+      "search_opponents": "排位赛",
+      "tournaments": "锦标赛",
+      "lobby": "游戏大厅",
+      "play_offline": "离线游戏",
+      "vs_bot": "对战 AI",
+      "cancel_search": "取消搜索",
+      "rejoin": "重新加入",
+      "logout": "退出登录",
+      "cancel": "取消",
+      "verify": "验证",
+      "view_all": "查看全部"
+   },
+   "text": {
+      "total_game": "总对局数",
+      "win_rate": "胜率",
+      "rating": "等级分",
+      "rating_trend": "等级分趋势",
+      "game_mode": "游戏模式",
+      "search_desc": "与真实对手对战",
+      "tournaments_desc": "竞技赛事",
+      "lobby_desc": "友谊赛",
+      "offline_desc": "扫描二维码开始游戏",
+      "bot_desc": "与 AI 练习",
+      "promotions": "活动推广",
+      "chess_news": "国际象棋新闻",
+      "account": "账户",
+      "total_balance": "总余额",
+      "guest": "游客",
+      "live_match": "实时对局",
+      "vs": "对战",
+      "matchmaking_progress": "匹配进度",
+      "estimated_wait": "预计等待时间：",
+      "searching": "正在搜索...",
+      "players": "玩家",
+      "online": "在线",
+      "similar": "相近",
+      "tip": "提示：",
+      "tip_desc": "扩大等级分范围可能更快找到对手",
+      "greeting": {
+         "morning": "早上好",
+         "afternoon": "下午好",
+         "evening": "晚上好",
+         "night": "晚安"
+      }
+   },
+   "toast": {
+      "connecting": "正在连接服务器...",
+      "finish_active": "请先完成当前对局！",
+      "req_failed": "请求发送失败。",
+      "search_cancelled": "搜索已取消。",
+      "cancel_failed": "取消失败。"
+   },
+   "dialog": {
+      "logout_title": "确定退出登录？",
+      "logout_desc": "您需要重新登录。"
+   },
+   "bot_game": {
+      "title": "对战 AI",
+      "bot_name": "国际象棋 AI",
+      "game_stats": "对局统计",
+      "game_controls": "游戏控制",
+      "game_over": "游戏结束",
+      "time_remaining": "剩余时间",
+      "moving": "行棋中",
+      "waiting": "等待中",
+      "moves": "步数",
+      "duration": "对局时长",
+      "your_moves": "你的步数",
+      "bot_moves": "AI 步数",
+      "total_moves": "总步数",
+      "bot_thinking": "AI 思考中",
+      "analyzing": "分析深度...",
+      "select_level": "选择 AI 等级",
+      "challenge_desc": "挑战不同难度的对手",
+      "level": "等级",
+      "turn": "走子方",
+      "you": "你",
+      "white": "白方",
+      "black": "黑方",
+      "your_turn": "轮到你走",
+      "wait_turn": "等待对方走子",
+      "reset": "重置对局",
+      "change_color": "切换颜色",
+      "stats": "统计",
+      "play_again": "再玩一局",
+      "dashboard": "返回仪表盘",
+      "tournament": "锦标赛",
+      "confirm_reset": "切换颜色？当前对局将被重置。",
+      "difficulty": {
+         "easy": "新手",
+         "medium": "中等",
+         "hard": "专家",
+         "gm": "大师"
+      },
+      "result": {
+         "time_out": "超时",
+         "bot_time_out": "AI 超时",
+         "checkmate": "将死",
+         "draw": "和棋",
+         "win": "你赢了",
+         "lose": "你输了"
+      }
+   },
+   "flight": {
+      "title": "预订机票",
+      "subtitle": "轻松搜索并预订机票",
+      "trip_type": {
+         "one_way": "单程",
+         "round_trip": "往返"
+      },
+      "form": {
+         "from": "出发地",
+         "to": "目的地",
+         "origin_placeholder": "出发机场",
+         "destination_placeholder": "到达机场",
+         "departure": "出发日期",
+         "return": "返程日期",
+         "passengers_class": "乘客与舱位",
+         "loading": "正在加载机场..."
+      },
+      "quick_date": {
+         "today": "今天",
+         "tomorrow": "明天",
+         "days_3": "3天内",
+         "days_7": "7天内"
+      },
+      "passengers": {
+         "title": "乘客人数",
+         "label": "乘客",
+         "adults": "成人",
+         "adults_desc": "(12岁及以上)",
+         "children": "儿童",
+         "children_desc": "(2-11岁)",
+         "infants": "婴儿",
+         "infants_desc": "(0-2岁)"
+      },
+      "class": {
+         "title": "舱位等级",
+         "economy": "经济舱",
+         "business": "商务舱",
+         "first": "头等舱",
+         "label_popular": "热门",
+         "label_comfort": "舒适",
+         "label_premium": "尊享"
+      },
+      "button": {
+         "search": "搜索航班",
+         "searching": "搜索中..."
+      },
+      "tips": {
+         "1": "至少在起飞前3小时预订",
+         "2": "准备好身份证/护照用于值机",
+         "3": "婴儿最大2岁，儿童2-11岁",
+         "4": "在机场出示登机牌",
+         "title": "预订提示"
+      },
+      "routes": {
+         "title": "热门航线",
+         "jakarta": "雅加达",
+         "bali": "巴厘岛",
+         "surabaya": "泗水",
+         "makassar": "望加锡"
+      },
+      "toast": {
+         "load_error": "加载机场列表失败。",
+         "try_again": "请稍后重试。",
+         "incomplete": "信息不完整",
+         "incomplete_desc": "请选择出发地和目的地机场。",
+         "invalid": "机场无效",
+         "invalid_desc": "出发地和目的地不能相同。",
+         "invalid_date": "日期无效",
+         "invalid_date_desc": "返程日期必须在出发日期之后。",
+         "success": "搜索成功！",
+         "showing_flights": "显示来自"
+      }
+   },
+   "forgot_password": {
+      "title": "忘记密码？",
+      "subtitle": "别担心。输入您注册的邮箱，我们将向您发送密码重置说明。",
+      "success_title": "成功！",
+      "success_message": "密码重置链接已发送至您的邮箱。请检查收件箱/垃圾邮件。",
+      "error_default": "请求处理失败。请确保邮箱已注册。",
+      "email_label": "注册邮箱",
+      "email_placeholder": "example@email.com",
+      "btn_submit": "发送重置链接",
+      "btn_sending": "发送中...",
+      "back_to_login": "返回登录"
+   },
+   "live_game": {
+      "header": {
+         "live_match": "实时对局",
+         "finished": "已结束",
+         "your_turn": "轮到你了",
+         "opponent_turn": "对手回合"
+      },
+      "loading": "正在加载对局...",
+      "player": {
+         "moving": "行棋中",
+         "you": "你",
+         "white": "白方",
+         "black": "黑方"
+      },
+      "info": {
+         "duration": "对局时长",
+         "mode": "模式",
+         "with_time": "限时",
+         "no_time": "不限时"
+      },
+      "controls": {
+         "title": "游戏控制",
+         "offer_draw": "提和",
+         "resign": "认输",
+         "draw_sent": "等待中...",
+         "resigning": "发送中...",
+         "draw_label": "提和",
+         "resign_label": "认输",
+         "back_dashboard": "返回仪表盘",
+         "analyze": "分析对局"
+      },
+      "overlay": {
+         "waiting_draw": "等待对手回应",
+         "sending_resign": "正在发送认输请求...",
+         "game_over": "游戏结束"
+      },
+      "result": {
+         "draw_title": "和棋！🤝",
+         "victory": "胜利！🏆",
+         "finished": "对局结束",
+         "default_desc": "对局已结束"
+      },
+      "reason": {
+         "checkmate": "将死！王无法移动",
+         "stalemate": "逼和 - 王无法移动但未被将军",
+         "insufficient_material": "剩余棋子不足以将死",
+         "threefold_repetition": "三次重复局面",
+         "timeout": "超时",
+         "resignation": "玩家认输",
+         "agreement": "双方协议",
+         "abandoned": "对局被放弃",
+         "unknown": "对局结束"
+      },
+      "modal": {
+         "draw_title": "提和请求",
+         "draw_desc": "对手提议和棋。",
+         "draw_ask_title": "提议和棋？",
+         "draw_ask_desc": "向对手发送提和请求",
+         "resign_title": "认输？",
+         "resign_desc": "您确定要认输吗？",
+         "btn_accept": "接受",
+         "btn_decline": "拒绝",
+         "btn_offer": "提议",
+         "btn_resign": "是的，认输",
+         "btn_cancel": "取消",
+         "btn_continue": "继续"
+      },
+      "toast": {
+         "draw_accepted": "和棋已接受",
+         "contacting_server": "正在连接服务器...",
+         "draw_declined": "和棋被拒绝",
+         "game_continued": "对局继续",
+         "draw_sent": "提和请求已发送",
+         "waiting_opponent": "等待对手...",
+         "opponent_declined": "对手拒绝了提和请求",
+         "resigning": "认输中...",
+         "sending_resign": "正在发送认输请求",
+         "load_error": "加载数据失败。",
+         "analyze_info": "分析功能即将推出"
+      }
+   },
+   "notification": {
+      "header": {
+         "title": "收件箱",
+         "unread_count": "{count} 条未读消息",
+         "mark_all_read": "全部标记为已读"
+      },
+      "empty": {
+         "title": "收件箱为空",
+         "desc": "所有通知将显示在此处"
+      },
+      "card": {
+         "just_now": "刚刚",
+         "min_ago": "{count} 分钟前",
+         "hour_ago": "{count} 小时前",
+         "view_detail": "查看详情"
+      },
+      "modal": {
+         "title": "通知详情",
+         "subtitle": "完整信息",
+         "read": "已读",
+         "unread": "未读",
+         "additional_info": "附加信息",
+         "close": "关闭",
+         "view_action": "查看详情"
+      },
+      "type": {
+         "success": "成功",
+         "warning": "警告",
+         "danger": "警报",
+         "payment": "支付",
+         "tournament": "锦标赛",
+         "match": "对局",
+         "info": "信息"
+      }
+   },
+   "kyc": {
+      "pending_title": "验证审核中",
+      "pending_desc": "资料正在审核中。",
+      "unverified_title": "账户未验证",
+      "unverified_desc": "部分功能受限。",
+      "header": {
+         "title": "账户验证",
+         "subtitle": "完善资料以启用提现功能。"
+      },
+      "step1": {
+         "title": "1. 身份证照片 (E-KTP)",
+         "status_success": "成功",
+         "upload_text": "上传身份证"
+      },
+      "step2": {
+         "title": "2. 人脸验证",
+         "status_success": "成功",
+         "start_liveness": "开始活体检测",
+         "click_camera": "点击开启摄像头",
+         "retake": "重新拍照"
+      },
+      "modal": {
+         "loading_ai": "正在加载 AI 模型...",
+         "instruction": "说明",
+         "success_title": "验证成功！",
+         "verified_hold": "已验证！请保持不动...",
+         "btn_camera": "开启摄像头",
+         "error_load": "加载活体检测系统失败。请检查连接/摄像头。"
+      },
+      "challenges": {
+         "smile": "请微笑",
+         "mouth": "张开嘴巴",
+         "turn_left": "头部微微向左转",
+         "turn_right": "头部微微向右转"
+      },
+      "button": {
+         "submit": "提交验证",
+         "sending": "正在发送数据..."
+      },
+      "toast": {
+         "incomplete": "数据不完整。",
+         "success_submit": "验证提交成功！",
+         "success_face": "人脸验证成功！",
+         "upload_failed": "上传失败。"
+      }
+   },
+   "live_matches": {
+      "header": {
+         "title_1": "实时",
+         "title_2": "对局",
+         "subtitle": "观看正在实时进行的对局",
+         "live_count": "{count} 场对局正在直播 | {count} 场对局正在直播",
+         "updated": "更新时间：{time}",
+         "refresh": "刷新"
+      },
+      "card": {
+         "live_now": "正在直播",
+         "match_id": "对局 #{id}",
+         "white": "白方",
+         "black": "黑方",
+         "moving": "行棋中",
+         "moves": "步数",
+         "time": "时间",
+         "watch": "观看对局"
+      },
+      "empty": {
+         "title": "暂无活跃对局",
+         "desc": "目前没有正在进行的对局。请等待下一场比赛！",
+         "btn_refresh": "刷新"
+      },
+      "footer": {
+         "title": "实时更新",
+         "desc": "数据每10秒自动更新一次",
+         "total": "实时对局总数"
+      }
+   },
+   "lobby": {
+      "header": {
+         "title": "玩家大厅",
+         "subtitle": "{count} 名玩家在线"
+      },
+      "search": {
+         "placeholder": "搜索用户名..."
+      },
+      "status": {
+         "playing": "对局中",
+         "online": "在线"
+      },
+      "empty": {
+         "title": "当前没有其他玩家在线。",
+         "desc": "尝试邀请你的朋友登录！"
+      },
+      "button": {
+         "duel": "发起挑战",
+         "watch": "观战"
+      },
+      "toast": {
+         "player_busy": "该玩家当前正在对局中。",
+         "challenge_sent": "已向 {username} 发送挑战请求！",
+         "challenge_declined": "{username} 拒绝了挑战。",
+         "match_start": "挑战被接受！开始游戏..."
+      }
+   },
+   "auth_login": {
+      "welcome_user": "欢迎回来，{name}！",
+      "biometric": {
+         "title": "指纹/面容登录",
+         "desc": "使用指纹或面容 ID 验证身份以继续",
+         "btn": "生物识别登录",
+         "processing": "处理中..."
+      },
+      "other_account": "使用其他账户登录",
+      "register_new": "注册新账户",
+      "form": {
+         "email_label": "邮箱地址",
+         "email_placeholder": "email@example.com",
+         "password_label": "密码",
+         "password_placeholder": "••••••••",
+         "forgot_password": "忘记密码？",
+         "btn_login": "登录",
+         "or_divider": "或通过以下方式继续"
+      },
+      "register_link": {
+         "text": "还没有账户？",
+         "link": "注册运动员"
+      },
+      "2fa": {
+         "title_setup": "启用双重验证",
+         "desc_setup": "使用验证器应用扫描二维码",
+         "title_verify": "安全验证",
+         "desc_verify": "输入您验证器应用中的 OTP 代码",
+         "title_input_setup": "输入验证码",
+         "desc_input_setup": "输入验证器应用中的 6 位验证码",
+         "loading_qr": "正在加载二维码...",
+         "manual_code": "或输入手动代码：",
+         "btn_verifying": "验证中...",
+         "btn_activate": "启用安全验证",
+         "btn_confirm": "确认 OTP",
+         "back_to_login": "返回登录",
+         "copy_success": "手动代码已复制！"
+      },
+      "error": {
+         "email_required": "请输入您的邮箱。",
+         "biometric_failed": "生物识别登录失败。",
+         "login_failed": "邮箱或密码无效。",
+         "google_failed": "谷歌登录失败",
+         "otp_invalid": "OTP 验证码无效或已过期。"
+      },
+      "footer": "版权所有。",
+      "default_welcome": "请登录"
+   },
+   "biometric": {
+      "title": "生物识别登录",
+      "btn_login": "使用指纹 / 面容 ID",
+      "btn_register": "注册此设备",
+      "success_register": "生物识别注册成功！",
+      "success_login": "登录成功！",
+      "error_auth": "生物识别失败或已取消。"
+   },
+   "market": {
+      "header": {
+         "title": "市场 & PPOB",
+         "subtitle": "选择您需要的服务",
+         "available_balance": "可用余额",
+         "today_transaction": "今日交易",
+         "points": "积分"
+      },
+      "section": {
+         "available_services": "可用服务",
+         "services_count": "{count} 项服务",
+         "services_desc": "轻松选择并访问各项服务"
+      },
+      "category": {
+         "train": "火车票",
+         "train_desc": "预订国内旅行的 KAI 车票。",
+         "flight": "机票",
+         "flight_desc": "搜索并预订国内和国际航班。",
+         "hotel": "酒店住宿",
+         "hotel_desc": "预订全球范围内的住宿、酒店或别墅。",
+         "pulsa": "话费流量",
+         "pulsa_desc": "为所有运营商充值话费和数据套餐。",
+         "postpaid": "电话账单",
+         "postpaid_desc": "支付您的月度后付费账单。",
+         "pln": "电费 (PLN)",
+         "pln_desc": "支付电费或购买 PLN 代币。",
+         "pdam": "水费 (PDAM)",
+         "pdam_desc": "支付各地区 PDAM 水费。",
+         "finance": "多合一金融",
+         "finance_desc": "支付摩托车、汽车或其他贷款的分期付款。",
+         "umrah": "朝觐套餐",
+         "umrah_desc": "最佳朝觐套餐优惠。",
+         "religious": "宗教之旅",
+         "religious_desc": "探索朝圣和宗教之旅套餐。"
+      },
+      "button": {
+         "access_now": "立即访问"
+      },
+      "info": {
+         "title": "重要信息",
+         "secure_title": "安全可靠的交易",
+         "secure_desc": "所有 PPOB 和旅行交易均使用主余额，并受交易 PIN 码保护以确保您的安全。"
+      }
+   },
+   "history": {
+      "header": {
+         "title": "对局历史列表",
+         "total_match": "总计：{count} 场对局"
+      },
+      "loading": "正在加载数据...",
+      "empty": {
+         "title": "暂无对局记录",
+         "desc": "现在就开始下棋吧！"
+      },
+      "table": {
+         "date": "日期",
+         "opponent": "对手",
+         "color": "执子颜色",
+         "result": "结果",
+         "reason": "原因"
+      },
+      "pagination": {
+         "page_info": "第 {current} 页，共 {total} 页",
+         "prev": "上一页",
+         "next": "下一页"
+      },
+      "player": {
+         "unknown": "未知",
+         "white": "白方",
+         "black": "黑方"
+      },
+      "result": {
+         "draw": "和棋",
+         "win": "胜利",
+         "lose": "失败"
+      },
+      "reason": {
+         "agreement": "协议",
+         "timeout": "超时",
+         "resignation": "认输",
+         "checkmate": "将死",
+         "abandoned": "放弃",
+         "unknown": "未知"
+      },
+      "toast": {
+         "load_error": "加载数据失败。"
+      }
+   },
+   "mirror": {
+      "title": "观战室",
+      "match_id": "对局 #{id}",
+      "status": {
+         "live": "正在观战",
+         "checkmate": "将死",
+         "draw": "和棋",
+         "finished": "已结束"
+      },
+      "stats": {
+         "watchers": "观战者",
+         "moves": "步数",
+         "white": "白方",
+         "black": "黑方"
+      },
+      "history": "走子历史",
+      "back": "返回"
+   },
+   "news_detail": {
+      "header": {
+         "title": "文章",
+         "subtitle": "策略与技巧"
+      },
+      "menu": {
+         "liked": "喜欢的文章",
+         "saved": "收藏的文章",
+         "profile": "我的个人资料"
+      },
+      "share": {
+         "title": "分享文章",
+         "copy": "复制链接",
+         "whatsapp": "WhatsApp",
+         "twitter": "推特",
+         "facebook": "脸书"
+      },
+      "meta": {
+         "min_read": "分钟阅读",
+         "views": "浏览量",
+         "verified": "已验证",
+         "articles_count": "10+ 篇文章",
+         "follow": "关注"
+      },
+      "stats": {
+         "likes": "点赞",
+         "comments": "评论",
+         "shares": "分享"
+      },
+      "tags_title": "相关话题",
+      "actions": {
+         "like": "点赞",
+         "liked": "已点赞",
+         "share": "分享"
+      },
+      "related": {
+         "title": "相关文章",
+         "subtitle": "阅读其他有趣的文章",
+         "view_all": "查看全部",
+         "read_more": "阅读更多",
+         "view_all_mobile": "查看所有文章"
+      },
+      "newsletter": {
+         "title": "想要最新资讯？",
+         "desc": "获取策略文章、锦标赛信息和独家技巧，直接发送到您的邮箱。",
+         "placeholder": "您的邮箱",
+         "subscribe": "订阅",
+         "privacy": "订阅即表示您同意我们的隐私政策。"
+      },
+      "toast": {
+         "copy_success": "链接复制成功！"
+      }
+   },
+   "profile": {
+      "header": {
+         "title": "编辑个人资料",
+         "subtitle": "更新账户和财务信息"
+      },
+      "verified": "已验证",
+      "verify_now": "立即验证",
+      "account_active": "账户活跃",
+      "tabs": {
+         "general": "通用",
+         "financial": "财务",
+         "security": "安全"
+      },
+      "general": {
+         "title": "基本信息",
+         "full_name": "全名",
+         "full_name_ph": "与身份证一致",
+         "phone": "WhatsApp 号码",
+         "country": "国家",
+         "province": "省份",
+         "regency": "城市 / 县",
+         "district": "区",
+         "subdistrict": "街道 / 村庄",
+         "postal_code": "邮政编码",
+         "address": "完整地址",
+         "address_ph": "街道、门牌号、RT/RW",
+         "select": {
+            "country": "选择国家",
+            "province": "选择省份",
+            "regency": "选择城市",
+            "district": "选择区",
+            "subdistrict": "选择街道"
+         },
+         "phone_verified_note": "* 号码已验证，不可更改。"
+      },
+      "financial": {
+         "title": "银行账户",
+         "bank_name": "银行名称",
+         "select_bank": "选择银行",
+         "account_number": "账户号码",
+         "account_holder": "账户持有人姓名",
+         "account_holder_ph": "自动跟随全名",
+         "account_holder_note": "自动跟随个人资料中的全名",
+         "wallet_security": "钱包安全",
+         "wallet_note": "如果不想更改钱包 PIN，请留空。PIN 用于提现。",
+         "old_pin": "旧 PIN",
+         "old_pin_note": "(创建新 PIN 时请留空)",
+         "new_pin": "新 PIN (6 位数字)",
+         "confirm_pin": "重复新 PIN (6 位数字)",
+         "pin_rule": "仅限数字 0-9"
+      },
+      "security": {
+         "title": "更改登录密码",
+         "note": "如果不想更改应用登录密码，请将此表单留空。",
+         "current_pass": "当前密码",
+         "current_pass_ph": "输入旧密码",
+         "new_pass": "新密码",
+         "new_pass_ph": "最少 6 个字符",
+         "confirm_pass": "确认新密码",
+         "confirm_pass_ph": "重新输入新密码"
+      },
+      "button": {
+         "save": "保存更改",
+         "saving": "保存中..."
+      },
+      "toast": {
+         "success": "数据保存成功！",
+         "error": "保存数据失败。",
+         "file_size": "文件大小最大 2MB。",
+         "pass_required": "更改密码需要输入当前密码。",
+         "pass_mismatch": "新密码确认不匹配。",
+         "pass_min": "新密码最少 6 个字符。",
+         "pin_length": "PIN 必须为 6 位数字。",
+         "pin_mismatch": "新 PIN 不匹配。",
+         "email_sent": "邮箱验证链接已发送。",
+         "phone_verified": "电话号码验证成功！"
+      },
+      "modal": {
+         "phone_title": "电话验证",
+         "phone_desc": "输入发送到您号码的 6 位验证码 (5 分钟内有效)",
+         "btn_verify": "验证",
+         "btn_cancel": "取消",
+         "validation": "输入 6 位验证码"
+      }
+   },
+   "topup": {
+      "header": {
+         "back": "返回",
+         "close": "关闭",
+         "title_input": "余额充值",
+         "title_qris": "QRIS 支付",
+         "subtitle_input": "通过 QRIS 充值",
+         "subtitle_qris": "扫描二维码支付",
+         "amount": "金额",
+         "total": "总计"
+      },
+      "form": {
+         "title": "通过 QRIS 充值",
+         "subtitle": "通过印度尼西亚 QRIS 即时、安全、自动支付",
+         "select_label": "选择充值金额",
+         "custom_label": "或输入其他金额",
+         "min_max_help": "最低 Rp 1,000，最高 Rp 10,000,000",
+         "btn_process": "处理中...",
+         "btn_submit": "生成支付二维码"
+      },
+      "qris": {
+         "total_due": "应付总额",
+         "trx_id": "交易 ID",
+         "expiry": "二维码 24 小时后过期",
+         "download": "下载二维码",
+         "not_available": "二维码不可用",
+         "supported_by": "支持方："
+      },
+      "steps": {
+         "title": "支付方式：",
+         "1_title": "打开应用",
+         "1_desc": "打开您的电子钱包、手机银行或网上银行应用",
+         "2_title": "扫描二维码",
+         "2_desc": "在您的应用中选择‘扫描二维码’或‘使用 QRIS 支付’菜单",
+         "3_title": "确认支付",
+         "3_desc": "扫描上方二维码并确认支付金额",
+         "4_title": "完成",
+         "4_desc": "余额将在 1-3 分钟内自动添加到您的账户"
+      },
+      "banner": {
+         "title": "使用 QRIS 支付更快捷",
+         "desc": "使用 QRIS 进行即时、便捷的余额充值。无需手动输入数据，扫描即可支付。"
+      },
+      "toast": {
+         "min_amount": "最低充值金额 Rp 1,000",
+         "success": "QRIS 生成成功",
+         "error": "生成 QRIS 失败"
+      }
+   },
+   "qr_game": {
+      "header": {
+         "title": "对局代码",
+         "subtitle": "显示二维码以加入"
+      },
+      "card": {
+         "title": "扫描加入",
+         "desc": "将对手的摄像头对准此二维码"
+      },
+      "status": {
+         "expired_title": "二维码已过期",
+         "btn_refresh": "生成新的",
+         "time_left": "剩余时间：",
+         "refresh_desc": "二维码将在 {time} 秒后自动刷新",
+         "loading": "正在连接...",
+         "network_check": "确保对手有稳定的网络连接"
+      },
+      "tips": {
+         "title": "如何加入",
+         "desc": "请您的对手打开应用，选择“扫描二维码”，并将摄像头对准上方的代码。确保光线充足且清晰可见。"
+      },
+      "toast": {
+         "error": "生成二维码失败。"
+      }
+   },
+   "receive_funds": {
+      "header": {
+         "title": "二维码收款",
+         "subtitle": "展示此码以接收付款"
+      },
+      "card": {
+         "title": "接收资金",
+         "desc": "扫描此二维码即时转账余额"
+      },
+      "timer": {
+         "label": "二维码有效时间：",
+         "refresh_info": "二维码每 60 秒自动刷新一次"
+      },
+      "button": {
+         "copy": "复制二维码"
+      },
+      "toast": {
+         "copy_success": "二维码复制成功！",
+         "copy_failed": "复制失败。"
+      },
+      "instruction": "确保二维码保持在付款方摄像头取景框内"
+   },
+   "auth_register": {
+      "title": "创建账户",
+      "subtitle": "加入并开始下棋！",
+      "form": {
+         "username_label": "用户名",
+         "username_placeholder": "johndoe",
+         "fullname_label": "全名",
+         "fullname_placeholder": "John Doe",
+         "email_label": "邮箱",
+         "email_placeholder": "name@email.com",
+         "password_label": "密码",
+         "password_placeholder": "******",
+         "btn_register": "立即注册",
+         "btn_loading": "处理中..."
+      },
+      "login_link": {
+         "text": "已有账户？",
+         "link": "在此登录"
+      },
+      "toast": {
+         "success_title": "注册成功！",
+         "success_desc": "请使用您的新账户登录。",
+         "error_title": "失败",
+         "error_desc": "注册失败。请重试。",
+         "warning_incomplete": "请填写所有必填字段。"
+      }
+   },
+   "scan_qr": {
+      "header": {
+         "title": "二维码扫描器",
+         "subtitle": "将摄像头对准二维码"
+      },
+      "loading": {
+         "processing": "处理中",
+         "preparing": "准备会话中...",
+         "initializing": "正在初始化摄像头...",
+         "wait": "请稍候"
+      },
+      "error": {
+         "title": "摄像头访问失败",
+         "btn_retry": "重试",
+         "btn_back": "返回",
+         "tip": "提示：确保您已授予摄像头权限且没有其他应用正在使用摄像头。"
+      },
+      "scanner": {
+         "instruction": "将二维码置于扫描区域内",
+         "scanning": "正在读取二维码..."
+      },
+      "controls": {
+         "flash_on": "闪光灯开",
+         "flash_off": "闪光灯关",
+         "help": "确保二维码在扫描框内且光线充足"
+      },
+      "toast": {
+         "invalid_format": "格式无效",
+         "scan_valid": "请扫描有效的二维码",
+         "flash_on": "闪光灯已开",
+         "flash_off": "闪光灯已关",
+         "flash_unsupported": "不支持闪光灯",
+         "flash_error": "设备不支持闪光灯",
+         "error_access": "访问摄像头失败。请检查权限。"
+      }
+   },
+   "settings": {
+      "header": {
+         "title": "设置",
+         "subtitle": "账户中心"
+      },
+      "tabs": {
+         "security": "安全",
+         "privacy": "隐私"
+      },
+      "security": {
+         "title": "安全与访问",
+         "single_login": {
+            "title": "单点登录",
+            "desc": "新登录将自动退出旧会话。"
+         },
+         "2fa": {
+            "title": "双重验证",
+            "desc": "使用谷歌验证器的代码登录。"
+         },
+         "biometric": {
+            "title": "生物识别登录",
+            "desc": "使用指纹或面容 ID 快速访问。"
+         },
+         "register_biometric": {
+            "title": "触控 ID 已就绪",
+            "subtitle": "准备注册",
+            "desc": "点击注册指纹",
+            "btn_register": "立即注册",
+            "btn_processing": "处理中...",
+            "btn_registered": "已注册",
+            "unsupported": {
+               "title": "设备不支持",
+               "desc": "您的浏览器/设备不支持生物识别功能。"
+            },
+            "tips": {
+               "1": "确保指纹/面容已在操作系统中注册",
+               "2": "使用在设备上注册的同一手指",
+               "title": "注册提示："
+            }
+         }
+      },
+      "privacy": {
+         "title": "连接与可见性",
+         "open_match": {
+            "title": "公开挑战",
+            "desc": "允许其他运动员查找并向您发起挑战。"
+         }
+      },
+      "tips": {
+         "1": "单点登录和双重验证保护您的等级分和钱包",
+         "2": "生物识别可加速登录，无需记住密码",
+         "3": "务必从公共设备退出登录",
+         "title": "账户安全提示"
+      },
+      "help": {
+         "title": "设置帮助",
+         "subtitle": "账户安全指南",
+         "email_support": "邮件支持",
+         "single_login_desc": "确保只有一个活动会话。在新设备登录会使旧设备退出。",
+         "benefits": {
+            "1": "防止未经授权的访问",
+            "2": "适合锦标赛等级分安全",
+            "3": "自动从旧设备登出"
+         },
+         "2fa_desc": "通过验证器应用的 OTP 代码增加额外的安全层。",
+         "setup_steps": "设置步骤：",
+         "step_1": "1. 启用双重验证开关",
+         "step_2": "2. 使用验证器应用扫描二维码",
+         "step_3": "3. 输入 6 位验证码",
+         "step_4": "4. 安全保存备用代码",
+         "biometric_desc": "使用指纹或面部识别进行快速无密码登录。",
+         "requirements": "要求：",
+         "req_1": "浏览器支持 WebAuthn (Chrome, Edge, Safari)",
+         "req_2": "具有生物识别传感器的设备",
+         "req_3": "已在操作系统中注册生物特征",
+         "challenge_desc": "允许其他运动员查找并向您发起挑战。禁用以获得最大隐私。",
+         "challenge_active": "活跃：个人资料在挑战搜索中可见",
+         "challenge_inactive": "非活跃：仅好友可发起挑战",
+         "btn_understand": "明白了"
+      },
+      "modal_2fa": {
+         "title": "设置验证器",
+         "desc": "使用谷歌验证器或 Authy 扫描此二维码。",
+         "loading_qr": "正在加载二维码...",
+         "manual_code": "手动代码",
+         "verify_otp": "验证 OTP",
+         "placeholder_otp": "000000",
+         "btn_cancel": "取消",
+         "btn_activate": "启用"
+      },
+      "confirm": {
+         "unsaved_title": "未保存的更改",
+         "unsaved_msg": "您有未保存的更改。",
+         "unsaved_detail": "您确定要离开而不保存吗？",
+         "disable_2fa_title": "禁用双重验证？",
+         "disable_2fa_msg": "您即将禁用双重验证。",
+         "disable_2fa_detail": "没有双重验证，您的账户安全性将降低。请确保您的密码强度足够。",
+         "disable_bio_title": "禁用生物识别登录？",
+         "disable_bio_msg": "此设备的生物识别会话数据将被删除。",
+         "disable_bio_detail": "如果您想再次使用生物识别登录，需要重新注册指纹/面容。",
+         "btn_stay": "留在此页",
+         "btn_leave": "离开",
+         "btn_cancel": "取消",
+         "btn_yes_disable": "是的，禁用",
+         "btn_yes_turn_off": "是的，关闭"
+      },
+      "toast": {
+         "bio_activate_info": "点击‘立即注册’以启用生物识别",
+         "qr_fail": "加载二维码失败",
+         "2fa_success": "双重验证启用成功！",
+         "otp_invalid": "OTP 验证码无效",
+         "2fa_disabled": "双重验证已禁用",
+         "2fa_disable_fail": "禁用双重验证失败",
+         "bio_unsupported": "设备不支持生物识别",
+         "bio_success": "生物识别注册成功！",
+         "bio_verify_fail": "服务器验证失败",
+         "bio_cancelled": "注册已被用户取消。",
+         "bio_fail": "生物识别注册失败。",
+         "load_fail": "加载个人资料失败",
+         "save_success": "设置保存成功",
+         "save_fail": "保存设置失败",
+         "code_copied": "手动代码已复制！"
+      }
+   },
+   "tournament_lobby": {
+      "header": {
+         "title": "锦标赛大厅",
+         "loading": "加载中..."
+      },
+      "status": {
+         "active": "大厅活跃",
+         "ongoing": "进行中"
+      },
+      "info": {
+         "format": "赛制",
+         "time": "时间",
+         "participants": "参赛者"
+      },
+      "schedule": {
+         "start": "开始",
+         "remaining": "剩余时间",
+         "start_in_days": "{d} 天后开始",
+         "start_in_hours": "{h} 小时 {m} 分钟后开始",
+         "start_in_mins": "{m} 分钟后开始"
+      },
+      "tabs": {
+         "participants": "参赛者",
+         "bracket": "对阵表"
+      },
+      "participants": {
+         "title": "参赛者列表",
+         "subtitle": "按等级分排序",
+         "count": "{count} 名玩家",
+         "empty_title": "尚无参赛者",
+         "empty_desc": "成为第一个注册者！",
+         "btn_register": "立即注册",
+         "rating": "等级分"
+      },
+      "bracket": {
+         "title": "锦标赛对阵表",
+         "subtitle": "比赛结构",
+         "system": "瑞士制",
+         "placeholder_title": "对阵表即将开放",
+         "placeholder_desc": "一旦锦标赛开始且参赛者注册完毕，对阵表将显示。",
+         "btn_view_participants": "查看参赛者"
+      },
+      "rules": {
+         "title": "锦标赛规则",
+         "time_control": "思考时间：每位玩家 {time}",
+         "format_round": "{format} 制 - {round} 轮",
+         "penalty": "强制退出惩罚：-5 等级分",
+         "prize": "前三名奖励：积分和专属徽章"
+      },
+      "actions": {
+         "rules": "规则",
+         "chat": "大厅聊天"
+      },
+      "toast": {
+         "error": "哎呀！",
+         "load_failed": "加载大厅数据失败。"
+      }
+   },
+   "tournament_list": {
+      "header": {
+         "title": "国际象棋锦标赛",
+         "subtitle": "参与并赢得胜利！",
+         "back": "返回"
+      },
+      "tabs": {
+         "all": "全部",
+         "open": "开放报名",
+         "active": "进行中",
+         "waiting": "等待中"
+      },
+      "search_placeholder": "搜索锦标赛...",
+      "stats": {
+         "total": "锦标赛总数",
+         "ongoing": "进行中",
+         "registration": "报名中",
+         "waiting": "等待中"
+      },
+      "card": {
+         "start_time": "开始时间",
+         "format": "赛制",
+         "entry_fee": "报名费",
+         "prize_pool": "奖池",
+         "free": "免费"
+      },
+      "status": {
+         "registration": "报名中",
+         "active": "进行中",
+         "completed": "已结束",
+         "waiting": "等待中"
+      },
+      "button": {
+         "register": "立即报名",
+         "processing": "处理中...",
+         "enter_lobby": "进入大厅",
+         "watch": "观战",
+         "closed": "报名已结束",
+         "unavailable": "不可用"
+      },
+      "empty": {
+         "title": "暂无锦标赛",
+         "desc_search": "未找到相关关键词的锦标赛",
+         "desc_default": "请稍后再试",
+         "btn_all": "查看所有锦标赛"
+      },
+      "footer": "显示 {count} 个锦标赛，共 {total} 个",
+      "toast": {
+         "load_error": "加载锦标赛数据失败。",
+         "join_success_title": "报名成功！",
+         "join_success_msg": "恭喜！您已成功注册为参赛者。",
+         "insufficient_balance": "余额不足",
+         "schedule_conflict": "日程冲突",
+         "join_failed": "加入失败"
+      },
+      "confirm_modal": {
+         "title": "确认报名",
+         "msg": "报名费将从您的余额中扣除。",
+         "btn_yes": "是的，立即报名",
+         "btn_cancel": "取消"
+      },
+      "time": {
+         "ended": "已结束",
+         "days": "{d} 天 {h} 小时",
+         "hours": "{h} 小时 {m} 分钟",
+         "mins": "{m} 分钟"
+      }
+   },
+   "train": {
+      "header": {
+         "title": "预订火车票",
+         "subtitle": "轻松搜索并预订车票"
+      },
+      "trip_type": {
+         "one_way": "单程",
+         "round_trip": "往返"
+      },
+      "form": {
+         "origin": "出发地",
+         "origin_placeholder": "出发车站",
+         "destination": "目的地",
+         "destination_placeholder": "到达车站",
+         "departure": "出发日期",
+         "passengers": "乘客",
+         "adult": "{count} 名成人 | {count} 名成人",
+         "loading": "正在加载车站..."
+      },
+      "quick_date": {
+         "today": "今天",
+         "tomorrow": "明天",
+         "days_7": "7天内"
+      },
+      "button": {
+         "search": "搜索车票",
+         "searching": "搜索中..."
+      },
+      "tips": {
+         "1": "至少在发车前 1 小时预订",
+         "2": "准备好身份证用于值机",
+         "3": "取消限制：发车前 2 小时",
+         "title": "预订提示"
+      },
+      "advantages": {
+         "1": "市场最优价格",
+         "2": "流程快捷简便",
+         "3": "数字车票直达邮箱",
+         "title": "优势"
+      },
+      "routes": {
+         "title": "热门路线",
+         "gambir": "甘比尔",
+         "bandung": "万隆",
+         "yogyakarta": "日惹",
+         "solo": "梭罗",
+         "surabaya": "泗水",
+         "malang": "玛琅",
+         "jakarta_kota": "雅加达哥打",
+         "tangerang": "坦格朗",
+         "hours": "{count} 小时 | {count} 小时",
+         "minutes": "{count} 分钟",
+         "price_start": "起价 {price}"
+      },
+      "toast": {
+         "load_error": "加载车站列表失败。",
+         "incomplete": "车站信息不完整",
+         "incomplete_desc": "请选择出发地和目的地车站。",
+         "invalid": "车站无效",
+         "invalid_desc": "出发地和目的地不能相同。",
+         "success": "搜索成功！",
+         "showing_schedule": "显示从"
+      }
+   },
+   "transaction_history": {
+      "header": {
+         "title": "交易记录",
+         "total_transactions": "交易总数",
+         "latest": "最新"
+      },
+      "filter": {
+         "period_label": "筛选周期：",
+         "this_month": "本月",
+         "month": "月份",
+         "year": "年份",
+         "jan": "一月",
+         "feb": "二月",
+         "mar": "三月",
+         "apr": "四月",
+         "may": "五月",
+         "jun": "六月",
+         "jul": "七月",
+         "aug": "八月",
+         "sep": "九月",
+         "oct": "十月",
+         "nov": "十一月",
+         "dec": "十二月"
+      },
+      "transaction_type": {
+         "topup_va": "余额充值",
+         "withdraw": "提现",
+         "tournament_fee": "锦标赛报名费",
+         "game_fee": "对局费用",
+         "prize_payout": "奖金",
+         "prize": "奖励",
+         "transfer_in": "转入",
+         "transfer_out": "转出",
+         "transaksi": "交易",
+         "transfer": "转账",
+         "default": "交易"
+      },
+      "status": {
+         "success": "成功",
+         "pending": "处理中",
+         "failed": "失败",
+         "unknown": "未知"
+      },
+      "remark": {
+         "from": "来自：{name}",
+         "to": "去向：{name}"
+      },
+      "empty": {
+         "title": "未找到交易记录",
+         "desc": "{period} 期间未找到交易记录",
+         "btn_topup": "立即充值"
+      },
+      "footer": "显示 {period} 期间的 {count} 条交易记录",
+      "btn_detail": "详情"
+   },
+   "transfer_amount": {
+      "header": {
+         "title": "资金转账"
+      },
+      "recipient": {
+         "to": "收款方",
+         "id": "ID",
+         "verified": "已验证"
+      },
+      "form": {
+         "amount_label": "转账金额",
+         "balance": "余额",
+         "note_label": "备注 (可选)",
+         "note_placeholder": "例如：咖啡付款",
+         "btn_continue": "继续",
+         "btn_processing": "处理中..."
+      },
+      "pin_modal": {
+         "title": "安全验证",
+         "desc": "输入您的 6 位交易 PIN 以确认转账。",
+         "placeholder": "••••••",
+         "btn_cancel": "取消",
+         "btn_send": "发送"
+      },
+      "error": {
+         "invalid_target": "转账目的地无效",
+         "self_transfer": "您不能向自己的账户转账。",
+         "user_not_found": "用户未找到",
+         "user_not_found_desc": "ID 无效或账户已被删除。",
+         "insufficient_balance": "余额不足",
+         "min_amount": "最低转账金额 Rp {amount}",
+         "pin_length": "PIN 必须为 6 位数字",
+         "system_error": "系统错误。",
+         "title_failed": "失败"
+      },
+      "success": {
+         "title": "转账成功！",
+         "msg": "Rp {amount} 已成功发送给 {name}",
+         "btn_done": "完成"
+      }
+   },
+   "wallet": {
+      "header": {
+         "title": "数字钱包",
+         "subtitle": "最后更新"
+      },
+      "balance": {
+         "available": "可用余额",
+         "currency": "印尼盾",
+         "description": "余额可用于所有交易",
+         "breakdown": {
+            "main": "主余额",
+            "pending": "处理中",
+            "bonus": "奖励"
+         }
+      },
+      "actions": {
+         "topup": "QRIS 充值",
+         "withdraw": "提现",
+         "history": "交易记录",
+         "help": "帮助"
+      },
+      "va": {
+         "title": "虚拟账户",
+         "subtitle": "用于通过银行转账手动充值",
+         "available_count": "{count} 个可用",
+         "empty_title": "尚无虚拟账户",
+         "btn_create": "创建新的虚拟账户",
+         "va_number": "虚拟账户号码",
+         "btn_copy": "复制 VA"
+      },
+      "tips": {
+         "1": "对 PIN 码保密，请勿分享",
+         "2": "系统绝不会通过电话或聊天索要 PIN 码",
+         "3": "提现前务必核实目标账户",
+         "4": "启用交易通知以监控活动",
+         "title": "钱包安全提示"
+      },
+      "modal_withdraw": {
+         "title": "提现",
+         "subtitle": "资金将发送到您选择的账户",
+         "amount_label": "提现金额",
+         "balance_info": "余额：{amount}",
+         "min_max_info": "手续费：Rp 2,500 • 最低 Rp 10,000",
+         "bank_label": "目标账户",
+         "select_bank": "选择账户",
+         "add_bank": "+ 添加新账户",
+         "pin_label": "安全 PIN",
+         "pin_placeholder": "输入 6 位 PIN",
+         "pin_desc": "用于交易安全的 6 位 PIN 码",
+         "summary_fee": "手续费",
+         "summary_total": "实收总额",
+         "btn_confirm": "确认提现",
+         "btn_processing": "处理中...",
+         "btn_cancel": "取消"
+      },
+      "toast": {
+         "load_fail": "加载钱包数据失败",
+         "no_bank": "尚无目标账户",
+         "no_bank_desc": "请先在编辑个人资料中添加账户",
+         "incomplete": "请填写所有数据。",
+         "pin_length": "PIN 必须为 6 位数字。",
+         "insufficient_balance": "余额不足！",
+         "min_withdraw": "最低提现金额 Rp 10,000",
+         "success_withdraw": "提现成功！",
+         "success_desc": "资金将在 1-2 个工作小时内到账",
+         "kyc_required": "您的账户尚未完成 KYC 验证。是否立即上传身份证？",
+         "copy_success": "已复制！",
+         "copy_desc": "VA 号码已复制到剪贴板",
+         "error_title": "失败",
+          "wallet_generated": "加密货币钱包已生成！",
+          "wallet_fail": "生成钱包失败",
+          "invalid_amount": "请输入有效金额",
+          "no_address": "未找到钱包地址",
+          "topup_initiated": "充值已启动！",
+          "topup_instruction": "请将加密货币发送到提供的地址",
+          "topup_failed": "充值失败",
+          "frozen_desc": "您的钱包已被冻结，请联系客服"
+      },
+      "crypto": {
+          "btn_topup": "加密货币充值",
+          "history_btn": "加密货币历史",
+          "wallets_title": "加密货币钱包",
+          "wallets_subtitle": "您的加密货币存款地址",
+          "wallets_count": "{count} 个钱包",
+          "address_label": "钱包地址",
+          "btn_copy": "复制",
+          "btn_deposit": "存款",
+          "modal": {
+            "title": "加密货币充值",
+            "subtitle": "使用加密货币存款",
+            "amount_label": "存款金额",
+            "amount_placeholder": "最低 10 美元",
+            "amount_help": "最低存款：10美元。网络费用可能适用。",
+            "currency_label": "选择加密货币",
+            "network_label": "选择网络",
+            "address_label": "您的存款地址",
+            "address_help": "仅向此地址发送 {network} 网络上的 {currency}",
+            "summary_amount": "金额",
+            "summary_currency": "货币",
+            "summary_network": "网络",
+            "summary_receive": "您将收到 ≈",
+            "btn_generate": "生成存款地址",
+            "btn_processing": "处理中...",
+            "btn_cancel": "取消"
+          }
+        }
+   },
+   "bottom_nav": {
+      "home": "首页",
+      "wallet": "钱包",
+      "scan": "扫描",
+      "market": "市场",
+      "profile": "个人资料"
+   },
+   "captured_pieces": {
+      "empty": "-",
+      "tooltip": "被吃掉的棋子"
+   },
+   "chess_board": {
+      "status": {
+         "check": "将军！",
+         "checkmate": "将死！",
+         "stalemate": "逼和",
+         "draw": "和棋",
+         "opponent_move": "对手：{from} → {to}"
+      },
+      "promotion": {
+         "title": "选择升变棋子",
+         "queen": "皇后",
+         "knight": "骑士",
+         "rook": "车",
+         "bishop": "象"
+      },
+      "controls": {
+         "mute": "静音",
+         "unmute": "取消静音",
+         "flip": "翻转棋盘"
+      },
+      "loading": "正在加载棋盘..."
+   },
+   "loading": {
+      "title": "正在加载策略",
+      "subtitle": "正在准备棋盘..."
+   },
+   "incoming_match": {
+      "default_title": "挑战",
+      "role_default": "玩家",
+      "seconds": "秒",
+      "btn_accept": "接受挑战",
+      "warning_wo": "无响应 = 自动判负。",
+      "waiting": "等待对手..."
+   },
+  "help_wallet": {
+    "header": "钱包与安全帮助",
+    "hero": {
+      "title": "您的智能钱包",
+      "desc": "了解如何明智地保护和管理您的钱包，以获得更好的国际象棋体验。",
+      "f1": "安全加密",
+      "f2": "实时交易",
+      "f3": "24/7 支持"
+    },
+    "nav": {
+      "what_is": "什么是钱包？",
+      "what_is_desc": "了解数字钱包",
+      "security": "安全",
+      "security_desc": "重要安全提示",
+      "tips": "实用技巧",
+      "tips_desc": "最佳实践",
+      "faq": "常见问题",
+      "faq_desc": "常见疑问"
+    },
+    "content": {
+      "what_is": {
+        "title": "什么是钱包？",
+        "subtitle": "用于平台交易的数字钱包",
+        "section_title": "国际象棋平台中的钱包",
+        "desc": "钱包是一个数字钱包，允许您在我们的国际象棋平台内进行交易。使用钱包，您可以：",
+        "list": {
+          "1": "参加付费锦标赛",
+          "2": "接收获胜奖金",
+          "3": "购买高级功能",
+          "4": "转账给其他用户"
+        },
+        "card1": {
+          "title": "加密钱包",
+          "desc": "所有交易均受端到端加密保护，以实现最大安全性。"
+        },
+        "card2": {
+          "title": "快速交易",
+          "desc": "交易在几秒钟内处理完毕，立即在收款人钱包中可用。"
+        }
+      },
+      "security": {
+        "title": "钱包安全",
+        "subtitle": "采取正确措施保护您的数字资产",
+        "alert_title": "特别注意！",
+        "alert_desc": "钱包安全是您的责任。我们的平台提供安全工具，但您必须保护您的账户访问权限。",
+        "tips": {
+          "pass_title": "强密码",
+          "pass_desc": "创建唯一且复杂的密码",
+          "pass_p1": "至少 12 个字符",
+          "pass_p2": "大小写字母组合",
+          "pass_p3": "数字和符号",
+          "pass_p4": "不要重复使用密码",
+          "2fa_title": "双重认证 (2FA)",
+          "2fa_desc": "启用 2FA 以增加安全层",
+          "2fa_p1": "使用身份验证器应用",
+          "2fa_p2": "保存备份代码",
+          "2fa_p3": "通过短信/电子邮件验证",
+          "2fa_p4": "在所有设备上启用",
+          "phish_title": "提防网络钓鱼",
+          "phish_desc": "避免可疑的电子邮件和链接",
+          "phish_p1": "检查发件人",
+          "phish_p2": "不要点击未知链接",
+          "phish_p3": "验证网站 URL",
+          "phish_p4": "立即报告网络钓鱼",
+          "backup_title": "备份与恢复",
+          "backup_desc": "准备备份以进行恢复",
+          "backup_p1": "保存恢复短语",
+          "backup_p2": "定期备份钱包",
+          "backup_p3": "测试恢复过程",
+          "backup_p4": "存放在安全的地方"
+        }
+      },
+      "practical": {
+        "title": "实用技巧",
+        "subtitle": "安全钱包体验的最佳实践",
+        "checklist_title": "每日安全清单",
+        "checks": {
+          "1": "检查最近登录活动",
+          "2": "审查钱包交易",
+          "3": "如有需要更新密码",
+          "4": "验证恢复备份"
+        },
+        "btn_done": "完成",
+        "btn_mark": "标记",
+        "do_title": "✅ 应该做",
+        "do_list": {
+          "1": "使用受信任的密码管理器",
+          "2": "启用安全通知",
+          "3": "定期更新软件",
+          "4": "从公共设备登出",
+          "5": "使用安全连接 (HTTPS)"
+        },
+        "dont_title": "❌ 不要做",
+        "dont_list": {
+          "1": "不要分享密码/PIN码",
+          "2": "不要在浏览器中保存密码",
+          "3": "不要在没有 VPN 的情况下使用公共 WiFi",
+          "4": "不要点击未知邮件中的链接",
+          "5": "不要推迟安全更新"
+        }
+      },
+      "faq": {
+        "title": "常见问题",
+        "subtitle": "常见问题解答",
+        "q1": "如果我忘记密码怎么办？",
+        "a1": "使用登录页面上的“忘记密码”功能。我们将向您的注册邮箱发送重置链接。确保您的恢复邮箱处于活动状态。",
+        "t1": "将密码保存在安全的密码管理器中以避免此问题。",
+        "q2": "我的钱包保证 100% 安全吗？",
+        "a2": "我们使用军用级加密和最新的安全协议。但是，安全性也取决于您的做法，如使用强密码和 2FA。",
+        "t2": "安全是平台和用户共同的责任。",
+        "q3": "如何报告可疑活动？",
+        "a3": "立即联系 support@catur.cloud 或使用本页上的紧急表格。提供交易详情和相关证据。",
+        "t3": "报告越快，我们就能越快采取行动。",
+        "q4": "交易可以取消吗？",
+        "a4": "区块链上已确认的交易无法取消。发送前请确保目标地址正确。",
+        "t4": "发送前务必至少核对两次收件人地址。"
+      }
+    },
+    "sidebar": {
+      "stats_title": "📊 安全统计",
+      "stats_1": "受保护账户",
+      "stats_2": "安全交易",
+      "stats_3": "支持响应",
+      "checklist_title": "📋 安全清单",
+      "check_1": "密码至少 12 个字符",
+      "check_2": "已启用双重认证",
+      "check_3": "恢复邮箱已验证",
+      "check_4": "恢复短语已备份",
+      "check_5": "安全警报已启用",
+      "check_6": "无未知设备",
+      "progress": "安全进度",
+      "emergency_title": "🚨 紧急联系",
+      "email_support": "邮件支持",
+      "security_report": "安全报告",
+      "btn_report": "报告安全问题"
+    },
+    "footer": {
+      "title": "国际象棋钱包安全",
+      "subtitle": "自 2024 年起保护您的数字资产",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "cookies": "Cookie 政策",
+      "copyright": "© 2024 Chess Cloud. 保留所有权利。",
+      "updated": "最后更新："
+    },
+    "modal": {
+      "title": "🚨 报告安全问题",
+      "warning": "仅在遇到严重安全问题时使用此表格，例如：",
+      "w1": "未经授权的账户访问",
+      "w2": "可疑交易",
+      "w3": "安全漏洞",
+      "w4": "身份盗窃",
+      "type_label": "问题类型",
+      "type_hack": "未经授权访问",
+      "type_trans": "可疑交易",
+      "type_phish": "网络钓鱼/诈骗",
+      "type_other": "其他",
+      "desc_label": "描述",
+      "desc_ph": "详细描述问题...",
+      "email_label": "您的邮箱",
+      "btn_cancel": "取消",
+      "btn_submit": "提交报告",
+      "alert_sent": "紧急报告已发送！"
+    }
+  },
+  "common": {
+      "back":"Back"
+  }
+}

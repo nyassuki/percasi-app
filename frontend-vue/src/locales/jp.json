@@ -1,0 +1,1612 @@
+{
+   "welcome": "私のアプリへようこそ",
+   "Nomor HP wajib diisi":"携帯電話番号は必須です",
+   "menu": {
+      "home": "ホーム",
+      "wallet": "ウォレット",
+      "market": "マーケット",
+      "profile": "プロフィール"
+   },
+   "button": {
+      "change_lang": "言語を変更",
+      "receive_funds": "入金",
+      "topup": "チャージ",
+      "search_opponents": "ランクマッチ",
+      "tournaments": "トーナメント",
+      "lobby": "ロビー",
+      "play_offline": "オフライン対戦",
+      "vs_bot": "AI対戦",
+      "cancel_search": "検索をキャンセル",
+      "rejoin": "再接続",
+      "logout": "ログアウト",
+      "cancel": "キャンセル",
+      "verify": "確認",
+      "view_all": "すべて表示"
+   },
+   "text": {
+      "total_game": "総対局数",
+      "win_rate": "勝率",
+      "rating": "レーティング",
+      "rating_trend": "レーティング推移",
+      "game_mode": "ゲームモード",
+      "search_desc": "実力者と対戦",
+      "tournaments_desc": "競技イベント",
+      "lobby_desc": "フレンドリー対戦",
+      "offline_desc": "QRコードをスキャンして対戦",
+      "bot_desc": "AIで練習",
+      "promotions": "プロモーション",
+      "chess_news": "チェスニュース",
+      "account": "アカウント",
+      "total_balance": "残高",
+      "guest": "ゲスト",
+      "live_match": "ライブ対局中",
+      "vs": "対",
+      "matchmaking_progress": "マッチメイキング中",
+      "estimated_wait": "待機時間予測：",
+      "searching": "検索中...",
+      "players": "プレイヤー",
+      "online": "オンライン",
+      "similar": "近い",
+      "tip": "ヒント：",
+      "tip_desc": "レーティング範囲を広げると対戦が見つかりやすくなります",
+      "greeting": {
+         "morning": "おはようございます",
+         "afternoon": "こんにちは",
+         "evening": "こんばんは",
+         "night": "おやすみなさい"
+      }
+   },
+   "toast": {
+      "connecting": "サーバーに接続中...",
+      "finish_active": "現在の対局を終了してください！",
+      "req_failed": "リクエスト送信に失敗しました。",
+      "search_cancelled": "検索をキャンセルしました。",
+      "cancel_failed": "キャンセルに失敗しました。"
+   },
+   "dialog": {
+      "logout_title": "ログアウトしますか？",
+      "logout_desc": "再度ログインが必要です。"
+   },
+   "bot_game": {
+      "title": "AI対戦",
+      "bot_name": "チェスAI",
+      "game_stats": "ゲーム統計",
+      "game_controls": "ゲームコントロール",
+      "game_over": "ゲーム終了",
+      "time_remaining": "残り時間",
+      "moving": "移動中",
+      "waiting": "待機中",
+      "moves": "手数",
+      "duration": "対局時間",
+      "your_moves": "あなたの手数",
+      "bot_moves": "AIの手数",
+      "total_moves": "総手数",
+      "bot_thinking": "AI思考中",
+      "analyzing": "深度を分析中...",
+      "select_level": "AIレベルを選択",
+      "challenge_desc": "様々な難易度に挑戦",
+      "level": "レベル",
+      "turn": "手番",
+      "you": "あなた",
+      "white": "白側",
+      "black": "黒側",
+      "your_turn": "あなたの手番",
+      "wait_turn": "相手の手番を待機中",
+      "reset": "ゲームをリセット",
+      "change_color": "色を変更",
+      "stats": "統計",
+      "play_again": "もう一度対戦",
+      "dashboard": "ダッシュボードに戻る",
+      "tournament": "トーナメント",
+      "confirm_reset": "色を変更しますか？現在のゲームはリセットされます。",
+      "difficulty": {
+         "easy": "初心者",
+         "medium": "中級",
+         "hard": "上級",
+         "gm": "グランドマスター"
+      },
+      "result": {
+         "time_out": "時間切れ",
+         "bot_time_out": "AI時間切れ",
+         "checkmate": "チェックメイト",
+         "draw": "引き分け",
+         "win": "勝利",
+         "lose": "敗北"
+      }
+   },
+   "flight": {
+      "title": "航空券予約",
+      "subtitle": "簡単に検索・予約",
+      "trip_type": {
+         "one_way": "片道",
+         "round_trip": "往復"
+      },
+      "form": {
+         "from": "出発地",
+         "to": "到着地",
+         "origin_placeholder": "出発空港",
+         "destination_placeholder": "到着空港",
+         "departure": "出発日",
+         "return": "帰路日",
+         "passengers_class": "乗客とクラス",
+         "loading": "空港を読み込み中..."
+      },
+      "quick_date": {
+         "today": "今日",
+         "tomorrow": "明日",
+         "days_3": "3日間",
+         "days_7": "7日間"
+      },
+      "passengers": {
+         "title": "乗客人数",
+         "label": "乗客",
+         "adults": "大人",
+         "adults_desc": "(12歳以上)",
+         "children": "子供",
+         "children_desc": "(2-11歳)",
+         "infants": "幼児",
+         "infants_desc": "(0-2歳)"
+      },
+      "class": {
+         "title": "座席クラス",
+         "economy": "エコノミー",
+         "business": "ビジネス",
+         "first": "ファーストクラス",
+         "label_popular": "人気",
+         "label_comfort": "快適",
+         "label_premium": "プレミアム"
+      },
+      "button": {
+         "search": "フライト検索",
+         "searching": "検索中..."
+      },
+      "tips": {
+         "1": "出発の3時間前までに予約",
+         "2": "搭乗手続き用に身分証/パスポートを準備",
+         "3": "幼児最大2歳、子供2-11歳",
+         "4": "空港で搭乗券を提示",
+         "title": "予約のヒント"
+      },
+      "routes": {
+         "title": "人気ルート",
+         "jakarta": "ジャカルタ",
+         "bali": "バリ",
+         "surabaya": "スラバヤ",
+         "makassar": "マカッサル"
+      },
+      "toast": {
+         "load_error": "空港リストの読み込みに失敗しました。",
+         "try_again": "後でもう一度お試しください。",
+         "incomplete": "情報が不完全です",
+         "incomplete_desc": "出発地と到着地の空港を選択してください。",
+         "invalid": "空港が無効です",
+         "invalid_desc": "出発地と到着地は同じにできません。",
+         "invalid_date": "日付が無効です",
+         "invalid_date_desc": "帰路日は出発日の後である必要があります。",
+         "success": "検索成功！",
+         "showing_flights": "表示中のフライト："
+      }
+   },
+   "forgot_password": {
+      "title": "パスワードをお忘れですか？",
+      "subtitle": "ご登録のメールアドレスを入力してください。パスワードリセットの手順をお送りします。",
+      "success_title": "成功！",
+      "success_message": "パスワードリセットリンクをメールで送信しました。受信トレイ/スパムを確認してください。",
+      "error_default": "リクエスト処理に失敗しました。メールアドレスが登録されていることを確認してください。",
+      "email_label": "登録メールアドレス",
+      "email_placeholder": "example@email.com",
+      "btn_submit": "リセットリンクを送信",
+      "btn_sending": "送信中...",
+      "back_to_login": "ログインに戻る"
+   },
+   "live_game": {
+      "header": {
+         "live_match": "ライブ対局中",
+         "finished": "終了",
+         "your_turn": "あなたの手番",
+         "opponent_turn": "相手の手番"
+      },
+      "loading": "ゲームを読み込み中...",
+      "player": {
+         "moving": "移動中",
+         "you": "あなた",
+         "white": "白側",
+         "black": "黒側"
+      },
+      "info": {
+         "duration": "対局時間",
+         "mode": "モード",
+         "with_time": "時間制限あり",
+         "no_time": "時間制限なし"
+      },
+      "controls": {
+         "title": "ゲームコントロール",
+         "offer_draw": "引き分け提案",
+         "resign": "投了",
+         "draw_sent": "待機中...",
+         "resigning": "送信中...",
+         "draw_label": "引き分け提案",
+         "resign_label": "投了",
+         "back_dashboard": "ダッシュボードに戻る",
+         "analyze": "棋譜分析"
+      },
+      "overlay": {
+         "waiting_draw": "相手の返答を待機中",
+         "sending_resign": "投了を送信中...",
+         "game_over": "ゲーム終了"
+      },
+      "result": {
+         "draw_title": "引き分け！🤝",
+         "victory": "勝利！🏆",
+         "finished": "対局終了",
+         "default_desc": "ゲームが終了しました"
+      },
+      "reason": {
+         "checkmate": "チェックメイト！キングが動けません",
+         "stalemate": "ステイルメイト - キングは動けませんがチェックされていません",
+         "insufficient_material": "継続に必要な駒が不足しています",
+         "threefold_repetition": "千日手",
+         "timeout": "時間切れ",
+         "resignation": "プレイヤーが投了",
+         "agreement": "合意",
+         "abandoned": "ゲームが放棄されました",
+         "unknown": "ゲーム終了"
+      },
+      "modal": {
+         "draw_title": "引き分け提案",
+         "draw_desc": "相手が引き分けを提案しています。",
+         "draw_ask_title": "引き分けを提案しますか？",
+         "draw_ask_desc": "相手に引き分け提案を送信",
+         "resign_title": "投了しますか？",
+         "resign_desc": "本当に投了しますか？",
+         "btn_accept": "受諾",
+         "btn_decline": "拒否",
+         "btn_offer": "提案",
+         "btn_resign": "はい、投了します",
+         "btn_cancel": "キャンセル",
+         "btn_continue": "続行"
+      },
+      "toast": {
+         "draw_accepted": "引き分けが受諾されました",
+         "contacting_server": "サーバーに接続中...",
+         "draw_declined": "引き分けが拒否されました",
+         "game_continued": "ゲームを続行",
+         "draw_sent": "引き分け提案を送信",
+         "waiting_opponent": "相手を待機中...",
+         "opponent_declined": "相手が引き分け提案を拒否",
+         "resigning": "投了中...",
+         "sending_resign": "投了リクエストを送信中",
+         "load_error": "データの読み込みに失敗しました。",
+         "analyze_info": "分析機能は近日公開予定"
+      }
+   },
+   "notification": {
+      "header": {
+         "title": "受信トレイ",
+         "unread_count": "{count} 件の未読メッセージ",
+         "mark_all_read": "すべて既読にする"
+      },
+      "empty": {
+         "title": "受信トレイは空です",
+         "desc": "すべての通知がここに表示されます"
+      },
+      "card": {
+         "just_now": "たった今",
+         "min_ago": "{count}分前",
+         "hour_ago": "{count}時間前",
+         "view_detail": "詳細を見る"
+      },
+      "modal": {
+         "title": "通知詳細",
+         "subtitle": "詳細情報",
+         "read": "既読",
+         "unread": "未読",
+         "additional_info": "追加情報",
+         "close": "閉じる",
+         "view_action": "詳細を見る"
+      },
+      "type": {
+         "success": "成功",
+         "warning": "警告",
+         "danger": "アラート",
+         "payment": "支払い",
+         "tournament": "トーナメント",
+         "match": "対局",
+         "info": "情報"
+      }
+   },
+   "kyc": {
+      "pending_title": "確認中",
+      "pending_desc": "書類を確認中です。",
+      "unverified_title": "未確認アカウント",
+      "unverified_desc": "一部機能が制限されます。",
+      "header": {
+         "title": "アカウント確認",
+         "subtitle": "出金機能を有効にするために情報を完了してください。"
+      },
+      "step1": {
+         "title": "1. 身分証明書写真（E-KTP）",
+         "status_success": "成功",
+         "upload_text": "身分証明書をアップロード"
+      },
+      "step2": {
+         "title": "2. 顔認証",
+         "status_success": "成功",
+         "start_liveness": "ライブネステスト開始",
+         "click_camera": "カメラを開く",
+         "retake": "写真を再撮影"
+      },
+      "modal": {
+         "loading_ai": "AIモデルを読み込み中...",
+         "instruction": "説明",
+         "success_title": "認証成功！",
+         "verified_hold": "認証済み！動かないでください...",
+         "btn_camera": "カメラをオンにする",
+         "error_load": "ライブネスシステムの読み込みに失敗しました。接続/カメラを確認してください。"
+      },
+      "challenges": {
+         "smile": "笑顔で",
+         "mouth": "口を開けて",
+         "turn_left": "頭を少し左へ",
+         "turn_right": "頭を少し右へ"
+      },
+      "button": {
+         "submit": "認証を送信",
+         "sending": "データを送信中..."
+      },
+      "toast": {
+         "incomplete": "データが不完全です。",
+         "success_submit": "認証を送信しました！",
+         "success_face": "顔認証に成功しました！",
+         "upload_failed": "アップロードに失敗しました。"
+      }
+   },
+   "live_matches": {
+      "header": {
+         "title_1": "ライブ",
+         "title_2": "対局",
+         "subtitle": "リアルタイムで進行中の対局を観戦",
+         "live_count": "{count} 対局がライブ中 | {count} 対局がライブ中",
+         "updated": "更新：{time}",
+         "refresh": "更新"
+      },
+      "card": {
+         "live_now": "ライブ中",
+         "match_id": "対局 #{id}",
+         "white": "白側",
+         "black": "黒側",
+         "moving": "移動中",
+         "moves": "手数",
+         "time": "時間",
+         "watch": "対局を観戦"
+      },
+      "empty": {
+         "title": "進行中の対局はありません",
+         "desc": "現在進行中の対局はありません。次の対局をお待ちください！",
+         "btn_refresh": "更新"
+      },
+      "footer": {
+         "title": "リアルタイム更新",
+         "desc": "データは10秒ごとに自動更新されます",
+         "total": "ライブ対局合計数"
+      }
+   },
+   "lobby": {
+      "header": {
+         "title": "プレイヤーロビー",
+         "subtitle": "{count} プレイヤーがオンライン"
+      },
+      "search": {
+         "placeholder": "ユーザー名を検索..."
+      },
+      "status": {
+         "playing": "対局中",
+         "online": "オンライン"
+      },
+      "empty": {
+         "title": "現在オンラインの他のプレイヤーはいません。",
+         "desc": "友達を招待してログインしてもらいましょう！"
+      },
+      "button": {
+         "duel": "対戦申込",
+         "watch": "観戦"
+      },
+      "toast": {
+         "player_busy": "プレイヤーは現在対局中です。",
+         "challenge_sent": "{username} に対戦申込を送信しました！",
+         "challenge_declined": "{username} が対戦申込を拒否しました。",
+         "match_start": "対戦申込が承諾されました！ゲームを開始します..."
+      }
+   },
+   "auth_login": {
+      "welcome_user": "ようこそ、{name}さん！",
+      "biometric": {
+         "title": "指紋でログイン",
+         "desc": "指紋またはFace IDで本人確認して続行",
+         "btn": "生体認証ログイン",
+         "processing": "処理中..."
+      },
+      "other_account": "別のアカウントでログイン",
+      "register_new": "新しいアカウントを登録",
+      "form": {
+         "email_label": "メールアドレス",
+         "email_placeholder": "email@example.com",
+         "password_label": "パスワード",
+         "password_placeholder": "••••••••",
+         "forgot_password": "パスワードをお忘れですか？",
+         "btn_login": "サインイン",
+         "or_divider": "または以下で続行"
+      },
+      "register_link": {
+         "text": "アカウントをお持ちでない場合",
+         "link": "選手登録"
+      },
+      "2fa": {
+         "title_setup": "2段階認証を有効化",
+         "desc_setup": "認証アプリでQRコードをスキャン",
+         "title_verify": "セキュリティ認証",
+         "desc_verify": "認証アプリのOTPコードを入力",
+         "title_input_setup": "認証コードを入力",
+         "desc_input_setup": "認証アプリの6桁コードを入力",
+         "loading_qr": "QRコードを読み込み中...",
+         "manual_code": "または手動コードを入力：",
+         "btn_verifying": "認証中...",
+         "btn_activate": "セキュリティを有効化",
+         "btn_confirm": "OTPを確認",
+         "back_to_login": "ログインに戻る",
+         "copy_success": "手動コードをコピーしました！"
+      },
+      "error": {
+         "email_required": "メールアドレスを入力してください。",
+         "biometric_failed": "生体認証ログインに失敗しました。",
+         "login_failed": "メールアドレスまたはパスワードが無効です。",
+         "google_failed": "Googleログインに失敗",
+         "otp_invalid": "OTPコードが無効または期限切れです。"
+      },
+      "footer": "無断複写・転載を禁じます。",
+      "default_welcome": "サインインしてください"
+   },
+   "biometric": {
+      "title": "生体認証ログイン",
+      "btn_login": "指紋 / Face IDを使用",
+      "btn_register": "このデバイスを登録",
+      "success_register": "生体認証を登録しました！",
+      "success_login": "ログイン成功！",
+      "error_auth": "生体認証が失敗またはキャンセルされました。"
+   },
+   "market": {
+      "header": {
+         "title": "マーケットプレイス＆PPOB",
+         "subtitle": "必要なサービスを選択",
+         "available_balance": "利用可能残高",
+         "today_transaction": "本日の取引",
+         "points": "ポイント"
+      },
+      "section": {
+         "available_services": "利用可能サービス",
+         "services_count": "{count} サービス",
+         "services_desc": "様々なサービスを簡単に選択・アクセス"
+      },
+      "category": {
+         "train": "電車チケット",
+         "train_desc": "国内旅行用KAIチケットを予約。",
+         "flight": "航空券",
+         "flight_desc": "国内・国際線を検索・予約。",
+         "hotel": "ホテル＆宿泊施設",
+         "hotel_desc": "世界中の宿泊施設、ホテル、ヴィラを予約。",
+         "pulsa": "クレジット＆データ",
+         "pulsa_desc": "全キャリアのプリペイドクレジットとデータパッケージをチャージ。",
+         "postpaid": "電話料金",
+         "postpaid_desc": "月々のポストペイド請求を支払い。",
+         "pln": "電気料金（PLN）",
+         "pln_desc": "電気料金を支払いまたはPLNトークンを購入。",
+         "pdam": "水道料金（PDAM）",
+         "pdam_desc": "各地域のPDAM水道料金を支払い。",
+         "finance": "マルチファイナンス",
+         "finance_desc": "バイク、車、その他ローンの分割払いを支払い。",
+         "umrah": "ウンムラパッケージ",
+         "umrah_desc": "ウンムラ巡礼パッケージのベストオファー。",
+         "religious": "宗教ツアー",
+         "religious_desc": "巡礼・宗教ツアーパッケージを探索。"
+      },
+      "button": {
+         "access_now": "今すぐアクセス"
+      },
+      "info": {
+         "title": "重要情報",
+         "secure_title": "安全で信頼性のある取引",
+         "secure_desc": "すべてのPPOBおよび旅行取引はメイン残高を使用し、取引PINで保護されております。"
+      }
+   },
+   "history": {
+      "header": {
+         "title": "対局履歴一覧",
+         "total_match": "合計：{count} 対局"
+      },
+      "loading": "データを読み込み中...",
+      "empty": {
+         "title": "まだ対局履歴がありません",
+         "desc": "今すぐチェスを始めましょう！"
+      },
+      "table": {
+         "date": "日付",
+         "opponent": "対戦相手",
+         "color": "色",
+         "result": "結果",
+         "reason": "理由"
+      },
+      "pagination": {
+         "page_info": "ページ {current}/{total}",
+         "prev": "前へ",
+         "next": "次へ"
+      },
+      "player": {
+         "unknown": "不明",
+         "white": "白側",
+         "black": "黒側"
+      },
+      "result": {
+         "draw": "引き分け",
+         "win": "勝利",
+         "lose": "敗北"
+      },
+      "reason": {
+         "agreement": "合意",
+         "timeout": "時間切れ",
+         "resignation": "投了",
+         "checkmate": "チェックメイト",
+         "abandoned": "放棄",
+         "unknown": "不明"
+      },
+      "toast": {
+         "load_error": "データの読み込みに失敗しました。"
+      }
+   },
+   "mirror": {
+      "title": "観戦ルーム",
+      "match_id": "対局 #{id}",
+      "status": {
+         "live": "ライブ観戦中",
+         "checkmate": "チェックメイト",
+         "draw": "引き分け",
+         "finished": "終了"
+      },
+      "stats": {
+         "watchers": "観戦者",
+         "moves": "手数",
+         "white": "白側",
+         "black": "黒側"
+      },
+      "history": "棋譜",
+      "back": "戻る"
+   },
+   "news_detail": {
+      "header": {
+         "title": "記事",
+         "subtitle": "戦略とヒント"
+      },
+      "menu": {
+         "liked": "いいねした記事",
+         "saved": "保存した記事",
+         "profile": "マイプロフィール"
+      },
+      "share": {
+         "title": "記事を共有",
+         "copy": "リンクをコピー",
+         "whatsapp": "WhatsApp",
+         "twitter": "Twitter",
+         "facebook": "Facebook"
+      },
+      "meta": {
+         "min_read": "分で読了",
+         "views": "閲覧数",
+         "verified": "認証済み",
+         "articles_count": "10+ 記事",
+         "follow": "フォロー"
+      },
+      "stats": {
+         "likes": "いいね",
+         "comments": "コメント",
+         "shares": "シェア"
+      },
+      "tags_title": "関連トピック",
+      "actions": {
+         "like": "いいね",
+         "liked": "いいね済み",
+         "share": "共有"
+      },
+      "related": {
+         "title": "関連記事",
+         "subtitle": "他の興味深い記事を読む",
+         "view_all": "すべて表示",
+         "read_more": "続きを読む",
+         "view_all_mobile": "すべての記事を見る"
+      },
+      "newsletter": {
+         "title": "最新情報をお求めですか？",
+         "desc": "戦略記事、トーナメント情報、限定ヒントをメールで直接受け取れます。",
+         "placeholder": "メールアドレス",
+         "subscribe": "購読",
+         "privacy": "購読により、プライバシーポリシーに同意したことになります。"
+      },
+      "toast": {
+         "copy_success": "リンクをコピーしました！"
+      }
+   },
+   "profile": {
+      "header": {
+         "title": "プロフィール編集",
+         "subtitle": "アカウントと財務情報を更新"
+      },
+      "verified": "確認済み",
+      "verify_now": "今すぐ確認",
+      "account_active": "アカウント有効",
+      "tabs": {
+         "general": "一般",
+         "financial": "財務",
+         "security": "セキュリティ"
+      },
+      "general": {
+         "title": "基本情報",
+         "full_name": "氏名",
+         "full_name_ph": "身分証明書通り",
+         "phone": "WhatsApp番号",
+         "country": "国",
+         "province": "州",
+         "regency": "市/県",
+         "district": "郡",
+         "subdistrict": "町/村",
+         "postal_code": "郵便番号",
+         "address": "住所",
+         "address_ph": "通り、家番号、RT/RW",
+         "select": {
+            "country": "国を選択",
+            "province": "州を選択",
+            "regency": "市を選択",
+            "district": "郡を選択",
+            "subdistrict": "町を選択"
+         },
+         "phone_verified_note": "* 番号は確認済みで変更できません。"
+      },
+      "financial": {
+         "title": "銀行口座",
+         "bank_name": "銀行名",
+         "select_bank": "銀行を選択",
+         "account_number": "口座番号",
+         "account_holder": "口座名義人",
+         "account_holder_ph": "氏名が自動的に入力",
+         "account_holder_note": "プロフィールの氏名が自動的に入力されます",
+         "wallet_security": "ウォレットセキュリティ",
+         "wallet_note": "ウォレットPINを変更しない場合は空欄にしてください。PINは出金時に使用します。",
+         "old_pin": "旧PIN",
+         "old_pin_note": "(新PIN作成時は空欄)",
+         "new_pin": "新PIN（6桁数字）",
+         "confirm_pin": "新PINを再入力（6桁数字）",
+         "pin_rule": "数字0-9のみ"
+      },
+      "security": {
+         "title": "ログインパスワード変更",
+         "note": "アプリのログインパスワードを変更しない場合はこのフォームを空欄にしてください。",
+         "current_pass": "現在のパスワード",
+         "current_pass_ph": "旧パスワードを入力",
+         "new_pass": "新パスワード",
+         "new_pass_ph": "最低6文字",
+         "confirm_pass": "新パスワードの確認",
+         "confirm_pass_ph": "新パスワードを再入力"
+      },
+      "button": {
+         "save": "変更を保存",
+         "saving": "保存中..."
+      },
+      "toast": {
+         "success": "データを保存しました！",
+         "error": "データの保存に失敗しました。",
+         "file_size": "ファイルサイズは最大2MBです。",
+         "pass_required": "パスワード変更には現在のパスワードを入力してください。",
+         "pass_mismatch": "新パスワードの確認が一致しません。",
+         "pass_min": "新パスワードは最低6文字です。",
+         "pin_length": "PINは6桁数字である必要があります。",
+         "pin_mismatch": "新PINが一致しません。",
+         "email_sent": "メール確認リンクを送信しました。",
+         "phone_verified": "電話番号の確認に成功しました！"
+      },
+      "modal": {
+         "phone_title": "電話番号確認",
+         "phone_desc": "番号に送信された6桁コードを入力（5分間有効）",
+         "btn_verify": "確認",
+         "btn_cancel": "キャンセル",
+         "validation": "6桁コードを入力"
+      }
+   },
+   "topup": {
+      "header": {
+         "back": "戻る",
+         "close": "閉じる",
+         "title_input": "残高チャージ",
+         "title_qris": "QRIS決済",
+         "subtitle_input": "QRISでチャージ",
+         "subtitle_qris": "QRコードをスキャンして支払い",
+         "amount": "金額",
+         "total": "合計"
+      },
+      "form": {
+         "title": "QRISでチャージ",
+         "subtitle": "QRISインドネシアによる即時・安全・自動決済",
+         "select_label": "チャージ金額を選択",
+         "custom_label": "または別の金額を入力",
+         "min_max_help": "最低 Rp 1,000、最高 Rp 10,000,000",
+         "btn_process": "処理中...",
+         "btn_submit": "QR支払いを生成"
+      },
+      "qris": {
+         "total_due": "支払総額",
+         "trx_id": "取引ID",
+         "expiry": "QRコードは24時間で有効期限切れ",
+         "download": "QRをダウンロード",
+         "not_available": "QRコードが利用できません",
+         "supported_by": "サポート："
+      },
+      "steps": {
+         "title": "支払い方法：",
+         "1_title": "アプリを開く",
+         "1_desc": "電子ウォレット、モバイルバンキング、またはインターネットバンキングアプリを開く",
+         "2_title": "QRコードをスキャン",
+         "2_desc": "アプリで「QRスキャン」または「QRISで支払い」メニューを選択",
+         "3_title": "支払いを確認",
+         "3_desc": "上記のQRコードをスキャンして支払金額を確認",
+         "4_title": "完了",
+         "4_desc": "1-3分以内に残高が自動的に追加されます"
+      },
+      "banner": {
+         "title": "QRISでより速く支払い",
+         "desc": "QRISを使用して即時で便利な残高チャージ。手動入力不要、スキャンして支払うだけです。"
+      },
+      "toast": {
+         "min_amount": "最低チャージ金額 Rp 1,000",
+         "success": "QRISを生成しました",
+         "error": "QRISの生成に失敗しました"
+      }
+   },
+   "qr_game": {
+      "header": {
+         "title": "対局コード",
+         "subtitle": "参加するためにQRコードを表示"
+      },
+      "card": {
+         "title": "スキャンして参加",
+         "desc": "相手のカメラをこのQRコードに向けてください"
+      },
+      "status": {
+         "expired_title": "QRコード有効期限切れ",
+         "btn_refresh": "新しく生成",
+         "time_left": "残り時間：",
+         "refresh_desc": "QRコードは {time} 秒後に自動更新されます",
+         "loading": "接続中...",
+         "network_check": "相手が安定したインターネット接続があることを確認"
+      },
+      "tips": {
+         "title": "参加方法",
+         "desc": "相手にアプリを開いて「QRスキャン」を選択し、カメラを上記のコードに向けるようお願いください。照明が良く、見やすいことを確認してください。"
+      },
+      "toast": {
+         "error": "QRコードの生成に失敗しました。"
+      }
+   },
+   "receive_funds": {
+      "header": {
+         "title": "QR振込",
+         "subtitle": "支払いを受けるためにこれを表示"
+      },
+      "card": {
+         "title": "入金",
+         "desc": "このQRをスキャンして即時残高を振込"
+      },
+      "timer": {
+         "label": "QR有効期間：",
+         "refresh_info": "QRコードは60秒ごとに自動更新されます"
+      },
+      "button": {
+         "copy": "QRコードをコピー"
+      },
+      "toast": {
+         "copy_success": "QRコードをコピーしました！",
+         "copy_failed": "コピーに失敗しました。"
+      },
+      "instruction": "QRコードが送信者のカメラフレーム内に表示されることを確認"
+   },
+   "auth_register": {
+      "title": "アカウント作成",
+      "subtitle": "参加してチェスを始めましょう！",
+      "form": {
+         "username_label": "ユーザー名",
+         "username_placeholder": "johndoe",
+         "fullname_label": "氏名",
+         "fullname_placeholder": "John Doe",
+         "email_label": "メール",
+         "email_placeholder": "name@email.com",
+         "password_label": "パスワード",
+         "password_placeholder": "******",
+         "btn_register": "今すぐ登録",
+         "btn_loading": "処理中..."
+      },
+      "login_link": {
+         "text": "すでにアカウントをお持ちですか？",
+         "link": "こちらでログイン"
+      },
+      "toast": {
+         "success_title": "登録成功！",
+         "success_desc": "新しいアカウントでログインしてください。",
+         "error_title": "失敗",
+         "error_desc": "登録に失敗しました。もう一度お試しください。",
+         "warning_incomplete": "すべての必須項目を記入してください。"
+      }
+   },
+   "scan_qr": {
+      "header": {
+         "title": "QRスキャナー",
+         "subtitle": "カメラをQRコードに向ける"
+      },
+      "loading": {
+         "processing": "処理中",
+         "preparing": "セッションを準備中...",
+         "initializing": "カメラを初期化中...",
+         "wait": "少々お待ちください"
+      },
+      "error": {
+         "title": "カメラアクセス失敗",
+         "btn_retry": "再試行",
+         "btn_back": "戻る",
+         "tip": "ヒント：カメラの許可が付与され、他のアプリがカメラを使用していないことを確認してください。"
+      },
+      "scanner": {
+         "instruction": "QRコードをスキャンエリア内に向ける",
+         "scanning": "QRコードを読み取り中..."
+      },
+      "controls": {
+         "flash_on": "フラッシュオン",
+         "flash_off": "フラッシュオフ",
+         "help": "QRコードがスキャンボックス内にあり、十分な照明があることを確認"
+      },
+      "toast": {
+         "invalid_format": "フォーマットが無効",
+         "scan_valid": "有効なQRコードをスキャンしてください",
+         "flash_on": "フラッシュオン",
+         "flash_off": "フラッシュオフ",
+         "flash_unsupported": "フラッシュ非対応",
+         "flash_error": "デバイスがフラッシュをサポートしていません",
+         "error_access": "カメラへのアクセスに失敗しました。権限を確認してください。"
+      }
+   },
+   "settings": {
+      "header": {
+         "title": "設定",
+         "subtitle": "アカウントセンター"
+      },
+      "tabs": {
+         "security": "セキュリティ",
+         "privacy": "プライバシー"
+      },
+      "security": {
+         "title": "セキュリティとアクセス",
+         "single_login": {
+            "title": "シングルログイン",
+            "desc": "新しいログインは自動的に古いセッションをログアウトします。"
+         },
+         "2fa": {
+            "title": "2段階認証",
+            "desc": "Google認証システムのコードを使用してログイン。"
+         },
+         "biometric": {
+            "title": "生体認証ログイン",
+            "desc": "指紋またはFace IDで素早くアクセス。"
+         },
+         "register_biometric": {
+            "title": "Touch ID準備完了",
+            "subtitle": "登録準備完了",
+            "desc": "タップして指紋を登録",
+            "btn_register": "今すぐ登録",
+            "btn_processing": "処理中...",
+            "btn_registered": "登録済み",
+            "unsupported": {
+               "title": "デバイス非対応",
+               "desc": "お使いのブラウザ/デバイスは生体認証機能をサポートしていません。"
+            },
+            "tips": {
+               "1": "OSに指紋/顔が登録されていることを確認",
+               "2": "デバイスに登録された同じ指を使用",
+               "title": "登録のヒント："
+            }
+         }
+      },
+      "privacy": {
+         "title": "接続と可視性",
+         "open_match": {
+            "title": "オープンチャレンジ",
+            "desc": "他の選手があなたを見つけて対戦申込できるようにする。"
+         }
+      },
+      "tips": {
+         "1": "シングルログインと2FAがレーティングとウォレットを保護",
+         "2": "生体認証はパスワードを覚えずに素早くログイン",
+         "3": "公共デバイスからは常にログアウト",
+         "title": "アカウントセキュリティのヒント"
+      },
+      "help": {
+         "title": "設定ヘルプ",
+         "subtitle": "アカウントセキュリティガイド",
+         "email_support": "メールサポート",
+         "single_login_desc": "1つのアクティブセッションのみを保証。新しいデバイスでログインすると古いデバイスはログアウトします。",
+         "benefits": {
+            "1": "不正アクセスから保護",
+            "2": "トーナメントレーティングセキュリティに最適",
+            "3": "古いデバイスから自動ログアウト"
+         },
+         "2fa_desc": "認証アプリのOTPコードで追加のセキュリティ層を追加。",
+         "setup_steps": "設定手順：",
+         "step_1": "1. 2FAトグルを有効化",
+         "step_2": "2. QRコードを認証アプリでスキャン",
+         "step_3": "3. 6桁認証コードを入力",
+         "step_4": "4. バックアップコードを安全に保存",
+         "biometric_desc": "指紋または顔認識で素早いパスワードレスログイン。",
+         "requirements": "要件：",
+         "req_1": "WebAuthn対応ブラウザ（Chrome, Edge, Safari）",
+         "req_2": "生体認証センサー搭載デバイス",
+         "req_3": "OSに登録済み生体情報",
+         "challenge_desc": "他の選手があなたを見つけて対戦申込できるようにする。最大限のプライバシーのために無効化。",
+         "challenge_active": "有効：プロフィールがチャレンジ検索で表示",
+         "challenge_inactive": "無効：友達のみ対戦申込可能",
+         "btn_understand": "理解しました"
+      },
+      "modal_2fa": {
+         "title": "認証システム設定",
+         "desc": "Google AuthenticatorまたはAuthyでこのQRコードをスキャン。",
+         "loading_qr": "QRコードを読み込み中...",
+         "manual_code": "手動コード",
+         "verify_otp": "OTPを確認",
+         "placeholder_otp": "000000",
+         "btn_cancel": "キャンセル",
+         "btn_activate": "有効化"
+      },
+      "confirm": {
+         "unsaved_title": "未保存の変更",
+         "unsaved_msg": "保存されていない変更があります。",
+         "unsaved_detail": "保存せずに離れてもよろしいですか？",
+         "disable_2fa_title": "2FAを無効化しますか？",
+         "disable_2fa_msg": "2段階認証を無効化しようとしています。",
+         "disable_2fa_detail": "2FAなしではアカウントセキュリティが低下します。パスワードの強度を十分に確保してください。",
+         "disable_bio_title": "生体認証ログインを無効化しますか？",
+         "disable_bio_msg": "このデバイスから生体認証セッションデータが削除されます。",
+         "disable_bio_detail": "生体認証ログインを再度使用するには、指紋/顔の再登録が必要です。",
+         "btn_stay": "ここに留まる",
+         "btn_leave": "離れる",
+         "btn_cancel": "キャンセル",
+         "btn_yes_disable": "はい、無効化",
+         "btn_yes_turn_off": "はい、オフ"
+      },
+      "toast": {
+         "bio_activate_info": "「今すぐ登録」をクリックして生体認証を有効化",
+         "qr_fail": "QRコードの読み込みに失敗",
+         "2fa_success": "2FAを有効化しました！",
+         "otp_invalid": "OTPコードが無効",
+         "2fa_disabled": "2FAを無効化",
+         "2fa_disable_fail": "2FAの無効化に失敗",
+         "bio_unsupported": "デバイスが生体認証をサポートしていません",
+         "bio_success": "生体認証を登録しました！",
+         "bio_verify_fail": "サーバー認証に失敗",
+         "bio_cancelled": "登録がユーザーによりキャンセルされました。",
+         "bio_fail": "生体認証登録に失敗。",
+         "load_fail": "プロフィールの読み込みに失敗",
+         "save_success": "設定を保存しました",
+         "save_fail": "設定の保存に失敗",
+         "code_copied": "手動コードをコピーしました！"
+      }
+   },
+   "tournament_lobby": {
+      "header": {
+         "title": "トーナメントロビー",
+         "loading": "読み込み中..."
+      },
+      "status": {
+         "active": "ロビー有効",
+         "ongoing": "進行中"
+      },
+      "info": {
+         "format": "形式",
+         "time": "時間",
+         "participants": "参加者"
+      },
+      "schedule": {
+         "start": "開始",
+         "remaining": "残り時間",
+         "start_in_days": "あと {d} 日で開始",
+         "start_in_hours": "あと {h} 時間 {m} 分で開始",
+         "start_in_mins": "あと {m} 分で開始"
+      },
+      "tabs": {
+         "participants": "参加者",
+         "bracket": "組み合わせ"
+      },
+      "participants": {
+         "title": "参加者一覧",
+         "subtitle": "レーティング順",
+         "count": "{count} プレイヤー",
+         "empty_title": "まだ参加者はいません",
+         "empty_desc": "最初の登録者になりましょう！",
+         "btn_register": "今すぐ登録",
+         "rating": "レーティング"
+      },
+      "bracket": {
+         "title": "トーナメント組み合わせ",
+         "subtitle": "対戦構成",
+         "system": "スイス式",
+         "placeholder_title": "組み合わせは近日公開",
+         "placeholder_desc": "トーナメント開始および参加者登録後に組み合わせが表示されます。",
+         "btn_view_participants": "参加者を表示"
+      },
+      "rules": {
+         "title": "トーナメントルール",
+         "time_control": "思考時間：プレイヤーごとに {time}",
+         "format_round": "{format} 方式 - {round} ラウンド",
+         "penalty": "強制退出ペナルティ：-5 レーティング",
+         "prize": "上位3名の賞品：ポイントと限定バッジ"
+      },
+      "actions": {
+         "rules": "ルール",
+         "chat": "ロビーチャット"
+      },
+      "toast": {
+         "error": "おっと！",
+         "load_failed": "ロビーデータの読み込みに失敗しました。"
+      }
+   },
+   "tournament_list": {
+      "header": {
+         "title": "チェストーナメント",
+         "subtitle": "参加して勝利を掴め！",
+         "back": "戻る"
+      },
+      "tabs": {
+         "all": "すべて",
+         "open": "参加受付中",
+         "active": "進行中",
+         "waiting": "待機中"
+      },
+      "search_placeholder": "トーナメントを検索...",
+      "stats": {
+         "total": "トーナメント合計数",
+         "ongoing": "進行中",
+         "registration": "登録受付中",
+         "waiting": "待機中"
+      },
+      "card": {
+         "start_time": "開始時間",
+         "format": "形式",
+         "entry_fee": "参加費",
+         "prize_pool": "賞金総額",
+         "free": "無料"
+      },
+      "status": {
+         "registration": "登録受付中",
+         "active": "進行中",
+         "completed": "終了",
+         "waiting": "待機中"
+      },
+      "button": {
+         "register": "今すぐ登録",
+         "processing": "処理中...",
+         "enter_lobby": "ロビーに入る",
+         "watch": "観戦する",
+         "closed": "登録終了",
+         "unavailable": "利用不可"
+      },
+      "empty": {
+         "title": "まだトーナメントがありません",
+         "desc_search": "そのキーワードに一致するトーナメントは見つかりませんでした",
+         "desc_default": "後でもう一度お試しください",
+         "btn_all": "すべてのトーナメントを表示"
+      },
+      "footer": "{count}/{total} トーナメントを表示中",
+      "toast": {
+         "load_error": "トーナメントデータの読み込みに失敗しました。",
+         "join_success_title": "登録成功！",
+         "join_success_msg": "おめでとうございます！参加者として登録されました。",
+         "insufficient_balance": "残高不足",
+         "schedule_conflict": "スケジュール衝突",
+         "join_failed": "参加に失敗"
+      },
+      "confirm_modal": {
+         "title": "登録確認",
+         "msg": "参加費が残高から引き落とされます。",
+         "btn_yes": "はい、今すぐ登録",
+         "btn_cancel": "キャンセル"
+      },
+      "time": {
+         "ended": "終了済み",
+         "days": "{d}日 {h}時間",
+         "hours": "{h}時間 {m}分",
+         "mins": "{m}分"
+      }
+   },
+   "train": {
+      "header": {
+         "title": "電車チケット予約",
+         "subtitle": "簡単に検索・予約"
+      },
+      "trip_type": {
+         "one_way": "片道",
+         "round_trip": "往復"
+      },
+      "form": {
+         "origin": "出発地",
+         "origin_placeholder": "出発駅",
+         "destination": "到着地",
+         "destination_placeholder": "到着駅",
+         "departure": "出発日",
+         "passengers": "乗客",
+         "adult": "{count} 名の大人 | {count} 名の大人",
+         "loading": "駅を読み込み中..."
+      },
+      "quick_date": {
+         "today": "今日",
+         "tomorrow": "明日",
+         "days_7": "7日間"
+      },
+      "button": {
+         "search": "チケットを検索",
+         "searching": "検索中..."
+      },
+      "tips": {
+         "1": "出発の1時間前までに予約",
+         "2": "搭乗手続き用に身分証を準備",
+         "3": "キャンセル期限：出発2時間前",
+         "title": "予約のヒント"
+      },
+      "advantages": {
+         "1": "市場最安価格",
+         "2": "迅速かつ簡単な手順",
+         "3": "メールに直接デジタルチケット",
+         "title": "メリット"
+      },
+      "routes": {
+         "title": "人気ルート",
+         "gambir": "ガンビール",
+         "bandung": "バンドン",
+         "yogyakarta": "ジョグジャカルタ",
+         "solo": "ソロ",
+         "surabaya": "スラバヤ",
+         "malang": "マラン",
+         "jakarta_kota": "ジャカルタ・コタ",
+         "tangerang": "タンゲラン",
+         "hours": "{count} 時間 | {count} 時間",
+         "minutes": "{count} 分",
+         "price_start": "{price} から"
+      },
+      "toast": {
+         "load_error": "駅リストの読み込みに失敗しました。",
+         "incomplete": "駅情報が不完全",
+         "incomplete_desc": "出発地と到着地の駅を選択してください。",
+         "invalid": "駅が無効です",
+         "invalid_desc": "出発地と到着地は同じにできません。",
+         "success": "検索成功！",
+         "showing_schedule": "表示中の時刻表："
+      }
+   },
+   "transaction_history": {
+      "header": {
+         "title": "取引履歴",
+         "total_transactions": "取引総数",
+         "latest": "最新"
+      },
+      "filter": {
+         "period_label": "期間フィルター：",
+         "this_month": "今月",
+         "month": "月",
+         "year": "年",
+         "jan": "1月",
+         "feb": "2月",
+         "mar": "3月",
+         "apr": "4月",
+         "may": "5月",
+         "jun": "6月",
+         "jul": "7月",
+         "aug": "8月",
+         "sep": "9月",
+         "oct": "10月",
+         "nov": "11月",
+         "dec": "12月"
+      },
+      "transaction_type": {
+         "topup_va": "残高チャージ",
+         "withdraw": "出金",
+         "tournament_fee": "トーナメント参加費",
+         "game_fee": "対局料",
+         "prize_payout": "賞金",
+         "prize": "賞品",
+         "transfer_in": "入金",
+         "transfer_out": "出金",
+         "transaksi": "取引",
+         "transfer": "振込",
+         "default": "取引"
+      },
+      "status": {
+         "success": "成功",
+         "pending": "保留中",
+         "failed": "失敗",
+         "unknown": "不明"
+      },
+      "remark": {
+         "from": "送信元：{name}",
+         "to": "送信先：{name}"
+      },
+      "empty": {
+         "title": "取引履歴が見つかりません",
+         "desc": "{period} 期間中に取引履歴はありません",
+         "btn_topup": "今すぐチャージ"
+      },
+      "footer": "{period} 期間中の {count} 件の取引を表示中",
+      "btn_detail": "詳細"
+   },
+   "transfer_amount": {
+      "header": {
+         "title": "資金振込"
+      },
+      "recipient": {
+         "to": "宛先",
+         "id": "ID",
+         "verified": "確認済み"
+      },
+      "form": {
+         "amount_label": "振込金額",
+         "balance": "残高",
+         "note_label": "備考（任意）",
+         "note_placeholder": "例：コーヒー代",
+         "btn_continue": "続行",
+         "btn_processing": "処理中..."
+      },
+      "pin_modal": {
+         "title": "セキュリティ",
+         "desc": "6桁の取引PINを入力して振込を確認。",
+         "placeholder": "••••••",
+         "btn_cancel": "キャンセル",
+         "btn_send": "送信"
+      },
+      "error": {
+         "invalid_target": "振込先が無効です",
+         "self_transfer": "自分のアカウントに資金を振込むことはできません。",
+         "user_not_found": "ユーザーが見つかりません",
+         "user_not_found_desc": "IDが無効またはアカウントが削除されています。",
+         "insufficient_balance": "残高不足",
+         "min_amount": "最低振込金額 Rp {amount}",
+         "pin_length": "PINは6桁数字である必要があります",
+         "system_error": "システムエラーが発生しました。",
+         "title_failed": "失敗"
+      },
+      "success": {
+         "title": "振込成功！",
+         "msg": "Rp {amount} を {name} に送信しました",
+         "btn_done": "完了"
+      }
+   },
+   "wallet": {
+      "header": {
+         "title": "デジタルウォレット",
+         "subtitle": "最終更新"
+      },
+      "balance": {
+         "available": "利用可能残高",
+         "currency": "インドネシアルピア",
+         "description": "残高はすべての取引に使用できます",
+         "breakdown": {
+            "main": "メイン残高",
+            "pending": "処理中",
+            "bonus": "ボーナス"
+         }
+      },
+      "actions": {
+         "topup": "QRISチャージ",
+         "withdraw": "出金",
+         "history": "履歴",
+         "help": "ヘルプ"
+      },
+      "va": {
+         "title": "バーチャルアカウント",
+         "subtitle": "銀行振込での手動チャージ用",
+         "available_count": "{count} 個利用可能",
+         "empty_title": "まだバーチャルアカウントがありません",
+         "btn_create": "新しいバーチャルアカウントを作成",
+         "va_number": "バーチャルアカウント番号",
+         "btn_copy": "VAをコピー"
+      },
+      "tips": {
+         "1": "PINを機密に保持し、共有しないでください",
+         "2": "システムが電話やチャットでPINを尋ねることはありません",
+         "3": "出金前には常に宛先口座を確認",
+         "4": "取引通知を有効化して活動を監視",
+         "title": "ウォレットセキュリティのヒント"
+      },
+      "modal_withdraw": {
+         "title": "出金",
+         "subtitle": "資金が選択した口座に送金されます",
+         "amount_label": "出金額",
+         "balance_info": "残高：{amount}",
+         "min_max_info": "手数料：Rp 2,500 • 最低 Rp 10,000",
+         "bank_label": "宛先口座",
+         "select_bank": "口座を選択",
+         "add_bank": "+ 新しい口座を追加",
+         "pin_label": "セキュリティPIN",
+         "pin_placeholder": "6桁PINを入力",
+         "pin_desc": "取引セキュリティ用の6桁PIN",
+         "summary_fee": "手数料",
+         "summary_total": "受取総額",
+         "btn_confirm": "出金を確認",
+         "btn_processing": "処理中...",
+         "btn_cancel": "キャンセル"
+      },
+      "toast": {
+         "load_fail": "ウォレットデータの読み込みに失敗",
+         "no_bank": "まだ宛先口座がありません",
+         "no_bank_desc": "まずプロフィール編集で口座を追加してください",
+         "incomplete": "すべてのデータを記入してください。",
+         "pin_length": "PINは6桁数字である必要があります。",
+         "insufficient_balance": "残高が不足しています！",
+         "min_withdraw": "最低出金額 Rp 10,000",
+         "success_withdraw": "出金成功！",
+         "success_desc": "資金は1-2営業時間以内に送金されます",
+         "kyc_required": "アカウントがKYC確認されていません。身分証明書を今すぐアップロードしますか？",
+         "copy_success": "コピーしました！",
+         "copy_desc": "VA番号をクリップボードにコピー",
+         "error_title": "失敗",
+           "wallet_generated": "暗号ウォレットが作成されました！",
+          "wallet_fail": "ウォレットの作成に失敗しました",
+          "invalid_amount": "有効な金額を入力してください",
+          "no_address": "ウォレットアドレスが見つかりません",
+          "topup_initiated": "入金を開始しました！",
+          "topup_instruction": "指定されたアドレスに暗号資産を送信してください",
+          "topup_failed": "入金に失敗しました",
+          "frozen_desc": "ウォレットが凍結されています。カスタマーサポートにご連絡ください"
+
+      },
+        "crypto": {
+            "btn_topup": "暗号資産入金",
+            "history_btn": "暗号資産履歴",
+            "wallets_title": "暗号資産ウォレット",
+            "wallets_subtitle": "暗号資産の入金アドレス",
+            "wallets_count": "{count} ウォレット",
+            "address_label": "ウォレットアドレス",
+            "btn_copy": "コピー",
+            "btn_deposit": "入金",
+            "modal": {
+              "title": "暗号資産入金",
+              "subtitle": "暗号資産で入金",
+              "amount_label": "入金額",
+              "amount_placeholder": "最低10米ドル",
+              "amount_help": "最低入金額：10米ドル。ネットワーク手数料が発生する場合があります。",
+              "currency_label": "暗号資産を選択",
+              "network_label": "ネットワークを選択",
+              "address_label": "入金アドレス",
+              "address_help": "{network} ネットワーク上の {currency} のみをこのアドレスに送信してください",
+              "summary_amount": "金額",
+              "summary_currency": "通貨",
+              "summary_network": "ネットワーク",
+              "summary_receive": "受取額（約）",
+              "btn_generate": "入金アドレスを生成",
+              "btn_processing": "処理中...",
+              "btn_cancel": "キャンセル"
+            }
+          }
+
+   },
+   "bottom_nav": {
+      "home": "ホーム",
+      "wallet": "ウォレット",
+      "scan": "スキャン",
+      "market": "マーケット",
+      "profile": "プロフィール"
+   },
+   "captured_pieces": {
+      "empty": "-",
+      "tooltip": "取った駒"
+   },
+   "chess_board": {
+      "status": {
+         "check": "チェック！",
+         "checkmate": "チェックメイト！",
+         "stalemate": "ステイルメイト",
+         "draw": "引き分け",
+         "opponent_move": "相手：{from} → {to}"
+      },
+      "promotion": {
+         "title": "昇格を選択",
+         "queen": "クイーン",
+         "knight": "ナイト",
+         "rook": "ルーク",
+         "bishop": "ビショップ"
+      },
+      "controls": {
+         "mute": "音を消す",
+         "unmute": "音を戻す",
+         "flip": "盤を反転"
+      },
+      "loading": "盤面を読み込み中..."
+   },
+   "loading": {
+      "title": "戦略を読み込み中",
+      "subtitle": "盤面を準備中..."
+   },
+   "incoming_match": {
+      "default_title": "対戦申込",
+      "role_default": "プレイヤー",
+      "seconds": "秒",
+      "btn_accept": "対戦申込を受諾",
+      "warning_wo": "無応答 = 自動不戦敗。",
+      "waiting": "相手を待機中..."
+   },
+  "help_wallet": {
+    "header": "ウォレットとセキュリティヘルプ",
+    "hero": {
+      "title": "あなたのスマートウォレット",
+      "desc": "より良いチェス体験のために、ウォレットを安全に管理する方法を学びましょう。",
+      "f1": "安全な暗号化",
+      "f2": "リアルタイム取引",
+      "f3": "24/7 サポート"
+    },
+    "nav": {
+      "what_is": "ウォレットとは？",
+      "what_is_desc": "デジタルウォレットについて",
+      "security": "セキュリティ",
+      "security_desc": "重要なセキュリティのヒント",
+      "tips": "実用的なヒント",
+      "tips_desc": "ベストプラクティス",
+      "faq": "よくある質問",
+      "faq_desc": "一般的な疑問"
+    },
+    "content": {
+      "what_is": {
+        "title": "ウォレットとは？",
+        "subtitle": "プラットフォーム取引のためのデジタルウォレット",
+        "section_title": "チェスプラットフォームのウォレット",
+        "desc": "ウォレットは、当社のチェスプラットフォーム内で取引を行うためのデジタル財布です。ウォレットを使用すると、次のことができます：",
+        "list": {
+          "1": "有料トーナメントに参加する",
+          "2": "勝利賞金を受け取る",
+          "3": "プレミアム機能を購入する",
+          "4": "他のユーザーに送金する"
+        },
+        "card1": {
+          "title": "暗号化ウォレット",
+          "desc": "すべての取引は、最大限のセキュリティのためにエンドツーエンド暗号化で保護されています。"
+        },
+        "card2": {
+          "title": "高速取引",
+          "desc": "取引は数秒で処理され、受取人のウォレットですぐに利用可能です。"
+        }
+      },
+      "security": {
+        "title": "ウォレットセキュリティ",
+        "subtitle": "デジタル資産を保護するための適切な対策を講じる",
+        "alert_title": "特に注意！",
+        "alert_desc": "ウォレットのセキュリティはあなたの責任です。当社のプラットフォームはセキュリティツールを提供しますが、あなたはアカウントアクセスを保護する必要があります。",
+        "tips": {
+          "pass_title": "強力なパスワード",
+          "pass_desc": "ユニークで複雑なパスワードを作成する",
+          "pass_p1": "最低12文字",
+          "pass_p2": "大文字と小文字の組み合わせ",
+          "pass_p3": "数字と記号",
+          "pass_p4": "パスワードを再利用しない",
+          "2fa_title": "二段階認証 (2FA)",
+          "2fa_desc": "セキュリティ層を追加するために2FAを有効にする",
+          "2fa_p1": "認証アプリを使用する",
+          "2fa_p2": "バックアップコードを保存する",
+          "2fa_p3": "SMS/メールで確認する",
+          "2fa_p4": "すべてのデバイスで有効にする",
+          "phish_title": "フィッシングに注意",
+          "phish_desc": "疑わしいメールやリンクを避ける",
+          "phish_p1": "送信者を確認する",
+          "phish_p2": "不明なリンクをクリックしない",
+          "phish_p3": "ウェブサイトURLを確認する",
+          "phish_p4": "フィッシングをすぐに報告する",
+          "backup_title": "バックアップと復元",
+          "backup_desc": "復元のためのバックアップを準備する",
+          "backup_p1": "リカバリーフレーズを保存する",
+          "backup_p2": "ウォレットを定期的にバックアップする",
+          "backup_p3": "復元プロセスをテストする",
+          "backup_p4": "安全な場所に保管する"
+        }
+      },
+      "practical": {
+        "title": "実用的なヒント",
+        "subtitle": "安全なウォレット体験のためのベストプラクティス",
+        "checklist_title": "デイリーセキュリティチェックリスト",
+        "checks": {
+          "1": "最近のログイン活動を確認する",
+          "2": "ウォレット取引を確認する",
+          "3": "必要に応じてパスワードを更新する",
+          "4": "復元バックアップを確認する"
+        },
+        "btn_done": "完了",
+        "btn_mark": "マーク",
+        "do_title": "✅ すべきこと",
+        "do_list": {
+          "1": "信頼できるパスワードマネージャーを使用する",
+          "2": "セキュリティ通知を有効にする",
+          "3": "ソフトウェアを定期的に更新する",
+          "4": "公共デバイスからログアウトする",
+          "5": "安全な接続（HTTPS）を使用する"
+        },
+        "dont_title": "❌ すべきでないこと",
+        "dont_list": {
+          "1": "パスワード/PINを共有しない",
+          "2": "ブラウザにパスワードを保存しない",
+          "3": "VPNなしで公共WiFiを使用しない",
+          "4": "不明なメールのリンクをクリックしない",
+          "5": "セキュリティアップデートを遅らせない"
+        }
+      },
+      "faq": {
+        "title": "よくある質問",
+        "subtitle": "一般的な疑問への回答",
+        "q1": "パスワードを忘れた場合はどうすればよいですか？",
+        "a1": "ログインページの「パスワードを忘れた」機能を使用してください。登録済みのメールアドレスにリセットリンクを送信します。リカバリー用メールアドレスがアクティブであることを確認してください。",
+        "t1": "この問題を回避するには、安全なパスワードマネージャーにパスワードを保存してください。",
+        "q2": "私のウォレットは100％安全ですか？",
+        "a2": "当社は軍事レベルの暗号化と最新のセキュリティプロトコルを使用しています。ただし、セキュリティは強力なパスワードや2FAの使用など、あなたの実践にも依存します。",
+        "t2": "セキュリティはプラットフォームとユーザーの共同責任です。",
+        "q3": "疑わしい活動を報告するにはどうすればよいですか？",
+        "a3": "すぐに support@chess.cloud に連絡するか、このページの緊急フォームを使用してください。取引の詳細と関連する証拠を提供してください。",
+        "t3": "報告が早ければ早いほど、迅速に対処できます。",
+        "q4": "取引はキャンセルできますか？",
+        "a4": "ブロックチェーンで確認済みの取引はキャンセルできません。送信前に宛先アドレスが正しいことを確認してください。",
+        "t4": "受取人アドレスを送信前に少なくとも2回確認してください。"
+      }
+    },
+    "sidebar": {
+      "stats_title": "📊 セキュリティ統計",
+      "stats_1": "保護されたアカウント",
+      "stats_2": "安全な取引",
+      "stats_3": "サポート対応",
+      "checklist_title": "📋 セキュリティチェックリスト",
+      "check_1": "パスワードは最低12文字",
+      "check_2": "二段階認証が有効",
+      "check_3": "復元用メールが確認済み",
+      "check_4": "リカバリーフレーズがバックアップ済み",
+      "check_5": "セキュリティアラートが有効",
+      "check_6": "不明なデバイスはない",
+      "progress": "セキュリティ進捗",
+      "emergency_title": "🚨 緊急連絡先",
+      "email_support": "メールサポート",
+      "security_report": "セキュリティ報告",
+      "btn_report": "セキュリティ問題を報告"
+    },
+    "footer": {
+      "title": "チェスウォレットセキュリティ",
+      "subtitle": "2024年よりデジタル資産を保護",
+      "privacy": "プライバシーポリシー",
+      "terms": "利用規約",
+      "cookies": "Cookieポリシー",
+      "copyright": "© 2024 Chess Cloud. 無断複写・転載を禁じます。",
+      "updated": "最終更新日："
+    },
+    "modal": {
+      "title": "🚨 セキュリティ問題を報告",
+      "warning": "このフォームは、深刻なセキュリティ問題に遭遇した場合のみ使用してください：",
+      "w1": "許可されていないアカウントアクセス",
+      "w2": "疑わしい取引",
+      "w3": "セキュリティ侵害",
+      "w4": "なりすまし",
+      "type_label": "問題の種類",
+      "type_hack": "許可されていないアクセス",
+      "type_trans": "疑わしい取引",
+      "type_phish": "フィッシング/詐欺",
+      "type_other": "その他",
+      "desc_label": "説明",
+      "desc_ph": "問題を詳細に説明してください...",
+      "email_label": "あなたのメールアドレス",
+      "btn_cancel": "キャンセル",
+      "btn_submit": "報告を送信",
+      "alert_sent": "緊急報告が送信されました！"
+    }
+  },
+  "common": {
+      "back":"Back"
+  }
+}

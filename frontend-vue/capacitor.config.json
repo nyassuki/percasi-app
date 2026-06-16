@@ -1,0 +1,9 @@
+{
+  "appId": "com.catur.cloud",
+  "appName": "Percasi App",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

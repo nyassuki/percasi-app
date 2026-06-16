@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cluster Monitor Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --success-color: #06d6a0;
+            --warning-color: #ffd166;
+            --danger-color: #ef476f;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --gray-color: #6c757d;
+            --sidebar-width: 280px;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, var(--dark-color) 0%, #16213e 100%);
+            color: var(--light-color);
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+            transition: all var(--transition-speed) ease;
+        }
+
+        .sidebar-header {
+            padding: 1.5rem 1.5rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .sidebar-header .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo-icon {
+            background: var(--primary-color);
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .agent-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem 0;
+        }
+
+        .agent-item {
+            padding: 1rem 1.5rem;
+            margin: 0.3rem 0.8rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-left: 4px solid transparent;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .agent-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+        }
+
+        .agent-item.active {
+            background: rgba(67, 97, 238, 0.15);
+            border-left-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.2);
+        }
+
+        .agent-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.3rem;
+        }
+
+        .agent-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: white;
+        }
+
+        .agent-status {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .agent-status.online {
+            background: var(--success-color);
+            box-shadow: 0 0 0 3px rgba(6, 214, 160, 0.2);
+        }
+
+        .agent-status.offline {
+            background: var(--danger-color);
+        }
+
+        .agent-details {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .sidebar-footer {
+            padding: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        /* Main Content */
+        .main {
+            margin-left: var(--sidebar-width);
+            padding: 1.5rem;
+            min-height: 100vh;
+            transition: all var(--transition-speed) ease;
+        }
+
+        @media (max-width: 992px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main {
+                margin-left: 0;
+            }
+            
+            .mobile-toggle {
+                display: block !important;
+            }
+        }
+
+        /* Header */
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-title h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 0.2rem;
+        }
+
+        .header-title p {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .header-stats {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .stat-badge {
+            background: white;
+            border: 1px solid #e9ecef;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .stat-badge i {
+            font-size: 1rem;
+        }
+
+        /* Cards */
+        .metric-card {
+            background: white;
+            border: none;
+            border-radius: 16px;
+            padding: 1.5rem;
+            height: 100%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color);
+            border-radius: 4px 0 0 4px;
+        }
+
+        .metric-card.cpu::before { background: var(--danger-color); }
+        .metric-card.memory::before { background: var(--primary-color); }
+        .metric-card.disk::before { background: var(--warning-color); }
+        .metric-card.services::before { background: var(--success-color); }
+
+        .metric-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .metric-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .metric-icon.cpu { background: linear-gradient(135deg, var(--danger-color), #ff6b6b); }
+        .metric-icon.memory { background: linear-gradient(135deg, var(--primary-color), #4cc9f0); }
+        .metric-icon.disk { background: linear-gradient(135deg, var(--warning-color), #ff9e00); }
+        .metric-icon.services { background: linear-gradient(135deg, var(--success-color), #4adf7f); }
+
+        .metric-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--dark-color);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--gray-color);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .metric-details {
+            font-size: 0.8rem;
+            color: var(--gray-color);
+            margin-top: 0.5rem;
+        }
+
+        /* Progress Bars */
+        .progress-container {
+            margin-top: 1rem;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            margin-bottom: 0.3rem;
+            color: var(--gray-color);
+        }
+
+        .progress {
+            height: 8px;
+            border-radius: 10px;
+            background: #e9ecef;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            border-radius: 10px;
+            transition: width 0.6s ease;
+        }
+
+        /* Charts */
+        .chart-container {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-title {
+            font-weight: 600;
+            color: var(--dark-color);
+            font-size: 1.1rem;
+        }
+
+        .chart-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .chart-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .chart-stat i {
+            font-size: 0.8rem;
+        }
+
+        /* Tables */
+        .table-container {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .table-header {
+            padding: 1.2rem 1.5rem;
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .table-title {
+            font-weight: 600;
+            color: var(--dark-color);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .custom-table {
+            margin-bottom: 0;
+        }
+
+        .custom-table thead th {
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            font-weight: 600;
+            color: var(--gray-color);
+            padding: 1rem 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .custom-table tbody td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: middle;
+            font-size: 0.9rem;
+        }
+
+        .custom-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        /* Badges */
+        .badge {
+            font-weight: 500;
+            padding: 0.4em 0.8em;
+            border-radius: 8px;
+            font-size: 0.75rem;
+        }
+
+        .badge-online {
+            background: rgba(6, 214, 160, 0.1);
+            color: var(--success-color);
+        }
+
+        .badge-offline {
+            background: rgba(239, 71, 111, 0.1);
+            color: var(--danger-color);
+        }
+
+        .badge-warning {
+            background: rgba(255, 209, 102, 0.1);
+            color: #e6a100;
+        }
+
+        /* Buttons */
+        .btn {
+            border-radius: 10px;
+            font-weight: 500;
+            padding: 0.5rem 1.2rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), #3a0ca3);
+            border: none;
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, var(--danger-color), #d90429);
+            border: none;
+        }
+
+        .btn-sm {
+            padding: 0.35rem 0.8rem;
+            font-size: 0.85rem;
+        }
+
+        .action-btn {
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            background: white;
+            color: var(--gray-color);
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Toast */
+        .toast-container {
+            z-index: 9999;
+        }
+
+        .custom-toast {
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Modal */
+        .modal-content {
+            border-radius: 16px;
+            border: none;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 16px 16px 0 0;
+            padding: 1.5rem;
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 1.2rem;
+            border-radius: 10px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.85rem;
+            border: 1px solid #333;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        /* Responsive */
+        .mobile-toggle {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1001;
+            background: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--dark-color);
+        }
+
+        /* Loading State */
+        .loading-skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            border-radius: 8px;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        /* Empty State */
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            text-align: center;
+            color: var(--gray-color);
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+
+        /* Grid Layout */
+        .grid-item {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a1a1a1;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!-- Mobile Toggle Button -->
+    <button class="mobile-toggle" @click="toggleSidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <div class="sidebar" :class="{active: sidebarActive}">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <span>ClusterMon</span>
+            </div>
+            <small class="text-muted mt-2 d-block">Real-time Monitoring Dashboard</small>
+        </div>
+
+        <div class="agent-list">
+            <div v-for="(agent, id) in agents" :key="id" 
+                 @click="selectAgent(id)" 
+                 class="agent-item fade-in" 
+                 :class="{active: selectedAgentId===id}">
+                <div class="agent-info">
+                    <span class="agent-name">{{ agent.info.name }}</span>
+                    <div class="agent-status" :class="agent.info.status"></div>
+                </div>
+                <div class="agent-details">
+                    <i class="fas fa-desktop"></i>
+                    <span>{{ agent.metrics.os?.hostname || 'Unknown' }}</span>
+                </div>
+                <div class="agent-details mt-1">
+                    <i class="fas fa-microchip"></i>
+                    <span>{{ agent.metrics.cpu?.cores || 0 }} Cores</span>
+                    <i class="fas fa-memory ms-2"></i>
+                    <span>{{ formatBytes(agent.metrics.memory?.total) }}</span>
+                </div>
+            </div>
+            
+            <div v-if="Object.keys(agents).length === 0" class="empty-state">
+                <i class="fas fa-server"></i>
+                <p>No servers connected</p>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <button class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#helpModal">
+                <i class="fas fa-question-circle me-2"></i>Setup Guide
+            </button>
+            <a href="/logout" class="btn btn-outline-light w-100">
+                <i class="fas fa-sign-out-alt me-2"></i>Logout
+            </a>
+            <small class="text-center text-muted mt-2">v2.1.0 • © 2024</small>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header" v-if="currentAgent">
+            <div class="header-title">
+                <h1>{{ currentAgent.info.name }}</h1>
+                <p>
+                    <i class="fab fa-linux me-1"></i> {{ currentAgent.metrics.os?.distro || 'Unknown' }} • 
+                    <i class="fas fa-clock me-1"></i> Uptime: {{ formatUptime(currentAgent.metrics.os?.uptime) }}
+                </p>
+            </div>
+            <div class="header-stats">
+                <div class="stat-badge">
+                    <i class="fas fa-globe text-primary"></i>
+                    <div>
+                        <div class="small text-muted">Network Ping</div>
+                        <strong :class="currentAgent.metrics.network?.ping > 100 ? 'text-danger' : 'text-success'">
+                            {{ currentAgent.metrics.network?.ping || 0 }}ms
+                        </strong>
+                    </div>
+                </div>
+                <div class="stat-badge">
+                    <i class="fas fa-tachometer-alt text-warning"></i>
+                    <div>
+                        <div class="small text-muted">Dashboard Lag</div>
+                        <strong>{{ dashboardLatency }}ms</strong>
+                    </div>
+                </div>
+                <div class="stat-badge">
+                    <i class="fas fa-sync-alt text-info"></i>
+                    <div>
+                        <div class="small text-muted">Last Update</div>
+                        <strong>{{ lastUpdateStr }}</strong>
+                    </div>
+                </div>
+                <button class="btn btn-danger" @click="confirmAction('reboot-os')">
+                    <i class="fas fa-power-off me-1"></i>Reboot Server
+                </button>
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div v-if="!currentAgent" class="empty-state mt-5">
+            <i class="fas fa-server fa-4x mb-4"></i>
+            <h3 class="mb-3">No Server Selected</h3>
+            <p class="text-muted mb-4">Select a server from the sidebar to view monitoring data</p>
+            <button class="btn btn-primary" @click="toggleSidebar">
+                <i class="fas fa-bars me-2"></i>Browse Servers
+            </button>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div v-if="currentAgent" class="row g-4">
+            <!-- CPU Card -->
+            <div class="col-xl-3 col-lg-6 grid-item">
+                <div class="metric-card cpu">
+                    <div class="metric-header">
+                        <div>
+                            <div class="metric-label">CPU Load</div>
+                            <div class="metric-value">{{ currentAgent.metrics.cpu?.load || 0 }}%</div>
+                        </div>
+                        <div class="metric-icon cpu">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Utilization</span>
+                            <span>{{ currentAgent.metrics.cpu?.load || 0 }}%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" :style="{width: currentAgent.metrics.cpu?.load + '%'}"></div>
+                        </div>
+                    </div>
+                    <div class="metric-details">
+                        {{ currentAgent.metrics.cpu?.cores || 0 }} Cores • {{ currentAgent.metrics.cpu?.model || 'Unknown' }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory Card -->
+            <div class="col-xl-3 col-lg-6 grid-item">
+                <div class="metric-card memory">
+                    <div class="metric-header">
+                        <div>
+                            <div class="metric-label">Memory</div>
+                            <div class="metric-value">{{ currentAgent.metrics.memory?.percent || 0 }}%</div>
+                        </div>
+                        <div class="metric-icon memory">
+                            <i class="fas fa-memory"></i>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Used: {{ formatBytes(currentAgent.metrics.memory?.used) }}</span>
+                            <span>Total: {{ formatBytes(currentAgent.metrics.memory?.total) }}</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" :style="{width: currentAgent.metrics.memory?.percent + '%'}"></div>
+                        </div>
+                    </div>
+                    <div class="metric-details">
+                        Free: {{ formatBytes(currentAgent.metrics.memory?.free) }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disk Card -->
+            <div class="col-xl-3 col-lg-6 grid-item">
+                <div class="metric-card disk">
+                    <div class="metric-header">
+                        <div>
+                            <div class="metric-label">Storage</div>
+                            <div class="metric-value">{{ currentAgent.metrics.disk?.percent || 0 }}%</div>
+                        </div>
+                        <div class="metric-icon disk">
+                            <i class="fas fa-hdd"></i>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Root Partition</span>
+                            <span>{{ currentAgent.metrics.disk?.percent || 0 }}%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" :style="{width: (currentAgent.metrics.disk?.percent || 0) + '%'}"></div>
+                        </div>
+                    </div>
+                    <div class="metric-details">
+                        Used: {{ formatBytes(currentAgent.metrics.disk?.used) }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Card -->
+            <div class="col-xl-3 col-lg-6 grid-item">
+                <div class="metric-card services">
+                    <div class="metric-header">
+                        <div>
+                            <div class="metric-label">Services</div>
+                            <div class="metric-value">{{ getActiveServices() }}</div>
+                        </div>
+                        <div class="metric-icon services">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <small>Web Connections</small>
+                            <strong class="text-success">{{ currentAgent.metrics.web_conn || 0 }}</strong>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <small>MySQL</small>
+                            <span class="badge" :class="currentAgent.metrics.mysql?.status==='Online'?'badge-online':'badge-offline'">
+                                {{ currentAgent.metrics.mysql?.status || 'Offline' }}
+                            </span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small>Web Server</small>
+                            <span class="badge badge-warning">
+                                {{ currentAgent.metrics.nginx?.status==='Active' ? 'Nginx' : (currentAgent.metrics.apache?.status==='Active' ? 'Apache' : 'None') }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Network Chart -->
+            <div class="col-xl-8 grid-item">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <div class="chart-title">Network Traffic</div>
+                        <div class="chart-stats">
+                            <div class="chart-stat text-primary">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>TX: {{ formatBytes(currentAgent.metrics.network?.tx || 0) }}/s</span>
+                            </div>
+                            <div class="chart-stat text-success">
+                                <i class="fas fa-arrow-down"></i>
+                                <span>RX: {{ formatBytes(currentAgent.metrics.network?.rx || 0) }}/s</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height: 250px;">
+                        <canvas id="netChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Network Interfaces -->
+            <div class="col-xl-4 grid-item">
+                <div class="table-container">
+                    <div class="table-header">
+                        <div class="table-title">
+                            <i class="fas fa-network-wired text-primary"></i>
+                            Network Interfaces
+                        </div>
+                        <small class="text-muted">{{ currentAgent.metrics.network?.interfaces?.length || 0 }} interfaces</small>
+                    </div>
+                    <div class="table-responsive" style="max-height: 300px;">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Interface</th>
+                                    <th>IP Address</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="iface in currentAgent.metrics.network?.interfaces || []" :key="iface.iface">
+                                    <td class="fw-bold">{{ iface.iface }}</td>
+                                    <td>{{ iface.ip4 || iface.ip6 || '-' }}</td>
+                                    <td>
+                                        <span class="badge" :class="iface.state === 'up' ? 'badge-online' : 'badge-offline'">
+                                            {{ iface.state }}
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr v-if="!currentAgent.metrics.network?.interfaces?.length">
+                                    <td colspan="3" class="text-center text-muted py-3">No network interfaces found</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Servers -->
+            <div class="col-lg-6 grid-item" v-if="currentAgent.metrics.apache?.ServerVersion">
+                <div class="table-container">
+                    <div class="table-header">
+                        <div class="table-title">
+                            <i class="fab fa-apache text-danger"></i>
+                            Apache Status
+                        </div>
+                        <span class="badge bg-light text-dark">{{ currentAgent.metrics.apache.ServerVersion }}</span>
+                    </div>
+                    <div class="p-3">
+                        <div class="row">
+                            <div class="col-6 border-end">
+                                <h6 class="text-muted small fw-bold text-uppercase mb-3">Traffic</h6>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <small>Requests/sec</small>
+                                    <strong>{{ currentAgent.metrics.apache.ReqPerSec || 0 }}</strong>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small>Bytes/sec</small>
+                                    <strong>{{ parseFloat(currentAgent.metrics.apache.BytesPerSec || 0).toFixed(2) }}</strong>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h6 class="text-muted small fw-bold text-uppercase mb-3">Workers</h6>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <small>Busy Workers</small>
+                                    <strong class="text-danger">{{ currentAgent.metrics.apache.BusyWorkers || 0 }}</strong>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small>Idle Workers</small>
+                                    <strong class="text-success">{{ currentAgent.metrics.apache.IdleWorkers || 0 }}</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 grid-item" v-if="currentAgent.metrics.nginx?.status === 'Active'">
+                <div class="table-container">
+                    <div class="table-header">
+                        <div class="table-title">
+                            <i class="fas fa-server text-success"></i>
+                            Nginx Status
+                        </div>
+                        <span class="badge badge-online">Active</span>
+                    </div>
+                    <div class="p-4 text-center">
+                        <div class="display-4 fw-bold text-success mb-2">{{ currentAgent.metrics.nginx.active_connections || 0 }}</div>
+                        <p class="text-muted mb-4">Active Connections</p>
+                        <div class="row">
+                            <div class="col-4 border-end">
+                                <div class="h4 fw-bold">{{ currentAgent.metrics.nginx.reading || 0 }}</div>
+                                <small class="text-muted">Reading</small>
+                            </div>
+                            <div class="col-4 border-end">
+                                <div class="h4 fw-bold">{{ currentAgent.metrics.nginx.writing || 0 }}</div>
+                                <small class="text-muted">Writing</small>
+                            </div>
+                            <div class="col-4">
+                                <div class="h4 fw-bold">{{ currentAgent.metrics.nginx.waiting || 0 }}</div>
+                                <small class="text-muted">Waiting</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MySQL Monitor -->
+            <div class="col-12 grid-item">
+                <div class="table-container">
+                    <div class="table-header">
+                        <div class="table-title">
+                            <i class="fas fa-database text-warning"></i>
+                            MySQL Monitor
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <span v-if="currentAgent.metrics.mysql?.status==='Online'" class="text-muted small">
+                                Uptime: {{ formatUptime(currentAgent.metrics.mysql.uptime) }}
+                            </span>
+                            <div class="d-flex gap-2">
+                                <div class="text-center">
+                                    <div class="fw-bold">{{ currentAgent.metrics.mysql?.connections || 0 }}</div>
+                                    <small class="text-muted">Connections</small>
+                                </div>
+                                <div class="text-center">
+                                    <div class="fw-bold">{{ currentAgent.metrics.mysql?.running || 0 }}</div>
+                                    <small class="text-muted">Running</small>
+                                </div>
+                                <div class="text-center">
+                                    <div class="fw-bold">{{ currentAgent.metrics.mysql?.qps || 0 }}</div>
+                                    <small class="text-muted">QPS</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>User</th>
+                                    <th>Database</th>
+                                    <th>Time</th>
+                                    <th>State</th>
+                                    <th>Query</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="proc in currentAgent.metrics.mysql?.process_list || []" :key="proc.id">
+                                    <td>{{ proc.id }}</td>
+                                    <td>{{ proc.user }}</td>
+                                    <td>{{ proc.db || '--' }}</td>
+                                    <td :class="proc.time > 5 ? 'text-danger fw-bold' : ''">
+                                        {{ proc.time }}s
+                                    </td>
+                                    <td>{{ proc.state || '--' }}</td>
+                                    <td class="text-truncate" style="max-width: 300px;" :title="proc.info">
+                                        {{ proc.info || '--' }}
+                                    </td>
+                                </tr>
+                                <tr v-if="!currentAgent.metrics.mysql?.process_list?.length">
+                                    <td colspan="6" class="text-center text-muted py-4">
+                                        <i class="fas fa-database fa-lg mb-3 d-block"></i>
+                                        No active queries
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Monitors -->
+            <div class="col-lg-4 grid-item">
+                <div class="table-container h-100">
+                    <div class="table-header">
+                        <div class="table-title">
+                            <i class="fas fa-database text-danger"></i>
+                            Redis Monitor
+                        </div>
+                        <span class="badge" :class="currentAgent.metrics.redis?.status==='Up'?'badge-online':'badge-offline'">
+                            {{ currentAgent.metrics.redis?.status || 'Down' }}
+                        </span>
+                    </div>
+                    <div class="table-responsive" style="max-height: 300px;" v-if="currentAgent.metrics.redis?.status==='Up'">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Key</th>
+                                    <th>Type</th>
+                                    <th>TTL</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="k in currentAgent.metrics.redis.key_list || []" :key="k.name">
+                                    <td class="text-truncate" style="max-width: 100px;">{{ k.name }}</td>
+                                    <td><span class="badge bg-secondary">{{ k.type }}</span></td>
+                                    <td>{{ k.ttl || '-' }}</td>
+                                    <td class="text-end">
+                                        <button class="action-btn" @click="confirmDeleteKey(k.name)" title="Delete Key">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div v-else class="p-4 text-center text-muted">
+                        <i class="fas fa-database fa-2x mb-3"></i>
+                        <p>Redis is not running</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 grid-item">
+                <div class="table-container h-100">
+                    <div class="table-header">
+                        <div class="table-title">
+                            <i class="fas fa-rocket text-info"></i>
+                            PM2 Processes
+                        </div>
+                        <small class="text-muted">{{ currentAgent.metrics.pm2?.length || 0 }} processes</small>
+                    </div>
+                    <div class="table-responsive" style="max-height: 300px;">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Application</th>
+                                    <th>Status</th>
+                                    <th>CPU/Memory</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="pm in currentAgent.metrics.pm2 || []" :key="pm.pm_id">
+                                    <td class="fw-bold">{{ pm.name }}</td>
+                                    <td>
+                                        <span class="badge" :class="pm.status==='online'?'badge-online':'badge-offline'">
+                                            {{ pm.status }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <small>CPU: {{ pm.cpu }}%</small>
+                                            <small>Mem: {{ pm.memory }}MB</small>
+                                        </div>
+                                    </td>
+                                    <td class="text-end">
+                                        <button class="action-btn" @click="confirmRestartPM2(pm.pm_id)" title="Restart">
+                                            <i class="fas fa-redo"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr v-if="!currentAgent.metrics.pm2?.length">
+                                    <td colspan="4" class="text-center text-muted py-3">No PM2 processes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 grid-item">
+                <div class="table-container h-100">
+                    <div class="table-header">
+                        <div class="table-title">
+                            <i class="fas fa-tasks text-primary"></i>
+                            Top Processes
+                        </div>
+                        <small class="text-muted">CPU Intensive</small>
+                    </div>
+                    <div class="table-responsive" style="max-height: 300px;">
+                        <table class="table custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Process</th>
+                                    <th>User</th>
+                                    <th>CPU</th>
+                                    <th>Memory</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="p in currentAgent.metrics.top_procs || []" :key="p.pid">
+                                    <td class="text-truncate" style="max-width: 120px;">{{ p.name }}</td>
+                                    <td>{{ p.user }}</td>
+                                    <td class="fw-bold" :class="p.cpu > 50 ? 'text-danger' : ''">{{ p.cpu }}%</td>
+                                    <td>{{ p.mem }}%</td>
+                                    <td class="text-end">
+                                        <button class="action-btn" @click="confirmKillProcess(p.pid)" title="Kill Process">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr v-if="!currentAgent.metrics.top_procs?.length">
+                                    <td colspan="5" class="text-center text-muted py-3">No process data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="liveToast" class="toast custom-toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas" :class="toastIcon" :class="toastClass"></i>
+                <strong class="ms-2 me-auto">{{ toastTitle }}</strong>
+                <small>{{ toastTime }}</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">{{ toastMessage }}</div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="modal fade" id="helpModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Server Monitoring Setup Guide</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Follow these steps to enable monitoring on your web servers
+                    </div>
+                    
+                    <h6 class="fw-bold text-primary mt-4">
+                        <i class="fab fa-apache me-2"></i>Apache Configuration (mod_status)
+                    </h6>
+                    <p>Enable Apache's built-in status module:</p>
+                    <pre class="code-block"># Enable the status module
+sudo a2enmod status
+
+# Create status configuration
+sudo nano /etc/apache2/conf-available/status.conf</pre>
+                    
+                    <p>Add the following configuration:</p>
+                    <pre class="code-block">&lt;Location /server-status&gt;
+    SetHandler server-status
+    Require local
+    # For remote access, use:
+    # Require ip 192.168.1.0/24
+&lt;/Location&gt;
+
+ExtendedStatus On</pre>
+                    
+                    <p>Enable and restart Apache:</p>
+                    <pre class="code-block">sudo a2enconf status
+sudo systemctl reload apache2
+
+# Test the status page
+curl http://localhost/server-status?auto</pre>
+                    
+                    <hr class="my-4">
+                    
+                    <h6 class="fw-bold text-success">
+                        <i class="fas fa-server me-2"></i>Nginx Configuration (stub_status)
+                    </h6>
+                    <p>Create Nginx status configuration:</p>
+                    <pre class="code-block">sudo nano /etc/nginx/sites-available/status</pre>
+                    
+                    <p>Add the following configuration:</p>
+                    <pre class="code-block">server {
+    listen 127.0.0.1:8080;
+    server_name localhost;
+    
+    location /nginx_status {
+        stub_status on;
+        access_log off;
+        allow 127.0.0.1;
+        deny all;
+    }
+}</pre>
+                    
+                    <p>Enable and test the configuration:</p>
+                    <pre class="code-block"># Enable the site
+sudo ln -s /etc/nginx/sites-available/status /etc/nginx/sites-enabled/
+
+# Test configuration
+sudo nginx -t
+
+# Reload Nginx
+sudo systemctl reload nginx
+
+# Test the status page
+curl http://127.0.0.1:8080/nginx_status</pre>
+                    
+                    <div class="alert alert-warning mt-4">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>Security Note:</strong> Always restrict access to status pages to trusted IP addresses only.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save Documentation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{ confirmTitle }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        {{ confirmMessage }}
+                    </div>
+                    <p class="text-muted small mb-0">{{ confirmDetails }}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" @click="executeConfirmedAction" data-bs-dismiss="modal">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const { createApp } = Vue;
+    const socket = io();
+    let chartInstance = null;
+
+    createApp({
+        data() {
+            return {
+                agents: {},
+                selectedAgentId: null,
+                lastUpdate: new Date(),
+                dashboardLatency: 0,
+                sidebarActive: false,
+                // Toast data
+                toastTitle: '',
+                toastMessage: '',
+                toastClass: '',
+                toastIcon: '',
+                toastTime: '',
+                // Confirmation modal data
+                confirmTitle: '',
+                confirmMessage: '',
+                confirmDetails: '',
+                pendingAction: null,
+                pendingPayload: null
+            }
+        },
+        computed: {
+            currentAgent() {
+                return this.selectedAgentId ? this.agents[this.selectedAgentId] : null;
+            },
+            lastUpdateStr() {
+                const now = new Date();
+                const diff = now - this.lastUpdate;
+                if (diff < 60000) return 'Just now';
+                if (diff < 3600000) return `${Math.floor(diff / 60000)} min ago`;
+                return this.lastUpdate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            }
+        },
+        watch: {
+            selectedAgentId(val) {
+                if (val) {
+                    this.$nextTick(() => this.initChart());
+                    if (window.innerWidth < 992) {
+                        this.sidebarActive = false;
+                    }
+                }
+            }
+        },
+        methods: {
+            selectAgent(id) {
+                this.selectedAgentId = id;
+            },
+            toggleSidebar() {
+                this.sidebarActive = !this.sidebarActive;
+            },
+            formatBytes(bytes) {
+                if (!bytes || bytes === 0) return '0 B';
+                const k = 1024;
+                const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            },
+            formatUptime(seconds) {
+                if (!seconds) return '-';
+                const days = Math.floor(seconds / 86400);
+                const hours = Math.floor((seconds % 86400) / 3600);
+                const minutes = Math.floor((seconds % 3600) / 60);
+                
+                if (days > 0) return `${days}d ${hours}h`;
+                if (hours > 0) return `${hours}h ${minutes}m`;
+                return `${minutes}m`;
+            },
+            getActiveServices() {
+                let count = 0;
+                if (this.currentAgent?.metrics.mysql?.status === 'Online') count++;
+                if (this.currentAgent?.metrics.nginx?.status === 'Active') count++;
+                if (this.currentAgent?.metrics.apache?.ServerVersion) count++;
+                if (this.currentAgent?.metrics.redis?.status === 'Up') count++;
+                return count;
+            },
+            // Confirmation methods
+            confirmAction(action, payload = null) {
+                this.pendingAction = action;
+                this.pendingPayload = payload;
+                
+                const actions = {
+                    'reboot-os': {
+                        title: 'Reboot Server',
+                        message: 'Are you sure you want to reboot this server?',
+                        details: 'All services will be restarted. This action may cause downtime.'
+                    },
+                    'delete-redis-key': {
+                        title: 'Delete Redis Key',
+                        message: `Delete key "${payload}"?`,
+                        details: 'This action cannot be undone.'
+                    },
+                    'kill-process': {
+                        title: 'Kill Process',
+                        message: `Kill process ID ${payload}?`,
+                        details: 'This may cause the application to stop working.'
+                    },
+                    'pm2-restart': {
+                        title: 'Restart PM2 Process',
+                        message: `Restart PM2 process ID ${payload}?`,
+                        details: 'The application will be temporarily unavailable.'
+                    }
+                };
+                
+                const config = actions[action] || {
+                    title: 'Confirm Action',
+                    message: 'Are you sure?',
+                    details: ''
+                };
+                
+                this.confirmTitle = config.title;
+                this.confirmMessage = config.message;
+                this.confirmDetails = config.details;
+                
+                const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
+                modal.show();
+            },
+            executeConfirmedAction() {
+                if (!this.pendingAction) return;
+                
+                const payload = this.pendingAction === 'delete-redis-key' || 
+                              this.pendingAction === 'kill-process' || 
+                              this.pendingAction === 'pm2-restart' ? 
+                              this.pendingPayload : {};
+                
+                socket.emit('send-command', {
+                    agentId: this.selectedAgentId,
+                    command: this.pendingAction,
+                    payload: payload
+                });
+                
+                this.pendingAction = null;
+                this.pendingPayload = null;
+            },
+            confirmDeleteKey(key) {
+                this.confirmAction('delete-redis-key', key);
+            },
+            confirmKillProcess(pid) {
+                this.confirmAction('kill-process', pid);
+            },
+            confirmRestartPM2(pmId) {
+                this.confirmAction('pm2-restart', pmId);
+            },
+            showToast(title, message, type = 'success') {
+                this.toastTitle = title;
+                this.toastMessage = message;
+                this.toastTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                
+                const configs = {
+                    success: { class: 'bg-success', icon: 'fa-check-circle' },
+                    error: { class: 'bg-danger', icon: 'fa-exclamation-circle' },
+                    info: { class: 'bg-info', icon: 'fa-info-circle' },
+                    warning: { class: 'bg-warning', icon: 'fa-exclamation-triangle' }
+                };
+                
+                const config = configs[type] || configs.info;
+                this.toastClass = config.class;
+                this.toastIcon = config.icon;
+                
+                const toastEl = document.getElementById('liveToast');
+                const toast = new bootstrap.Toast(toastEl);
+                toast.show();
+            },
+            initChart() {
+                if (chartInstance) {
+                    chartInstance.destroy();
+                    chartInstance = null;
+                }
+                
+                const ctx = document.getElementById('netChart');
+                if (!ctx) return;
+                
+                const gradientTx = ctx.getContext('2d').createLinearGradient(0, 0, 0, 250);
+                gradientTx.addColorStop(0, 'rgba(59, 130, 246, 0.3)');
+                gradientTx.addColorStop(1, 'rgba(59, 130, 246, 0)');
+                
+                const gradientRx = ctx.getContext('2d').createLinearGradient(0, 0, 0, 250);
+                gradientRx.addColorStop(0, 'rgba(16, 185, 129, 0.3)');
+                gradientRx.addColorStop(1, 'rgba(16, 185, 129, 0)');
+                
+                chartInstance = new Chart(ctx.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: Array(20).fill(''),
+                        datasets: [
+                            {
+                                label: 'TX',
+                                borderColor: '#3b82f6',
+                                backgroundColor: gradientTx,
+                                data: Array(20).fill(0),
+                                tension: 0.4,
+                                pointRadius: 0,
+                                borderWidth: 2,
+                                fill: true
+                            },
+                            {
+                                label: 'RX',
+                                borderColor: '#10b981',
+                                backgroundColor: gradientRx,
+                                data: Array(20).fill(0),
+                                tension: 0.4,
+                                pointRadius: 0,
+                                borderWidth: 2,
+                                fill: true
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                titleFont: { size: 12 },
+                                bodyFont: { size: 12 },
+                                padding: 10,
+                                displayColors: false,
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.dataset.label || '';
+                                        if (label) label += ': ';
+                                        label += context.parsed.y.toFixed(2) + ' MB/s';
+                                        return label;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: { display: false },
+                            y: {
+                                beginAtZero: true,
+                                grid: { color: 'rgba(0, 0, 0, 0.05)' },
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + ' MB/s';
+                                    }
+                                }
+                            }
+                        },
+                        interaction: { intersect: false, mode: 'index' }
+                    }
+                });
+            },
+            updateChart(rx, tx) {
+                if (!chartInstance) return;
+                
+                // Convert bytes to megabytes
+                const rxMB = rx / (1024 * 1024);
+                const txMB = tx / (1024 * 1024);
+                
+                chartInstance.data.datasets[0].data.shift();
+                chartInstance.data.datasets[0].data.push(txMB);
+                chartInstance.data.datasets[1].data.shift();
+                chartInstance.data.datasets[1].data.push(rxMB);
+                
+                chartInstance.update('none');
+            },
+            handleResize() {
+                if (window.innerWidth >= 992) {
+                    this.sidebarActive = true;
+                } else {
+                    this.sidebarActive = false;
+                }
+            }
+        },
+        mounted() {
+            // Initialize WebSocket listeners
+            socket.on('ui-init-state', data => {
+                this.agents = data;
+                if (!this.selectedAgentId && Object.keys(data).length) {
+                    this.selectedAgentId = Object.keys(data)[0];
+                }
+            });
+            
+            socket.on('ui-new-agent', ({ id, data }) => {
+                this.agents[id] = data;
+                if (!this.selectedAgentId) this.selectedAgentId = id;
+                this.showToast('New Server Connected', `${data.info.name} has joined the cluster`, 'success');
+            });
+            
+            socket.on('ui-update-metrics', ({ agentId, data }) => {
+                if (!this.agents[agentId]) {
+                    this.agents[agentId] = {
+                        info: { id: agentId, name: agentId, status: 'online' },
+                        metrics: data
+                    };
+                }
+                
+                this.agents[agentId].metrics = data;
+                this.agents[agentId].info.status = 'online';
+                this.lastUpdate = new Date();
+                
+                // Calculate latency
+                if (data.sent_at) {
+                    this.dashboardLatency = Date.now() - data.sent_at;
+                }
+                
+                // Update chart if this is the selected agent
+                if (this.selectedAgentId === agentId) {
+                    this.updateChart(data.network?.rx || 0, data.network?.tx || 0);
+                }
+            });
+            
+            socket.on('agent-status-change', ({ id, status }) => {
+                if (this.agents[id]) {
+                    this.agents[id].info.status = status;
+                    const agentName = this.agents[id].info.name;
+                    this.showToast(
+                        `Server ${status === 'offline' ? 'Disconnected' : 'Reconnected'}`,
+                        `${agentName} is now ${status}`,
+                        status === 'offline' ? 'error' : 'success'
+                    );
+                }
+            });
+            
+            socket.on('ui-command-notification', (response) => {
+                this.showToast(
+                    response.success ? 'Command Executed' : 'Command Failed',
+                    response.msg,
+                    response.success ? 'success' : 'error'
+                );
+            });
+            
+            // Initialize chart
+            this.$nextTick(() => {
+                if (this.selectedAgentId) {
+                    this.initChart();
+                }
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', this.handleResize);
+            this.handleResize(); // Initial call
+            
+            // Auto-refresh indicator
+            setInterval(() => {
+                this.lastUpdate = new Date();
+            }, 30000);
+        },
+        beforeUnmount() {
+            window.removeEventListener('resize', this.handleResize);
+        }
+    }).mount('#app');
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

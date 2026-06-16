@@ -1,0 +1,24 @@
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BCA User 12600129:","timestamp":"2026-05-04 21:11:53"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA MANDIRI User 12600129:","timestamp":"2026-05-04 21:11:53"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BSI User 12600129:","timestamp":"2026-05-04 21:11:53"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BNI User 12600129:","timestamp":"2026-05-04 21:11:53"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA PERMATA User 12600129:","timestamp":"2026-05-04 21:11:53"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BRI User 12600129:","timestamp":"2026-05-04 21:11:53"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA CIMB User 12600129:","timestamp":"2026-05-04 21:11:53"}
+{"level":"error","message":"[XENDIT QR ERROR] {\"error_code\":\"DUPLICATE_ERROR\",\"message\":\"ID_XENDIT only allows 1 static QR code for each merchant\",\"existing\":\"qr_c347ec3e-2013-4611-a217-41f4b8ab8a73\"}","timestamp":"2026-05-04 21:11:54"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BNI User 12600130:","timestamp":"2026-05-04 21:12:28"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BCA User 12600130:","timestamp":"2026-05-04 21:12:28"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA PERMATA User 12600130:","timestamp":"2026-05-04 21:12:28"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BRI User 12600130:","timestamp":"2026-05-04 21:12:28"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA CIMB User 12600130:","timestamp":"2026-05-04 21:12:28"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA MANDIRI User 12600130:","timestamp":"2026-05-04 21:12:28"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BSI User 12600130:","timestamp":"2026-05-04 21:12:28"}
+{"level":"error","message":"[XENDIT QR ERROR] {\"error_code\":\"DUPLICATE_ERROR\",\"message\":\"ID_XENDIT only allows 1 static QR code for each merchant\",\"existing\":\"qr_c347ec3e-2013-4611-a217-41f4b8ab8a73\"}","timestamp":"2026-05-04 21:12:29"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BCA User 12600131:","timestamp":"2026-05-04 21:12:59"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BNI User 12600131:","timestamp":"2026-05-04 21:12:59"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA MANDIRI User 12600131:","timestamp":"2026-05-04 21:12:59"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA PERMATA User 12600131:","timestamp":"2026-05-04 21:12:59"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BRI User 12600131:","timestamp":"2026-05-04 21:12:59"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA BSI User 12600131:","timestamp":"2026-05-04 21:12:59"}
+{"level":"error","message":"[PAYMENT WARNING] Gagal init VA CIMB User 12600131:","timestamp":"2026-05-04 21:12:59"}
+{"level":"error","message":"[XENDIT QR ERROR] {\"error_code\":\"DUPLICATE_ERROR\",\"message\":\"ID_XENDIT only allows 1 static QR code for each merchant\",\"existing\":\"qr_c347ec3e-2013-4611-a217-41f4b8ab8a73\"}","timestamp":"2026-05-04 21:12:59"}

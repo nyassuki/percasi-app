@@ -1,0 +1,11 @@
+/* 1. Import Library DULUAN (Wajib di baris paling atas) */
+@import 'chessground/assets/chessground.base.css';
+@import 'chessground/assets/chessground.brown.css';
+@import 'chessground/assets/chessground.cburnett.css';
+
+/* 2. Baru load Tailwind setelah import selesai */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  

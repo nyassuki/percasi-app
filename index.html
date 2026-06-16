@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChessMaster Arena - Platform Catur Online Terbaik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css">
+    <style>
+        /* Reset dan Variabel */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #1a2530;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --dark-square: #b58863;
+            --light-square: #f0d9b5;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --radius: 10px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Animasi */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Header dan Navigasi */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            animation: fadeIn 0.8s ease;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            animation: slideInLeft 0.8s ease;
+        }
+        
+        .logo i {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        nav ul li a:hover:after, nav ul li a.active:after {
+            width: 80%;
+        }
+        
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--secondary);
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+            animation: slideInRight 0.8s ease;
+        }
+        
+        .btn {
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .btn-success {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        .btn-sm {
+            padding: 0.4rem 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .btn-large {
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 37, 48, 0.8), rgba(26, 37, 48, 0.9)), url('https://images.unsplash.com/photo-1586165368502-1bad197a6461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1900&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background-color: white;
+            padding: 3rem 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius);
+            background-color: var(--light);
+            transition: var(--transition);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+        
+        .stat-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Features Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features, .play-section, .tournaments, .community, .download-app {
+            padding: 5rem 0;
+        }
+        
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+            transform-origin: top;
+        }
+        
+        .feature-card:hover:before {
+            transform: scaleY(1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        /* Play Section */
+        .play-section {
+            background-color: var(--light);
+        }
+        
+        .play-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .play-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .play-option {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .play-option:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .play-option h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .play-option p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        .chess-board-container {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        #demoBoard {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        /* Tournaments Section */
+        .tournaments-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .tournament-card {
+            background-color: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .tournament-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tournament-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .tournament-body {
+            padding: 1.5rem;
+        }
+        
+        .tournament-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .tournament-prize {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--success);
+            text-align: center;
+            margin: 1rem 0;
+        }
+        
+        /* Community Section */
+        .community {
+            background-color: var(--light);
+        }
+        
+        .community-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .community-card {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .community-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .community-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .community-card:hover img {
+            transform: scale(1.1);
+            border-color: var(--accent);
+        }
+        
+        /* Download App Section */
+        .download-app {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+        }
+        
+        .download-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .download-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        
+        .download-info p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .download-features {
+            margin-bottom: 2rem;
+        }
+        
+        .download-features li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .download-features i {
+            color: var(--success);
+        }
+        
+        .app-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .app-button {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 1rem 1.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: white;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            min-width: 200px;
+        }
+        
+        .app-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .app-button.android {
+            background-color: #3ddc84;
+            color: #333;
+            border: none;
+        }
+        
+        .app-button.android:hover {
+            background-color: #2bc473;
+        }
+        
+        .app-button.ios {
+            background-color: #000;
+            border: none;
+        }
+        
+        .app-button.ios:hover {
+            background-color: #333;
+        }
+        
+        .app-button i {
+            font-size: 2rem;
+        }
+        
+        .app-button .button-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .app-button .small-text {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        .app-button .store-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .app-preview {
+            text-align: center;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .phone-mockup {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .phone-mockup img {
+            width: 300px;
+            max-width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .app-screen {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            background-color: #1a2530;
+            border-radius: 24px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .app-screen i {
+            font-size: 4rem;
+            color: var(--secondary);
+            animation: pulse 2s infinite;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: var(--radius);
+            width: 90%;
+            max-width: 500px;
+            padding: 2rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: slideInLeft 0.5s ease;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            color: var(--accent);
+            transform: rotate(90deg);
+        }
+        
+        .modal h2 {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus, .form-group select:focus {
+            border-color: var(--secondary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background: #eee;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: var(--secondary);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        /* Responsiveness */
+        @media (max-width: 992px) {
+            .play-container, .download-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .app-preview {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0.3rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-buttons .btn {
+                width: 80%;
+                max-width: 300px;
+            }
+            
+            .app-buttons {
+                justify-content: center;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .modal-content {
+                padding: 1.5rem;
+            }
+            
+            .app-button {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-chess-king"></i>
+                <span>ChessMaster Arena</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Beranda</a></li>
+                    <li><a href="#features">Fitur</a></li>
+                    <li><a href="#play">Mainkan</a></li>
+                    <li><a href="#tournaments">Turnamen</a></li>
+                    <li><a href="#community">Komunitas</a></li>
+                    <li><a href="#download">Download App</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline" id="loginBtn">Masuk</button>
+                <button class="btn btn-primary" id="registerBtn">Daftar Gratis</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Platform Catur Online Terbaik di Indonesia</h1>
+            <p>Bergabunglah dengan komunitas pemain catur terbesar. Tantang pemain dari seluruh dunia, ikuti turnamen berhadiah, dan tingkatkan kemampuan bermain catur Anda!</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-large" id="playNowBtn">
+                    <i class="fas fa-play"></i> Main Sekarang
+                </button>
+                <button class="btn btn-success btn-large" id="tournamentBtn">
+                    <i class="fas fa-trophy"></i> Ikuti Turnamen
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container stats-container">
+            <div class="stat-card animate-on-scroll">
+                <i class="fas fa-users"></i>
+                <div class="stat-number">250K+</div>
+                <p>Pemain Aktif</p>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <i class="fas fa-chess-board"></i>
+                <div class="stat-number">1.5Jt+</div>
+                <p>Permainan per Bulan</p>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <i class="fas fa-trophy"></i>
+                <div class="stat-number">500+</div>
+                <p>Turnamen Diselenggarakan</p>
+            </div>
+            <div class="stat-card animate-on-scroll">
+                <i class="fas fa-mobile-alt"></i>
+                <div class="stat-number">150K+</div>
+                <p>Download Aplikasi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fitur Unggulan Platform Kami</h2>
+                <p>ChessMaster Arena menawarkan pengalaman bermain catur online yang lengkap dan menyenangkan</p>
+            </div>
+            <div class="features-container">
+                <div class="feature-card animate-on-scroll">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI dengan Level Beragam</h3>
+                    <p>Latih kemampuan Anda dengan AI yang dapat disesuaikan dari tingkat pemula hingga grandmaster.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Permainan Real-time</h3>
+                    <p>Bermain melawan pemain lain secara live dengan sistem pencocokan yang cerdas berdasarkan rating.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Turnamen Berhadiah</h3>
+                    <p>Ikuti turnamen mingguan dan bulanan dengan hadiah uang tunai dan merchandise eksklusif.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Analisis Permainan</h3>
+                    <p>Dapatkan analisis mendetail tentang permainan Anda untuk mengetahui kekuatan dan kelemahan.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Pelajaran Interaktif</h3>
+                    <p>Akses ratusan pelajaran catur dari pemula hingga mahir dengan instruksi langkah demi langkah.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Multi-Platform</h3>
+                    <p>Mainkan di desktop, tablet, atau smartphone dengan pengalaman yang konsisten di semua perangkat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Play Section -->
+    <section class="play-section" id="play">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pilih Mode Permainan</h2>
+                <p>Tersedia berbagai pilihan mode permainan sesuai dengan preferensi Anda</p>
+            </div>
+            <div class="play-container">
+                <div class="play-options">
+                    <div class="play-option animate-on-scroll">
+                        <h3><i class="fas fa-user-friends"></i> Vs Pemain</h3>
+                        <p>Tantang pemain lain secara real-time dari seluruh dunia dengan sistem pencocokan yang adil.</p>
+                        <button class="btn btn-primary btn-sm" data-mode="player">Mainkan</button>
+                    </div>
+                    <div class="play-option animate-on-scroll">
+                        <h3><i class="fas fa-robot"></i> Vs Komputer</h3>
+                        <p>Latih kemampuan Anda dengan AI yang dapat disesuaikan dari level mudah hingga sangat sulit.</p>
+                        <button class="btn btn-primary btn-sm" data-mode="computer">Mainkan</button>
+                    </div>
+                    <div class="play-option animate-on-scroll">
+                        <h3><i class="fas fa-users"></i> Turnamen Cepat</h3>
+                        <p>Bergabung dengan turnamen cepat dengan format Swiss system dan dapatkan poin rating.</p>
+                        <button class="btn btn-primary btn-sm" data-mode="tournament">Gabung</button>
+                    </div>
+                    <div class="play-option animate-on-scroll">
+                        <h3><i class="fas fa-link"></i> Undangan Teman</h3>
+                        <p>Undang teman Anda untuk bermain dengan mengirimkan kode permainan pribadi.</p>
+                        <button class="btn btn-primary btn-sm" data-mode="friend">Undang</button>
+                    </div>
+                </div>
+                <div class="chess-board-container animate-on-scroll">
+                    <h3>Demo Permainan</h3>
+                    <div id="demoBoard"></div>
+                    <p class="demo-status" id="demoStatus">Status: Pilih mode permainan</p>
+                    <div class="board-controls" style="margin-top: 1rem;">
+                        <button class="btn btn-sm btn-outline" id="resetDemo">Reset Papan</button>
+                        <button class="btn btn-sm btn-accent" id="flipBoard">Balik Papan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournaments Section -->
+    <section class="tournaments" id="tournaments">
+        <div class="container">
+            <div class="section-title">
+                <h2>Turnamen Mendatang</h2>
+                <p>Ikuti turnamen berhadiah yang diadakan secara rutin di platform kami</p>
+            </div>
+            <div class="tournaments-container">
+                <div class="tournament-card animate-on-scroll">
+                    <div class="tournament-header">
+                        <h3>Turnamen Mingguan</h3>
+                        <p>Setiap Sabtu, 19:00 WIB</p>
+                    </div>
+                    <div class="tournament-body">
+                        <div class="tournament-info">
+                            <span><i class="far fa-calendar"></i> 10 Juni 2023</span>
+                            <span><i class="far fa-clock"></i> 90 menit</span>
+                        </div>
+                        <p>Turnamen catur cepat dengan format Swiss system. Terbuka untuk semua pemain dengan rating di bawah 2000.</p>
+                        <div class="tournament-prize">Hadiah: Rp 2.500.000</div>
+                        <button class="btn btn-accent btn-sm" style="width: 100%;">Daftar Sekarang</button>
+                    </div>
+                </div>
+                <div class="tournament-card animate-on-scroll">
+                    <div class="tournament-header">
+                        <h3>Grandmaster Challenge</h3>
+                        <p>Bulanan, 1 Juli 2023</p>
+                    </div>
+                    <div class="tournament-body">
+                        <div class="tournament-info">
+                            <span><i class="far fa-calendar"></i> 1 Juli 2023</span>
+                            <span><i class="far fa-clock"></i> 3 jam</span>
+                        </div>
+                        <p>Turnamen eksklusif dengan hadiah besar. Diikuti oleh grandmaster dan master internasional.</p>
+                        <div class="tournament-prize">Hadiah: Rp 25.000.000</div>
+                        <button class="btn btn-accent btn-sm" style="width: 100%;">Daftar Sekarang</button>
+                    </div>
+                </div>
+                <div class="tournament-card animate-on-scroll">
+                    <div class="tournament-header">
+                        <h3>Turnamen Pemula</h3>
+                        <p>Setiap Rabu, 20:00 WIB</p>
+                    </div>
+                    <div class="tournament-body">
+                        <div class="tournament-info">
+                            <span><i class="far fa-calendar"></i> 14 Juni 2023</span>
+                            <span><i class="far fa-clock"></i> 60 menit</span>
+                        </div>
+                        <p>Khusus untuk pemain dengan rating di bawah 1500. Kesempatan bagus untuk meningkatkan rating Anda.</p>
+                        <div class="tournament-prize">Hadiah: Rp 1.000.000</div>
+                        <button class="btn btn-accent btn-sm" style="width: 100%;">Daftar Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community" id="community">
+        <div class="container">
+            <div class="section-title">
+                <h2>Bergabung dengan Komunitas Kami</h2>
+                <p>Terhubung dengan pemain catur dari seluruh Indonesia dan dunia</p>
+            </div>
+            <div class="community-container">
+                <div class="community-card animate-on-scroll">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Community Member">
+                    <h3>Andi Wijaya</h3>
+                    <p><strong>Rating: 1850</strong></p>
+                    <p>"Platform ini sangat membantu saya meningkatkan kemampuan bermain catur. Sistem turnamennya juga sangat adil!"</p>
+                </div>
+                <div class="community-card animate-on-scroll">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Community Member">
+                    <h3>Sari Dewi</h3>
+                    <p><strong>Rating: 2100</strong></p>
+                    <p>"Saya suka fitur analisis permainannya. Setelah setiap pertandingan, saya bisa belajar dari kesalahan saya."</p>
+                </div>
+                <div class="community-card animate-on-scroll">
+                    <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Community Member">
+                    <h3>Budi Santoso</h3>
+                    <p><strong>Rating: 1650</strong></p>
+                    <p>"Komunitasnya sangat ramah. Saya sudah mendapatkan banyak teman baru yang sama-sama mencintai catur."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download App Section -->
+    <section class="download-app" id="download">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Download Aplikasi Mobile</h2>
+                <p style="color: rgba(255, 255, 255, 0.9);">Bawa ChessMaster Arena ke mana pun Anda pergi dengan aplikasi mobile kami</p>
+            </div>
+            <div class="download-container">
+                <div class="download-info animate-on-scroll">
+                    <h3>Mainkan Catur Di Mana Saja, Kapan Saja</h3>
+                    <p>Dengan aplikasi ChessMaster Arena, Anda dapat terus bermain dan meningkatkan kemampuan catur Anda dari smartphone atau tablet.</p>
+                    
+                    <ul class="download-features">
+                        <li><i class="fas fa-check-circle"></i> <strong>Fitur Lengkap:</strong> Semua fitur web tersedia di aplikasi mobile</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Notifikasi Real-time:</strong> Dapatkan pemberitahuan saat giliran Anda bermain</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Offline Mode:</strong> Latih kemampuan dengan AI bahkan tanpa internet</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Touch-Optimized:</strong> Kontrol yang dirancang khusus untuk layar sentuh</li>
+                    </ul>
+                    
+                    <div class="app-buttons">
+                        <a href="https://play.google.com/store/apps" target="_blank" class="app-button android">
+                            <i class="fab fa-google-play"></i>
+                            <div class="button-text">
+                                <span class="small-text">Download di</span>
+                                <span class="store-name">Google Play</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://apps.apple.com/id/app" target="_blank" class="app-button ios">
+                            <i class="fab fa-apple"></i>
+                            <div class="button-text">
+                                <span class="small-text">Download di</span>
+                                <span class="store-name">App Store</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8;">
+                        <i class="fas fa-qrcode"></i> Scan QR code di samping untuk download langsung
+                    </p>
+                </div>
+                
+                <div class="app-preview animate-on-scroll">
+                    <div class="phone-mockup">
+                        <!-- Phone Mockup -->
+                        <img src="https://cdn.pixabay.com/photo/2014/12/21/23/28/iphone-6-575797_1280.png" alt="Phone Mockup">
+                        <div class="app-screen">
+                            <i class="fas fa-chess-king"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- QR Code untuk download -->
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <div style="display: inline-block; background: white; padding: 15px; border-radius: var(--radius);">
+                            <div id="qrCode" style="width: 150px; height: 150px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                                <div style="text-align: center;">
+                                    <i class="fas fa-qrcode" style="font-size: 3rem; color: #333;"></i>
+                                    <p style="margin-top: 10px; font-size: 0.8rem; color: #666;">Scan untuk download</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">Scan QR code untuk download aplikasi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>ChessMaster Arena</h3>
+                    <p>Platform catur online terkemuka di Indonesia dengan berbagai fitur lengkap untuk pemain semua tingkat.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Menu Cepat</h3>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#features">Fitur</a></li>
+                        <li><a href="#play">Mainkan</a></li>
+                        <li><a href="#tournaments">Turnamen</a></li>
+                        <li><a href="#community">Komunitas</a></li>
+                        <li><a href="#download">Download App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Download Aplikasi</h3>
+                    <div class="app-download-footer">
+                        <a href="https://play.google.com/store/apps" target="_blank" class="footer-app-btn">
+                            <i class="fab fa-google-play"></i>
+                            <span>Google Play</span>
+                        </a>
+                        <a href="https://apps.apple.com/id/app" target="_blank" class="footer-app-btn">
+                            <i class="fab fa-apple"></i>
+                            <span>App Store</span>
+                        </a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Tersedia untuk Android dan iOS</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                        <li><i class="fas fa-envelope"></i> info@chessmasterarena.com</li>
+                        <li><i class="fas fa-phone"></i> +62 21 1234 5678</li>
+                        <li><i class="fas fa-download"></i> <a href="#download">Download App</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ChessMaster Arena. Semua hak dilindungi.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">
+                    <a href="#" style="color: rgba(255, 255, 255, 0.7); margin: 0 10px;">Kebijakan Privasi</a> | 
+                    <a href="#" style="color: rgba(255, 255, 255, 0.7); margin: 0 10px;">Syarat Layanan</a> |
+                    <a href="#download" style="color: rgba(255, 255, 255, 0.7); margin: 0 10px;">Download App</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Masuk ke Akun Anda</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="email@contoh.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Kata Sandi</label>
+                    <input type="password" id="loginPassword" placeholder="Kata sandi Anda" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Masuk</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">Belum punya akun? <a href="#" id="switchToRegister">Daftar di sini</a></p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Daftar Akun Baru</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Nama Lengkap</label>
+                    <input type="text" id="registerName" placeholder="Nama lengkap Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="email@contoh.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Kata Sandi</label>
+                    <input type="password" id="registerPassword" placeholder="Minimal 8 karakter" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerLevel">Tingkat Kemampuan</label>
+                    <select id="registerLevel" required>
+                        <option value="">Pilih tingkat kemampuan</option>
+                        <option value="beginner">Pemula</option>
+                        <option value="intermediate">Menengah</option>
+                        <option value="advanced">Lanjutan</option>
+                        <option value="expert">Ahli</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success" style="width: 100%;">Daftar Sekarang</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">Sudah punya akun? <a href="#" id="switchToLogin">Masuk di sini</a></p>
+        </div>
+    </div>
+
+    <!-- Game Mode Modal -->
+    <div class="modal" id="gameModeModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="gameModeTitle">Pilih Mode Permainan</h2>
+            <div id="gameModeContent">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
+
+    <script>
+        // Inisialisasi variabel
+        let game = new Chess();
+        let board = null;
+        let currentGameMode = 'demo';
+        
+        // Inisialisasi papan catur demo
+        function initChessBoard() {
+            const boardConfig = {
+                position: 'start',
+                pieceTheme: 'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png',
+                draggable: true,
+                onDragStart: onDragStart,
+                onDrop: onDrop,
+                onSnapEnd: onSnapEnd
+            };
+            
+            board = Chessboard('demoBoard', boardConfig);
+            updateStatus();
+        }
+        
+        // Fungsi untuk memulai drag piece
+        function onDragStart(source, piece, position, orientation) {
+            // Hanya izinkan drag jika giliran pemain yang sesuai
+            if (currentGameMode === 'demo') {
+                return true;
+            }
+            
+            // Cek jika permainan sudah berakhir
+            if (game.game_over()) return false;
+            
+            // Cek jika giliran pemain yang sesuai
+            if ((game.turn() === 'w' && piece.search(/^b/) !== -1) ||
+                (game.turn() === 'b' && piece.search(/^w/) !== -1)) {
+                return false;
+            }
+            
+            return true;
+        }
+        
+        // Fungsi ketika piece di-drop
+        function onDrop(source, target) {
+            // Coba gerakkan piece
+            const move = game.move({
+                from: source,
+                to: target,
+                promotion: 'q' // Secara default promosi ke ratu
+            });
+            
+            // Jika gerakan tidak valid
+            if (move === null) return 'snapback';
+            
+            // Jika melawan komputer, buat gerakan komputer setelah jeda
+            if (currentGameMode === 'computer' && !game.game_over()) {
+                setTimeout(makeComputerMove, 500);
+            }
+            
+            updateStatus();
+        }
+        
+        // Fungsi untuk gerakan komputer (sederhana)
+        function makeComputerMove() {
+            const moves = game.moves();
+            
+            if (moves.length === 0 || game.game_over()) {
+                updateStatus();
+                return;
+            }
+            
+            // Pilih gerakan acak
+            const randomMove = moves[Math.floor(Math.random() * moves.length)];
+            game.move(randomMove);
+            
+            // Perbarui papan
+            board.position(game.fen());
+            
+            updateStatus();
+        }
+        
+        // Fungsi setelah snap selesai
+        function onSnapEnd() {
+            board.position(game.fen());
+        }
+        
+        // Perbarui status permainan
+        function updateStatus() {
+            let status = '';
+            let statusElement = document.getElementById('demoStatus');
+            
+            if (game.in_checkmate()) {
+                status = 'Permainan berakhir, ' + (game.turn() === 'w' ? 'hitam' : 'putih') + ' menang dengan skakmat!';
+            } else if (game.in_draw()) {
+                status = 'Permainan berakhir dengan remis';
+            } else {
+                status = 'Giliran ' + (game.turn() === 'w' ? 'putih' : 'hitam');
+                if (game.in_check()) {
+                    status += ', SKAK!';
+                }
+            }
+            
+            statusElement.textContent = 'Status: ' + status;
+        }
+        
+        // Reset papan demo
+        document.getElementById('resetDemo').addEventListener('click', function() {
+            game = new Chess();
+            board.position('start');
+            updateStatus();
+            showMessage('Papan berhasil direset!', 'success');
+        });
+        
+        // Balik papan
+        document.getElementById('flipBoard').addEventListener('click', function() {
+            board.flip();
+            showMessage('Papan berhasil dibalik!', 'info');
+        });
+        
+        // Tombol mode permainan
+        document.querySelectorAll('[data-mode]').forEach(button => {
+            button.addEventListener('click', function() {
+                const mode = this.getAttribute('data-mode');
+                showGameModeModal(mode);
+            });
+        });
+        
+        // Tampilkan modal mode permainan
+        function showGameModeModal(mode) {
+            const modal = document.getElementById('gameModeModal');
+            const title = document.getElementById('gameModeTitle');
+            const content = document.getElementById('gameModeContent');
+            
+            let modalContent = '';
+            
+            switch(mode) {
+                case 'player':
+                    title.textContent = 'Bermain Melawan Pemain Lain';
+                    modalContent = `
+                        <p>Anda akan dipasangkan dengan pemain lain yang memiliki rating serupa.</p>
+                        <div class="form-group">
+                            <label for="gameTime">Waktu Permainan</label>
+                            <select id="gameTime">
+                                <option value="1|0">1 menit + 0 detik</option>
+                                <option value="3|0">3 menit + 0 detik</option>
+                                <option value="5|3">5 menit + 3 detik</option>
+                                <option value="10|0">10 menit + 0 detik</option>
+                                <option value="15|10">15 menit + 10 detik</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" id="findPlayerBtn" style="width: 100%;">
+                            <i class="fas fa-search"></i> Cari Lawan
+                        </button>
+                    `;
+                    break;
+                    
+                case 'computer':
+                    title.textContent = 'Bermain Melawan Komputer';
+                    modalContent = `
+                        <p>Pilih tingkat kesulitan AI yang ingin Anda tantang.</p>
+                        <div class="form-group">
+                            <label for="aiLevel">Tingkat Kesulitan</label>
+                            <select id="aiLevel">
+                                <option value="easy">Mudah (Pemula)</option>
+                                <option value="medium" selected>Menengah</option>
+                                <option value="hard">Sulit (Lanjutan)</option>
+                                <option value="expert">Sangat Sulit (Ahli)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="playerColor">Warna yang Anda Mainkan</label>
+                            <select id="playerColor">
+                                <option value="white">Putih (Bergerak pertama)</option>
+                                <option value="black">Hitam (Bergerak kedua)</option>
+                                <option value="random">Acak</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" id="startComputerGame" style="width: 100%;">
+                            <i class="fas fa-robot"></i> Mulai Permainan
+                        </button>
+                    `;
+                    break;
+                    
+                case 'tournament':
+                    title.textContent = 'Bergabung dengan Turnamen Cepat';
+                    modalContent = `
+                        <p>Bergabunglah dengan turnamen cepat yang akan segera dimulai.</p>
+                        <div class="form-group">
+                            <label for="tournamentType">Jenis Turnamen</label>
+                            <select id="tournamentType">
+                                <option value="swiss">Sistem Swiss (5 ronde)</option>
+                                <option value="arena">Arena (60 menit)</option>
+                                <option value="knockout">Sistem Gugur</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tournamentTime">Waktu per Pemain</label>
+                            <select id="tournamentTime">
+                                <option value="3|2">3 menit + 2 detik</option>
+                                <option value="5|3" selected>5 menit + 3 detik</option>
+                                <option value="10|5">10 menit + 5 detik</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-accent" id="joinTournamentBtn" style="width: 100%;">
+                            <i class="fas fa-trophy"></i> Gabung Turnamen
+                        </button>
+                    `;
+                    break;
+                    
+                case 'friend':
+                    title.textContent = 'Undang Teman Bermain';
+                    modalContent = `
+                        <p>Buat permainan pribadi dan undang teman Anda.</p>
+                        <div class="form-group">
+                            <label for="gameCode">Kode Permainan</label>
+                            <input type="text" id="gameCode" value="CHESS${Math.floor(1000 + Math.random() * 9000)}" readonly>
+                        </div>
+                        <p>Bagikan kode ini dengan teman Anda agar mereka bisa bergabung.</p>
+                        <div class="form-group">
+                            <label for="gameTimeFriend">Waktu Permainan</label>
+                            <select id="gameTimeFriend">
+                                <option value="10|0">10 menit + 0 detik</option>
+                                <option value="15|10" selected>15 menit + 10 detik</option>
+                                <option value="30|0">30 menit + 0 detik</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-success" id="copyCodeBtn" style="width: 100%; margin-bottom: 10px;">
+                            <i class="fas fa-copy"></i> Salin Kode
+                        </button>
+                        <button class="btn btn-primary" id="createFriendGame" style="width: 100%;">
+                            <i class="fas fa-plus"></i> Buat Permainan
+                        </button>
+                    `;
+                    break;
+            }
+            
+            content.innerHTML = modalContent;
+            modal.style.display = 'flex';
+            
+            // Tambahkan event listener untuk tombol dalam modal
+            if (mode === 'computer') {
+                document.getElementById('startComputerGame').addEventListener('click', function() {
+                    currentGameMode = 'computer';
+                    game = new Chess();
+                    
+                    // Atur warna pemain
+                    const playerColor = document.getElementById('playerColor').value;
+                    if (playerColor === 'white') {
+                        board.orientation('white');
+                    } else if (playerColor === 'black') {
+                        board.orientation('black');
+                        // Jika pemain memilih hitam, biarkan komputer bergerak pertama
+                        setTimeout(makeComputerMove, 500);
+                    } else {
+                        // Acak
+                        const randomColor = Math.random() > 0.5 ? 'white' : 'black';
+                        board.orientation(randomColor);
+                        if (randomColor === 'black') {
+                            setTimeout(makeComputerMove, 500);
+                        }
+                    }
+                    
+                    board.position('start');
+                    updateStatus();
+                    
+                    document.getElementById('demoStatus').textContent = 'Status: Bermain melawan komputer - ' + 
+                        document.getElementById('aiLevel').options[document.getElementById('aiLevel').selectedIndex].text;
+                    
+                    document.getElementById('gameModeModal').style.display = 'none';
+                    showMessage('Permainan vs komputer dimulai!', 'success');
+                });
+            }
+            
+            if (mode === 'friend') {
+                document.getElementById('copyCodeBtn').addEventListener('click', function() {
+                    const gameCode = document.getElementById('gameCode');
+                    gameCode.select();
+                    document.execCommand('copy');
+                    showMessage('Kode berhasil disalin!', 'success');
+                });
+            }
+        }
+        
+        // Modal handling
+        const loginBtn = document.getElementById('loginBtn');
+        const registerBtn = document.getElementById('registerBtn');
+        const playNowBtn = document.getElementById('playNowBtn');
+        const tournamentBtn = document.getElementById('tournamentBtn');
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        const closeModalButtons = document.querySelectorAll('.close-modal');
+        const switchToRegister = document.getElementById('switchToRegister');
+        const switchToLogin = document.getElementById('switchToLogin');
+        
+        // Tampilkan modal login
+        loginBtn.addEventListener('click', function() {
+            loginModal.style.display = 'flex';
+        });
+        
+        // Tampilkan modal registrasi
+        registerBtn.addEventListener('click', function() {
+            registerModal.style.display = 'flex';
+        });
+        
+        // Tombol main sekarang
+        playNowBtn.addEventListener('click', function() {
+            showGameModeModal('player');
+        });
+        
+        // Tombol turnamen
+        tournamentBtn.addEventListener('click', function() {
+            showGameModeModal('tournament');
+        });
+        
+        // Tutup modal
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                loginModal.style.display = 'none';
+                registerModal.style.display = 'none';
+                document.getElementById('gameModeModal').style.display = 'none';
+            });
+        });
+        
+        // Switch antara login dan register
+        switchToRegister.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.style.display = 'none';
+            registerModal.style.display = 'flex';
+        });
+        
+        switchToLogin.addEventListener('click', function(e) {
+            e.preventDefault();
+            registerModal.style.display = 'none';
+            loginModal.style.display = 'flex';
+        });
+        
+        // Tutup modal saat klik di luar konten modal
+        window.addEventListener('click', function(e) {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+            if (e.target === registerModal) {
+                registerModal.style.display = 'none';
+            }
+            if (e.target === document.getElementById('gameModeModal')) {
+                document.getElementById('gameModeModal').style.display = 'none';
+            }
+        });
+        
+        // Form submission handling
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // Simulasi login
+            if (email && password) {
+                showMessage('Login berhasil! Mengarahkan ke dashboard...', 'success');
+                setTimeout(() => {
+                    loginModal.style.display = 'none';
+                    document.getElementById('loginEmail').value = '';
+                    document.getElementById('loginPassword').value = '';
+                }, 1500);
+            } else {
+                showMessage('Harap isi semua field', 'error');
+            }
+        });
+        
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('registerName').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+            const level = document.getElementById('registerLevel').value;
+            
+            // Simulasi registrasi
+            if (name && email && password && level) {
+                showMessage('Registrasi berhasil! Selamat bergabung di ChessMaster Arena.', 'success');
+                setTimeout(() => {
+                    registerModal.style.display = 'none';
+                    document.getElementById('registerForm').reset();
+                }, 1500);
+            } else {
+                showMessage('Harap isi semua field', 'error');
+            }
+        });
+        
+        // Fungsi untuk menampilkan pesan
+        function showMessage(message, type) {
+            // Buat elemen pesan
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            messageElement.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                border-radius: 5px;
+                color: white;
+                font-weight: 500;
+                z-index: 3000;
+                animation: slideIn 0.3s ease;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            `;
+            
+            if (type === 'success') {
+                messageElement.style.backgroundColor = '#2ecc71';
+            } else if (type === 'error') {
+                messageElement.style.backgroundColor = '#e74c3c';
+            } else if (type === 'info') {
+                messageElement.style.backgroundColor = '#3498db';
+            } else {
+                messageElement.style.backgroundColor = '#f39c12';
+            }
+            
+            document.body.appendChild(messageElement);
+            
+            // Hapus pesan setelah 3 detik
+            setTimeout(() => {
+                messageElement.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    document.body.removeChild(messageElement);
+                }, 300);
+            }, 3000);
+        }
+        
+        // Tambahkan CSS untuk animasi pesan
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            
+            /* Style tambahan untuk footer app download */
+            .app-download-footer {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .footer-app-btn {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 0.8rem 1rem;
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 5px;
+                color: white;
+                text-decoration: none;
+                transition: var(--transition);
+            }
+            
+            .footer-app-btn:hover {
+                background-color: var(--secondary);
+                transform: translateY(-3px);
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Smooth scroll untuk navigasi
+        document.querySelectorAll('nav a, .footer-column a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    
+                    // Update active nav link
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    if (this.closest('nav')) {
+                        this.classList.add('active');
+                    }
+                    
+                    // Scroll ke elemen
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Highlight nav link saat scroll
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY + 100;
+            
+            // Loop melalui setiap section
+            document.querySelectorAll('section[id]').forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+            
+            // Progress bar
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+            
+            // Back to top button
+            const backToTop = document.getElementById("backToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+        });
+        
+        // Back to top button
+        document.getElementById("backToTop").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+        
+        // Animasi saat scroll
+        function checkScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // Inisialisasi saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            initChessBoard();
+            
+            // Tambahkan event listener untuk tombol dalam game mode modal
+            document.addEventListener('click', function(e) {
+                if (e.target.id === 'findPlayerBtn') {
+                    showMessage('Mencari lawan dengan rating serupa...', 'info');
+                    setTimeout(() => {
+                        document.getElementById('gameModeModal').style.display = 'none';
+                        showMessage('Lawan ditemukan! Memulai permainan...', 'success');
+                    }, 2000);
+                }
+                
+                if (e.target.id === 'joinTournamentBtn') {
+                    showMessage('Bergabung dengan turnamen...', 'info');
+                    setTimeout(() => {
+                        document.getElementById('gameModeModal').style.display = 'none';
+                        showMessage('Anda telah bergabung dengan turnamen!', 'success');
+                    }, 1500);
+                }
+                
+                if (e.target.id === 'createFriendGame') {
+                    showMessage('Permainan pribadi dibuat! Bagikan kode dengan teman Anda.', 'success');
+                    document.getElementById('gameModeModal').style.display = 'none';
+                }
+            });
+            
+            // Animasi statistik
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const originalText = stat.textContent;
+                const target = parseInt(originalText.replace(/[^0-9]/g, ''));
+                const suffix = originalText.replace(/[0-9]/g, '');
+                let current = 0;
+                const increment = target / 50;
+                
+                // Reset to 0 for animation
+                stat.textContent = '0' + suffix;
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    current = target;
+                                    clearInterval(timer);
+                                }
+                                stat.textContent = Math.floor(current) + suffix;
+                            }, 20);
+                            observer.unobserve(stat);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(stat);
+            });
+            
+            // Tambahkan QR code generator sederhana (simulasi)
+            setTimeout(() => {
+                const qrCodeElement = document.getElementById('qrCode');
+                qrCodeElement.innerHTML = `
+                    <div style="text-align: center; padding: 10px;">
+                        <div style="display: grid; grid-template-columns: repeat(10, 1fr); gap: 2px; width: 130px; height: 130px; margin: 0 auto;">
+                            ${Array.from({length: 100}, (_, i) => 
+                                `<div style="background-color: ${Math.random() > 0.5 ? '#333' : '#fff'}; border-radius: 2px;"></div>`
+                            ).join('')}
+                        </div>
+                        <p style="margin-top: 10px; font-size: 0.8rem; color: #666;">Scan untuk download</p>
+                    </div>
+                `;
+            }, 500);
+            
+            // Inisialisasi animasi saat scroll
+            window.addEventListener('scroll', checkScroll);
+            checkScroll(); // Check on load
+        });
+        
+        // Efek hover pada kartu
+        document.querySelectorAll('.feature-card, .play-option, .tournament-card, .community-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = this.classList.contains('feature-card') ? 'translateY(-10px)' : 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('visible')) {
+                    this.style.transform = 'translateY(0)';
+                } else {
+                    this.style.transform = this.classList.contains('feature-card') ? 'translateY(-10px)' : 'translateY(-5px)';
+                }
+            });
+        });
+        
+        // Efek parallax sederhana
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+        });
+    </script>
+</body>
+</html>

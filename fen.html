@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chess Match Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --dark-square: #b58863;
+            --light-square: #f0d9b5;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #ecf0f1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #3498db, #e74c3c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .match-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .player {
+            background: rgba(52, 152, 219, 0.2);
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid rgba(52, 152, 219, 0.3);
+        }
+        
+        .player.white {
+            background: rgba(241, 241, 241, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .player.black {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .player-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .player-rating {
+            color: #f1c40f;
+            font-size: 1.1rem;
+        }
+        
+        .vs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 25px;
+        }
+        
+        @media (max-width: 1200px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .chess-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .board-container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #board {
+            width: 600px;
+            max-width: 100%;
+        }
+        
+        .board-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .control-btn {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        
+        .control-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        .control-btn i {
+            font-size: 1.2rem;
+        }
+        
+        .control-btn.reset {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+        
+        .control-btn.reset:hover {
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+        
+        .control-btn.example {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+        
+        .control-btn.example:hover {
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        }
+        
+        .status-panel {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .status-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #3498db;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .fen-display {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #bdc3c7;
+            font-family: monospace;
+            font-size: 0.9rem;
+            word-break: break-all;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+        
+        .fen-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            color: #7f8c8d;
+        }
+        
+        #message {
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .success {
+            background-color: rgba(46, 204, 113, 0.2);
+            border: 1px solid rgba(46, 204, 113, 0.5);
+            color: #2ecc71;
+        }
+        
+        .error {
+            background-color: rgba(231, 76, 60, 0.2);
+            border: 1px solid rgba(231, 76, 60, 0.5);
+            color: #e74c3c;
+        }
+        
+        .info {
+            background-color: rgba(52, 152, 219, 0.2);
+            border: 1px solid rgba(52, 152, 219, 0.5);
+            color: #3498db;
+        }
+        
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .moves-panel, .live-chat-panel, .live-data-panel {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .live-data-panel {
+            height: 300px;
+        }
+        
+        .panel-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #3498db;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .moves-list {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        .move-row {
+            display: grid;
+            grid-template-columns: 50px 1fr 1fr;
+            padding: 8px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: monospace;
+        }
+        
+        .move-row:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        .move-row.current {
+            background: rgba(52, 152, 219, 0.2);
+            font-weight: bold;
+        }
+        
+        .move-number {
+            color: #7f8c8d;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            padding-right: 10px;
+        }
+        
+        .chat-message {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .chat-message.system {
+            border-left-color: #f1c40f;
+            background: rgba(241, 196, 15, 0.1);
+        }
+        
+        .chat-message .user {
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+        
+        .chat-message.system .user {
+            color: #f1c40f;
+        }
+        
+        .chat-input-container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        #chatInput {
+            flex: 1;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: white;
+        }
+        
+        #sendChat {
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .connection-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        .connected {
+            background: rgba(46, 204, 113, 0.2);
+            border: 1px solid rgba(46, 204, 113, 0.5);
+            color: #2ecc71;
+        }
+        
+        .disconnected {
+            background: rgba(231, 76, 60, 0.2);
+            border: 1px solid rgba(231, 76, 60, 0.5);
+            color: #e74c3c;
+        }
+        
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .connected .status-dot {
+            background: #2ecc71;
+            box-shadow: 0 0 10px #2ecc71;
+        }
+        
+        .disconnected .status-dot {
+            background: #e74c3c;
+        }
+        
+        .live-data-content {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        .data-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .data-item .label {
+            font-weight: bold;
+            color: #9b59b6;
+            margin-bottom: 5px;
+        }
+        
+        .data-item .value {
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #ecf0f1;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            #board {
+                width: 400px;
+            }
+            
+            .player {
+                min-width: 150px;
+            }
+            
+            .control-btn {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #board {
+                width: 320px;
+            }
+            
+            .main-content {
+                gap: 15px;
+            }
+            
+            .board-container, .status-panel, .moves-panel, .live-chat-panel {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chess-board"></i> Live Chess Match Viewer</h1>
+            <div class="subtitle">Real-time chess matches with live commentary and move tracking</div>
+            
+            <div class="match-info">
+                <div class="player white">
+                    <div class="player-name" id="whitePlayer">Loading...</div>
+                    <div class="player-rating"><i class="fas fa-star"></i> <span id="whiteRating">-</span></div>
+                    <div class="player-time" id="whiteTime">00:00</div>
+                </div>
+                
+                <div class="vs">VS</div>
+                
+                <div class="player black">
+                    <div class="player-name" id="blackPlayer">Loading...</div>
+                    <div class="player-rating"><i class="fas fa-star"></i> <span id="blackRating">-</span></div>
+                    <div class="player-time" id="blackTime">00:00</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="chess-section">
+                <div class="board-container">
+                    <div id="board"></div>
+                    
+                    <div class="board-controls">
+                        <button class="control-btn" onclick="simulateLiveData()">
+                            <i class="fas fa-bolt"></i> Simulate Live Data
+                        </button>
+                        <button class="control-btn reset" onclick="resetBoard()">
+                            <i class="fas fa-undo"></i> Reset Board
+                        </button>
+                        <button class="control-btn example" onclick="loadExampleGame()">
+                            <i class="fas fa-magic"></i> Load Example Game
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="status-panel">
+                    <div class="status-title">
+                        <i class="fas fa-info-circle"></i> Match Status
+                    </div>
+                    
+                    <div class="match-status" id="matchStatus">
+                        <div>Current turn: <span id="currentTurn" class="highlight">White</span></div>
+                        <div>Move #: <span id="moveNumber">1</span></div>
+                        <div>Game status: <span id="gameStatus" class="highlight">Waiting for game data...</span></div>
+                        <div>Last update: <span id="lastUpdate">Never</span></div>
+                    </div>
+                    
+                    <div class="fen-display-container">
+                        <div class="fen-label">
+                            <span><i class="fas fa-code"></i> Current FEN (from Pusher)</span>
+                            <span class="update-time" id="fenUpdateTime"></span>
+                        </div>
+                        <div class="fen-display" id="currentFen">
+                            Waiting for live data...
+                        </div>
+                    </div>
+                    
+                    <div id="message" class="info">
+                        Connecting to live chess feed...
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <div class="moves-panel">
+                    <div class="panel-title">
+                        <i class="fas fa-list-ol"></i> Move History
+                    </div>
+                    <div class="moves-list" id="movesList">
+                        <!-- Moves will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="live-chat-panel">
+                    <div class="panel-title">
+                        <i class="fas fa-comments"></i> Live Commentary
+                    </div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="chat-message system">
+                            <div class="user">System</div>
+                            <div class="message">Connecting to live commentary feed...</div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chatInput" placeholder="Type your comment...">
+                        <button id="sendChat" onclick="sendChatMessage()">Send</button>
+                    </div>
+                </div>
+                
+                <div class="live-data-panel">
+                    <div class="panel-title">
+                        <i class="fas fa-database"></i> Live Game Data
+                    </div>
+                    <div class="live-data-content" id="liveDataContent">
+                        <div class="data-item">
+                            <div class="label">Event</div>
+                            <div class="value" id="eventName">Waiting for data...</div>
+                        </div>
+                        <div class="data-item">
+                            <div class="label">Match ID</div>
+                            <div class="value" id="matchId">-</div>
+                        </div>
+                        <div class="data-item">
+                            <div class="label">Time Control</div>
+                            <div class="value" id="timeControl">-</div>
+                        </div>
+                        <div class="data-item">
+                            <div class="label">Live Moves</div>
+                            <div class="value" id="totalMoves">0</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="connection-status disconnected" id="connectionStatus">
+                    <div class="status-dot"></div>
+                    <div>Disconnected from Live Feed</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Live Chess Match Viewer &copy; 2023 | Powered by Chessboard.js, chess.js and Pusher | This is a demonstration interface for live chess matches</p>
+        </footer>
+    </div>
+
+    <!-- Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
+    <!-- Pusher for real-time updates -->
+    <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
+    
+    <script>
+        // Initialize chessboard
+        const board = Chessboard('board', {
+            position: 'start',
+            pieceTheme: 'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png',
+            draggable: false  // Disable dragging since we're receiving moves from Pusher
+        });
+
+        // Initialize chess game
+        let game = new Chess();
+        let moveHistory = [];
+        let currentMoveIndex = 0;
+        let lastFen = '';
+        let matchData = {
+            whitePlayer: 'White Player',
+            blackPlayer: 'Black Player',
+            whiteRating: 2500,
+            blackRating: 2500,
+            event: 'Live Chess Match',
+            matchId: 'CHESS-' + Math.floor(Math.random() * 10000),
+            timeControl: '15+10'
+        };
+        
+        // Pusher configuration (using a demo key for demonstration)
+        // In a real application, you would use your own Pusher credentials
+        const pusherAppKey = 'ee0d0bc2c642afac4689';
+        const pusherCluster = 'ap1';
+        
+        // Initialize Pusher
+        let pusher = null;
+        let channel = null;
+        
+        // Function to initialize Pusher connection
+        function initPusher() {
+            try {
+                pusher = new Pusher(pusherAppKey, {
+                    cluster: pusherCluster,
+                    encrypted: true,
+                    authEndpoint: 'https://your-server.com/pusher/auth' // Optional: for private channels
+                });
+                
+                // Subscribe to the chess match channel
+                // In a real app, this would be dynamic based on the match ID
+                channel = pusher.subscribe('live-chess-match');
+                
+                // Listen for FEN updates from Pusher
+                channel.bind('fen-update', function(data) {
+                    console.log('Received FEN update from Pusher:', data);
+                    handleFenUpdate(data);
+                });
+                
+                // Listen for move updates from Pusher
+                channel.bind('move-update', function(data) {
+                    console.log('Received move update from Pusher:', data);
+                    handleMoveUpdate(data);
+                });
+                
+                // Listen for game status updates from Pusher
+                channel.bind('game-status-update', function(data) {
+                    console.log('Received game status update from Pusher:', data);
+                    handleGameStatusUpdate(data);
+                });
+                
+                // Listen for player info updates from Pusher
+                channel.bind('player-info-update', function(data) {
+                    console.log('Received player info update from Pusher:', data);
+                    handlePlayerInfoUpdate(data);
+                });
+                
+                // Listen for chat messages from Pusher
+                channel.bind('chat-message', function(data) {
+                    console.log('Received chat message from Pusher:', data);
+                    handleChatMessage(data);
+                });
+                
+                // Listen for match data updates from Pusher
+                channel.bind('match-data-update', function(data) {
+                    console.log('Received match data update from Pusher:', data);
+                    handleMatchDataUpdate(data);
+                });
+                
+                // Update connection status
+                updateConnectionStatus(true);
+                showMessage('Connected to live chess feed!', 'success');
+                
+                // Request initial game state
+                simulateInitialDataRequest();
+                
+            } catch (error) {
+                console.error('Error initializing Pusher:', error);
+                showMessage('Failed to connect to live feed. Using simulated data.', 'error');
+                updateConnectionStatus(false);
+                
+                // Fallback: Use simulated data
+                setTimeout(() => {
+                    simulateInitialDataRequest();
+                }, 2000);
+            }
+        }
+        
+        // Function to handle FEN updates from Pusher
+        function handleFenUpdate(data) {
+            const fen = data;
+            const timestamp = data.timestamp || new Date().toISOString();
+              console.log(fen);
+            // Update the FEN display
+            document.getElementById('currentFen').textContent = fen;
+            document.getElementById('fenUpdateTime').textContent = formatTime(timestamp);
+            
+            // Update the last update time
+            document.getElementById('lastUpdate').textContent = formatTime(timestamp, true);
+            
+            // Only update the board if FEN has changed
+            if (fen !== lastFen) {
+                try {
+                    // Load the FEN into the game
+                    if (game.load(fen)) {
+                        // Update the board
+                        board.position(fen);
+                        
+                        // Update move history
+                        //updateMoveHistory();
+                        
+                        // Update game status
+                        //updateGameStatus();
+                        
+                        // Show notification for significant changes
+                        if (lastFen && lastFen !== '') {
+                            showMessage('Board position updated from live feed', 'success');
+                        }
+                        
+                        lastFen = fen;
+                        
+                        // Log for debugging
+                        console.log('Board updated with FEN:', fen);
+                    } else {
+                        showMessage('Error: Invalid FEN received from server', 'error');
+                    }
+                } catch (error) {
+                    console.error('Error loading FEN:', error);
+                    showMessage('Error processing FEN from live feed', 'error');
+                }
+            }
+        }
+        
+        // Function to handle move updates from Pusher
+        function handleMoveUpdate(data) {
+            const move = data.move;
+            const from = data.from;
+            const to = data.to;
+            const player = data.player;
+            const timestamp = data.timestamp || new Date().toISOString();
+            
+            // Try to make the move in the game
+            try {
+                const moveObj = { from: from, to: to };
+                
+                // Add promotion if specified
+                if (data.promotion) {
+                    moveObj.promotion = data.promotion;
+                }
+                
+                // Make the move
+                const result = game.move(moveObj);
+                
+                if (result) {
+                    // Update the board
+                    board.position(game.fen());
+                    
+                    // Add to move history
+                    addMoveToHistory(result, game.fen(), player);
+                    
+                    // Update game status
+                    updateGameStatus();
+                    
+                    // Update FEN display
+                    document.getElementById('currentFen').textContent = game.fen();
+                    document.getElementById('fenUpdateTime').textContent = formatTime(timestamp);
+                    
+                    // Show notification
+                    showMessage(`${player} played ${from} to ${to}`, 'success');
+                    
+                    // Add commentary
+                    addChatMessage('Commentator', `${player} moves ${from} to ${to}`);
+                    
+                    // Log for debugging
+                    console.log('Move applied:', result);
+                } else {
+                    showMessage(`Error: Invalid move ${from} to ${to}`, 'error');
+                }
+            } catch (error) {
+                console.error('Error applying move:', error);
+                showMessage('Error processing move from live feed', 'error');
+            }
+        }
+        
+        // Function to handle game status updates from Pusher
+        function handleGameStatusUpdate(data) {
+            const status = data.status;
+            const result = data.result;
+            const timestamp = data.timestamp || new Date().toISOString();
+            
+            // Update game status display
+            let statusText = status;
+            if (result) {
+                statusText += ` - ${result}`;
+            }
+            
+            document.getElementById('gameStatus').textContent = statusText;
+            document.getElementById('lastUpdate').textContent = formatTime(timestamp, true);
+            
+            // Add system message
+            if (status === 'game-over' || status === 'finished') {
+                addChatMessage('System', `Game finished: ${result || status}`);
+                showMessage(`Game finished: ${result || status}`, 'info');
+            }
+        }
+        
+        // Function to handle player info updates from Pusher
+        function handlePlayerInfoUpdate(data) {
+            // Update white player info
+            if (data.white) {
+                matchData.whitePlayer = data.white.name || matchData.whitePlayer;
+                matchData.whiteRating = data.white.rating || matchData.whiteRating;
+                
+                document.getElementById('whitePlayer').textContent = matchData.whitePlayer;
+                document.getElementById('whiteRating').textContent = matchData.whiteRating;
+            }
+            
+            // Update black player info
+            if (data.black) {
+                matchData.blackPlayer = data.black.name || matchData.blackPlayer;
+                matchData.blackRating = data.black.rating || matchData.blackRating;
+                
+                document.getElementById('blackPlayer').textContent = matchData.blackPlayer;
+                document.getElementById('blackRating').textContent = matchData.blackRating;
+            }
+            
+            // Update other player data
+            if (data.event) matchData.event = data.event;
+            if (data.matchId) matchData.matchId = data.matchId;
+            if (data.timeControl) matchData.timeControl = data.timeControl;
+            
+            updateMatchDataDisplay();
+        }
+        
+        // Function to handle chat messages from Pusher
+        function handleChatMessage(data) {
+            const user = data.user || 'Anonymous';
+            const message = data.message;
+            const type = data.type || 'user'; // 'user', 'system', 'commentator'
+            const timestamp = data.timestamp || new Date().toISOString();
+            
+            addChatMessage(user, message, type);
+        }
+        
+        // Function to handle match data updates from Pusher
+        function handleMatchDataUpdate(data) {
+            // Update match data
+            if (data.event) matchData.event = data.event;
+            if (data.matchId) matchData.matchId = data.matchId;
+            if (data.timeControl) matchData.timeControl = data.timeControl;
+            if (data.whiteTime) document.getElementById('whiteTime').textContent = formatTimeSeconds(data.whiteTime);
+            if (data.blackTime) document.getElementById('blackTime').textContent = formatTimeSeconds(data.blackTime);
+            
+            updateMatchDataDisplay();
+        }
+        
+        // Function to update the match data display
+        function updateMatchDataDisplay() {
+            document.getElementById('eventName').textContent = matchData.event;
+            document.getElementById('matchId').textContent = matchData.matchId;
+            document.getElementById('timeControl').textContent = matchData.timeControl;
+            document.getElementById('totalMoves').textContent = moveHistory.length;
+        }
+        
+        // Function to add a move to the history
+        function addMoveToHistory(move, fen, player) {
+            const moveNumber = Math.floor(moveHistory.length / 2) + 1;
+            const isWhiteMove = moveHistory.length % 2 === 0;
+            
+            if (isWhiteMove) {
+                // New move pair
+                moveHistory.push({
+                    moveNumber: moveNumber,
+                    white: move.san,
+                    black: '',
+                    fen: fen,
+                    player: player || 'White'
+                });
+            } else {
+                // Update black move in the last pair
+                moveHistory[moveHistory.length - 1].black = move.san;
+                moveHistory[moveHistory.length - 1].fen = fen;
+                moveHistory[moveHistory.length - 1].playerBlack = player || 'Black';
+            }
+            
+            currentMoveIndex = moveHistory.length - 1;
+            updateMoveHistoryDisplay();
+            updateMatchDataDisplay();
+        }
+        
+        // Function to update the move history from the current game
+        function updateMoveHistory() {
+            moveHistory = [];
+            
+            // Get move history from game
+            const history = game.history({verbose: true});
+            
+            // Group moves into pairs
+            for (let i = 0; i < history.length; i++) {
+                const moveNumber = Math.floor(i / 2) + 1;
+                const isWhiteMove = i % 2 === 0;
+                
+                if (isWhiteMove) {
+                    moveHistory.push({
+                        moveNumber: moveNumber,
+                        white: history[i].san,
+                        black: '',
+                        fen: getFenAfterMove(history, i)
+                    });
+                } else {
+                    moveHistory[moveHistory.length - 1].black = history[i].san;
+                    moveHistory[moveHistory.length - 1].fen = getFenAfterMove(history, i);
+                }
+            }
+            
+            currentMoveIndex = moveHistory.length > 0 ? moveHistory.length - 1 : 0;
+            updateMoveHistoryDisplay();
+            updateMatchDataDisplay();
+        }
+        
+        // Helper function to get FEN after a specific move
+        function getFenAfterMove(history, index) {
+            // Create a temporary game and replay moves up to index
+            const tempGame = new Chess();
+            
+            for (let i = 0; i <= index; i++) {
+                tempGame.move(history[i]);
+            }
+            
+            return tempGame.fen();
+        }
+        
+        // Function to update the move history display
+        function updateMoveHistoryDisplay() {
+            const movesList = document.getElementById('movesList');
+            movesList.innerHTML = '';
+            
+            // Add header
+            const headerRow = document.createElement('div');
+            headerRow.className = 'move-row';
+            headerRow.innerHTML = '<div>#</div><div>White</div><div>Black</div>';
+            movesList.appendChild(headerRow);
+            
+            // Add moves
+            moveHistory.forEach((movePair, index) => {
+                const moveRow = document.createElement('div');
+                moveRow.className = `move-row ${index === currentMoveIndex ? 'current' : ''}`;
+                moveRow.innerHTML = `
+                    <div class="move-number">${movePair.moveNumber}.</div>
+                    <div>${movePair.white || '-'}</div>
+                    <div>${movePair.black || '-'}</div>
+                `;
+                
+                // Click to navigate to this position
+                moveRow.addEventListener('click', () => {
+                    if (movePair.fen) {
+                        game.load(movePair.fen);
+                        board.position(game.fen());
+                        currentMoveIndex = index;
+                        updateMoveHistoryDisplay();
+                        updateGameStatus();
+                        document.getElementById('currentFen').textContent = movePair.fen;
+                    }
+                });
+                
+                movesList.appendChild(moveRow);
+            });
+            
+            // Scroll to the current move
+            const currentMoveElement = movesList.querySelector('.current');
+            if (currentMoveElement) {
+                currentMoveElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+        
+        // Function to update the game status display
+        function updateGameStatus() {
+            document.getElementById('currentTurn').textContent = game.turn() === 'w' ? 'White' : 'Black';
+            document.getElementById('moveNumber').textContent = Math.max(1, Math.ceil((moveHistory.length * 2) / 2));
+            
+            // Check game status
+            if (game.in_checkmate()) {
+                document.getElementById('gameStatus').textContent = game.turn() === 'w' ? 'Black wins by checkmate' : 'White wins by checkmate';
+                document.getElementById('gameStatus').style.color = '#e74c3c';
+            } else if (game.in_stalemate()) {
+                document.getElementById('gameStatus').textContent = 'Stalemate';
+                document.getElementById('gameStatus').style.color = '#f1c40f';
+            } else if (game.in_threefold_repetition()) {
+                document.getElementById('gameStatus').textContent = 'Draw by threefold repetition';
+                document.getElementById('gameStatus').style.color = '#f1c40f';
+            } else if (game.insufficient_material()) {
+                document.getElementById('gameStatus').textContent = 'Draw by insufficient material';
+                document.getElementById('gameStatus').style.color = '#f1c40f';
+            } else if (game.in_draw()) {
+                document.getElementById('gameStatus').textContent = 'Draw';
+                document.getElementById('gameStatus').style.color = '#f1c40f';
+            } else {
+                document.getElementById('gameStatus').textContent = game.in_check() ? 'In Check' : 'In Progress';
+                document.getElementById('gameStatus').style.color = game.in_check() ? '#e74c3c' : '#2ecc71';
+            }
+        }
+        
+        // Function to add a chat message
+        function addChatMessage(user, message, type = 'user') {
+            const chatMessages = document.getElementById('chatMessages');
+            
+            const messageElement = document.createElement('div');
+            messageElement.className = `chat-message ${type === 'system' ? 'system' : ''}`;
+            messageElement.innerHTML = `
+                <div class="user">${user}</div>
+                <div class="message">${message}</div>
+            `;
+            
+            chatMessages.appendChild(messageElement);
+            
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            // Limit number of messages
+            if (chatMessages.children.length > 50) {
+                chatMessages.removeChild(chatMessages.firstChild);
+            }
+        }
+        
+        // Function to send a chat message
+        function sendChatMessage() {
+            const chatInput = document.getElementById('chatInput');
+            const message = chatInput.value.trim();
+            
+            if (!message) return;
+            
+            // For demo, use a random username or allow user to set one
+            const username = 'Spectator_' + Math.floor(Math.random() * 1000);
+            
+            // Add to local chat
+            addChatMessage(username, message);
+            
+            // In a real app, this would send to Pusher
+            // channel.trigger('client-chat-message', {
+            //     user: username,
+            //     message: message,
+            //     timestamp: new Date().toISOString()
+            // });
+            
+            // Clear input
+            chatInput.value = '';
+        }
+        
+        // Function to show messages
+        function showMessage(text, type) {
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = text;
+            messageElement.className = type;
+            
+            // Auto-hide success messages after 5 seconds
+            if (type === 'success') {
+                setTimeout(() => {
+                    messageElement.textContent = 'Connected to live chess feed';
+                    messageElement.className = 'info';
+                }, 5000);
+            }
+        }
+        
+        // Function to update connection status
+        function updateConnectionStatus(connected) {
+            const statusElement = document.getElementById('connectionStatus');
+            if (connected) {
+                statusElement.className = 'connection-status connected';
+                statusElement.innerHTML = '<div class="status-dot"></div><div>Connected to Live Feed</div>';
+            } else {
+                statusElement.className = 'connection-status disconnected';
+                statusElement.innerHTML = '<div class="status-dot"></div><div>Disconnected from Live Feed</div>';
+            }
+        }
+        
+        // Function to format time
+        function formatTime(timestamp, includeSeconds = false) {
+            const date = new Date(timestamp);
+            const now = new Date();
+            const diffMs = now - date;
+            const diffSec = Math.floor(diffMs / 1000);
+            const diffMin = Math.floor(diffSec / 60);
+            
+            if (diffMin < 1) {
+                return 'Just now';
+            } else if (diffMin < 60) {
+                return `${diffMin} minute${diffMin !== 1 ? 's' : ''} ago`;
+            } else {
+                if (includeSeconds) {
+                    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                } else {
+                    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                }
+            }
+        }
+        
+        // Function to format time in seconds to MM:SS
+        function formatTimeSeconds(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        // Function to reset board to starting position
+        function resetBoard() {
+            const defaultFen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+            
+            game = new Chess();
+            game.load(defaultFen);
+            board.position('start');
+            
+            // Reset move history
+            moveHistory = [];
+            currentMoveIndex = 0;
+            updateMoveHistoryDisplay();
+            updateGameStatus();
+            
+            // Update FEN display
+            document.getElementById('currentFen').textContent = defaultFen;
+            document.getElementById('fenUpdateTime').textContent = 'Now';
+            
+            showMessage('Board reset to starting position', 'success');
+            addChatMessage('System', 'Board has been reset to starting position');
+        }
+        
+        // Function to load an example game
+        function loadExampleGame() {
+            // Example: A famous chess game (Fischer vs Spassky, 1972)
+            const exampleFen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+            
+            game = new Chess();
+            game.load(exampleFen);
+            board.position(exampleFen);
+            
+            // Update move history
+            updateMoveHistory();
+            updateGameStatus();
+            
+            // Update FEN display
+            document.getElementById('currentFen').textContent = exampleFen;
+            document.getElementById('fenUpdateTime').textContent = 'Example';
+            
+            showMessage('Loaded example game position', 'success');
+            addChatMessage('System', 'Example game loaded (Fischer vs Spassky, 1972)');
+        }
+        
+        // Function to simulate receiving initial data from Pusher
+        function simulateInitialDataRequest() {
+            // Simulate receiving player info
+            setTimeout(() => {
+                handlePlayerInfoUpdate({
+                    white: { name: 'Magnus Carlsen', rating: 2856 },
+                    black: { name: 'Hikaru Nakamura', rating: 2789 },
+                    event: 'World Chess Championship 2023',
+                    matchId: 'WCC-2023-FINAL',
+                    timeControl: '120+30'
+                });
+                
+                // Simulate receiving initial FEN
+                setTimeout(() => {
+                    handleFenUpdate({
+                        fen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+                        timestamp: new Date().toISOString()
+                    });
+                    
+                    // Add some initial commentary
+                    setTimeout(() => {
+                        addChatMessage('Commentator', 'Welcome to the World Chess Championship 2023 final match!');
+                        addChatMessage('Commentator', 'Magnus Carlsen (White) vs Hikaru Nakamura (Black)');
+                        addChatMessage('Commentator', "We're starting with 1. d4 - a solid opening choice from Carlsen");
+                    }, 1000);
+                }, 500);
+            }, 1000);
+        }
+        
+        // Function to simulate live data updates (for demo purposes)
+        function simulateLiveData() {
+            // Only simulate if we're connected to Pusher
+            if (!pusher) {
+                showMessage('Not connected to Pusher. Using local simulation.', 'info');
+            }
+            
+            // Get all possible moves
+            const moves = game.moves({verbose: true});
+            
+            if (moves.length === 0) {
+                showMessage('No moves available - game might be over', 'error');
+                return;
+            }
+            
+            // Pick a random move
+            const randomMove = moves[Math.floor(Math.random() * moves.length)];
+            const player = game.turn() === 'w' ? 'White' : 'Black';
+            
+            // Simulate receiving a move update from Pusher
+            handleMoveUpdate({
+                move: randomMove.san,
+                from: randomMove.from,
+                to: randomMove.to,
+                player: player,
+                timestamp: new Date().toISOString()
+            });
+            
+            // Also simulate time updates
+            if (Math.random() > 0.5) {
+                const whiteTime = Math.max(0, 7200 - moveHistory.length * 30 - Math.floor(Math.random() * 50));
+                const blackTime = Math.max(0, 7200 - moveHistory.length * 30 - Math.floor(Math.random() * 50));
+                
+                document.getElementById('whiteTime').textContent = formatTimeSeconds(whiteTime);
+                document.getElementById('blackTime').textContent = formatTimeSeconds(blackTime);
+            }
+        }
+        
+        // Initialize the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize chessboard
+            board.position('start');
+            
+            // Initialize Pusher connection
+            initPusher();
+            
+            // Add keyboard support for chat input
+            document.getElementById('chatInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    sendChatMessage();
+                }
+            });
+            
+            // Set up periodic simulation of live data (for demo only)
+            // In a real app, this would come from Pusher
+            setInterval(() => {
+                // Randomly simulate a move every 30-60 seconds
+                if (Math.random() > 0.8 && moveHistory.length < 40) {
+                    simulateLiveData();
+                }
+            }, 30000);
+            
+            console.log('Live Chess Match Viewer initialized');
+        });
+    </script>
+</body>
+</html>

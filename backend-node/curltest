@@ -1,0 +1,162 @@
+register:
+
+curl -X POST http://localhost:3000/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "gmd",
+    "email": "a@b.com",
+    "password": "sahabat",
+    "fullName": "Budi Santoso"
+  }'
+
+  login:
+
+  curl -X POST http://localhost:3000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "a@b.com",
+    "password": "sahabat1!"
+  }'
+
+# Ganti  password  
+curl -X POST http://localhost:3000/api/auth/change-password \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA1LCJlbWFpbCI6ImFAYi5jb20iLCJpYXQiOjE3NjU0NjAxNDEsImV4cCI6MTc2ODA1MjE0MX0.-wsz0n-ssrJtrDorFpSpTSExWazPsvkHzvgjQHnWio8" \
+  -d '{
+    "oldPassword": "sahabat",
+    "newPassword": "sahabat1!"
+  }'
+
+\lupa password
+curl -X POST http://localhost:3000/api/auth/forgot-password \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "a@b.com"
+  }'
+
+  match move:
+  curl -X POST http://localhost:3000/api/matches/move \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA1LCJlbWFpbCI6ImFAYi5jb20iLCJpYXQiOjE3NjU0NjAxNDEsImV4cCI6MTc2ODA1MjE0MX0.-wsz0n-ssrJtrDorFpSpTSExWazPsvkHzvgjQHnWio8" \
+  -d '{
+    "matchId": 1,
+    "uciMove": "e2e4"
+  }'
+
+
+  withdraw:
+  curl -X POST http://localhost:3000/api/finance/withdraw \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA1LCJlbWFpbCI6ImFAYi5jb20iLCJpYXQiOjE3NjU0NjAxNDEsImV4cCI6MTc2ODA1MjE0MX0.-wsz0n-ssrJtrDorFpSpTSExWazPsvkHzvgjQHnWio8" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "amount": 50000,
+    "bankAccountId": 1,
+    "pin": "123456"
+  }'
+
+
+  admin login:
+
+  curl -X POST http://localhost:3000/api/admin/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "admin@percasi.com",
+    "password": "admin"
+  }'
+
+
+
+  broadcast:
+  # 1. Kirim Broadcast
+curl -X POST http://localhost:3000/api/admin/broadcast \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBwZXJjYXNpLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2NTY4NzExMSwiZXhwIjoxNzY1NzMwMzExfQ.3LMV8mCu58w6wbMBoG6iQBOvm2zCSzHfOHPanx5ID7g" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "PENGUMUMAN PENTING",
+    "message": "Turnamen Akbar akan dimulai hari Sabtu jam 10.00 WIB!",
+    "type": "success"
+  }'
+
+# 2. Kirim ke User ID 105
+curl -X POST http://localhost:3000/api/admin/notify-user \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBwZXJjYXNpLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2NTY4NzExMSwiZXhwIjoxNzY1NzMwMzExfQ.3LMV8mCu58w6wbMBoG6iQBOvm2zCSzHfOHPanx5ID7g" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "userId": 1,
+    "title": "Peringatan Akun",
+    "message": "Mohon lengkapi data profil Anda segera.",
+    "type": "warning"
+  }'
+
+  user profile :
+  curl -X GET 'http://192.168.1.13:3000/api/users/profile' \
+-H 'Accept: application/json' \
+-H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTA1LCJlbWFpbCI6ImFAYi5jb20iLCJpYXQiOjE3NjU0Nzk2NDYsImV4cCI6MTc2ODA3MTY0Nn0.yYSfXnU3lVOZ9hr_J499PbRTR5_GQaX6U3pLZkuYFMI'
+
+
+match :
+curl -X POST http://localhost:3000/api/admin/match-pairing \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBwZXJjYXNpLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2NTg1MjI0NSwiZXhwIjoxNzY1ODk1NDQ1fQ.6y78_OJ7Z-AbLdgyPR7rCCAdbaMAhlGiA8lFW0-e5kg" \
+  -d '{
+    "whitePlayerId": 1,
+    "blackPlayerId": 4
+}'
+
+get unread:
+  curl -X GET http://localhost:3000/api/notification/unread-count \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBwZXJjYXNpLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2NTgxMjk5NSwiZXhwIjoxNzY1ODU2MTk1fQ.c2NRqfvTANhyhgcmzwjcMDxMcICUZEias7KoQQGVW7c" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "amount": 50000,
+    "bankAccountId": 1,
+    "pin": "123456"
+  }'
+
+
+
+
+  curl --request POST \
+  --url http://localhost:3000/api/v1/wallet/deposit \
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTI0LCJlbWFpbCI6Im4ueWFzc3VraUBnbWFpbC5jb20iLCJ1c2VybmFtZSI6Im4ueWFzc3VraTQ3MyIsImlhdCI6MTc2NzIwMDE4MiwiZXhwIjoxNzY3Mjg2NTgyfQ.98ovufp3ccz4KcEB0cdKaxqmSKz6FNZp5HOfIU_GTII' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "amount": 50000,
+    "payment_method": "VIRTUAL_ACCOUNT_BCA"
+  }'
+
+  callback payment gateway:
+
+  curl -k --request POST \
+  --url https://localhost:3000/api/callback/payment \
+  --header 'Content-Type: application/json' \
+  --header 'x-callback-token: YOUR_SECRET_CALLBACK_TOKEN' \
+  --data '{
+    "external_id": "DEP-1704012345-ABC123",
+    "status": "PAID",
+    "amount": 50000
+  }'
+
+
+
+
+  # GET request dengan query parameters
+curl -k -X GET "https://localhost:3000/api/admin/all-users?page=1&limit=10&search=john&userStatus=active&kycStatus=verified"
+
+
+curl -k -X POST https://localhost:3000/api/admin/all-users?page=1&limit=10&search=john&userStatus=active&kycStatus=verified \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBwZXJjYXNpLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2NzU0OTU1MiwiZXhwIjoxNzY3NTkyNzUyfQ.tuIapHa7GnoEVjw2Mmdd9nIovGSkHTDn7Dj4B1XP0eQ" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "PENGUMUMAN PENTING",
+    "message": "Turnamen Akbar akan dimulai hari Sabtu jam 10.00 WIB!",
+    "type": "success"
+  }'
+
+  curl -k -X GET "https://localhost:3000/api/users?page=1&limit=20&search=&userStatus=&kycStatus=&sortBy=created_at&sortOrder=DESC" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBwZXJjYXNpLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2NzU0OTU1MiwiZXhwIjoxNzY3NTkyNzUyfQ.tuIapHa7GnoEVjw2Mmdd9nIovGSkHTDn7Dj4B1XP0eQ"
+
+
+
+curl -k -X GET "https://localhost:3000/api/admin/all-users?page=1&limit=10"   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBwZXJjYXNpLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2NzU0OTU1MiwiZXhwIjoxNzY3NTkyNzUyfQ.tuIapHa7GnoEVjw2Mmdd9nIovGSkHTDn7Dj4B1XP0eQ"
+

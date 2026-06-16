@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Mendeteksi Perangkat...</title>
+    <script>
+        function redirectUser() {
+            const urlMobile = "https://mobile.catur.cloud"; // Ganti dengan URL Mobile
+            const urlDesktop = "https://desktop.catur.cloud"; // Ganti dengan URL Desktop
+
+            // Regex untuk mendeteksi perangkat mobile populer
+            const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+            
+            if (mobileRegex.test(navigator.userAgent)) {
+                // Jika Mobile
+                window.location.href = urlMobile;
+            } else {
+                // Jika Desktop
+                window.location.href = urlDesktop;
+            }
+        }
+
+        // Jalankan fungsi segera saat halaman dimuat
+        window.onload = redirectUser;
+    </script>
+</head>
+<body style="font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div style="text-align: center;">
+        <p>Mengarahkan Anda ke halaman yang sesuai...</p>
+        <noscript>
+            Silakan aktifkan JavaScript atau klik 
+            <a href="https://url-B-anda.com">di sini</a> untuk melanjutkan.
+        </noscript>
+    </div>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Tester - iPhone 14 Pro Max</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .device-frame {
+            background: #1a1a1a;
+            border-radius: 60px;
+            padding: 25px 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 10px solid #333;
+            position: relative;
+            margin: 0 auto;
+            width: 430px; /* iPhone 14 Pro Max width in points */
+        }
+        
+        .notch {
+            width: 40%;
+            height: 30px;
+            background: #1a1a1a;
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        
+        .screen-area {
+            background: white;
+            border-radius: 40px;
+            overflow: hidden;
+            height: 932px; /* iPhone 14 Pro Max height in points */
+            position: relative;
+        }
+        
+        .device-info {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: 300;
+        }
+        
+        .controls {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .url-input-group {
+            margin-bottom: 20px;
+        }
+        
+        .device-specs {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+        .refresh-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+        }
+        
+        .refresh-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        @media (max-width: 768px) {
+            .device-frame {
+                transform: scale(0.8);
+                margin: -40px auto;
+            }
+            
+            .controls {
+                margin-top: -40px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .device-frame {
+                transform: scale(0.7);
+                margin: -60px auto;
+            }
+        }
+        
+        .status-bar {
+            height: 44px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            font-size: 14px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .time {
+            font-weight: bold;
+        }
+        
+        .battery {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="device-frame">
+                    <div class="notch"></div>
+                    <div class="screen-area">
+                        <div class="status-bar">
+                            <div class="time" id="currentTime">9:41</div>
+                            <div class="battery">🔋 100%</div>
+                        </div>
+                        <iframe 
+                            id="mobileFrame" 
+                            src="about:blank"
+                            frameborder="0" 
+                            style="width: 100%; height: calc(100% - 44px); border: none;"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                        <button class="refresh-btn" onclick="refreshFrame()" title="Refresh">
+                            <i class="bi bi-arrow-clockwise"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="device-info">
+                    <h4>iPhone 14 Pro Max Simulator</h4>
+                    <p class="mb-0">Resolution: 1290 × 2796 pixels • Viewport: 430 × 932 points</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="controls">
+                    <h4 class="mb-4">📱 Mobile Tester Controls</h4>
+                    
+                    <div class="url-input-group">
+                        <label class="form-label">Website URL to Test</label>
+                        <div class="input-group mb-3">
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="urlInput" 
+                                   placeholder="https://example.com"
+                                   value="https://" readonly>
+                            <button class="btn btn-primary" onclick="loadURL()">Load</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label">Quick Test Pages</label>
+                        <div class="d-flex flex-wrap gap-2">
+                            <button class="btn btn-outline-primary btn-sm" onclick="testURL('https://google.com')">Google</button>
+                            <button class="btn btn-outline-primary btn-sm" onclick="testURL('https://getbootstrap.com')">Bootstrap</button>
+                            <button class="btn btn-outline-primary btn-sm" onclick="testURL('https://whatismyviewport.com')">Viewport Test</button>
+                            <button class="btn btn-outline-primary btn-sm" onclick="testURL('https://responsivedesignchecker.com')">Responsive Test</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="form-label">Device Orientation</label>
+                        <div class="btn-group w-100" role="group">
+                            <button type="button" class="btn btn-outline-primary active" onclick="setPortrait()">Portrait</button>
+                            <button type="button" class="btn btn-outline-primary" onclick="setLandscape()">Landscape</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Viewport Scale</label>
+                        <input type="range" class="form-range" min="50" max="150" value="100" id="scaleSlider" onchange="updateScale()">
+                        <div class="d-flex justify-content-between">
+                            <small>50%</small>
+                            <small id="scaleValue">100%</small>
+                            <small>150%</small>
+                        </div>
+                    </div>
+                    
+                    <div class="device-specs">
+                        <h6>📐 Device Specifications</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li><small>• Display: 6.7" Super Retina XDR</small></li>
+                            <li><small>• Resolution: 2796 × 1290 pixels</small></li>
+                            <li><small>• Pixel Density: 460 ppi</small></li>
+                            <li><small>• CSS Viewport: 430 × 932 pt</small></li>
+                            <li><small>• Device Pixel Ratio: 3.0</small></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <div class="alert alert-info small">
+                            <strong>💡 Tip:</strong> Press F12 for Developer Tools. Use Ctrl+Shift+M in Chrome/Firefox for responsive mode.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <script>
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.getHours().toString().padStart(2, '0') + ':' + 
+                             now.getMinutes().toString().padStart(2, '0');
+            document.getElementById('currentTime').textContent = timeString;
+        }
+        
+        // Load URL into iframe
+        function loadURL() {
+            const urlInput = document.getElementById('urlInput');
+            let url = urlInput.value.trim();
+            
+            // Add https:// if not present
+            if (url && !url.startsWith('http://') && !url.startsWith('https://')) {
+                url = 'https://' + url;
+                urlInput.value = url;
+            }
+            
+            if (url && url !== 'https://') {
+                document.getElementById('mobileFrame').src = url;
+            }
+        }
+        
+        // Test with predefined URL
+        function testURL(url) {
+            document.getElementById('urlInput').value = url;
+            document.getElementById('mobileFrame').src = url;
+        }
+        
+        // Refresh iframe
+        function refreshFrame() {
+            const frame = document.getElementById('mobileFrame');
+            frame.src = frame.src;
+        }
+        
+        // Set portrait orientation
+        function setPortrait() {
+            const frame = document.querySelector('.device-frame');
+            const screen = document.querySelector('.screen-area');
+            
+            frame.style.width = '430px';
+            screen.style.height = '932px';
+            screen.style.width = 'auto';
+            
+            // Update button states
+            document.querySelectorAll('.btn-group button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+        
+        // Set landscape orientation
+        function setLandscape() {
+            const frame = document.querySelector('.device-frame');
+            const screen = document.querySelector('.screen-area');
+            
+            frame.style.width = '932px';
+            screen.style.height = '430px';
+            screen.style.width = '932px';
+            
+            // Update button states
+            document.querySelectorAll('.btn-group button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+        
+        // Update scale
+        function updateScale() {
+            const slider = document.getElementById('scaleSlider');
+            const value = slider.value;
+            const frame = document.querySelector('.device-frame');
+            
+            document.getElementById('scaleValue').textContent = value + '%';
+            frame.style.transform = `scale(${value / 100})`;
+            
+            if (value < 100) {
+                frame.style.margin = '0 auto';
+            }
+        }
+        
+        // Enter key to load URL
+        document.getElementById('urlInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                loadURL();
+            }
+        });
+        
+        // Initialize
+        updateTime();
+        setInterval(updateTime, 60000); // Update time every minute
+        
+        // Load a default test page
+        setTimeout(() => {
+            testURL('https://mobile.catur.cloud');
+        }, 500);
+        
+        // Add some sample interactions
+        console.log('📱 iPhone 14 Pro Max Mobile Tester Ready!');
+        console.log('Device Specs: 430×932pt viewport, 3.0 pixel ratio');
+        console.log('Try testing: https://responsivechecker.net');
+    </script>
+</body>
+</html>
